@@ -10,3 +10,4 @@ site/
 # stays local for builds; only build-time aggregate numbers are published.
 data/evidence/
 web/data/evidence/
+occurrences_published.csv

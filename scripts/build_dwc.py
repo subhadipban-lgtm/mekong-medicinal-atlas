@@ -217,6 +217,10 @@ def main() -> int:
 
     L.write_csv(L.PROCESSED / "occurrences.csv", rows, DWC_TERMS + ATLAS_FLAGS)
     published = [r for r in rows if r["evidence_grade"] != "D"]
+    # The full table includes grade-D records that were excluded from publication because they may
+    # lack an open licence; this published-only table is the redistributable CSV. It is large and
+    # stays out of git (see .gitignore); the Darwin Core archive tracks the same records.
+    L.write_csv(L.PROCESSED / "occurrences_published.csv", published, DWC_TERMS + ATLAS_FLAGS)
     L.DWC.mkdir(parents=True, exist_ok=True)
     # The Darwin Core Archive convention is tab-separated, matching meta.xml. Tabs and line breaks
     # inside a value would break the file, so they are collapsed to spaces.
