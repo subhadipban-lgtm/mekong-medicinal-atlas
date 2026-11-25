@@ -130,7 +130,6 @@ def shrestha_commit() -> str:
 NAV = [("index.html", "Atlas", "index"), ("explore.html", "Explore", "explore"),
        ("species/index.html", "Species", "species"), ("evidence.html", "Evidence", "evidence"),
        ("macroecology.html", "Macroecology", "macroecology"),
-       ("harvest_pressure.html", "Harvest pressure & hydrological risk", "harvest_pressure"),
        ("methods.html", "Methods", "methods"),
        ("download.html", "Download", "download"),
        ("about.html", "About", "about")]
@@ -515,7 +514,7 @@ def home(d: dict) -> str:
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
         <div class="small mt-2"><a class="text-light" href="evidence.html">Evidence engine (pilot):
           {n(d["ev"]["totals"]["pubs"])} publications mapped across {n(len(d["ev"]["order"]))} taxa</a></div>
-        <div class="small mt-2"><a class="text-light" href="harvest_pressure.html">Harvest pressure &amp; hydrological risk:
+        <div class="small mt-2"><a class="text-light" href="sustainability.html">Sustainability:
           {e(sust_hp)} taxa high or very high harvest pressure · {e(sust_hy)} hydro-vulnerable · climate SDM {e(sust_sdm_state)}</a></div>
       </div>
     </div>
@@ -1503,7 +1502,7 @@ def main() -> int:
         if src.exists():
             shutil.copyfile(src, geo_dest / layer)
     pages = {"index.html": home(d), "explore.html": explore(d), "evidence.html": evidence(d),
-             "macroecology.html": macroecology(d), "harvest_pressure.html": sustainability(d),
+             "macroecology.html": macroecology(d),
              "methods.html": methods(d),
              "about.html": about(d), "download.html": download(d), "species/index.html": species_index(d)}
     pages.update({f"species/{slug_of(r['species_id'])}.html": species_page(d, r) for r in d["species_master"]})
