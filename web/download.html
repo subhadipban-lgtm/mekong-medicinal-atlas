@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Download — Mekong Medicinal Plant Atlas</title>
+<meta name="description" content="Download the Mekong Medicinal Plant Atlas data">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="assets/css/atlas.css" rel="stylesheet">
+
+</head>
+<body data-page="download">
+<nav class="navbar navbar-expand-md navbar-atlas navbar-dark">
+  <div class="container-fluid px-3 px-lg-4">
+    <a class="navbar-brand" href="index.html">🌿 Mekong Medicinal Plant Atlas</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#atlasNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="atlasNav"><ul class="navbar-nav ms-auto"><a class="nav-link" data-page="index" href="index.html">Atlas</a><a class="nav-link" data-page="explore" href="explore.html">Explore</a><a class="nav-link" data-page="species" href="species/index.html">Species</a><a class="nav-link" data-page="evidence" href="evidence.html">Evidence</a><a class="nav-link" data-page="macroecology" href="macroecology.html">Macroecology</a><a class="nav-link" data-page="sustainability" href="harvest_pressure.html">Harvest pressure & hydrological risk</a><a class="nav-link" data-page="methods" href="methods.html">Methods</a><a class="nav-link active" data-page="download" href="download.html">Download</a><a class="nav-link" data-page="about" href="about.html">About</a></ul></div>
+  </div>
+</nav>
+
+<main class="container-fluid px-3 px-lg-4 py-3">
+  <h1 class="h4">Download the data</h1>
+  <div class="alert alert-success small"><strong>Cite the dataset as:</strong> Banerjee, S. (2026). Mekong Medicinal Plant Atlas: occurrence records of medicinal plant taxa in the Mekong River basin.
+  Zenodo. <a href="https://doi.org/10.5281/zenodo.24525569" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.24525569</a>. The concept DOI 10.5281/zenodo.24525568
+  always resolves to the latest version.</div>
+  <div class="table-responsive"><table class="table table-striped table-atlas"><thead><tr><th>File</th><th>Content</th><th>Format</th><th>Description</th><th>Size</th><th>Licence</th></tr></thead><tbody><tr><td><a href="data/dwca/dwca-mekong-medicinal-plant-atlas.zip" download>dwca-mekong-medicinal-plant-atlas.zip</a></td><td>Darwin Core Archive</td><td>ZIP</td><td>Published occurrence records as Darwin Core terms, with archive and dataset metadata.</td><td class="text-nowrap">5.8 MB</td><td>CC-BY-NC-4.0; each record keeps its own licence</td></tr><tr><td><a href="data/tables/species_master.csv" download>species_master.csv</a></td><td>Species master</td><td>CSV</td><td>One row per taxon: names, grades, conservation status, occurrence counts.</td><td class="text-nowrap">302.8 KB</td><td>Research compilation; primary sources cited per row</td></tr><tr><td><a href="data/tables/uses.csv" download>uses.csv</a></td><td>Ethnobotanical use records</td><td>CSV</td><td>Use, ailment category, part used, country, source and evidence grade.</td><td class="text-nowrap">56.6 KB</td><td>Research compilation; primary sources cited per row</td></tr><tr><td><a href="data/tables/pharmacology.csv" download>pharmacology.csv</a></td><td>Pharmacology records</td><td>CSV</td><td>Extract assays and isolated compounds with potency, source and evidence grade.</td><td class="text-nowrap">213.1 KB</td><td>Research compilation; primary sources cited per row</td></tr><tr><td><a href="data/tables/conservation_trade.csv" download>conservation_trade.csv</a></td><td>Conservation and trade</td><td>CSV</td><td>IUCN category and its basis, CITES appendix, trade notes.</td><td class="text-nowrap">8.4 KB</td><td>Cited public sources</td></tr><tr><td><a href="data/tables/occurrence_summary_by_species.csv" download>occurrence_summary_by_species.csv</a></td><td>Occurrence counts by species</td><td>CSV</td><td>Published records per species: inside basin, outside basin, specimen-based, generalised.</td><td class="text-nowrap">25.8 KB</td><td>CC-BY-NC-4.0</td></tr><tr><td><a href="data/tables/references.csv" download>references.csv</a></td><td>Source register</td><td>CSV</td><td>Every source with licence, access date and status.</td><td class="text-nowrap">4.8 KB</td><td>Metadata</td></tr><tr><td><a href="data/tables/evidence_grade_provenance.csv" download>evidence_grade_provenance.csv</a></td><td>Evidence-grade provenance</td><td>CSV</td><td>Per taxon: grade, number of distinct sources behind its uses and pharmacology, and the source IDs.</td><td class="text-nowrap">27.7 KB</td><td>Metadata</td></tr><tr><td><a href="data/tables/evidence_summary.json" download>evidence_summary.json</a></td><td>Evidence summary</td><td>JSON</td><td>Grade counts and the citation issues found while grading.</td><td class="text-nowrap">26.9 KB</td><td>Metadata</td></tr><tr><td><a href="data/geo/occurrences.geojson" download>occurrences.geojson</a></td><td>Occurrence records inside the basin</td><td>GeoJSON</td><td>One point per published record inside the basin.</td><td class="text-nowrap">2.9 MB</td><td>CC-BY-NC-4.0</td></tr><tr><td><a href="data/geo/occurrences_outside_basin.geojson" download>occurrences_outside_basin.geojson</a></td><td>Records outside the basin (generalised)</td><td>GeoJSON</td><td>One point per species per half-degree cell.</td><td class="text-nowrap">5.9 MB</td><td>CC-BY-NC-4.0</td></tr><tr><td><a href="data/geo/mekong_basin.geojson" download>mekong_basin.geojson</a></td><td>Mekong basin boundary</td><td>GeoJSON</td><td>Full-resolution boundary, EPSG:4326.</td><td class="text-nowrap">1.8 MB</td><td>CC-BY-4.0, Tiwari et al., doi:10.5281/zenodo.7622998</td></tr><tr><td><a href="data/geo/mekong_river_naturalearth.geojson" download>mekong_river_naturalearth.geojson</a></td><td>Mekong River centreline</td><td>GeoJSON</td><td>Natural Earth 1:10m line.</td><td class="text-nowrap">30.9 KB</td><td>Public domain</td></tr></tbody></table></div>
+  <h2 class="h5 section-title">Licence</h2>
+  <p class="small">The occurrence archive is released under CC-BY-NC-4.0 because it includes records published under that licence; each record's own licence (CC0, CC-BY-4.0 or CC-BY-NC-4.0) is given in its
+  <code>license</code> field and prevails for that record. The basin boundary is CC-BY 4.0 (Tiwari et al.). Natural Earth layers are public domain. The project tables are a research compilation whose rows cite their
+  primary sources; the source workbook is not redistributed.</p>
+  <h2 class="h5 section-title">Suggested citation</h2>
+  <div class="citation-box">Mekong Medicinal Plant Atlas, version 0.9.0 (data as of 2026-11-24). Occurrence data from GBIF; taxonomic backbone GBIF and World Flora Online;
+  basin boundary Tiwari et al., Zenodo, doi:10.5281/zenodo.7622998. Repository: https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas. Dataset DOI: <a href="https://doi.org/10.5281/zenodo.24525569" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.24525569</a>.</div>
+  <h2 class="h5 section-title">Darwin Core terms in the archive</h2>
+  <p class="small">occurrenceID, basisOfRecord, eventDate, year, month, day, scientificName, acceptedNameUsage, taxonRank, kingdom, family, genus, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters,
+  geodeticDatum, country, countryCode, stateProvince, county, locality, recordedBy, identifiedBy, occurrenceStatus, establishmentMeans, associatedReferences, license, rightsHolder, institutionCode, collectionCode,
+  catalogNumber, datasetName, dataGeneralizations, informationWithheld. Definitions are in the <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/data_dictionary.md" target="_blank" rel="noopener">data dictionary</a>.</p>
+</main>
+
+<footer class="atlas">
+  <div class="container-fluid px-3 px-lg-4">
+    <div class="row g-3">
+      <div class="col-md-5">
+        <strong>Mekong Medicinal Plant Atlas</strong> · version 0.9.0 · data as of 2026-11-24<br>
+        Occurrence records from <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a>; names from the GBIF backbone and
+        <a href="https://www.worldfloraonline.org" target="_blank" rel="noopener">World Flora Online</a>; basin boundary
+        <a href="https://doi.org/10.5281/zenodo.7622998" target="_blank" rel="noopener">Tiwari et al. (Zenodo, CC-BY 4.0)</a>;
+        photos © iNaturalist contributors under their own licences.<br>
+        <strong>Dataset DOI: <a href="https://doi.org/10.5281/zenodo.24525569" target="_blank" rel="noopener">10.5281/zenodo.24525569</a></strong> (concept DOI 10.5281/zenodo.24525568).
+      </div>
+      <div class="col-md-4">
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas" target="_blank" rel="noopener">Source code and documentation</a><br>
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/QA_REPORT.md" target="_blank" rel="noopener">QA report</a> ·
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/CONFLICT_REPORT.md" target="_blank" rel="noopener">Conflict report</a> ·
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/data_dictionary.md" target="_blank" rel="noopener">Data dictionary</a>
+      </div>
+      <div class="col-md-3 text-md-end">Research resource; not medical advice.<br><a href="about.html">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -41,9 +41,10 @@ if [[ $SITE_ONLY -eq 0 ]]; then
   run "$PYTHON" scripts/build_tables.py
   run "$PYTHON" scripts/build_dictionary.py
   run "$PYTHON" scripts/grade_evidence.py
+  run "$PYTHON" scripts/build_provenance.py
   run "$PYTHON" scripts/build_dwc.py
   run "$PYTHON" scripts/build_geo.py
-  if [ -f data/raw/shrestha2025/data.csv ]; then run "$PYTHON" scripts/macroecology.py; else echo "skipping macroecology: data/raw/shrestha2025/data.csv missing"; fi
+  if [ -f data/raw/shrestha2025/data.csv ]; then run "$PYTHON" scripts/macroecology.py; else echo "error: data/raw/shrestha2025/data.csv missing (Shrestha et al. 2025 deposit, Zenodo 14765689) — the macroecology scatter must not ship as a placeholder" >&2; exit 1; fi
   if [ -f data/raw/wcvp/wcvp_names.csv ]; then run "$PYTHON" scripts/wcvp_match.py; else echo "skipping WCVP matching: data/raw/wcvp/wcvp_names.csv missing"; fi
   if [ -f data/raw/ne_admin1/ne_10m_admin_1_states_provinces.shp ]; then run "$PYTHON" scripts/macroecology_layers.py; else echo "skipping macroecology layers: Natural Earth admin-1 missing"; fi
   if [ -f data/raw/admin1_vascular.json ]; then run "$PYTHON" scripts/internal_coldspots.py; else echo "skipping internal coldspots: data/raw/admin1_vascular.json missing (run scripts/harvest_admin1_vascular.py)"; fi

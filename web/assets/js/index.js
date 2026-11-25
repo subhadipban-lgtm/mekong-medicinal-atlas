@@ -1,8 +1,14 @@
-/* Home page: the basin map with clustered in-basin records and a country filter. */
+/* Home page: the basin map with clustered in-basin records and a country filter.
+   Record scope toggle: "In-basin" loads only data/geo/occurrences.geojson (default).
+   "All records" lazily fetches data/geo/occurrences_outside_basin.geojson — 137,655 records
+   generalised to one point per species per half-degree cell — and adds it as a second
+   marker-clustered layer (disableClusteringAtZoom = 6, the generalisation cell).
+   Chosen approach (documented in the repo): a separate GeoJSON loaded lazily on toggle,
+   with markercluster enabled, so the default load never touches the 6 MB out-of-basin file. */
 (function () {
   'use strict';
   const A = window.Atlas, M = window.AtlasMap;
-  const { esc, fmt, fuzzy, COUNTRY_NAMES } = A;
+  const { fmt, fuzzy } = A;
 
   function init() {
     const el = document.getElementById('map');
@@ -10,9 +16,8 @@
     Promise.all([M.getJSON('data/species.json'), M.create(el, { countries: true }), M.getJSON('data/geo/occurrences.geojson', 30000)])
       .then(([species, ms, gj]) => {
         const byId = Object.fromEntries(species.map(s => [s.id, s]));
-        const layer = M.occurrenceLayer(ms, gj, {
-          species: id => { const s = byId[id]; return s ? { name: s.name, family: s.family, href: 'species/' + id.replace(/^sp_/, '') + '.html' } : null; }
-        });
+        const speciesInfo = id => { const s = byId[id]; return s ? { name: s.name, family: s.family, href: 'species/' + id.replace(/^sp_/, '') + '.html' } : null; };
+        const layer = M.occurrenceLayer(ms, gj, { species: speciesInfo });
         const overlays = M.addOverlays(ms, true);
         layer.group.addTo(ms.map);
         overlays['Occurrence records inside the basin'] = layer.group;
@@ -20,6 +25,7 @@
 
         const country = document.getElementById('homeCountry');
         const search = document.getElementById('homeSearch');
+        const scopeNote = document.getElementById('scopeNote');
         let all = [];
         function draw() {
           const q = search.value.trim(), c = country.value;
@@ -39,8 +45,49 @@
         let timer;
         search.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(draw, 250); });
         draw();
+
+        /* ---- scope toggle: lazily add the out-of-basin layer ------------------------ */
+        let outside = null;   // { group, markers, show } once loaded
+        let outsideLoading = false;
+        const scopeIn = document.getElementById('scopeInBasin');
+        const scopeAll = document.getElementById('scopeAll');
+
+        function setScope(value) {
+          if (value === 'all') {
+            if (!outside && !outsideLoading) {
+              outsideLoading = true;
+              if (scopeNote) scopeNote.textContent = 'Loading the out-of-basin layer (137,655 records, generalised)…';
+              M.getJSON('data/geo/occurrences_outside_basin.geojson', 60000)
+                .then(gj => {
+                  outside = M.occurrenceLayer(ms, gj, {
+                    light: true, species: speciesInfo, disableClusteringAtZoom: 6
+                  });
+                  overlays['Occurrence records outside the basin (generalised)'] = outside.group;
+                  outside.group.addTo(ms.map);
+                  outside.show(outside.markers);
+                  outsideLoading = false;
+                  if (scopeNote) scopeNote.textContent = 'All records shown; out-of-basin points are generalised to one point per species per half-degree cell.';
+                })
+                .catch(err => {
+                  outsideLoading = false;
+                  if (scopeNote) scopeNote.textContent = 'The out-of-basin layer could not be loaded: ' + err.message;
+                  if (scopeIn) scopeIn.checked = true;
+                  if (scopeAll) scopeAll.checked = false;
+                });
+            } else if (outside) {
+              outside.show(outside.markers);
+              if (scopeNote) scopeNote.textContent = 'All records shown; out-of-basin points are generalised to one point per species per half-degree cell.';
+            }
+          } else {
+            if (outside) outside.show([]);
+            if (scopeNote) scopeNote.textContent = 'Loading the in-basin records only; switch to all records to add the out-of-basin layer.';
+          }
+        }
+        if (scopeIn) scopeIn.addEventListener('change', () => setScope('in'));
+        if (scopeAll) scopeAll.addEventListener('change', () => setScope('all'));
         const loading = document.getElementById('homeLoading');
         if (loading) loading.remove();
+        window.__atlasHomeReady = true;
       })
       .catch(err => {
         const loading = document.getElementById('homeLoading');

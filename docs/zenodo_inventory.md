@@ -1,14 +1,14 @@
 # Inventory — Shrestha et al. 2025 data (macroecology)
 
-**Record:** Shrestha, N., et al. (2025). The human fingerprint of medicinal plant species diversity. *Current Biology*, doi:10.1016/j.cub.2025.09.050.
+**Record:** Shrestha, N., et al. (2025). The human fingerprint of medicinal plant species diversity. *Current Biology*, doi:10.1016/j.cub.2025.09.050. Data deposit: Zenodo record 14765689; repository: https://github.com/nawalshrestha/med_plants (commit e0bea268, recorded in `data/raw/shrestha2025/commit.txt`).
 
-**Data source:** `data/raw/shrestha2025/data.csv` — 369 botanical countries' vascular and medicinal diversity data, excluding Antarctica and Oceania.
+**Data source:** `data/raw/shrestha2025/data.csv` — 369 botanical countries' vascular and medicinal diversity data (333 retained after excluding Antarctica and Oceania).
 
-**DOI:** 10.1016/j.cub.2025.09.050
+**DOI:** 10.1016/j.cub.2025.09.050 (paper) · Zenodo 14765689 (data deposit)
 
-**License:** The paper's data is reused under the paper's DOI and license terms; see the atlas LICENSE and data_dictionary.md for full attribution.
+**License:** CC-BY-4.0 (Shrestha et al. 2025 repository/data deposit); see the atlas LICENSE and data_dictionary.md for full attribution.
 
-**Checksum:** c151663edaa46a8a1d77fc673e0f080e
+**Checksum:** c151663edaa46a8a1d77fc673e0f080e (md5, `data/raw/shrestha2025/data.csv`)
 
 **Contents:** Each row represents a botanical country with columns: LEVEL3_NAME, TDWG, realm, vas_rich, med_rich, Human, glottolog, Clim.PC1, Clim.PC2, MAT_ANO, MAT_STD, residuals, and other covariates used in the global OLS model med_rich ~ vas_rich.
 

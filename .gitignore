@@ -1,4 +1,9 @@
-data/raw/
+# Raw harvests are re-derived from source and are not committed, EXCEPT the
+# Shrestha et al. 2025 macroecology deposit, which is small, third-party,
+# licence-clear (CC-BY-4.0) and must travel with the repo for reproducibility
+# (see docs/zenodo_inventory.md).
+data/raw/*
+!data/raw/shrestha2025/
 *.numbers
 .DS_Store
 .venv/

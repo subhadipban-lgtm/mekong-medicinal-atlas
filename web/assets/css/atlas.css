@@ -58,6 +58,9 @@ code, .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-s
 .badge-iucn.DD { background: #6b7280; color: #fff; }
 .badge-sens { background: var(--sens); color: #fff; font-weight: 600; }
 .legend-grade .sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.legend-scope { left: 0.7rem; right: auto; max-width: 340px; }
+.legend-scope .sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.map-scope-toggle { font-size: 0.86rem; }
 
 /* Tables */
 .table-atlas td, .table-atlas th { vertical-align: top; }

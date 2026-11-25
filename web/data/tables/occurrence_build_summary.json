@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "harvested": 153800,
+    "grade_C": 153798,
+    "exact": 150012,
+    "generalised": 3788,
+    "grade_D": 2,
+    "published_outside_basin": 137655,
+    "published_in_basin": 16143
+  },
+  "harvested": 153800,
+  "published": 153798,
+  "published_by_country": {
+    "CN": {
+      "in_basin": 7249,
+      "outside_basin": 111713
+    },
+    "TH": {
+      "in_basin": 3911,
+      "outside_basin": 18186
+    },
+    "VN": {
+      "in_basin": 2733,
+      "outside_basin": 6058
+    },
+    "LA": {
+      "in_basin": 1369,
+      "outside_basin": 23
+    },
+    "KH": {
+      "in_basin": 873,
+      "outside_basin": 472
+    },
+    "MM": {
+      "in_basin": 8,
+      "outside_basin": 1203
+    }
+  },
+  "basis_of_published": {
+    "HUMAN_OBSERVATION": 36652,
+    "PRESERVED_SPECIMEN": 114862,
+    "MATERIAL_SAMPLE": 622,
+    "OCCURRENCE": 1053,
+    "LIVING_SPECIMEN": 608,
+    "FOSSIL_SPECIMEN": 1
+  },
+  "licence_of_published": {
+    "http://creativecommons.org/licenses/by-nc/4.0/legalcode": 93035,
+    "http://creativecommons.org/licenses/by/4.0/legalcode": 48562,
+    "http://creativecommons.org/publicdomain/zero/1.0/legalcode": 12201
+  },
+  "gbif_datasets": 147,
+  "harvested_at": "2026-11-24",
+  "excluded_grade_d": 2,
+  "species_with_published_records": 311,
+  "sensitive_species": {
+    "sp_ailanthus_altissima": "IUCN EN",
+    "sp_aquilaria_crassna": "IUCN Critically Endangered",
+    "sp_aquilaria_malaccensis": "IUCN Critically Endangered",
+    "sp_aquilaria_sinensis": "IUCN VU",
+    "sp_coscinium_fenestratum": "IUCN Critically Endangered",
+    "sp_dalbergia_cochinchinensis": "IUCN Critically Endangered",
+    "sp_dalbergia_oliveri": "IUCN Critically Endangered",
+    "sp_ephedra_gerardiana": "IUCN VU",
+    "sp_kopsia_fruticosa": "IUCN EN",
+    "sp_mesua_ferrea": "IUCN VU",
+    "sp_panax_vietnamensis": "IUCN EN",
+    "sp_pterocarpus_macrocarpus": "IUCN EN",
+    "sp_rauvolfia_serpentina": "CITES Appendix II",
+    "sp_santalum_album": "IUCN VU",
+    "sp_tectona_grandis": "IUCN EN"
+  },
+  "sensitive_species_with_published_records": [
+    "sp_ailanthus_altissima",
+    "sp_aquilaria_crassna",
+    "sp_aquilaria_malaccensis",
+    "sp_aquilaria_sinensis",
+    "sp_coscinium_fenestratum",
+    "sp_dalbergia_cochinchinensis",
+    "sp_dalbergia_oliveri",
+    "sp_ephedra_gerardiana",
+    "sp_kopsia_fruticosa",
+    "sp_mesua_ferrea",
+    "sp_panax_vietnamensis",
+    "sp_pterocarpus_macrocarpus",
+    "sp_rauvolfia_serpentina",
+    "sp_santalum_album",
+    "sp_tectona_grandis"
+  ],
+  "generalisation_rule": {
+    "CR": "0.1 decimal degrees",
+    "EN/VU/CITES I-II": "0.01 decimal degrees"
+  },
+  "genus_level_taxa_without_occurrence_data": [
+    "sp_aglaia",
+    "sp_clausena",
+    "sp_erythrina",
+    "sp_sargassum"
+  ]
+}

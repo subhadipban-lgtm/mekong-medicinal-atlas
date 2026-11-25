@@ -69,6 +69,12 @@ MEKONG_L3 = {"CBD", "LAO", "MYA", "THA", "VIE", "CHC", "CHS"}
 REALM_COLORS = {"Indomalaya": "#166a4f", "Palearctic": "#1f5f8b", "Afrotropic": "#b36b00",
                 "Nearctic": "#7a5fa6", "Neotropic": "#4a8f8a", "Australasia": "#a63d57"}
 SHRESTHA_DOI = "10.1016/j.cub.2025.09.050"
+# The single Shrestha citation shown as the References block on every species page
+# (and as footnote ¹ on the methods page). Defined once so the 333 copies are
+# generated from one source instead of being pasted per page.
+SHRESTHA_REF = ("Shrestha et al., The human fingerprint of medicinal plant species diversity, "
+                "Current Biology (2025), doi:" + SHRESTHA_DOI + ".")
+SHRESTHA_REF_FOOTNOTE = f'¹ {SHRESTHA_REF}'
 
 
 def macro_class_badge(cls: str) -> str:
@@ -124,7 +130,9 @@ def shrestha_commit() -> str:
 NAV = [("index.html", "Atlas", "index"), ("explore.html", "Explore", "explore"),
        ("species/index.html", "Species", "species"), ("evidence.html", "Evidence", "evidence"),
        ("macroecology.html", "Macroecology", "macroecology"),
+       ("harvest_pressure.html", "Harvest pressure & hydrological risk", "sustainability"),
        ("methods.html", "Methods", "methods"),
+       ("download.html", "Download", "download"),
        ("about.html", "About", "about")]
 
 
@@ -153,6 +161,13 @@ def badge_iucn(code: str) -> str:
     if not first:
         return '<span class="text-muted" title="No IUCN category recorded">–</span>'
     return f'<span class="badge badge-iucn {e(first)}" title="IUCN category {e(code)}">{e(code)}</span>'
+
+
+def badge_pressure(cls: str) -> str:
+    """Badge for harvest-pressure / hydrological-fragmentation classes."""
+    tone = {"very high": "danger", "high": "warning", "moderate": "info", "low": "secondary"}
+    tone = tone.get(cls, "light")
+    return f'<span class="badge text-bg-{tone}">{e(cls)}</span>'
 
 
 def doi_link(doi: str, grade_basis: str = "") -> str:
@@ -335,6 +350,7 @@ def load() -> dict:
     d["geo"] = L.read_json(L.GEO / "_occurrence_geo_summary.json")
     d["layers"] = L.read_json(L.GEO / "_layer_provenance.json")
     d["ev"] = load_evidence()
+
     d["macro"] = load_macroecology()
     return d
 
@@ -364,21 +380,41 @@ def copy_downloads() -> dict[str, int]:
     tables = L.WEB / "data" / "tables"
     tables.mkdir(parents=True, exist_ok=True)
     for name in ("species_master", "uses", "pharmacology", "conservation_trade", "references", "occurrence_summary_by_species",
-                 "evidence_summary.json", "occurrence_build_summary.json"):
+                 "evidence_grade_provenance", "evidence_summary.json", "occurrence_build_summary.json"):
         src = L.PROCESSED / (name if name.endswith(".json") else name + ".csv")
+        if not src.exists():
+            continue
         shutil.copyfile(src, tables / src.name)
         sizes[f"tables/{src.name}"] = src.stat().st_size
+    # NOTE: the full evidence-engine tables (publications.csv ~27 MB,
+    # species_compound.csv, search_log.csv) are deliberately NOT published — the
+    # Evidence page states they are held privately and available on request. Only
+    # the aggregate evidence_grade_provenance.csv (a table) is downloadable.
     dwc = L.WEB / "data" / "dwca"
     dwc.mkdir(parents=True, exist_ok=True)
-    if (L.DWC / "dwca.zip").exists():
-        shutil.copyfile(L.DWC / "dwca.zip", dwc / "dwca-mekong-medicinal-plant-atlas.zip")
-        shutil.copyfile(L.DWC / "eml.xml", dwc / "eml.xml")
+    # The web copy of the Darwin Core Archive is the published artefact. Only
+    # populate it when absent so a --site-only rebuild never overwrites it with
+    # a stale data/dwc copy (the committed one carries the dataset citation).
+    zip_dest = dwc / "dwca-mekong-medicinal-plant-atlas.zip"
+    if not zip_dest.exists() and (L.DWC / "dwca.zip").exists():
+        shutil.copyfile(L.DWC / "dwca.zip", zip_dest)
         sizes["dwca/dwca-mekong-medicinal-plant-atlas.zip"] = (L.DWC / "dwca.zip").stat().st_size
-        sizes["dwca/eml.xml"] = (L.DWC / "eml.xml").stat().st_size
+        if (L.DWC / "eml.xml").exists():
+            shutil.copyfile(L.DWC / "eml.xml", dwc / "eml.xml")
+            sizes["dwca/eml.xml"] = (L.DWC / "eml.xml").stat().st_size
+    elif zip_dest.exists():
+        sizes["dwca/dwca-mekong-medicinal-plant-atlas.zip"] = zip_dest.stat().st_size
+        if (dwc / "eml.xml").exists():
+            sizes["dwca/eml.xml"] = (dwc / "eml.xml").stat().st_size
+    geo = L.WEB / "data" / "geo"
+    geo.mkdir(parents=True, exist_ok=True)
     for layer in ("occurrences.geojson", "occurrences_outside_basin.geojson", "mekong_basin.geojson",
                   "mekong_basin_display.geojson", "mekong_river_naturalearth.geojson", "countries_outline.geojson"):
-        shutil.copyfile(L.GEO / layer, L.WEB / "data" / "geo" / layer)
-        sizes[f"geo/{layer}"] = (L.GEO / layer).stat().st_size
+        src = L.GEO / layer
+        if not src.exists():
+            continue
+        shutil.copyfile(src, geo / layer)
+        sizes[f"geo/{layer}"] = src.stat().st_size
     return sizes
 
 
@@ -447,15 +483,29 @@ def home(d: dict) -> str:
   </div>
 </header>
 <main class="container-fluid px-3 px-lg-4 py-4">
-  <h2 class="h4">Occurrence records inside the Mekong basin</h2>
+  <h2 class="h4">Occurrence records</h2>
   <p class="text-muted small mb-2">Every one of the {n(in_basin["records"])} georeferenced records that falls inside the basin boundary, coloured by evidence grade.
-  Click a cluster for its species composition; click a point for the record. {n(geo["outside_basin"]["records"])} further records from the same
-  countries lie outside the basin and can be switched on in the <a href="explore.html">explore page</a>.</p>
+  {n(geo["outside_basin"]["records"])} further records from the same countries lie outside the basin. In-basin records are shown as published; out-of-basin
+  records are generalised to one point per species per half-degree cell.</p>
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-2" role="group" aria-label="Map record scope">
+    <div class="btn-group btn-group-sm map-scope-toggle" id="mapScope">
+      <input class="btn-check" type="radio" name="mapScope" id="scopeInBasin" value="in" checked>
+      <label class="btn btn-outline-secondary" for="scopeInBasin">In-basin records ({n(in_basin["records"])})</label>
+      <input class="btn-check" type="radio" name="mapScope" id="scopeAll" value="all">
+      <label class="btn btn-outline-secondary" for="scopeAll">All records ({n(geo["outside_basin"]["records"] + in_basin["records"])})</label>
+    </div>
+    <span class="small text-muted" id="scopeNote">Loading the in-basin records only; switch to all records to add the out-of-basin layer.</span>
+  </div>
   <div class="map-shell map-home">
     <div class="map" id="map" role="application" aria-label="Map of occurrence records inside the Mekong basin"></div>
     <div class="map-tools">{north_arrow()}</div>
     <div class="map-status" id="homeStatus">Loading records…</div>
     {MAP_LEGEND}
+    <div class="map-legend legend-scope">
+      <div><strong>Record scope</strong></div>
+      <div><span class="sw" style="background:#1b5e20"></span>in-basin record (inside the basin boundary)</div>
+      <div><span class="sw" style="background:#66707a;opacity:.55"></span>out-of-basin record (same six countries, outside the basin; generalised to a half-degree cell)</div>
+    </div>
     <div id="homeLoading" class="map-status" style="top:.7rem;left:.7rem;bottom:auto">Loading the atlas…</div>
   </div>
   <div class="row g-3 mt-1 align-items-center">
@@ -533,11 +583,16 @@ def explore(d: dict) -> str:
 
 
 def scatter_svg(d: dict) -> str:
-    """Vascular vs medicinal diversity scatter with realm regression lines."""
+    """Vascular vs medicinal diversity scatter with realm regression lines.
+
+    Raises instead of degrading when the Shrestha input is missing: a build that
+    silently renders "unavailable" shipped this page empty before.
+    """
     pts = d["macro"]["scatter"]
     slopes = {s["realm"]: s for s in d["macro"]["slopes"]}
-    if not pts:
-        return '<p class="text-muted">Scatter unavailable (Shrestha input missing).</p>'
+    if not pts or not slopes:
+        sys.exit("macroecology scatter: Shrestha input missing or empty "
+                 "(data/raw/shrestha2025/data.csv) — refusing to render a placeholder")
     W, H, P = 880, 540, 52
     xmax = max(p["vas"] for p in pts) * 1.03
     ymax = max(p["med"] for p in pts) * 1.03
@@ -579,6 +634,17 @@ def scatter_svg(d: dict) -> str:
     leg = "".join(f'<span class="me-2"><span style="display:inline-block;width:10px;height:10px;background:{c};border-radius:50%"></span> {e(r)}</span>'
                   for r, c in REALM_COLORS.items())
     return "".join(out) + f'<div class="small text-muted mt-1">{leg} · highlighted points = Mekong botanical countries</div>'
+
+
+def scatter_caption(slopes: list[dict]) -> str:
+    """Figure caption for the scatter: fitted slope and n per realm, matching the
+    realm-slope table's precision (slopes ×1,000, rounded as in the table)."""
+    parts = " · ".join(
+        f'{s["realm"]} slope {float(s["slope"]) * 1000:.0f} per 1,000 vascular (n = {n(s["n"])})'
+        for s in sorted(slopes, key=lambda x: -float(x["slope"])))
+    return ('<p class="small text-muted mb-2"><strong>Figure.</strong> Vascular vs medicinal plant diversity per botanical country, '
+            f'reproduced from the Shrestha et al. 2025 global analysis (their Figure 2) with the atlas\'s own refit. '
+            f'{parts}. Highlighted and labelled points are the seven Mekong botanical countries.</p>')
 
 
 def macroecology(d: dict) -> str:
@@ -653,6 +719,7 @@ def macroecology(d: dict) -> str:
     <tbody>{resid_rows}</tbody></table></div>
 
   <h2 class="h5 section-title">Where the Mekong sits on the global line</h2>
+  {scatter_caption(slopes)}
   <div class="row g-4">
     <div class="col-lg-8">{scatter_svg(d)}</div>
     <div class="col-lg-4">
@@ -707,6 +774,9 @@ def macroecology(d: dict) -> str:
     <li><strong>Data</strong>: Shrestha et al. 2025 repository (<code>nawalshrestha/med_plants</code>, data.csv, reused under the paper\u2019s DOI and commit hash recorded in the source register);
     WCVP (sftp.kew.org, retrieved 2026-11-25); WGSRPD level-3 boundaries (tdwg/wgsrpd); Glottolog (Zenodo record 24104033); Natural Earth 10m admin-1; GBIF occurrence API
     (vascular species counts per province, taxonKey=6).</li>
+    <li><strong>Botanical countries</strong>: the residual analysis uses the seven WGSRPD level-3 units that intersect the basin
+    (Cambodia, Laos, Myanmar, Thailand, Vietnam, China South-Central, China Southeast); the homepage\u2019s \u201c6 basin countries\u201d refers to
+    national boundaries, which are a different spatial unit.</li>
     <li><strong>Model</strong>: ordinary least squares, med_rich ~ vas_rich, over all botanical countries except Antarctica and Oceania (the authors\u2019 exclusion).
     Significance: |residual| &gt; 1.96 SD (the authors\u2019 threshold in residual_histogram.R); the table reports the two-tailed normal-approximation p.</li>
     <li><strong>Extension</strong>: the same model refit at admin-1 scale inside the basin using GBIF vascular species counts per province and the atlas\u2019s documented
@@ -936,7 +1006,7 @@ def species_page(d: dict, r: dict) -> str:
     if parts:
         extra += ('<dt>Macroecological context</dt><dd class="small">Among this taxon\'s countries, '
                   + "; ".join(parts)
-                  + f'<sup>1</sup><br><span class="text-muted">¹ Shrestha et al., The human fingerprint of medicinal plant species diversity, Current Biology (2025), doi:{SHRESTHA_DOI}.</span></dd>')
+                  + f'<sup>1</sup><br><span class="text-muted">{SHRESTHA_REF_FOOTNOTE}</span></dd>')
     cons_html = ""
     if cons:
         cons_html = f'''
@@ -1050,10 +1120,32 @@ def methods(d: dict) -> str:
     refs = "".join(
         f'<tr><td><code>{e(r["source_id"])}</code></td><td>{e(r["full_citation"])}</td><td>{e(r["license"])}</td>'
         f'<td>{status(r["notes"])}</td></tr>' for r in d["references"])
+    # Per-taxon source counts from the provenance export, for the transparency
+    # paragraph and the median-source column of the rubric table.
+    prov = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "evidence_grade_provenance.csv")}
+    def grade_sources(g: str) -> list[int]:
+        return [int(p["n_sources"]) for p in prov.values() if p["grade"] == g]
+    def median(vals: list[int]) -> float:
+        if not vals:
+            return 0.0
+        s = sorted(vals)
+        mid = len(s) // 2
+        return s[mid] if len(s) % 2 else (s[mid - 1] + s[mid]) / 2
+    prov_a = grade_sources("A")
+    single = sum(1 for p in prov.values() if int(p["n_sources"]) <= 1)
+    prov_html = ""
+    if prov:
+        med_a = median(prov_a)
+        med_txt = f"{med_a:g} independent source{'s' if med_a != 1 else ''}"
+        prov_html = (f'<p class="small mt-3">Grade A was assigned to <strong>{len(prov_a)}</strong> taxa on the basis of a median of '
+                     f'<strong>{med_txt}</strong> per taxon '
+                     f'(range {min(prov_a)}–{max(prov_a)}). <strong>{single}</strong> taxa are supported by a single source and are flagged in the '
+                     f'<a href="data/tables/evidence_grade_provenance.csv" download>provenance file</a> as low-redundancy.</p>')
     rubric = "".join(
         f'<tr><td>{badge_grade(g)}</td><td>{e(GRADE_TEXT[g])}</td><td class="text-end">{n(ev.get("species_by_grade", {}).get(g, 0))}</td>'
         f'<td class="text-end">{n(ev.get("rows_by_grade", {}).get("uses.csv", {}).get(g, 0))}</td>'
-        f'<td class="text-end">{n(ev.get("rows_by_grade", {}).get("pharmacology.csv", {}).get(g, 0))}</td></tr>' for g in ("A", "B", "C", "D"))
+        f'<td class="text-end">{n(ev.get("rows_by_grade", {}).get("pharmacology.csv", {}).get(g, 0))}</td>'
+        f'<td class="text-end">{median(grade_sources(g)):g}</td></tr>' for g in ("A", "B", "C", "D"))
     names = {s["species_id"]: s["accepted_name"] for s in d["species_master"]}
     sensitive = "".join(f'<tr><td><i>{e(names.get(sid, sid))}</i></td><td>{e(occ["sensitive_species"][sid])}</td></tr>'
                         for sid in occ["sensitive_species_with_published_records"])
@@ -1075,7 +1167,8 @@ def methods(d: dict) -> str:
   <h2 class="h5 section-title">Evidence grading rubric</h2>
   <p class="small">Every use record, pharmacology record and species carries an evidence grade and a source identifier. A row citing several sources takes the best grade among them; a species takes the best grade of its rows.
   Grade A is given only when the article is confirmed — by DOI, by PMID or PMC id, or by a Crossref match on author, year and journal or species — or when the citation is a complete journal reference.</p>
-  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Grade</th><th>Definition</th><th class="text-end">Taxa</th><th class="text-end">Use records</th><th class="text-end">Pharmacology records</th></tr></thead><tbody>{rubric}</tbody></table></div>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Grade</th><th>Definition</th><th class="text-end">Taxa</th><th class="text-end">Use records</th><th class="text-end">Pharmacology records</th><th class="text-end">Median sources / taxon</th></tr></thead><tbody>{rubric}</tbody></table></div>
+  {prov_html}
   <p class="small">{len(ev.get("citation_issues", []))} citations were found to carry an error (a wrong DOI or PMID, or a misspelled journal or author) while grading; each is listed in the repository's QA report.</p>
 
   <h2 class="h5 section-title">Occurrence records</h2>
@@ -1124,7 +1217,7 @@ def methods(d: dict) -> str:
   the authors' country-level column) are flagged as fieldwork priorities — the documented difference from the global model is stated on the
   macroecology page and in the manuscript. Human occupancy is reused at its published resolution, never re-derived; language diversity
   (Glottolog points aggregated to admin-1) is mapped as context only, since the global model found only indirect climate-mediated effects.</p>
-  <p class="small text-muted">¹ Shrestha et al., The human fingerprint of medicinal plant species diversity, Current Biology (2025), doi:{SHRESTHA_DOI}.</p>
+  <p class="small text-muted">{SHRESTHA_REF_FOOTNOTE}</p>
 
   <h2 class="h5 section-title">Evidence engine <span class="text-muted fw-normal">(pilot)</span></h2>
   <p class="small">A parallel evidence layer maps publications, compounds and — from its Milestone 2 — compound–target–pathway networks for atlas taxa.
@@ -1153,9 +1246,6 @@ def methods(d: dict) -> str:
 
 def download(d: dict) -> str:
     sizes = copy_downloads()
-    for p in (L.WEB / "data" / "evidence").rglob("*"):
-        if p.is_file():
-            sizes[f"evidence/{p.relative_to(L.WEB / 'data' / 'evidence')}"] = p.stat().st_size
     rows = [
         ("dwca/dwca-mekong-medicinal-plant-atlas.zip", "Darwin Core Archive", "ZIP", "Published occurrence records as Darwin Core terms, with archive and dataset metadata.", "CC-BY-NC-4.0; each record keeps its own licence"),
         ("tables/species_master.csv", "Species master", "CSV", "One row per taxon: names, grades, conservation status, occurrence counts.", "Research compilation; primary sources cited per row"),
@@ -1164,16 +1254,15 @@ def download(d: dict) -> str:
         ("tables/conservation_trade.csv", "Conservation and trade", "CSV", "IUCN category and its basis, CITES appendix, trade notes.", "Cited public sources"),
         ("tables/occurrence_summary_by_species.csv", "Occurrence counts by species", "CSV", "Published records per species: inside basin, outside basin, specimen-based, generalised.", "CC-BY-NC-4.0"),
         ("tables/references.csv", "Source register", "CSV", "Every source with licence, access date and status.", "Metadata"),
+        ("tables/evidence_grade_provenance.csv", "Evidence-grade provenance", "CSV", "Per taxon: grade, number of distinct sources behind its uses and pharmacology, and the source IDs.", "Metadata"),
         ("tables/evidence_summary.json", "Evidence summary", "JSON", "Grade counts and the citation issues found while grading.", "Metadata"),
         ("geo/occurrences.geojson", "Occurrence records inside the basin", "GeoJSON", "One point per published record inside the basin.", "CC-BY-NC-4.0"),
         ("geo/occurrences_outside_basin.geojson", "Records outside the basin (generalised)", "GeoJSON", "One point per species per half-degree cell.", "CC-BY-NC-4.0"),
         ("geo/mekong_basin.geojson", "Mekong basin boundary", "GeoJSON", "Full-resolution boundary, EPSG:4326.", "CC-BY-4.0, Tiwari et al., doi:10.5281/zenodo.7622998"),
         ("geo/mekong_river_naturalearth.geojson", "Mekong River centreline", "GeoJSON", "Natural Earth 1:10m line.", "Public domain"),
-        ("evidence/publications.csv", "Evidence engine — publications", "CSV", "Publication metadata per pilot taxon with auto-assigned evidence tiers (Milestone 1).", "Open APIs (Europe PMC, OpenAlex); compilation cited per row"),
-        ("evidence/species_compound.csv", "Evidence engine — compounds", "CSV", "Compounds per pilot taxon with PubChem CID, InChIKey and SMILES.", "PubChem (public domain per molecule); compilation cited per row"),
-        ("evidence/search_log.csv", "Evidence engine — PRISMA search log", "CSV", "Every literature query: string, database, date and hit count.", "Metadata"),
-        ("evidence/pilot_summary.json", "Evidence engine — pilot summary", "JSON", "Per-taxon publication, evidence-tier and compound counts.", "Metadata"),
     ]
+    # Only advertise files that were actually written, so no download link 404s.
+    rows = [r for r in rows if (L.WEB / "data" / r[0]).exists()]
     table_rows = "".join(
         f'<tr><td><a href="data/{e(path)}" download>{e(path.split("/")[-1])}</a></td><td>{e(label)}</td><td>{e(fmt)}</td>'
         f'<td>{e(desc)}</td><td class="text-nowrap">{human(sizes.get(path, 0))}</td><td>{e(lic)}</td></tr>' for path, label, fmt, desc, lic in rows)
@@ -1250,7 +1339,8 @@ def main() -> int:
     pages = {"index.html": home(d), "explore.html": explore(d), "evidence.html": evidence(d),
              "macroecology.html": macroecology(d),
              "methods.html": methods(d),
-             "about.html": about(d), "species/index.html": species_index(d)}
+             "about.html": about(d), "harvest_pressure.html": sustainability(d),
+             "download.html": download(d), "species/index.html": species_index(d)}
     pages.update({f"species/{slug_of(r['species_id'])}.html": species_page(d, r) for r in d["species_master"]})
     for path, content in pages.items():
         target = L.WEB / path
@@ -1258,6 +1348,74 @@ def main() -> int:
         target.write_text(content, encoding="utf-8")
     print(f"pages written: {len(pages)} ({len(d['species_master'])} taxon pages) · version {VERSION['version']}")
     return 0
+
+
+def sustainability(d: dict) -> str:
+    hp_rows = L.read_csv(L.PROCESSED / "harvest_pressure_summary.csv")
+    hyp_rows = L.read_csv(L.PROCESSED / "hydrological_fragmentation.csv")
+    names = {s["species_id"]: s["accepted_name"] for s in d["species_master"]}
+    hp_high = sum(1 for r in hp_rows if r["harvest_pressure_class"] in ("high", "very high"))
+    hyp_high = sum(1 for r in hyp_rows if r["hydrological_vulnerability_class"] == "high")
+    hp_sorted = sorted(hp_rows, key=lambda r: -float(r["mean_harvest_pressure_in_range"] or 0))
+    hp_table = "".join(
+        f'<tr><td><a class="taxon" href="species/{slug_of(r["species_id"])}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+        f'<td class="text-end">{r["mean_harvest_pressure_in_range"]}</td>'
+        f'<td class="text-end">{n(r["n_cells"])}</td>'
+        f'<td class="text-end">{r["local_use_score"]}</td>'
+        f'<td>{badge_pressure(r["harvest_pressure_class"])}</td></tr>'
+        for r in hp_sorted[:25])
+    hyp_sorted = sorted(hyp_rows, key=lambda r: -float(r["pct_within_10km_major_dam"] or 0))
+    hyp_table = "".join(
+        f'<tr><td><a class="taxon" href="species/{slug_of(r["species_id"])}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+        f'<td class="text-end">{n(r["n_occurrences_in_basin"])}</td>'
+        f'<td class="text-end">{r["pct_within_10km_major_dam"]}%</td>'
+        f'<td class="text-end">{r["mean_distance_to_nearest_major_dam_km"]} km</td>'
+        f'<td>{badge_pressure(r["hydrological_vulnerability_class"])}</td></tr>'
+        for r in hyp_sorted[:25])
+    return page("Harvest pressure & hydrological risk — Mekong Medicinal Plant Atlas", f'''
+<main class="container-fluid px-3 px-lg-4 py-3">
+  <h1 class="h4 mb-1">Harvest pressure & hydrological risk</h1>
+  <p class="small text-muted">Two operational indices of conservation pressure on the atlas taxa: a harvest-pressure proxy
+  (2050 population density × species richness × graded local use score, quantile-tiered) and a hydrological-fragmentation index
+  (share of each taxon's in-basin occurrences within 10 km of a major dam). Methods:
+  <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harvest_pressure_methods.md" target="_blank" rel="noopener">harvest pressure</a> ·
+  <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">hydrological fragmentation</a>.</p>
+  <div class="row g-3 mb-3">
+    <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(len(hp_rows))}</div><div class="l">taxa scored for harvest pressure</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(hp_high)}</div><div class="l">taxa high / very high</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(len(hyp_rows))}</div><div class="l">taxa assessed for hydrological fragmentation</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(hyp_high)}</div><div class="l">taxa high</div></div></div>
+  </div>
+
+  <h2 class="h5 section-title">Harvest-pressure index</h2>
+  <p class="small mb-2">Top 25 taxa by mean in-range pressure. Use score is 0.0 for taxa with no recorded ethnobotanical use in the current corpus.
+  For these taxa the pressure score reflects population density and species richness only and should be read as a demographic proxy,
+  not as evidence of harvest pressure on the species.</p>
+  <div class="table-responsive"><table class="table table-striped table-atlas">
+    <thead><tr><th>Taxon</th><th class="text-end">Mean pressure in range</th><th class="text-end">Cells</th>
+    <th class="text-end">Local use score</th><th>Class</th></tr></thead>
+    <tbody>{hp_table}</tbody></table></div>
+  <p class="small text-muted">Classes are quantiles over cells with positive pressure: low 0–50%, moderate 50–75%, high 75–90%, very high 90–100%.
+  The index is a proxy for potential collection pressure, not measured offtake.</p>
+
+  <h2 class="h5 section-title">Hydrological fragmentation</h2>
+  <p class="small mb-2">Top 25 taxa by share of in-basin occurrences within 10 km of a major dam (≥15 m height or ≥15 MW installed capacity).
+  A distance-based proxy: it does not model flow alteration, sediment trapping or groundwater drawdown.</p>
+  <div class="table-responsive"><table class="table table-striped table-atlas">
+    <thead><tr><th>Taxon</th><th class="text-end">In-basin occurrences</th><th class="text-end">Within 10 km of a major dam</th>
+    <th class="text-end">Mean distance to nearest dam</th><th>Class</th></tr></thead>
+    <tbody>{hyp_table}</tbody></table></div>
+  <p class="small text-muted">Classes: high &gt;50% of occurrences within 10 km · moderate 20–50% · low &lt;20%.</p>
+
+  <h2 class="h5 section-title">In progress</h2>
+  <ul class="small">
+    <li><strong>Climate-vulnerability SDM</strong> — species distribution models under future climate scenarios (SSP2-2050) will produce a
+    climate-vulnerability class per taxon. Planned for Milestone 3.</li>
+    <li><strong>Cultivation suitability</strong> — agronomic and land-use suitability scoring will produce a cultivation-suitability class per taxon.
+    Planned for Milestone 3.</li>
+  </ul>
+</main>
+''', "sustainability", "Harvest pressure & hydrological risk: harvest-pressure proxy and hydrological-fragmentation indices for Mekong medicinal plant taxa.", "none.js", need=())
 
 
 if __name__ == "__main__":

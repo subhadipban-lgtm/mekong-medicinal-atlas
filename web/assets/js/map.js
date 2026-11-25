@@ -114,9 +114,9 @@
 
   /* Builds one marker per feature once; filtering then swaps subsets in and out of the cluster group. */
   function occurrenceLayer(state, geojson, opts) {
-    const o = Object.assign({ light: false, species: () => null }, opts || {});
+    const o = Object.assign({ light: false, species: () => null, disableClusteringAtZoom: 12 }, opts || {});
     const group = L.markerClusterGroup({
-      disableClusteringAtZoom: 12, maxClusterRadius: 55, spiderfyOnMaxZoom: true,
+      disableClusteringAtZoom: o.disableClusteringAtZoom, maxClusterRadius: 55, spiderfyOnMaxZoom: true,
       showCoverageOnHover: false, zoomToBoundsOnClick: false, animate: false
     });
 

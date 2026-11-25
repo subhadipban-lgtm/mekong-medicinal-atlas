@@ -11,7 +11,7 @@
 | 3. Cluster popup reports species composition | **PASS** | 5 clusters tested at zooms 4, 5, 6, 7, 8; in each, the species list and record counts a popup shows match an independent tally of the underlying records |
 | 4. Clustering off at zoom 12; co-located points spiderfy | **PASS** | disableClusteringAtZoom = 12; at zoom 11 there are 82 clusters and 9 of them satisfy the spiderfy condition (spiderfyOnMaxZoom = true); at zoom 12 clustering is off, with 2925 individual markers and 0 clusters drawn |
 | 5. River above basemap, below records | **PASS** | computed z-index: tiles 200 < basin 350 < river 360 < records 600 < tooltips 650 (river above the basemap and below the records). Pane order in map.js: basin 350 < river 360 < records 400 (Leaflet overlay pane), fixed with custom panes so that load order cannot change it |
-| 6. Fast, responsive with all taxa | **PASS** | explore page interactive 1403 ms after navigation (budget 5000 ms) with 16,143 in-basin points loaded Initial explore payload: 4.5 MB raw, 0.5 MB gzipped. |
+| 6. Fast, responsive with all taxa | **PASS** | explore page interactive 1053 ms after navigation (budget 5000 ms) with 16,143 in-basin points loaded Initial explore payload: 4.5 MB raw, 0.5 MB gzipped. |
 | 7. Data dictionary complete and obeyed | **PASS** | 7 tables and 157 fields defined with type, unit and allowed values; 155,398 rows validated against the schema, 0 violations. |
 | 8. Conflict report produced | **PASS** | 1,024 conflicts and discrepancies of 5 kinds recorded in docs/CONFLICT_REPORT.md |
 

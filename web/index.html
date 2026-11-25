@@ -15,7 +15,7 @@
   <div class="container-fluid px-3 px-lg-4">
     <a class="navbar-brand" href="index.html">🌿 Mekong Medicinal Plant Atlas</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#atlasNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="atlasNav"><ul class="navbar-nav ms-auto"><a class="nav-link active" data-page="index" href="index.html">Atlas</a><a class="nav-link" data-page="explore" href="explore.html">Explore</a><a class="nav-link" data-page="species" href="species/index.html">Species</a><a class="nav-link" data-page="evidence" href="evidence.html">Evidence</a><a class="nav-link" data-page="macroecology" href="macroecology.html">Macroecology</a><a class="nav-link" data-page="methods" href="methods.html">Methods</a><a class="nav-link" data-page="about" href="about.html">About</a></ul></div>
+    <div class="collapse navbar-collapse" id="atlasNav"><ul class="navbar-nav ms-auto"><a class="nav-link active" data-page="index" href="index.html">Atlas</a><a class="nav-link" data-page="explore" href="explore.html">Explore</a><a class="nav-link" data-page="species" href="species/index.html">Species</a><a class="nav-link" data-page="evidence" href="evidence.html">Evidence</a><a class="nav-link" data-page="macroecology" href="macroecology.html">Macroecology</a><a class="nav-link" data-page="sustainability" href="harvest_pressure.html">Harvest pressure & hydrological risk</a><a class="nav-link" data-page="methods" href="methods.html">Methods</a><a class="nav-link" data-page="download" href="download.html">Download</a><a class="nav-link" data-page="about" href="about.html">About</a></ul></div>
   </div>
 </nav>
 
@@ -49,10 +49,19 @@
   </div>
 </header>
 <main class="container-fluid px-3 px-lg-4 py-4">
-  <h2 class="h4">Occurrence records inside the Mekong basin</h2>
+  <h2 class="h4">Occurrence records</h2>
   <p class="text-muted small mb-2">Every one of the 16,143 georeferenced records that falls inside the basin boundary, coloured by evidence grade.
-  Click a cluster for its species composition; click a point for the record. 137,655 further records from the same
-  countries lie outside the basin and can be switched on in the <a href="explore.html">explore page</a>.</p>
+  137,655 further records from the same countries lie outside the basin. In-basin records are shown as published; out-of-basin
+  records are generalised to one point per species per half-degree cell.</p>
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-2" role="group" aria-label="Map record scope">
+    <div class="btn-group btn-group-sm map-scope-toggle" id="mapScope">
+      <input class="btn-check" type="radio" name="mapScope" id="scopeInBasin" value="in" checked>
+      <label class="btn btn-outline-secondary" for="scopeInBasin">In-basin records (16,143)</label>
+      <input class="btn-check" type="radio" name="mapScope" id="scopeAll" value="all">
+      <label class="btn btn-outline-secondary" for="scopeAll">All records (153,798)</label>
+    </div>
+    <span class="small text-muted" id="scopeNote">Loading the in-basin records only; switch to all records to add the out-of-basin layer.</span>
+  </div>
   <div class="map-shell map-home">
     <div class="map" id="map" role="application" aria-label="Map of occurrence records inside the Mekong basin"></div>
     <div class="map-tools"><div class="north-arrow" title="North is up"><svg width="18" height="26" viewBox="0 0 18 26" role="img" aria-label="North arrow"><polygon points="9,1 15,19 9,15 3,19" fill="#166a4f"/><text x="9" y="25" text-anchor="middle" font-size="8" font-weight="700" fill="#1c2420">N</text></svg></div></div>
@@ -66,6 +75,11 @@
   <div><span class="sw" style="background:#166a4f;opacity:.2;border:1px dashed #166a4f"></span>Mekong basin boundary</div>
   <div><span class="sw" style="background:#1f5f8b;border-radius:2px"></span>Mekong River</div>
 </div>
+    <div class="map-legend legend-scope">
+      <div><strong>Record scope</strong></div>
+      <div><span class="sw" style="background:#1b5e20"></span>in-basin record (inside the basin boundary)</div>
+      <div><span class="sw" style="background:#66707a;opacity:.55"></span>out-of-basin record (same six countries, outside the basin; generalised to a half-degree cell)</div>
+    </div>
     <div id="homeLoading" class="map-status" style="top:.7rem;left:.7rem;bottom:auto">Loading the atlas…</div>
   </div>
   <div class="row g-3 mt-1 align-items-center">

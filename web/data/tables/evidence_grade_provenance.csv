@@ -1,0 +1,334 @@
+species_id,accepted_name,grade,n_sources,source_ids,notes
+sp_acanthus_ilicifolius,Acanthus ilicifolius,A,7,SRC-001; SRC-014,
+sp_achyranthes_aspera,Achyranthes aspera,A,2,SRC-001; SRC-014,
+sp_acmella_oleracea,Acmella oleracea,A,2,SRC-001; SRC-014,
+sp_acorus_calamus,Acorus calamus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_acorus_gramineus,Acorus gramineus,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_acrostichum_aureum,Acrostichum aureum,A,3,SRC-001; SRC-014,
+sp_adenanthera_pavonina,Adenanthera pavonina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_aegiceras_corniculatum,Aegiceras corniculatum,A,2,SRC-001; SRC-014,
+sp_aegle_marmelos,Aegle marmelos,A,10,SRC-001; SRC-014,
+sp_aerva_lanata,Aerva lanata,A,3,SRC-001; SRC-014,
+sp_aglaia,Aglaia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_aglaia_elliptica,Aglaia elliptica,C,2,SRC-001; SRC-014,
+sp_aglaia_foveolata,Aglaia foveolata,A,3,SRC-001; SRC-014,
+sp_aglaia_odorata,Aglaia odorata,A,3,SRC-001; SRC-014,
+sp_aglaia_roxburghiana,Aglaia roxburghiana,A,2,SRC-001; SRC-014,
+sp_ailanthus_altissima,Ailanthus altissima,A,6,SRC-001; SRC-014,
+sp_albizia_lebbeck,Albizia lebbeck,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_allamanda_cathartica,Allamanda cathartica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_alpinia_galanga,Alpinia galanga,A,6,SRC-001; SRC-014,
+sp_alpinia_officinarum,Alpinia officinarum,A,4,SRC-001; SRC-014,
+sp_alpinia_zerumbet,Alpinia zerumbet,A,3,SRC-001; SRC-014,
+sp_alstonia_macrophylla,Alstonia macrophylla,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_alstonia_scholaris,Alstonia scholaris,A,8,SRC-001; SRC-014,
+sp_alternanthera_sessilis,Alternanthera sessilis,A,2,SRC-001; SRC-014,
+sp_alyxia_reinwardtii,Alyxia reinwardtii,C,3,SRC-001; SRC-014,
+sp_amomum_villosum,Amomum villosum,A,2,SRC-001; SRC-014,
+sp_andrographis_paniculata,Andrographis paniculata,A,10,SRC-001; SRC-014,
+sp_anodendron_affine,Anodendron affine,A,3,SRC-001; SRC-014,
+sp_aphanamixis_polystachya,Aphanamixis polystachya,A,7,SRC-001; SRC-014,
+sp_aquilaria_crassna,Aquilaria crassna,A,12,SRC-001; SRC-014,
+sp_aquilaria_malaccensis,Aquilaria malaccensis,A,3,SRC-001; SRC-014,
+sp_aquilaria_sinensis,Aquilaria sinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_arcangelisia_flava,Arcangelisia flava,A,3,SRC-001; SRC-014,
+sp_areca_catechu,Areca catechu,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_argemone_mexicana,Argemone mexicana,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_argyreia_nervosa,Argyreia nervosa,A,2,SRC-001; SRC-014,
+sp_argyreia_osyrensis,Argyreia osyrensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_aristolochia_indica,Aristolochia indica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_aristolochia_tagala,Aristolochia tagala,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_artemisia_annua,Artemisia annua,A,3,SRC-001; SRC-014,
+sp_artocarpus_heterophyllus,Artocarpus heterophyllus,A,8,SRC-001; SRC-014,
+sp_artocarpus_lakoocha,Artocarpus lakoocha,A,4,SRC-001; SRC-014,
+sp_asparagus_cochinchinensis,Asparagus cochinchinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_avicennia_marina,Avicennia marina,A,2,SRC-001; SRC-014,
+sp_azadirachta_indica,Azadirachta indica,A,5,SRC-001; SRC-014,
+sp_bacopa_monnieri,Bacopa monnieri,A,7,SRC-001; SRC-014,
+sp_barleria_prionitis,Barleria prionitis,A,8,SRC-001; SRC-014,
+sp_bauhinia_purpurea,Bauhinia purpurea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_biancaea_sappan,Biancaea sappan,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_blumea_balsamifera,Blumea balsamifera,A,6,SRC-001; SRC-014,
+sp_boesenbergia_rotunda,Boesenbergia rotunda,A,7,SRC-001; SRC-014,
+sp_bombax_ceiba,Bombax ceiba,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_brownlowia_tersa,Brownlowia tersa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_brucea_javanica,Brucea javanica,A,9,SRC-001; SRC-014,
+sp_bruguiera_gymnorrhiza,Bruguiera gymnorhiza,A,3,SRC-001; SRC-014,
+sp_buddleja_asiatica,Buddleja asiatica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_buddleja_officinalis,Buddleja officinalis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_butea_monosperma,Butea monosperma,A,5,SRC-001; SRC-014,
+sp_butea_superba,Butea superba,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_caesalpinia_sappan,Caesalpinia sappan,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_callicarpa_macrophylla,Callicarpa macrophylla,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_calophyllum_inophyllum,Calophyllum inophyllum,A,5,SRC-001; SRC-014,
+sp_calotropis_gigantea,Calotropis gigantea,A,3,SRC-001; SRC-014,
+sp_camellia_sinensis,Camellia sinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cananga_odorata,Cananga odorata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cannabis_sativa,Cannabis sativa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_capsicum_annuum,Capsicum annuum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cardiospermum_halicacabum,Cardiospermum halicacabum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cassia_alata,Cassia alata,A,2,SRC-001; SRC-014,
+sp_cassia_angustifolia,Cassia angustifolia,C,2,SRC-001; SRC-014,
+sp_cassia_fistula,Cassia fistula,A,4,SRC-001; SRC-014,
+sp_catharanthus_roseus,Catharanthus roseus,A,6,SRC-001; SRC-014,
+sp_celosia_cristata,Celosia cristata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_centella_asiatica,Centella asiatica,A,6,SRC-001; SRC-014,
+sp_ceriops_tagal,Ceriops tagal,A,3,SRC-001; SRC-014,
+sp_chloranthus_spicatus,Chloranthus spicatus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_chonemorpha_fragrans,Chonemorpha fragrans,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_chromolaena_odorata,Chromolaena odorata,A,3,SRC-001; SRC-014,
+sp_chrysanthemum_cinerariifolium,Chrysanthemum cinerariifolium,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_chukrasia_tabularis,Chukrasia tabularis,A,6,SRC-001; SRC-014,
+sp_cinnamomum_camphora,Cinnamomum camphora,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cinnamomum_tamala,Cinnamomum tamala,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cissampelos_pareira,Cissampelos pareira,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cissus_quadrangularis,Cissus quadrangularis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_citrus_hystrix,Citrus hystrix,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_clausena,Clausena,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_clausena_harmandiana,Clausena harmandiana,A,4,SRC-001; SRC-014,
+sp_clerodendrum_indicum,Clerodendrum indicum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_clerodendrum_viscosum,Clerodendrum viscosum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_clinacanthus_nutans,Clinacanthus nutans,A,7,SRC-001; SRC-014,
+sp_clitoria_ternatea,Clitoria ternatea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cocos_nucifera,Cocos nucifera,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_coix_lacryma,Coix lacryma,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_combretum_quadrangulare,Combretum quadrangulare,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_coscinium_fenestratum,Coscinium fenestratum,A,8,SRC-001; SRC-014,
+sp_costus_speciosus,Costus speciosus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_crateva_religiosa,Crateva religiosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_crinum_asiaticum,Crinum asiaticum,A,2,SRC-001; SRC-014,
+sp_cryptolepis_dubia,Cryptolepis dubia,A,2,SRC-001; SRC-014,
+sp_curculigo_orchioides,Curculigo orchioides,A,4,SRC-001; SRC-014,
+sp_curcuma_caesia,Curcuma caesia,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_curcuma_comosa,Curcuma comosa,A,7,SRC-001; SRC-014,
+sp_curcuma_longa,Curcuma longa,A,6,SRC-001; SRC-014,
+sp_curcuma_phaeocaulis,Curcuma phaeocaulis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_curcuma_xanthorrhiza,Curcuma xanthorrhiza,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_curcuma_zedoaria,Curcuma zedoaria,A,5,SRC-001; SRC-014,
+sp_cuscuta_reflexa,Cuscuta reflexa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_cyclea_barbata,Cyclea barbata,C,2,SRC-001; SRC-014,
+sp_cynometra_ramiflora,Cynometra ramiflora,A,2,SRC-001; SRC-014,
+sp_cyperus_rotundus,Cyperus rotundus,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,A,9,SRC-001; SRC-014,
+sp_dalbergia_oliveri,Dalbergia oliveri,C,3,SRC-001; SRC-014,
+sp_datura_metel,Datura metel,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_dendrobium_devonianum,Dendrobium devonianum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_dendrobium_nobile,Dendrobium nobile,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_derris_elliptica,Derris elliptica,A,3,SRC-001; SRC-014,
+sp_desmodium_triquetrum,Desmodium triquetrum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_euphoria_longana,Dimocarpus longan,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_dioscorea_bulbifera,Dioscorea bulbifera,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_dioscorea_pentaphylla,Dioscorea pentaphylla,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_diospyros_mollis,Diospyros mollis,A,7,SRC-001; SRC-014,
+sp_dolichandrone_spathacea,Dolichandrone spathacea,A,2,SRC-001; SRC-014,
+sp_dracaena_angustifolia,Dracaena angustifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_duhaldea_cappa,Duhaldea cappa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_dysoxylum_binectariferum,Dysoxylum binectariferum,A,2,SRC-001; SRC-014,
+sp_ecdysanthera_rosea,Ecdysanthera rosea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_eclipta_prostrata,Eclipta prostrata,A,6,SRC-001; SRC-014,
+sp_elephantopus_scaber,Elephantopus scaber,A,5,SRC-001; SRC-014,
+sp_embelia_ribes,Embelia ribes,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_entada_phaseoloides,Entada phaseoloides,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_ephedra_gerardiana,Ephedra gerardiana,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_erythrina,Erythrina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_erythrina_suberosa,Erythrina suberosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_erythrina_variegata,Erythrina variegata,A,3,SRC-001; SRC-014,
+sp_eurycoma_longifolia,Eurycoma longifolia,A,11,SRC-001; SRC-014,
+sp_excoecaria_agallocha,Excoecaria agallocha,A,2,SRC-001; SRC-014,
+sp_ficus_hispida,Ficus hispida,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_ficus_racemosa,Ficus racemosa,A,3,SRC-001; SRC-014,
+sp_ficus_religiosa,Ficus religiosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_flacourtia_jangomas,Flacourtia jangomas,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_garcinia_atroviridis,Garcinia atroviridis,A,2,SRC-001; SRC-014,
+sp_garcinia_cowa,Garcinia cowa,A,7,SRC-001; SRC-014,
+sp_garcinia_hanburyi,Garcinia hanburyi,A,5,SRC-001; SRC-014,
+sp_garcinia_mangostana,Garcinia mangostana,A,11,SRC-001; SRC-014,
+sp_garcinia_pedunculata,Garcinia pedunculata,A,2,SRC-001; SRC-014,
+sp_garcinia_schomburgkiana,Garcinia schomburgkiana,A,2,SRC-001; SRC-014,
+sp_gardenia_jasminoides,Gardenia jasminoides,C,4,SRC-001; SRC-014,
+sp_gelsemium_elegans,Gelsemium elegans,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_glycosmis_pentaphylla,Glycosmis pentaphylla,A,4,SRC-001; SRC-014,
+sp_glycyrrhiza_glabra,Glycyrrhiza glabra,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_gmelina_arborea,Gmelina arborea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_gymnema_sylvestre,Gymnema sylvestre,A,7,SRC-001; SRC-014,
+sp_gynura_procumbens,Gynura procumbens,A,2,SRC-001; SRC-014,
+sp_gynura_pseudochina,Gynura pseudochina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_gyrinops_salicifolia,Gyrinops salicifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_helicteres_isora,Helicteres isora,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_heritiera_littoralis,Heritiera littoralis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_hibiscus_tiliaceus,Hibiscus tiliaceus,A,2,SRC-001; SRC-014,
+sp_hiptage_benghalensis,Hiptage benghalensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_holarrhena_antidysenterica,Holarrhena pubescens,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_holarrhena_pubescens,Holarrhena pubescens,A,5,SRC-001; SRC-014,
+sp_homalomena_pendula,Homalomena pendula,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_houttuynia_cordata,Houttuynia cordata,A,4,SRC-001; SRC-014,
+sp_hydnocarpus_kurzii,Hydnocarpus kurzii,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_hygrophila_auriculata,Hygrophila auriculata,A,6,SRC-001; SRC-014,
+sp_hygrophila_spinosa,Hygrophila spinosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_hymenocallis_littoralis,Hymenocallis littoralis,A,2,SRC-001; SRC-014,
+sp_hypericum_japonicum,Hypericum japonicum,A,2,SRC-001; SRC-014,
+sp_hypericum_perforatum,Hypericum perforatum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_ichnocarpus_frutescens,Ichnocarpus frutescens,A,2,SRC-001; SRC-014,
+sp_illicium_verum,Illicium verum,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_intsia_bijuga,Intsia bijuga,C,2,SRC-001; SRC-014,
+sp_ipomoea_aquatica,Ipomoea aquatica,A,6,SRC-001; SRC-014,
+sp_ixora_chinensis,Ixora chinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_jatropha_curcas,Jatropha curcas,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_justicia_adhatoda,Justicia adhatoda,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_justicia_gendarussa,Justicia gendarussa,A,2,SRC-001; SRC-014,
+sp_kaempferia_galanga,Kaempferia galanga,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_kaempferia_parviflora,Kaempferia parviflora,A,8,SRC-001; SRC-014,
+sp_kopsia_fruticosa,Kopsia fruticosa,A,4,SRC-001; SRC-014,
+sp_lannea_grandis,Lannea grandis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_lansium_domesticum,Lansium domesticum,A,6,SRC-001; SRC-014,
+sp_leonurus_japonicus,Leonurus japonicus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_leucaena_leucocephala,Leucaena leucocephala,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_limonia_acidissima,Limonia acidissima,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_litsea_cubeba,Litsea cubeba,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_lumnitzera_racemosa,Lumnitzera racemosa,A,2,SRC-001; SRC-014,
+sp_madhuca_longifolia,Madhuca longifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_mahonia_bealei,Mahonia bealei,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_mallotus_philippensis,Mallotus philippensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_mangifera_indica,Mangifera indica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_markhamia_stipulata,Markhamia stipulata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_marsdenia_tenacissima,Marsdenia tenacissima,A,6,SRC-001; SRC-014,
+sp_melastoma_malabathricum,Melastoma malabathricum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_melia_azedarach,Melia azedarach,A,5,SRC-001; SRC-014,
+sp_mesua_ferrea,Mesua ferrea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_millettia_pachycarpa,Millettia pachycarpa,A,4,SRC-001; SRC-014,
+sp_mimosa_pudica,Mimosa pudica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_mitragyna_rotundifolia,Mitragyna rotundifolia,C,2,SRC-001; SRC-014,
+sp_mitragyna_speciosa,Mitragyna speciosa,A,7,SRC-001; SRC-014,
+sp_momordica_charantia,Momordica charantia,A,7,SRC-001; SRC-014,
+sp_momordica_cochinchinensis,Momordica cochinchinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_morinda_citrifolia,Morinda citrifolia,A,12,SRC-001; SRC-014,
+sp_moringa_oleifera,Moringa oleifera,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_morus_alba,Morus alba,A,8,SRC-001; SRC-014,
+sp_mucuna_pruriens,Mucuna pruriens,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_murraya_koenigii,Murraya koenigii,A,4,SRC-001; SRC-014,
+sp_nauclea_officinalis,Nauclea officinalis,A,6,SRC-001; SRC-014,
+sp_nerium_oleander,Nerium oleander,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_nigella_sativa,Nigella sativa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_nypa_fruticans,Nypa fruticans,A,2,SRC-001; SRC-014,
+sp_ocimum_tenuiflorum,Ocimum tenuiflorum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_ophiorrhiza_pumila,Ophiorrhiza pumila,A,4,SRC-001; SRC-014,
+sp_oroxylum_indicum,Oroxylum indicum,B,2,SRC-001; SRC-014,
+sp_paederia_foetida,Paederia foetida,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_panax_vietnamensis,Panax vietnamensis,A,6,SRC-001; SRC-014,
+sp_pandanus_amaryllifolius,Pandanus amaryllifolius,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_paramignya_trimera,Paramignya trimera,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_parsonsia_alboflavescens,Parsonsia alboflavescens,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_passiflora_foetida,Passiflora foetida,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_peperomia_pellucida,Peperomia pellucida,A,3,SRC-001; SRC-014,
+sp_polygonum_chinense,Persicaria chinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_phoenix_paludosa,Phoenix paludosa,A,2,SRC-001; SRC-014,
+sp_phyllanthus_amarus,Phyllanthus amarus,A,5,SRC-001; SRC-014,
+sp_phyllanthus_emblica,Phyllanthus emblica,A,5,SRC-001; SRC-014,
+sp_phyllanthus_niruri,Phyllanthus niruri,A,4,SRC-001; SRC-014,
+sp_phyllanthus_reticulatus,Phyllanthus reticulatus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_picrasma_quassioides,Picrasma quassioides,A,7,SRC-001; SRC-014,
+sp_piper_betle,Piper betle,A,4,SRC-001; SRC-014,
+sp_piper_longum,Piper longum,A,2,SRC-001; SRC-014,
+sp_piper_nigrum,Piper nigrum,A,5,SRC-001; SRC-014,
+sp_plantago_asiatica,Plantago asiatica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_pluchea_indica,Pluchea indica,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_plumbago_indica,Plumbago indica,A,5,SRC-001; SRC-014,
+sp_plumbago_zeylanica,Plumbago zeylanica,A,2,SRC-001; SRC-014,
+sp_plumeria_rubra,Plumeria rubra,A,3,SRC-001; SRC-014,
+sp_pogostemon_cablin,Pogostemon cablin,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_premna_serratifolia,Premna serratifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_psidium_guajava,Psidium guajava,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,A,4,SRC-001; SRC-014,
+sp_punica_granatum,Punica granatum,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_quassia_amara,Quassia amara,A,3,SRC-001; SRC-014,
+sp_randia_spinosa,Randia spinosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_rauvolfia_cambodiana,Rauvolfia cambodiana,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_rauvolfia_serpentina,Rauvolfia serpentina,A,4,SRC-001; SRC-014,
+sp_rhinacanthus_nasutus,Rhinacanthus nasutus,A,8,SRC-001; SRC-014,
+sp_rhizophora_apiculata,Rhizophora apiculata,A,3,SRC-001; SRC-014,
+sp_rhizophora_mucronata,Rhizophora mucronata,A,4,SRC-001; SRC-014,
+sp_rhododendron_moulmainense,Rhododendron moulmainense,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,A,5,SRC-001; SRC-014,
+sp_ricinus_communis,Ricinus communis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_rubia_cordifolia,Rubia cordifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_salacia_chinensis,Salacia chinensis,A,4,SRC-001; SRC-014,
+sp_sambucus_javanica,Sambucus javanica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_santalum_album,Santalum album,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_sapindus_saponaria,Sapindus saponaria,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_sargassum,Sargassum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_saurauia_napaulensis,Saurauia napaulensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_hedyotis_diffusa,Scleromitrion diffusum,C,2,SRC-001; SRC-014,
+sp_scoparia_dulcis,Scoparia dulcis,A,6,SRC-001; SRC-014,
+sp_selaginella_pulvinata,Selaginella pulvinata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_senegalia_catechu,Senegalia catechu,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_senna_alata,Senna alata,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_senna_alexandrina,Senna alexandrina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_senna_occidentalis,Senna occidentalis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_senna_tora,Senna tora,A,3,SRC-001; SRC-014,
+sp_sida_acuta,Sida acuta,A,3,SRC-001; SRC-014,
+sp_smilax_glabra,Smilax glabra,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_solanum_indicum,Solanum indicum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_solanum_trilobatum,Solanum trilobatum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_solanum_violaceum,Solanum violaceum,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_sonneratia_caseolaris,Sonneratia caseolaris,A,2,SRC-001; SRC-014,
+sp_sophora_flavescens,Sophora flavescens,A,4,SRC-001; SRC-014,
+sp_spondias_pinnata,Spondias pinnata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_stephania_epigaea,Stephania epigaea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_stephania_erecta,Stephania erecta,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_stephania_pierrei,Stephania pierrei,A,6,SRC-001; SRC-014,
+sp_stephania_rotunda,Stephania rotunda,A,6,SRC-001; SRC-014,
+sp_stephania_tetrandra,Stephania tetrandra,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_stereospermum_tetragonum,Stereospermum tetragonum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_streblus_asper,Streblus asper,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_strophanthus_gratus,Strophanthus gratus,C,2,SRC-001; SRC-014,
+sp_strychnos_axillaris,Strychnos axillaris,A,2,SRC-001; SRC-014,
+sp_strychnos_nux,Strychnos nux-vomica,A,5,SRC-001; SRC-014,
+sp_strychnos_potatorum,Strychnos potatorum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_styphnolobium_japonicum,Styphnolobium japonicum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_swertia_angustifolia,Swertia angustifolia,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_syzygium_aromaticum,Syzygium aromaticum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_syzygium_cumini,Syzygium cumini,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_syzygium_globiflorum,Syzygium globiflorum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_tabernaemontana_divaricata,Tabernaemontana divaricata,A,8,SRC-001; SRC-014,
+sp_tabernanthe_iboga,Tabernanthe iboga,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_tadehagi_triquetrum,Tadehagi triquetrum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_tamarindus_indica,Tamarindus indica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_tectona_grandis,Tectona grandis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_terminalia_bellirica,Terminalia bellirica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_terminalia_chebula,Terminalia chebula,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_terminalia_citrina,Terminalia citrina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_tetrastigma_hemsleyanum,Tetrastigma hemsleyanum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_thespesia_populnea,Thespesia populnea,A,2,SRC-001; SRC-014,
+sp_thevetia_peruviana,Thevetia peruviana,A,2,SRC-001; SRC-014,
+sp_thunbergia_laurifolia,Thunbergia laurifolia,A,6,SRC-001; SRC-014,
+sp_tinospora_crispa,Tinospora crispa,A,5,SRC-001; SRC-014,
+sp_tithonia_diversifolia,Tithonia diversifolia,A,5,SRC-001; SRC-014,
+sp_toona_ciliata,Toona ciliata,A,3,SRC-001; SRC-014,
+sp_toona_sinensis,Toona sinensis,A,5,SRC-001; SRC-014,
+sp_trachelospermum_asiaticum,Trachelospermum asiaticum,A,2,SRC-001; SRC-014,
+sp_trachelospermum_jasminoides,Trachelospermum jasminoides,A,3,SRC-001; SRC-014,
+sp_trachyspermum_roxburghianum,Trachyspermum roxburghianum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_trichosanthes_cucumerina,Trichosanthes cucumerina,A,2,SRC-001; SRC-014,
+sp_triumfetta_rhomboidea,Triumfetta rhomboidea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_tylophora_indica,Tylophora indica,A,4,SRC-001; SRC-014,
+sp_urceola_rosea,Urceola rosea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_urena_lobata,Urena lobata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_verbena_officinalis,Verbena officinalis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_vernonia_amygdalina,Vernonia amygdalina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_vetiveria_zizanioides,Vetiveria zizanioides,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_vitex_negundo,Vitex negundo,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_wedelia_chinensis,Wedelia chinensis,A,4,SRC-001; SRC-014,
+sp_wrightia_hanleyi,Wrightia hanleyi,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_wrightia_tinctoria,Wrightia tinctoria,A,2,SRC-001; SRC-014,
+sp_wrightia_tomentosa,Wrightia tomentosa,A,2,SRC-001; SRC-014,
+sp_xylocarpus_granatum,Xylocarpus granatum,A,7,SRC-001; SRC-014,
+sp_xylocarpus_moluccensis,Xylocarpus moluccensis,A,2,SRC-001; SRC-014,
+sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_zanthoxylum_armatum,Zanthoxylum armatum,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_zanthoxylum_rhetsa,Zanthoxylum rhetsa,A,3,SRC-001; SRC-014,
+sp_zingiber_cassumunar,Zingiber cassumunar,A,2,SRC-001; SRC-014,
+sp_zingiber_montanum,Zingiber montanum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
+sp_zingiber_officinale,Zingiber officinale,A,6,SRC-001; SRC-014,
+sp_zingiber_zerumbet,Zingiber zerumbet,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
