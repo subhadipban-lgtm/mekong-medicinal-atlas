@@ -1,0 +1,9 @@
+{
+  "n_countries_modelled": 333,
+  "corr_med_vas_residuals_vs_published": 0.998161,
+  "corr_full_lm_residuals_vs_published": 0.921924,
+  "mean_abs_diff_med_vas_vs_published": 45.537,
+  "indomalaya_slope": 0.31039,
+  "indomalaya_is_steepest": true,
+  "published_notes": "their residuals column in data.csv; closest match wins"
+}

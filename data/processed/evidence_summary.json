@@ -1,0 +1,614 @@
+{
+  "rubric": {
+    "A": "peer-reviewed article or survey with documented methodology",
+    "B": "major reference book or authoritative flora",
+    "C": "report, proceedings, specimen, or unverifiable citation",
+    "D": "web source, unverified lead, or no citation"
+  },
+  "rows_by_grade": {
+    "uses.csv": {
+      "A": 167,
+      "B": 37,
+      "C": 3
+    },
+    "pharmacology.csv": {
+      "A": 453,
+      "B": 2,
+      "C": 227,
+      "D": 8
+    }
+  },
+  "basis_counts": {
+    "uses.csv": {
+      "confirmed by query: peer-reviewed article": 123,
+      "reference book named in citation": 33,
+      "complete journal citation (not confirmed through Crossref)": 32,
+      "confirmed by doi: peer-reviewed article": 7,
+      "reference book named in citation ": 4,
+      "confirmed by pmid: peer-reviewed article": 2,
+      "printed DOI rejected: first author differs (lin) and species not in titl": 2,
+      "confirmed by query: peer-reviewed article ": 1,
+      "same author and year as a confirmed article ": 1,
+      "complete journal citation (not confirmed through Crossref) ": 1,
+      "printed DOI rejected: DOI not found in Crossref - verify ": 1
+    },
+    "pharmacology.csv": {
+      "citation too incomplete to confirm peer review": 187,
+      "confirmed by pmid: peer-reviewed article": 147,
+      "confirmed by query: peer-reviewed article": 142,
+      "complete journal citation (not confirmed through Crossref)": 85,
+      "confirmed by pmid: peer-reviewed article ": 28,
+      "confirmed by query: peer-reviewed article ": 28,
+      "confirmed by doi: peer-reviewed article": 18,
+      "report or proceedings named in citation": 18,
+      "citation too incomplete to confirm peer review ": 10,
+      "web source named in citation": 8,
+      "complete journal citation (not confirmed through Crossref) ": 5,
+      "printed PMID/PMC rejected: resolved article is not about plants or natur": 4,
+      "printed DOI rejected: DOI not found in Crossref - verify": 3,
+      "reference book named in citation": 2,
+      "printed PMID/PMC rejected: first author differs (rivero-cruz) and specie": 1,
+      "printed PMID/PMC rejected: first author differs (touhtouh) and species n": 1,
+      "printed DOI rejected: resolved article is not about plants or natural pr": 1,
+      "printed PMID/PMC rejected: year differs (2025) - verify": 1,
+      "report or proceedings named in citation ": 1
+    }
+  },
+  "species_by_grade": {
+    "A": 296,
+    "B": 22,
+    "C": 15
+  },
+  "citation_issues": [
+    {
+      "table": "uses.csv",
+      "row_id": "use_aquilaria-crassna_r12_1",
+      "species_id": "sp_aquilaria_crassna",
+      "citation": "ASEAN 2024, Herbal & Medicinal Plants Vol.3, p.300; Wang et al. 2018, Molecules 23:828, doi:10.3390/molecules23040828",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "uses.csv",
+      "row_id": "use_dalbergia-cochinchinensis_r69_1",
+      "species_id": "sp_dalbergia_cochinchinensis",
+      "citation": "Hung et al. 2020, Forests 11:996, doi:10.3390/f11090996",
+      "grade": "C",
+      "note": "printed DOI rejected: first author differs (lin) and species not in title - verify"
+    },
+    {
+      "table": "uses.csv",
+      "row_id": "use_dalbergia-oliveri_r70_1",
+      "species_id": "sp_dalbergia_oliveri",
+      "citation": "Hung et al. 2020, Forests 11:996, doi:10.3390/f11090996",
+      "grade": "C",
+      "note": "printed DOI rejected: first author differs (lin) and species not in title - verify"
+    },
+    {
+      "table": "uses.csv",
+      "row_id": "use_eurycoma-longifolia_r87_1",
+      "species_id": "sp_eurycoma_longifolia",
+      "citation": "Bhat & Karim 2010, J Ethnopharmacol 132:1–10, PMID 20434529",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)"
+    },
+    {
+      "table": "uses.csv",
+      "row_id": "use_mitragyna-speciosa_r121_1",
+      "species_id": "sp_mitragyna_speciosa",
+      "citation": "Urumarudappa et al. 2026, Adv Tradit Med, doi:10.1016/j.atmed.2026.03.002; DeFilipps & Krupnick 2018",
+      "grade": "C",
+      "note": "printed DOI rejected: DOI not found in Crossref - verify"
+    },
+    {
+      "table": "uses.csv",
+      "row_id": "use_stephania-rotunda_r174_1",
+      "species_id": "sp_stephania_rotunda",
+      "citation": "Chea et al. 2007, J Ethnopharmacol 112:480–489, PMID 17624624",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_andrographis-paniculata_r3",
+      "species_id": "sp_andrographis_paniculata",
+      "citation": "Low M et al. 2024, Front Pharmacol, doi:10.3389/fphar.2024.1395021",
+      "grade": "C",
+      "note": "printed DOI rejected: DOI not found in Crossref - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_curcuma-comosa_r8",
+      "species_id": "sp_curcuma_comosa",
+      "citation": "Aung ZMK et al. 2022, Heliyon, doi:10.1016/j.heliyon.2022.e12516",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_kaempferia-parviflora_r9",
+      "species_id": "sp_kaempferia_parviflora",
+      "citation": "Morikawa T et al. 2008, J Nat Prod — PMID 18725283",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation; journal differs from the citation (Journal of ethnopharmacology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_zingiber-officinale_r16",
+      "species_id": "sp_zingiber_officinale",
+      "citation": "van Breemen RB et al. 2011, PLoS One — PMC3018740",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_zingiber-cassumunar_r18",
+      "species_id": "sp_zingiber_cassumunar",
+      "citation": "Auranwiwat C et al. 2023, J Health Sci Med Res, doi:10.31584/jhsmr.2023.995",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_blumea-balsamifera_r20",
+      "species_id": "sp_blumea_balsamifera",
+      "citation": "Sari NM et al. 2023, Biomedich, doi:10.21580/biomedich.2023.301",
+      "grade": "C",
+      "note": "printed DOI rejected: DOI not found in Crossref - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_elephantopus-scaber_r27",
+      "species_id": "sp_elephantopus_scaber",
+      "citation": "Wang J et al. 2014, Molecules — PMC4055671",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Evidence-based complementary and alterna)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_gynura-procumbens_r34",
+      "species_id": "sp_gynura_procumbens",
+      "citation": "Cao MY et al. 2022, Nat Prod Res, doi:10.1080/09540105.2022.2098935",
+      "grade": "A",
+      "note": "confirmed by doi: peer-reviewed article; citation error: journal differs from the citation (Food and Agricultural Immunology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_thunbergia-laurifolia_r37",
+      "species_id": "sp_thunbergia_laurifolia",
+      "citation": "Senghoi W et al. 2024, S Afr J Bot, doi:10.1016/j.sajb.2024.08.034",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_thunbergia-laurifolia_r38",
+      "species_id": "sp_thunbergia_laurifolia",
+      "citation": "Srimawong C et al. 2025, RSC Adv 15:22086, doi:10.1039/D5RA02755A",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_thunbergia-laurifolia_r39",
+      "species_id": "sp_thunbergia_laurifolia",
+      "citation": "Wonkchalee O et al. 2012, PubMed PMID 22327320",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Parasitology research)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_barleria-prionitis_r43",
+      "species_id": "sp_barleria_prionitis",
+      "citation": "Gangaram S et al. 2021, Molecules — PMC8747396",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Plants (Basel, Switzerland))"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_phyllanthus-emblica_r51",
+      "species_id": "sp_phyllanthus_emblica",
+      "citation": "Majeed M et al. 2020, PubMed PMID 31487036",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of the science of food and agric)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_phyllanthus-emblica_r52",
+      "species_id": "sp_phyllanthus_emblica",
+      "citation": "Majeed M et al. 2020, PubMed PMID 31487036",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of the science of food and agric)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_gymnema-sylvestre_r54",
+      "species_id": "sp_gymnema_sylvestre",
+      "citation": "Chen G et al. 2017, Molecules — PMC5406464",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Frontiers in pharmacology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_aegle-marmelos_r62",
+      "species_id": "sp_aegle_marmelos",
+      "citation": "Phytochemical Analysis and Evaluation of Antioxidant..., PMC11523027",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_centella-asiatica_r67",
+      "species_id": "sp_centella_asiatica",
+      "citation": "Arribas-López E et al. 2022, PMC8956065",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_scoparia-dulcis_r72",
+      "species_id": "sp_scoparia_dulcis",
+      "citation": "Antidiabetic Properties, Bioactive Constituents of Scoparia dulcis, doi:10.1155/2016/8243215",
+      "grade": "A",
+      "note": "confirmed by doi: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_morinda-citrifolia_r75",
+      "species_id": "sp_morinda_citrifolia",
+      "citation": "Hepatoprotective Effects of Morinda citrifolia Leaf Extract, J Longev 2019:9714302 (cited in Hou S 2025, PMC11939675)",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_hygrophila-auriculata_r80",
+      "species_id": "sp_hygrophila_auriculata",
+      "citation": "Shanmugasundaram P et al. 2006, PubMed PMID 16213687",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of ethnopharmacology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_achyranthes-aspera_r86",
+      "species_id": "sp_achyranthes_aspera",
+      "citation": "Ha HA et al. 2024, PubMed PMID 38043891",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Environmental research)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_coscinium-fenestratum_r91",
+      "species_id": "sp_coscinium_fenestratum",
+      "citation": "Nair GM et al. 2005, PubMed PMID 16112497",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_stephania-rotunda_r98",
+      "species_id": "sp_stephania_rotunda",
+      "citation": "Baghdikian B et al. 2013, PubMed PMID 23127648",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of ethnopharmacology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_calotropis-gigantea_r106",
+      "species_id": "sp_calotropis_gigantea",
+      "citation": "Nejhad AA et al. 2023, PMC10485245",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_calotropis-gigantea_r108",
+      "species_id": "sp_calotropis_gigantea",
+      "citation": "Suknoppakit P et al. 2023, Heliyon, doi:10.1016/j.heliyon.2023.e20358",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_brucea-javanica_r110",
+      "species_id": "sp_brucea_javanica",
+      "citation": "Chen J et al. 2024, Brucea javanica review — PMC10871038",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Frontiers in pharmacology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_nauclea-officinalis_r113",
+      "species_id": "sp_nauclea_officinalis",
+      "citation": "Liu B et al. 2022, Nauclea officinalis review — PMC9764569",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Chinese medicine)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_eurycoma-longifolia_r115",
+      "species_id": "sp_eurycoma_longifolia",
+      "citation": "Cytotoxic and antimalarial constituents of the roots of Eurycoma longifolia, PubMed PMID 1800638",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_piper-nigrum_r125",
+      "species_id": "sp_piper_nigrum",
+      "citation": "Alves FS et al. 2022, Membranes 10(1):21, doi:10.3399/membranes10010021",
+      "grade": "C",
+      "note": "printed DOI rejected: DOI not found in Crossref - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_rhodomyrtus-tomentosa_r127",
+      "species_id": "sp_rhodomyrtus_tomentosa",
+      "citation": "Srisuwan S et al. 2017, PubMed PMID 28475464",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Microbial drug resistance (Larchmont, N.)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_diospyros-mollis_r136",
+      "species_id": "sp_diospyros_mollis",
+      "citation": "Rauf A et al. 2024, Anticancer therapeutic potential of genus Diospyros — PMC11521686",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Food science & nutrition)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_catharanthus-roseus_r138",
+      "species_id": "sp_catharanthus_roseus",
+      "citation": "Dhyani P et al. 2022, Anticancer potential of alkaloids — PMC9161525",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Cancer cell international)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_kopsia-fruticosa_r143",
+      "species_id": "sp_kopsia_fruticosa",
+      "citation": "Long SY et al. 2018, Phytochemistry — S0367326X18308864 / PMID 29935259",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_aglaia-odorata_r146",
+      "species_id": "sp_aglaia_odorata",
+      "citation": "Rivero-Cruz JF et al. 2020, PMC7022611",
+      "grade": "C",
+      "note": "printed PMID/PMC rejected: first author differs (rivero-cruz) and species not in title - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_lansium-domesticum_r147",
+      "species_id": "sp_lansium_domesticum",
+      "citation": "Fadhilah K et al. 2020, PubMed PMID 34136135",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (F1000Research)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_xylocarpus-granatum_r150",
+      "species_id": "sp_xylocarpus_granatum",
+      "citation": "Islam ME et al. 2025, PMC12639601",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_aphanamixis-polystachya_r154",
+      "species_id": "sp_aphanamixis_polystachya",
+      "citation": "Niloticin apoptotic assessment, PMC11378019",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_melia-azedarach_r159",
+      "species_id": "sp_melia_azedarach",
+      "citation": "Yuan CM et al. 2013, PubMed PMID 23250810",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Planta medica)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_dalbergia-cochinchinensis_r166",
+      "species_id": "sp_dalbergia_cochinchinensis",
+      "citation": "Polyphenolic Diversity, Antioxidant Activity, and Anticancer effects, PMC13092726",
+      "grade": "C",
+      "note": "printed PMID/PMC rejected: first author differs (touhtouh) and species not in title - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_garcinia-hanburyi_r179",
+      "species_id": "sp_garcinia_hanburyi",
+      "citation": "Seo MJ et al. 2019, Cell Death Dis, doi:10.1038/s41419-019-1360-4",
+      "grade": "C",
+      "note": "printed DOI rejected: resolved article is not about plants or natural products (Gambogic acid triggers vacuolization-associated ce) - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_morus-alba_r187",
+      "species_id": "sp_morus_alba",
+      "citation": "Morusin as a drug candidate, Front Pharmacol 2025, doi:10.3389/fphar.2025.1704535",
+      "grade": "A",
+      "note": "confirmed by doi: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_morus-alba_r189",
+      "species_id": "sp_morus_alba",
+      "citation": "Exploring the therapeutic and anti-tumor properties of morusin — PMC10203489",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_ichnocarpus-frutescens_r205",
+      "species_id": "sp_ichnocarpus_frutescens",
+      "citation": "Kumarappan CT et al. 2007, PubMed PMID 17704739",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Experimental oncology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_toona-ciliata_r215",
+      "species_id": "sp_toona_ciliata",
+      "citation": "Zhu GL et al. 2019, PubMed PMID 31503490",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of natural products)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_garcinia-atroviridis_r225",
+      "species_id": "sp_garcinia_atroviridis",
+      "citation": "Mackeen MM et al. 2000, PubMed PMID 10996278",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of ethnopharmacology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_derris-elliptica_r240",
+      "species_id": "sp_derris_elliptica",
+      "citation": "Wu X et al. 2012, PubMed PMID 22414317",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_bruguiera-gymnorrhiza_r252",
+      "species_id": "sp_bruguiera_gymnorrhiza",
+      "citation": "Rahman NH et al. 2020, PMC7784945",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_excoecaria-agallocha_r263",
+      "species_id": "sp_excoecaria_agallocha",
+      "citation": "Sabu KR et al. 2022, PMC8765538",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_lumnitzera-racemosa_r267",
+      "species_id": "sp_lumnitzera_racemosa",
+      "citation": "Nguyen PT et al. 2015, PubMed PMID 25001899",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Archives of pharmacal research)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_hibiscus-tiliaceus_r280",
+      "species_id": "sp_hibiscus_tiliaceus",
+      "citation": "Evaluation of pharmacological activity of Hibiscus tiliaceus, PMC4967069",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_ext_brownlowia-tersa_r291",
+      "species_id": "sp_brownlowia_tersa",
+      "citation": "Pervin R et al. 2022, J Biologically Active Prod Nat — 10.1080/10496475.2022.2077878",
+      "grade": "A",
+      "note": "confirmed by doi: peer-reviewed article; citation error: journal differs from the citation (Journal of Herbs, Spices &amp; Medicinal)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_andrographis-paniculata_r7",
+      "species_id": "sp_andrographis_paniculata",
+      "citation": "Chao & Lin 2010, Chin Med 5:17 (PMID 20374662); Xia et al. 2004",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_rhinacanthus-nasutus_r35",
+      "species_id": "sp_rhinacanthus_nasutus",
+      "citation": "Ngoc et al. 2019, Fitoterapia (PMID 29561167)",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Natural product research)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_thevetia-peruviana_r96",
+      "species_id": "sp_thevetia_peruviana",
+      "citation": "Vázquez-Martínez et al. 2024, PMC11396790",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_tylophora-indica_r103",
+      "species_id": "sp_tylophora_indica",
+      "citation": "Cyriac et al. 2020, PMC7211505",
+      "grade": "C",
+      "note": "printed PMID/PMC rejected: resolved article is not about plants or natural products (Tylophorine: Sources, Properties, Applications and) - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_urceola-rosea_r104",
+      "species_id": "sp_urceola_rosea",
+      "citation": "Ngoc et al. 2018 (PMID 29101817)",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_wedelia-chinensis_r126",
+      "species_id": "sp_wedelia_chinensis",
+      "citation": "Han et al. 2026, PMC12891205",
+      "grade": "C",
+      "note": "printed PMID/PMC rejected: year differs (2025) - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_cassia-fistula_r171",
+      "species_id": "sp_cassia_fistula",
+      "citation": "Mehta et al. 2009, PMC2839395",
+      "grade": "C",
+      "note": "printed PMID/PMC rejected: resolved article is not about plants or natural products (A modified method for isolation of rhein from senn) - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_millettia-pachycarpa_r187",
+      "species_id": "sp_millettia_pachycarpa",
+      "citation": "Caboni et al. 2004 (PMID 15540952); Zhang et al. 2022",
+      "grade": "C",
+      "note": "printed PMID/PMC rejected: resolved article is not about plants or natural products (Rotenone, deguelin, their metabolites, and the rat) - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_artocarpus-heterophyllus_r247",
+      "species_id": "sp_artocarpus_heterophyllus",
+      "citation": "Septama et al. 2015, Phytomedicine (PMID 25856717); Septama 2018",
+      "grade": "A",
+      "note": "confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Pharmaceutical biology)"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_mitragyna-speciosa_r290",
+      "species_id": "sp_mitragyna_speciosa",
+      "citation": "Kruegel et al. 2019, PMC6598159",
+      "grade": "C",
+      "note": "printed PMID/PMC rejected: resolved article is not about plants or natural products (7-Hydroxymitragynine Is an Active Metabolite of Mi) - verify"
+    },
+    {
+      "table": "pharmacology.csv",
+      "row_id": "pha_cmp_kaempferia-parviflora_r394",
+      "species_id": "sp_kaempferia_parviflora",
+      "citation": "Sawasdee & Chaiyana 2009 (PMID 19585019)",
+      "grade": "A",
+      "note": "confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search"
+    }
+  ],
+  "lookups": {
+    "resolved_doi": 24,
+    "unresolved": 408,
+    "resolved_query": 261,
+    "resolved_pmid": 175
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "generated": "2026-11-24",
+    "species_count": 333,
+    "backbone_primary": "GBIF (occurrence counts, taxon keys)",
+    "backbone_secondary": "WFO 2024-06 backbone via WorldFlora 1.14.5 (taxonomic names)",
+    "gbif_wfo_agreement": 292,
+    "gbif_wfo_differ": 41
+  },
+  "species_richness": {
+    "description": "Species per basin country (workbook inventory)",
+    "values": {
+      "CN": 102,
+      "KH": 164,
+      "LA": 185,
+      "MM": 157,
+      "TH": 202,
+      "VN": 191
+    }
+  },
+  "use_categories": {
+    "description": "Ethnobotanical use records by ailment category",
+    "values": {
+      "gastrointestinal": 92,
+      "other": 38,
+      "dermatological": 26,
+      "respiratory": 12,
+      "infectious": 11,
+      "reproductive": 8,
+      "musculoskeletal": 7,
+      "neurological": 7,
+      "metabolic": 5,
+      "genitourinary": 1
+    }
+  },
+  "conservation": {
+    "description": "CITES appendix and IUCN status (16 trade-flagged rows; 11 spine species, 5 non-spine retained as intelligence)",
+    "cites": {
+      "**CITES Appendix II**, all *Aquilaria* spp., annotation #1 (all parts and derivatives except seeds, spores, pollen, seedlings/tissue cultures, cut flowers)": 1,
+      "**CITES Appendix II since 1994/1995**, annotation #1": 1,
+      "**CITES Appendix II** (listed 2013, CoP16), annotation #15": 1,
+      "**CITES Appendix II**, annotation #15 (all *Dalbergia* spp. listed 2017)": 1,
+      "**CITES Appendix II** (listing proposal CoP7, prop. 59)": 1,
+      "**Not CITES-listed.** Only *Panax ginseng* and *P. quinquefolius* are Appendix II (annotation #3, roots and whole plants); *P. vietnamensis* has no CITES listing": 1,
+      "**Thailand: legal since Aug 2021** — Narcotics Act (No. 8) B.E. 2564 removed kratom from Category V narcotics; >12,000 prior convictions expunged. **Illegal in Vietnam, Malaysia, Singapore, Myanmar.** Not CITES-listed": 1,
+      "**Not CITES-listed.** Managed nationally (Malaysia harvesting rules); no Appendix listing": 1,
+      "Not CITES-listed; national protection in India and range states": 1,
+      "Not CITES-listed": 2,
+      "**CITES Appendix II**": 1,
+      "**Not CITES-listed** (correctly excluded by the task)": 1,
+      "CITES Appendix II applies to **cultivated** specimens too; CoP19/CoP20 reviewed agarwood annotation and exemptions (≤1 kg woodchips, 24 ml oil personal effects)": 1,
+      "Cross-border CITES enforcement required for listed taxa": 1,
+      "**CITES Appendix II, annotation #15** for the whole genus since 2017": 1
+    },
+    "iucn": {
+      "**Critically Endangered (IUCN)**": 2,
+      "**Endangered / Critically Endangered** (assessments differ; IUCN Red List entry exists)": 1,
+      "**Endangered**": 1,
+      "Threatened in parts of range; IUCN category **not confirmed** in sources retrieved": 1,
+      "**Endangered (Vietnam Red Data Book)**; endemic to Việt Nam's Annamite cordillera (Ngọc Linh massif)": 1,
+      "**Least Concern (IUCN, 2020 assessment)**": 1,
+      "**Least Concern (IUCN 3.1)** despite heavy exploitation — an explicit status/pressure mismatch": 1,
+      "Described as **\"critically endangered and highly-traded\"** in the specialist review": 1,
+      "IUCN category **not confirmed** in sources retrieved": 1,
+      "Listed among threatened medicinal plants of India; global IUCN category **not confirmed**": 1,
+      "**Critically Endangered (IUCN, criterion A2cd)**": 1,
+      "—": 1,
+      "Cultivation relieves wild pressure but risks genetic swamping and \"plantation laundering\"": 1,
+      "Multiple species declining": 1,
+      "Multiple": 1
+    },
+    "n_flagged": 16
+  },
+  "chemistry": {
+    "description": "Compound classes reported in pharmacology.csv",
+    "values": {
+      "indole alkaloid": 21,
+      "xanthone": 10,
+      "quassinoid": 10,
+      "canthin-6-one alkaloid": 9,
+      "carbazole alkaloid": 9,
+      "flavone c-glycoside": 8,
+      "prenylflavone": 8,
+      "naphthoquinone": 7,
+      "triterpenoid saponin": 7,
+      "lignan": 7,
+      "flavanone": 7,
+      "anthraquinone": 7,
+      "limonoid": 7,
+      "sesquiterpene lactone": 6,
+      "coumarin": 6,
+      "sesquiterpenoid": 6,
+      "sesquiterpenoids": 6,
+      "iridoid glycoside": 5,
+      "naphthoquinone ester": 5,
+      "iboga alkaloid": 5,
+      "protoberberine alkaloid": 5,
+      "bisbenzylisoquinoline alkaloid": 5,
+      "diarylheptanoid": 5,
+      "methoxyflavone": 5,
+      "labdane diterpenoid": 4,
+      "triterpenoid": 4,
+      "amaryllidaceae alkaloid": 4,
+      "chalcone": 4,
+      "limonoids": 4,
+      "quassinoids": 4
+    }
+  },
+  "pharmacology": {
+    "description": "Assay vs isolated-compound split",
+    "n_assay_rows": 290,
+    "n_compound_rows": 400
+  },
+  "source_coverage": {
+    "description": "Rows contributed per source register entry",
+    "SRC-001": 333,
+    "SRC-002": 333,
+    "SRC-003": 333,
+    "SRC-004": 16,
+    "SRC-006": 333
+  },
+  "occurrence_counts": {
+    "description": "GBIF country-level occurrence totals per species (occurrence/count API, 2026-11-24 snapshot). Point layer intentionally omitted: the GBIF sample was rate-limited and alphabet-biased. See species_master.gbif_occurrences_mekong.",
+    "total_mekong_occurrences": 222280,
+    "point_layer": "removed 2026-11-24 (user decision): sample was not representative; counts retained as CC-BY facts"
+  },
+  "country_richness": {
+    "description": "Taxa per basin country (workbook inventory)",
+    "values": {
+      "TH": 202,
+      "LA": 185,
+      "VN": 191,
+      "KH": 164,
+      "MM": 157,
+      "CN": 102
+    }
+  },
+  "country_gbif_occurrences": {
+    "description": "GBIF occurrence/count per basin country, 2026-11-24 (CC-BY)",
+    "values": {
+      "CN": 164446,
+      "TH": 33696,
+      "VN": 14647,
+      "MM": 4542,
+      "KH": 2499,
+      "LA": 2450
+    }
+  }
+}

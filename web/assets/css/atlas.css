@@ -1,0 +1,130 @@
+/* Mekong Medicinal Plant Atlas — site styles.
+   Palette: one primary accent, one river blue, and the three evidence-grade colours. */
+:root {
+  --ink: #1c2420;
+  --muted: #5b6962;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #dde3df;
+  --primary: #166a4f;
+  --primary-soft: #e4f1ea;
+  --river: #1f5f8b;
+  --grade-a: #1b5e20;
+  --grade-b: #b36b00;
+  --grade-c: #66707a;
+  --grade-d: #a23b3b;
+  --sens: #8a3b8a;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+a { color: var(--primary); }
+h1, h2, h3, h4 { color: var(--ink); letter-spacing: -0.01em; }
+.taxon { font-style: italic; }
+.muted { color: var(--muted); }
+.small { font-size: 0.86rem; }
+code, .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86em; background: #eef1ee; padding: 1px 4px; border-radius: 3px; }
+
+/* Navigation */
+.navbar-atlas { background: #0f2a20; }
+.navbar-atlas .navbar-brand { color: #fff; font-weight: 700; letter-spacing: 0.01em; }
+.navbar-atlas .nav-link { color: #cfe3d8; font-weight: 500; }
+.navbar-atlas .nav-link:hover, .navbar-atlas .nav-link:focus { color: #fff; }
+.navbar-atlas .nav-link.active { color: #fff; box-shadow: inset 0 -3px 0 #6fd0a6; }
+.navbar-atlas .navbar-toggler { border-color: #3d5a4c; }
+.navbar-atlas .navbar-toggler-icon { filter: invert(1); }
+
+/* Hero */
+.hero { background: linear-gradient(120deg, #0f2a20 0%, #16453a 55%, #1b5f8b 130%); color: #e9f3ee; }
+.hero h1 { color: #fff; font-weight: 750; letter-spacing: -0.02em; }
+.hero .lead { color: #cfe3d8; max-width: 46rem; }
+.hero .stat { border-left: 2px solid rgba(255, 255, 255, 0.22); padding-left: 0.9rem; }
+.hero .stat .n { font-size: 1.75rem; font-weight: 700; color: #fff; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.hero .stat .l { font-size: 0.8rem; color: #b9d3c6; }
+
+/* Cards and badges */
+.card { border-color: var(--line); border-radius: 0.6rem; }
+.card-header { background: #f1f5f2; font-weight: 600; }
+.badge-grade { font-variant-numeric: tabular-nums; font-weight: 700; color: #fff; }
+.badge-grade.A { background: var(--grade-a); }
+.badge-grade.B { background: var(--grade-b); }
+.badge-grade.C { background: var(--grade-c); }
+.badge-grade.D { background: var(--grade-d); }
+.badge-iucn { font-weight: 600; font-variant-numeric: tabular-nums; }
+.badge-iucn.CR, .badge-iucn.EN { background: #7a1f1f; color: #fff; }
+.badge-iucn.VU { background: #b5541b; color: #fff; }
+.badge-iucn.NT { background: #8a7a1f; color: #fff; }
+.badge-iucn.LC { background: #5d7f63; color: #fff; }
+.badge-iucn.DD { background: #6b7280; color: #fff; }
+.badge-sens { background: var(--sens); color: #fff; font-weight: 600; }
+.legend-grade .sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+
+/* Tables */
+.table-atlas td, .table-atlas th { vertical-align: top; }
+#speciesTable td:nth-child(2), #speciesTable td:nth-child(4), #speciesTable td:nth-child(5),
+#speciesTable td:nth-child(6), #speciesTable td:nth-child(7), #speciesTable td:nth-child(8) { white-space: nowrap; }
+.table-atlas td.source { min-width: 16rem; max-width: 34rem; overflow-wrap: anywhere; }
+.table-atlas td.note { max-width: 22rem; overflow-wrap: anywhere; }
+.dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_length { margin-bottom: 0.6rem; }
+.page-link { color: var(--primary); }
+
+/* Map */
+.map-shell { position: relative; background: #e8ece9; border: 1px solid var(--line); border-radius: 0.6rem; overflow: hidden; }
+.map-shell .map { width: 100%; height: 100%; }
+.map-home .map { height: 640px; }
+.map-explore .map { height: 66vh; min-height: 440px; }
+.map-species .map { height: 380px; }
+.filter-panel { position: absolute; top: 0.7rem; left: 0.7rem; z-index: 1000; width: 300px; max-width: calc(100% - 1.4rem); }
+.filter-panel .card-body { padding: 0.8rem 0.9rem; }
+/* The panel is taller than the map on laptop screens, so it scrolls inside itself. */
+.filter-panel .card { max-height: calc(100vh - 17rem); min-height: 15rem; overflow-y: auto; }
+.filter-panel label { font-size: 0.78rem; font-weight: 600; color: var(--muted); margin-bottom: 0.15rem; }
+.filter-panel .form-control, .filter-panel .form-select { font-size: 0.86rem; padding: 0.28rem 0.5rem; }
+.filter-panel select[multiple] { height: auto; }
+.map-tools { position: absolute; top: 0.7rem; right: 0.7rem; z-index: 1000; display: flex; gap: 0.4rem; }
+.map-tools .btn { background: #fff; border-color: var(--line); font-size: 0.8rem; }
+.map-legend { position: absolute; right: 0.7rem; bottom: 3.9rem; z-index: 1000; background: rgba(255, 255, 255, 0.94); border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.5rem 0.7rem; font-size: 0.76rem; }
+.map-legend div { margin: 0.1rem 0; white-space: nowrap; }
+.map-status { position: absolute; left: 0.7rem; bottom: 1.9rem; z-index: 1000; background: rgba(255, 255, 255, 0.94); border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.35rem 0.6rem; font-size: 0.78rem; color: var(--muted); }
+.leaflet-container { font-family: inherit; font-size: 0.8rem; }
+.leaflet-control-attribution { background: rgba(255, 255, 255, 0.85) !important; font-size: 0.66rem !important; }
+.leaflet-control-attribution a { color: var(--muted); }
+.north-arrow { background: #fff; border: 1px solid var(--line); border-radius: 0.35rem; width: 30px; height: 34px; display: flex; align-items: center; justify-content: center; }
+.cluster { border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-variant-numeric: tabular-nums; border: 2px solid rgba(255, 255, 255, 0.9); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); }
+.cluster.s { width: 28px; height: 28px; font-size: 0.72rem; }
+.cluster.m { width: 38px; height: 38px; font-size: 0.8rem; }
+.cluster.l { width: 50px; height: 50px; font-size: 0.9rem; }
+.cluster.A { background: var(--grade-a); }
+.cluster.B { background: var(--grade-b); }
+.cluster.C { background: var(--grade-c); }
+.occ-popup { font-size: 0.8rem; min-width: 200px; }
+.occ-popup table { margin: 0.3rem 0; }
+.occ-popup td { padding: 0 0.5rem 0 0; }
+.occ-popup .btn { margin-top: 0.3rem; }
+.species-photo { background: #eef1ee; border-radius: 0.5rem; overflow: hidden; width: fit-content; max-width: 100%; margin: 0 auto; }
+.species-photo img { display: block; max-width: 100%; max-height: 460px; width: auto; height: auto;
+  margin: 0 auto; object-fit: contain; }
+.species-photo .cap { font-size: 0.72rem; color: var(--muted); padding: 0.35rem 0.6rem; background: #fff; }
+.glance dt { font-size: 0.76rem; color: var(--muted); font-weight: 600; margin-top: 0.5rem; }
+.glance dd { margin-bottom: 0; }
+.section-title { border-top: 3px solid var(--primary); padding-top: 0.5rem; margin-top: 1.6rem; }
+.citation-box { background: #f1f5f2; border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.8rem 1rem; font-size: 0.86rem; }
+footer.atlas { border-top: 1px solid var(--line); margin-top: 3rem; padding: 1.4rem 0 2rem; font-size: 0.82rem; color: var(--muted); }
+footer.atlas a { color: var(--muted); }
+
+@media (max-width: 1024px) {
+  .filter-panel { width: 260px; }
+  .map-explore .map { height: 58vh; }
+}
+@media (max-width: 767px) {
+  .filter-panel { position: static; width: 100%; margin-bottom: 0.6rem; }
+  .map-explore .map { height: 70vh; }
+  .map-home .map { height: 420px; }
+}
+
+/* macroecology page */
+.map-macro .map { height: 560px; }
+.badge-hotspot { background: #c0392b; color: #fff; }
+.badge-coldspot { background: #2471a3; color: #fff; }
+.legend-macro { max-width: 320px; }
+.legend-macro .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 0.2rem; vertical-align: baseline; }

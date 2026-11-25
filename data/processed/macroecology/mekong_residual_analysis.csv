@@ -1,0 +1,8 @@
+botanical_country,wgsrpd_code,vascular_diversity,medicinal_diversity,predicted_medicinal_diversity,residual,residual_p_value,classification
+Cambodia,CBD,3933.0,2181.0,1187.2,993.8,0.07193,not_significant
+China South-Central,CHC,20177.0,6264.0,4132.6,2131.4,0.00011,hotspot
+China Southeast,CHS,11471.0,4749.0,2554.0,2195.0,7e-05,hotspot
+Laos,LAO,5150.0,2576.0,1407.9,1168.1,0.03441,hotspot
+Myanmar,MYA,9637.0,4425.0,2221.5,2203.5,7e-05,hotspot
+Thailand,THA,11109.0,4173.0,2488.4,1684.6,0.00228,hotspot
+Vietnam,VIE,11738.0,4413.0,2602.4,1810.6,0.00104,hotspot

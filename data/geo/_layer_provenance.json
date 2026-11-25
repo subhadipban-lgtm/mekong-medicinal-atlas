@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-11-24T17:35:44+00:00",
+  "mekong_basin.geojson": {
+    "input_polygons": 96,
+    "input_vertices": 98900,
+    "output_vertices": 98910,
+    "geometry_type": "MultiPolygon",
+    "bbox": [
+      93.859,
+      8.566,
+      108.773,
+      33.825
+    ],
+    "area_sq_deg": 68.677,
+    "license": "CC-BY-4.0",
+    "doi": "10.5281/zenodo.7622998",
+    "citation": "Tiwari, A. et al. A synthesis of hydroclimatic, ecological, and socioeconomic data for transdisciplinary research in the Mekong. Zenodo. https://doi.org/10.5281/zenodo.7622998",
+    "derived_from": "Dang, H., Pokhrel, Y., Shin, S., Stelly, J., Ahlquist, D., & Du Bui, D. (2022). Hydrologic balance and inundation dynamics of Southeast Asia's largest inland lake altered by hydropower dams in the Mekong River basin. Science of The Total Environment, 831, 154833.",
+    "source_file": "data/raw/baselayers/zenodo7622998_SupplementalData.zip",
+    "source_sha256": "a3417e9298d42d217293ff4e4f170b081ae9141a674143ecf3095260a9e8bfae"
+  },
+  "mekong_river_naturalearth.geojson": {
+    "features_merged": [
+      "Lancang",
+      "Mekong"
+    ],
+    "vertices": 1514,
+    "length_sq_deg": 39.104,
+    "bbox": [
+      96.941,
+      10.005,
+      106.119,
+      31.966
+    ],
+    "source_sha256": "bb854a900ecbd3b408df46d5e16e3e0f974ba55993f9d8b5c26e855273c0905a"
+  },
+  "countries_outline.geojson": {
+    "countries": 13,
+    "source_sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f"
+  },
+  "mekong_river_wwf_arcgis (runtime only, not published)": {
+    "status": "ok",
+    "service_item_id": "dcfa38b28bc247dca5ee94828eed1df6",
+    "query_url": "https://services1.arcgis.com/RTK5Unh1Z71JKIiR/ArcGIS/rest/services/Mekong_River_/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+    "owner_display": "WWF-Laos account on ArcGIS Online",
+    "licence": "not stated",
+    "redistribution": "no - rendered from the publisher's service at run time only",
+    "features": 1,
+    "vertices": 861,
+    "length_sq_deg": 42.951,
+    "bbox": [
+      93.886,
+      9.502,
+      106.72,
+      33.267
+    ],
+    "response_sha256": "5838fd0f52593c73f8d0e1d153d8b7dab8b74eae4e6aab805e46d859ea6d8f0a"
+  }
+}

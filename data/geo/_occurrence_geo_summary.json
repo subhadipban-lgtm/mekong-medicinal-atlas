@@ -1,0 +1,29 @@
+{
+  "inside_basin": {
+    "records": 16143,
+    "points": 16143,
+    "species": 285,
+    "by_country": {
+      "TH": 3911,
+      "VN": 2733,
+      "LA": 1369,
+      "CN": 7249,
+      "KH": 873,
+      "MM": 8
+    }
+  },
+  "outside_basin": {
+    "records": 137655,
+    "points": 32923,
+    "cell_size_degrees": 0.5,
+    "by_country": {
+      "TH": 5237,
+      "VN": 2071,
+      "KH": 207,
+      "MM": 782,
+      "CN": 24606,
+      "LA": 20
+    }
+  },
+  "species_with_map_data": 311
+}

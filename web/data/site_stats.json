@@ -1,0 +1,17 @@
+{
+  "version": "0.9.0",
+  "data_cutoff": "2026-11-24",
+  "taxa": 333,
+  "taxa_species_level": 329,
+  "use_records": 207,
+  "pharmacology_records": 690,
+  "occurrence_records_published": 153798,
+  "occurrence_records_in_basin": 16143,
+  "occurrence_records_outside_basin": 137655,
+  "taxa_with_records_in_basin": 285,
+  "species_by_grade": {
+    "A": 296,
+    "B": 22,
+    "C": 15
+  }
+}

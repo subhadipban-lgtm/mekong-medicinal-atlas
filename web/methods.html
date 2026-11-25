@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Methods — Mekong Medicinal Plant Atlas</title>
+<meta name="description" content="Methods of the Mekong Medicinal Plant Atlas: sources, evidence grading, coordinate generalisation, software.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="assets/css/atlas.css" rel="stylesheet">
+
+</head>
+<body data-page="methods">
+<nav class="navbar navbar-expand-md navbar-atlas navbar-dark">
+  <div class="container-fluid px-3 px-lg-4">
+    <a class="navbar-brand" href="index.html">🌿 Mekong Medicinal Plant Atlas</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#atlasNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="atlasNav"><ul class="navbar-nav ms-auto"><a class="nav-link" data-page="index" href="index.html">Atlas</a><a class="nav-link" data-page="explore" href="explore.html">Explore</a><a class="nav-link" data-page="species" href="species/index.html">Species</a><a class="nav-link" data-page="evidence" href="evidence.html">Evidence</a><a class="nav-link" data-page="macroecology" href="macroecology.html">Macroecology</a><a class="nav-link active" data-page="methods" href="methods.html">Methods</a><a class="nav-link" data-page="about" href="about.html">About</a></ul></div>
+  </div>
+</nav>
+
+<main class="container-fluid px-3 px-lg-4 py-3">
+  <h1 class="h4">Methods</h1>
+  <p class="lead small text-muted">How the atlas is built, graded and checked. Every step is a script in <code>scripts/</code>; running <code>build.sh</code> regenerates the whole site from the raw inputs.</p>
+
+  <h2 class="h5 section-title">Data sources</h2>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Source</th><th>Citation</th><th>Licence</th><th>Status</th></tr></thead><tbody><tr><td><code>SRC-001</code></td><td>Mekong Basin Natural Products workbook (MEKONG_BASIN_NATURAL_PRODUCTS_2026-11-24.xlsx): sheets 1_Plants, 2_Extracts, 3_Compounds, 4_Cross-tier, 5_Reviews, 6_Trade_CITES</td><td>not licensed for redistribution</td><td>used</td></tr><tr><td><code>SRC-002</code></td><td>GBIF Secretariat. GBIF Backbone Taxonomy. https://doi.org/10.15468/39omei</td><td>CC-BY-4.0</td><td>used</td></tr><tr><td><code>SRC-003</code></td><td>GBIF occurrence search API: georeferenced records of the atlas taxa in CN, TH, VN, LA, KH, MM</td><td>per record (CC0, CC-BY-4.0, CC-BY-NC-4.0)</td><td>used</td></tr><tr><td><code>SRC-004</code></td><td>CITES Appendices I, II and III. CITES Secretariat. https://cites.org/eng/app/appendices.php</td><td>public</td><td>used</td></tr><tr><td><code>SRC-005</code></td><td>IUCN Red List of Threatened Species. https://www.iucnredlist.org</td><td>(c) IUCN; cited, not redistributed</td><td>used</td></tr><tr><td><code>SRC-006</code></td><td>World Flora Online taxonomic backbone, matched with R package WorldFlora 1.14-5 (Kindt 2020, https://doi.org/10.1002/aps3.11388)</td><td>CC-BY-3.0</td><td>used</td></tr><tr><td><code>SRC-007</code></td><td>Plants of the World Online (POWO), Royal Botanic Gardens Kew. https://powo.science.kew.org</td><td>CC-BY-3.0</td><td>access pending</td></tr><tr><td><code>SRC-008</code></td><td>Lancang-Mekong Traditional Medicine Resources Database. https://lmsjk.ynutcm.edu.cn</td><td>unknown</td><td>access pending</td></tr><tr><td><code>SRC-009</code></td><td>Nguyen Van Duong. Medicinal Plants of Vietnam, Cambodia, and Laos. Hanoi: Agriculture Publishing House, 1993.</td><td>copyright (print)</td><td>access pending</td></tr><tr><td><code>SRC-010</code></td><td>Nguyen Minh Khoi. Atlas of Medicinal Plants in Vietnam / Atlas cay thuoc Viet Nam. 2022.</td><td>copyright (print)</td><td>access pending</td></tr><tr><td><code>SRC-011</code></td><td>Thorel C. Agriculture and Ethnobotany of the Mekong Basin. Mekong Exploration Commission Report Vol. 4 (1866-1868).</td><td>public domain</td><td>access pending</td></tr><tr><td><code>SRC-012</code></td><td>Wiart C. Medicinal Plants from the East. CRC Press.</td><td>copyright (print)</td><td>access pending</td></tr><tr><td><code>SRC-013</code></td><td>Greater Mekong Subregion Atlas of the Environment. Asian Development Bank / UNEP.</td><td>public</td><td>access pending</td></tr><tr><td><code>SRC-014</code></td><td>Primary literature cited per row in the workbook (ethnobotanical surveys, phytochemical and pharmacological studies).</td><td>varies</td><td>used</td></tr><tr><td><code>SRC-015</code></td><td>Crossref REST API, https://api.crossref.org</td><td>public metadata</td><td>used</td></tr><tr><td><code>SRC-016</code></td><td>Natural Earth 1:10m rivers and lake centerlines (feature Mekong / Lancang), v5.1.2</td><td>public domain</td><td>used</td></tr><tr><td><code>SRC-017</code></td><td>Tiwari A. et al. A synthesis of hydroclimatic, ecological, and socioeconomic data for transdisciplinary research in the Mekong. Zenodo. doi:10.5281/zenodo.7622998</td><td>CC-BY-4.0</td><td>used</td></tr><tr><td><code>SRC-018</code></td><td>WWF-Laos. Mekong River centreline, ArcGIS Online feature service (item dcfa38b28bc247dca5ee94828eed1df6).</td><td>not stated</td><td>used</td></tr><tr><td><code>SRC-019</code></td><td>iNaturalist taxon API, https://api.inaturalist.org/v1/taxa (CC-licensed default photos)</td><td>per photo (CC0, CC-BY, CC-BY-SA, CC-BY-NC, CC-BY-NC-SA)</td><td>used</td></tr></tbody></table></div>
+
+  <h2 class="h5 section-title">Evidence grading rubric</h2>
+  <p class="small">Every use record, pharmacology record and species carries an evidence grade and a source identifier. A row citing several sources takes the best grade among them; a species takes the best grade of its rows.
+  Grade A is given only when the article is confirmed — by DOI, by PMID or PMC id, or by a Crossref match on author, year and journal or species — or when the citation is a complete journal reference.</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Grade</th><th>Definition</th><th class="text-end">Taxa</th><th class="text-end">Use records</th><th class="text-end">Pharmacology records</th></tr></thead><tbody><tr><td><span class="badge badge-grade A" title="Evidence grade A">A</span></td><td>peer-reviewed article or survey with documented methodology</td><td class="text-end">296</td><td class="text-end">167</td><td class="text-end">453</td></tr><tr><td><span class="badge badge-grade B" title="Evidence grade B">B</span></td><td>major reference book or authoritative flora</td><td class="text-end">22</td><td class="text-end">37</td><td class="text-end">2</td></tr><tr><td><span class="badge badge-grade C" title="Evidence grade C">C</span></td><td>report, proceedings, specimen, or citation that cannot be verified</td><td class="text-end">15</td><td class="text-end">3</td><td class="text-end">227</td></tr><tr><td><span class="badge badge-grade D" title="Evidence grade D">D</span></td><td>web source, unverified lead, or no citation</td><td class="text-end">0</td><td class="text-end">0</td><td class="text-end">8</td></tr></tbody></table></div>
+  <p class="small">68 citations were found to carry an error (a wrong DOI or PMID, or a misspelled journal or author) while grading; each is listed in the repository's QA report.</p>
+
+  <h2 class="h5 section-title">Occurrence records</h2>
+  <p class="small">Records were harvested from the GBIF occurrence search API on 2026-11-24 for each species-level atlas taxon in the six basin countries (georeferenced, without geospatial issues):
+  153,800 records from 147 GBIF datasets. A record is published only if it has an open licence, a recognised basis of record and verifiable metadata
+  (153,798 published; 2 excluded). Of the published records, 116,092 are specimen-based
+  and 36,652 are observations. Each record was tested against the Mekong basin boundary:</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Country</th><th class="text-end">Published records inside the basin</th><th class="text-end">Published records outside the basin</th></tr></thead><tbody><tr><td>China</td><td class="text-end">7,249</td><td class="text-end">111,713</td></tr><tr><td>Thailand</td><td class="text-end">3,911</td><td class="text-end">18,186</td></tr><tr><td>Vietnam</td><td class="text-end">2,733</td><td class="text-end">6,058</td></tr><tr><td>Laos</td><td class="text-end">1,369</td><td class="text-end">23</td></tr><tr><td>Cambodia</td><td class="text-end">873</td><td class="text-end">472</td></tr><tr><td>Myanmar</td><td class="text-end">8</td><td class="text-end">1,203</td></tr></tbody></table></div>
+  <p class="small">Country-level counts therefore overstate basin presence: 16,143 published records fall inside the basin and 137,655 outside it.
+  The map shows the in-basin records in full; records outside the basin appear only when switched on, generalised to one point per species per half-degree cell.</p>
+
+  <h2 class="h5 section-title">Coordinate generalisation policy</h2>
+  <p class="small">Exact localities of threatened medicinal plants can lead collectors to wild populations, so the atlas generalises the coordinates of <strong>sensitive species</strong>:
+  those with an IUCN category of Critically Endangered, Endangered or Vulnerable (as recorded in the project workbook or attached by GBIF) or listed in CITES Appendix I or II.</p>
+  <ul class="small">
+    <li><strong>Critically Endangered</strong> — coordinates rounded to 0.1 decimal degrees (about 11 km).</li>
+    <li><strong>Endangered, Vulnerable, or CITES Appendix I or II</strong> — coordinates rounded to 0.01 decimal degrees (about 1.1 km).</li>
+    <li>For every generalised record the locality text is removed and the coordinate uncertainty is raised to at least the rounding cell; the record states this in
+      <code>dataGeneralizations</code> and <code>informationWithheld</code>.</li>
+    <li>All other records keep the precision supplied by GBIF, capped at five decimals.</li>
+  </ul>
+  <p class="small">3,788 of 153,800 harvested records were generalised. Species with published records affected:</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Species</th><th>Reason</th></tr></thead><tbody><tr><td><i>Ailanthus altissima</i></td><td>IUCN EN</td></tr><tr><td><i>Aquilaria crassna</i></td><td>IUCN Critically Endangered</td></tr><tr><td><i>Aquilaria malaccensis</i></td><td>IUCN Critically Endangered</td></tr><tr><td><i>Aquilaria sinensis</i></td><td>IUCN VU</td></tr><tr><td><i>Coscinium fenestratum</i></td><td>IUCN Critically Endangered</td></tr><tr><td><i>Dalbergia cochinchinensis</i></td><td>IUCN Critically Endangered</td></tr><tr><td><i>Dalbergia oliveri</i></td><td>IUCN Critically Endangered</td></tr><tr><td><i>Ephedra gerardiana</i></td><td>IUCN VU</td></tr><tr><td><i>Kopsia fruticosa</i></td><td>IUCN EN</td></tr><tr><td><i>Mesua ferrea</i></td><td>IUCN VU</td></tr><tr><td><i>Panax vietnamensis</i></td><td>IUCN EN</td></tr><tr><td><i>Pterocarpus macrocarpus</i></td><td>IUCN EN</td></tr><tr><td><i>Rauvolfia serpentina</i></td><td>CITES Appendix II</td></tr><tr><td><i>Santalum album</i></td><td>IUCN VU</td></tr><tr><td><i>Tectona grandis</i></td><td>IUCN EN</td></tr></tbody></table></div>
+
+  <h2 class="h5 section-title">Geospatial layers</h2>
+  <ul class="small">
+    <li><strong>Mekong basin boundary</strong> — 96 catchment polygons dissolved into one boundary, EPSG:4326, from the Zenodo deposit of Tiwari et al. (doi:10.5281/zenodo.7622998, CC-BY 4.0),
+      derived from an SRTM basin mask by Dang et al. 2022 (<i>Sci Total Environ</i> 831:154833). The boundary is also the test surface that classifies every record as inside or outside the basin.</li>
+    <li><strong>Mekong River centreline</strong> — rendered from the WWF-Laos feature service on ArcGIS Online, which states no licence, so it is loaded from the publisher at run time and not redistributed
+      (861 vertices when last checked). The committed fallback is the Natural Earth 1:10m centreline (public domain, 1514 vertices).</li>
+    <li><strong>Country outlines</strong> — Natural Earth 1:110m (public domain), unfilled: the atlas reports basin presence and does not shade countries.</li>
+    <li><strong>Basemap</strong> — CartoDB Positron raster tiles (© CARTO; © OpenStreetMap contributors).</li>
+  </ul>
+
+  <h2 class="h5 section-title">Software</h2>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Component</th><th>Version</th></tr></thead><tbody><tr><td>Python</td><td>3.14.7</td></tr><tr><td>Python packages</td><td>openpyxl 3.1.5, shapely 2.2.0, pyshp 3.1.9</td></tr><tr><td>R / WorldFlora</td><td>4.6.1 / 1.14-5 (taxonomic matching, scripts/match_wfo.R)</td></tr><tr><td>Leaflet</td><td>1.9.4</td></tr><tr><td>Leaflet.markercluster</td><td>1.5.3</td></tr><tr><td>DataTables</td><td>2.1.8</td></tr><tr><td>DataTables Bootstrap 5 integration</td><td>2.1.8</td></tr><tr><td>jQuery</td><td>3.7.1</td></tr><tr><td>Bootstrap (CDN, subresource integrity pinned)</td><td>5.3.3</td></tr><tr><td>Natural Earth</td><td>v5.1.2</td></tr><tr><td>Basemap</td><td>CARTO Positron raster tiles</td></tr></tbody></table></div>
+
+  <h2 class="h5 section-title">Macroecology <span class="text-muted fw-normal">(Shrestha et al. 2025 framework)</span></h2>
+  <p class="small">The atlas reproduces the residual analysis of Shrestha et al. 2025 (Current Biology, doi:10.1016/j.cub.2025.09.050) on their published
+  data for the seven botanical countries that contain the Mekong basin, and extends it to admin-1 (province) scale as an internal
+  under-documentation screen. Model: ordinary least squares, medicinal richness ~ vascular richness, over all botanical countries except
+  Antarctica and Oceania (the authors' exclusion); significance at |residual| &gt; 1.96 SD per their residual_histogram.R. Reproduction is
+  validated against the residuals column shipped in their repository (r = 0.998161).
+  The sub-national extension fits the same model on GBIF vascular species counts per province against the number of atlas medicinal taxa
+  with occurrence records in that province; provinces with significantly negative residuals in areas of long human occupancy (reused from
+  the authors' country-level column) are flagged as fieldwork priorities — the documented difference from the global model is stated on the
+  macroecology page and in the manuscript. Human occupancy is reused at its published resolution, never re-derived; language diversity
+  (Glottolog points aggregated to admin-1) is mapped as context only, since the global model found only indirect climate-mediated effects.</p>
+
+  <h2 class="h5 section-title">Evidence engine <span class="text-muted fw-normal">(pilot)</span></h2>
+  <p class="small">A parallel evidence layer maps publications, compounds and — from its Milestone 2 — compound–target–pathway networks for atlas taxa.
+  Pilot scope: the 20 taxa with the most pharmacology records. Publications come from Europe PMC (primary) and OpenAlex
+  (secondary), searched by accepted name and synonyms with a fixed query template; every query is recorded in the PRISMA search log
+  (<code>data/evidence/search_log.csv</code>). Evidence tiers are assigned by an automated keyword rubric (<code>auto-rubric-v1</code>) on title
+  and abstract; rows the rubric cannot place are flagged <code>needs_review</code> for a human queue — machine classification is never presented as
+  evidence strength. Compounds are seeded from the pharmacology table and resolved against PubChem (CID, InChIKey, SMILES); unresolved names are
+  flagged rather than guessed. Milestone-1 metadata is a citation-sorted slice (top 100 per query), so tier shares are not yet corpus-wide; full
+  pagination arrives with the scheduled living review. Target promotion (Milestone 2) uses a two-independent-lines rule: prediction in two engines,
+  or prediction plus literature-mined support.</p>
+
+  <h2 class="h5 section-title">Limitations</h2>
+  <ul class="small">
+    <li>Ethnobotanical, pharmacological and trade content comes from a project workbook that cites primary literature per row; the workbook itself is not redistributed.</li>
+    <li>Local names in Khmer, Lao, Thai, Vietnamese, Burmese and Chinese are not yet recorded: the Tier-2 reference books and the Lancang-Mekong Traditional Medicine Resources Database are access pending.</li>
+    <li>Occurrence records are not re-identified and carry the names GBIF supplies; 4 workbook entries name only a genus and have no occurrence data.</li>
+    <li>The GBIF harvest is an API snapshot without a download DOI; a DOI-citable GBIF download should replace it at release.</li>
+    <li>IUCN categories come from the workbook trade sheet and from GBIF, not from the IUCN API.</li>
+    <li>The map shows records, and a record is not evidence that a plant is used medicinally at that place.</li>
+  </ul>
+  <p class="small">Quality-assurance results and the conflict report (taxonomic synonyms, country-versus-basin discrepancies, citation errors, coordinate outliers) are in the repository under <code>docs/</code>.</p>
+</main>
+
+<footer class="atlas">
+  <div class="container-fluid px-3 px-lg-4">
+    <div class="row g-3">
+      <div class="col-md-5">
+        <strong>Mekong Medicinal Plant Atlas</strong> · version 0.9.0 · data as of 2026-11-24<br>
+        Occurrence records from <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a>; names from the GBIF backbone and
+        <a href="https://www.worldfloraonline.org" target="_blank" rel="noopener">World Flora Online</a>; basin boundary
+        <a href="https://doi.org/10.5281/zenodo.7622998" target="_blank" rel="noopener">Tiwari et al. (Zenodo, CC-BY 4.0)</a>;
+        photos © iNaturalist contributors under their own licences.<br>
+        <strong>Dataset DOI: <a href="https://doi.org/10.5281/zenodo.24525569" target="_blank" rel="noopener">10.5281/zenodo.24525569</a></strong> (concept DOI 10.5281/zenodo.24525568).
+      </div>
+      <div class="col-md-4">
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas" target="_blank" rel="noopener">Source code and documentation</a><br>
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/QA_REPORT.md" target="_blank" rel="noopener">QA report</a> ·
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/CONFLICT_REPORT.md" target="_blank" rel="noopener">Conflict report</a> ·
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/data_dictionary.md" target="_blank" rel="noopener">Data dictionary</a>
+      </div>
+      <div class="col-md-3 text-md-end">Research resource; not medical advice.<br><a href="about.html">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

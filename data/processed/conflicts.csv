@@ -1,0 +1,1025 @@
+type,scope,detail,action
+taxonomic_synonym,sp_aglaia,GBIF accepts Aglaia; World Flora Online accepts NA,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_aglaia,workbook entry names a genus only,no occurrence data; kept in the species table
+taxonomic_synonym,sp_allamanda_cathartica,GBIF accepts Allamanda cathartica; World Flora Online accepts Allamanda schottii,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_amomum_villosum,GBIF accepts Amomum villosum; World Flora Online accepts Wurfbainia villosa,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_aquilaria_malaccensis,GBIF accepts Aquilaria malaccensis; World Flora Online accepts Aquilaria sinensis,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_aristolochia_tagala,GBIF accepts Aristolochia tagala; World Flora Online accepts Aristolochia acuminata,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_artemisia_annua,GBIF accepts Artemisia annua; World Flora Online accepts Artemisia gmelinii,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_artocarpus_lakoocha,GBIF accepts Artocarpus lakoocha; World Flora Online accepts Artocarpus lacucha,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_caesalpinia_sappan,GBIF accepts Caesalpinia sappan; World Flora Online accepts Biancaea sappan,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_caesalpinia_sappan,caesalpinia sappan and Biancaea sappan are one accepted species,records kept under sp_biancaea_sappan
+taxonomic_synonym,sp_cassia_alata,GBIF accepts Cassia alata; World Flora Online accepts Senna alata,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_cassia_angustifolia,GBIF accepts Cassia angustifolia; World Flora Online accepts Senna alexandrina,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_celosia_cristata,GBIF accepts Celosia cristata; World Flora Online accepts Celosia argentea,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_chrysanthemum_cinerariifolium,GBIF accepts Chrysanthemum cinerariifolium; World Flora Online accepts Tanacetum cinerariifolium,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_clausena,GBIF accepts Clausena; World Flora Online accepts Clausena,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_clausena,workbook entry names a genus only,no occurrence data; kept in the species table
+taxonomic_synonym,sp_clerodendrum_viscosum,GBIF accepts Clerodendrum viscosum; World Flora Online accepts Clerodendrum infortunatum,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_coix_lacryma,GBIF accepts Coix lacryma; World Flora Online accepts Coix lacryma-jobi,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_costus_speciosus,GBIF accepts Costus speciosus; World Flora Online accepts Hellenia speciosa,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_desmodium_triquetrum,GBIF accepts Desmodium triquetrum; World Flora Online accepts Tadehagi triquetrum,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_duhaldea_cappa,GBIF accepts Duhaldea cappa; World Flora Online accepts Inula cappa,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_dysoxylum_binectariferum,GBIF accepts Dysoxylum binectariferum; World Flora Online accepts Dysoxylum gotadhora,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_ecdysanthera_rosea,GBIF accepts Ecdysanthera rosea; World Flora Online accepts Urceola rosea,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_erythrina,GBIF accepts Erythrina; World Flora Online accepts NA,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_erythrina,workbook entry names a genus only,no occurrence data; kept in the species table
+taxonomic_synonym,sp_hedyotis_diffusa,GBIF accepts Scleromitrion diffusum; World Flora Online accepts Oldenlandia herbacea var. herbacea,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_holarrhena_antidysenterica,holarrhena antidysenterica and Holarrhena pubescens are one accepted species,records kept under sp_holarrhena_pubescens
+taxonomic_synonym,sp_hygrophila_spinosa,GBIF accepts Hygrophila spinosa; World Flora Online accepts Hygrophila auriculata,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_hygrophila_spinosa,hygrophila spinosa and Hygrophila auriculata are one accepted species,records kept under sp_hygrophila_auriculata
+taxonomic_synonym,sp_lannea_grandis,GBIF accepts Lannea grandis; World Flora Online accepts Lannea coromandelica,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_leonurus_japonicus,GBIF accepts Leonurus japonicus; World Flora Online accepts Leonurus macranthus,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_mahonia_bealei,GBIF accepts Mahonia bealei; World Flora Online accepts Berberis bealei,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_marsdenia_tenacissima,GBIF accepts Marsdenia tenacissima; World Flora Online accepts Gongronemopsis tenacissima,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_millettia_pachycarpa,GBIF accepts Millettia pachycarpa; World Flora Online accepts Derris taiwaniana,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_murraya_koenigii,GBIF accepts Murraya koenigii; World Flora Online accepts Bergera koenigii,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_randia_spinosa,GBIF accepts Randia spinosa; World Flora Online accepts Catunaregam spinosa,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_sargassum,GBIF accepts Sargassum; World Flora Online accepts NA,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_sargassum,workbook entry names a genus only,no occurrence data; kept in the species table
+taxonomic_synonym,sp_senna_alata,senna alata and Cassia alata are one accepted species,records kept under sp_cassia_alata
+taxonomic_synonym,sp_solanum_indicum,GBIF accepts Solanum indicum; World Flora Online accepts Solanum violaceum,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_solanum_violaceum,GBIF accepts Solanum violaceum; World Flora Online accepts Solanum tuberosum,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_stephania_erecta,GBIF accepts Stephania erecta; World Flora Online accepts Stephania pierrei,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_stephania_pierrei,stephania pierrei and Stephania erecta are one accepted species,records kept under sp_stephania_erecta
+taxonomic_synonym,sp_stereospermum_tetragonum,GBIF accepts Stereospermum tetragonum; World Flora Online accepts Stereospermum colais,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_tadehagi_triquetrum,tadehagi triquetrum and Desmodium triquetrum are one accepted species,records kept under sp_desmodium_triquetrum
+taxonomic_synonym,sp_thevetia_peruviana,GBIF accepts Thevetia peruviana; World Flora Online accepts Cascabela thevetia,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_trachyspermum_roxburghianum,GBIF accepts Trachyspermum roxburghianum; World Flora Online accepts Psammogeton involucratum,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_tylophora_indica,GBIF accepts Tylophora indica; World Flora Online accepts Vincetoxicum indicum,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_urceola_rosea,urceola rosea and Ecdysanthera rosea are one accepted species,records kept under sp_ecdysanthera_rosea
+taxonomic_synonym,sp_vetiveria_zizanioides,GBIF accepts Vetiveria zizanioides; World Flora Online accepts Chrysopogon zizanioides,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_wrightia_tomentosa,GBIF accepts Wrightia tomentosa; World Flora Online accepts Wrightia arborea,both names searchable; GBIF is the operational backbone
+taxonomic_synonym,sp_zingiber_cassumunar,GBIF accepts Zingiber cassumunar; World Flora Online accepts Zingiber purpureum,both names searchable; GBIF is the operational backbone
+country_vs_basin,sp_acanthus_ilicifolius,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_acanthus_ilicifolius,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_acanthus_ilicifolius,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_acanthus_ilicifolius,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_achyranthes_aspera,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_achyranthes_aspera,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_achyranthes_aspera,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_achyranthes_aspera,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_acmella_oleracea,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_acorus_calamus,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_acorus_gramineus,a published record inside the basin in MM; the workbook does not list MM,basin occurrence from GBIF
+country_vs_basin,sp_acrostichum_aureum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_acrostichum_aureum,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_acrostichum_aureum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_acrostichum_aureum,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_adenanthera_pavonina,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_adenanthera_pavonina,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_adenanthera_pavonina,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_aegle_marmelos,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aegle_marmelos,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aegle_marmelos,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_aglaia_elliptica,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_aglaia_elliptica,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_aglaia_odorata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_aglaia_odorata,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_aglaia_odorata,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_aglaia_roxburghiana,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_ailanthus_altissima,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_albizia_lebbeck,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_albizia_lebbeck,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_albizia_lebbeck,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_allamanda_cathartica,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_allamanda_cathartica,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_allamanda_cathartica,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_allamanda_cathartica,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_allamanda_cathartica,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_alpinia_galanga,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_alpinia_galanga,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_alpinia_officinarum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_alpinia_officinarum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_alpinia_zerumbet,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_alpinia_zerumbet,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_alpinia_zerumbet,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_alstonia_macrophylla,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_alstonia_scholaris,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_alstonia_scholaris,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_alternanthera_sessilis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_alternanthera_sessilis,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_alternanthera_sessilis,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_alternanthera_sessilis,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_alternanthera_sessilis,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_alyxia_reinwardtii,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_alyxia_reinwardtii,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_alyxia_reinwardtii,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_amomum_villosum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_amomum_villosum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_andrographis_paniculata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_andrographis_paniculata,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aphanamixis_polystachya,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_aphanamixis_polystachya,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_aphanamixis_polystachya,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_aquilaria_crassna,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_crassna,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_crassna,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_crassna,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_malaccensis,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_malaccensis,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_malaccensis,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_malaccensis,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aquilaria_sinensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_arcangelisia_flava,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_areca_catechu,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_argemone_mexicana,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_argemone_mexicana,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_argemone_mexicana,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_argemone_mexicana,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_argemone_mexicana,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_argemone_mexicana,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_argyreia_nervosa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_argyreia_osyrensis,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_aristolochia_indica,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aristolochia_indica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aristolochia_indica,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aristolochia_tagala,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aristolochia_tagala,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_aristolochia_tagala,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artemisia_annua,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artemisia_annua,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artemisia_annua,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artocarpus_lakoocha,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artocarpus_lakoocha,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artocarpus_lakoocha,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artocarpus_lakoocha,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artocarpus_lakoocha,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_artocarpus_lakoocha,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_asparagus_cochinchinensis,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_avicennia_marina,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_azadirachta_indica,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_azadirachta_indica,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_azadirachta_indica,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_bacopa_monnieri,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_bacopa_monnieri,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_bacopa_monnieri,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_bacopa_monnieri,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_bacopa_monnieri,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_barleria_prionitis,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_barleria_prionitis,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_barleria_prionitis,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_barleria_prionitis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_bauhinia_purpurea,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_bauhinia_purpurea,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_bauhinia_purpurea,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_bauhinia_purpurea,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_blumea_balsamifera,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_blumea_balsamifera,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_boesenbergia_rotunda,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_boesenbergia_rotunda,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_boesenbergia_rotunda,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_boesenbergia_rotunda,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_bombax_ceiba,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_brownlowia_tersa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_brucea_javanica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_brucea_javanica,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_bruguiera_gymnorrhiza,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_buddleja_officinalis,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_butea_monosperma,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_butea_monosperma,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_butea_monosperma,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_butea_monosperma,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_butea_monosperma,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_butea_superba,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_butea_superba,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_butea_superba,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_caesalpinia_sappan,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_caesalpinia_sappan,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_caesalpinia_sappan,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_caesalpinia_sappan,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_caesalpinia_sappan,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_callicarpa_macrophylla,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_callicarpa_macrophylla,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_callicarpa_macrophylla,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_callicarpa_macrophylla,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_calophyllum_inophyllum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_calophyllum_inophyllum,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_calophyllum_inophyllum,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_calotropis_gigantea,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_calotropis_gigantea,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_calotropis_gigantea,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_calotropis_gigantea,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_calotropis_gigantea,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_camellia_sinensis,a published record inside the basin in MM; the workbook does not list MM,basin occurrence from GBIF
+country_vs_basin,sp_cananga_odorata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cananga_odorata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_cannabis_sativa,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cannabis_sativa,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cardiospermum_halicacabum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cardiospermum_halicacabum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_cardiospermum_halicacabum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_cassia_alata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_cassia_alata,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_cassia_alata,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_cassia_fistula,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cassia_fistula,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_catharanthus_roseus,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_catharanthus_roseus,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_celosia_cristata,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_celosia_cristata,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_celosia_cristata,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_celosia_cristata,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_celosia_cristata,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_celosia_cristata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_centella_asiatica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_ceriops_tagal,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_chloranthus_spicatus,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_chonemorpha_fragrans,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_chonemorpha_fragrans,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_chonemorpha_fragrans,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_chonemorpha_fragrans,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_chromolaena_odorata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_chrysanthemum_cinerariifolium,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_chrysanthemum_cinerariifolium,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_chrysanthemum_cinerariifolium,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_chukrasia_tabularis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_chukrasia_tabularis,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_chukrasia_tabularis,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_chukrasia_tabularis,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_cinnamomum_camphora,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cinnamomum_camphora,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cinnamomum_camphora,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cinnamomum_camphora,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cinnamomum_tamala,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cinnamomum_tamala,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cissampelos_pareira,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cissampelos_pareira,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cissus_quadrangularis,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cissus_quadrangularis,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_citrus_hystrix,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clausena_harmandiana,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_clausena_harmandiana,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_clerodendrum_indicum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clerodendrum_indicum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clerodendrum_indicum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_clerodendrum_viscosum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clerodendrum_viscosum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clerodendrum_viscosum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clerodendrum_viscosum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clerodendrum_viscosum,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_clinacanthus_nutans,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_clinacanthus_nutans,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_clinacanthus_nutans,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_clinacanthus_nutans,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_clitoria_ternatea,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_cocos_nucifera,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cocos_nucifera,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_coix_lacryma,workbook reports the species from CN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coix_lacryma,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coix_lacryma,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coix_lacryma,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coix_lacryma,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coix_lacryma,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coscinium_fenestratum,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coscinium_fenestratum,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_coscinium_fenestratum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_costus_speciosus,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_crateva_religiosa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_crateva_religiosa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_crateva_religiosa,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_crateva_religiosa,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cratoxylum_cochinchinense,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_cratoxylum_cochinchinense,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_cratoxylum_cochinchinense,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_cratoxylum_cochinchinense,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_cratoxylum_cochinchinense,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_crinum_asiaticum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_crinum_asiaticum,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_crinum_asiaticum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_crinum_asiaticum,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_crinum_asiaticum,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_curculigo_orchioides,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_curculigo_orchioides,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_curculigo_orchioides,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_curculigo_orchioides,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_curcuma_caesia,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_caesia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_caesia,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_caesia,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_comosa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_comosa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_comosa,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_comosa,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_longa,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_phaeocaulis,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_phaeocaulis,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_xanthorrhiza,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_xanthorrhiza,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_xanthorrhiza,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_xanthorrhiza,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_xanthorrhiza,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_zedoaria,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_zedoaria,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_curcuma_zedoaria,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cuscuta_reflexa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cuscuta_reflexa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cuscuta_reflexa,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cuscuta_reflexa,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cuscuta_reflexa,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cuscuta_reflexa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_cyclea_barbata,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_cyclea_barbata,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_cynometra_ramiflora,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_cyperus_rotundus,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cyperus_rotundus,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_cyperus_rotundus,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dalbergia_cochinchinensis,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dalbergia_oliveri,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_datura_metel,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_datura_metel,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_datura_metel,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_dendrobium_chrysotoxum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dendrobium_devonianum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dendrobium_devonianum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dendrobium_devonianum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dendrobium_nobile,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dendrobium_nobile,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dendrobium_nobile,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dendrobium_nobile,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_derris_elliptica,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_desmodium_triquetrum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_desmodium_triquetrum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_desmodium_triquetrum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_desmodium_triquetrum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_dioscorea_bulbifera,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dioscorea_pentaphylla,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dioscorea_pentaphylla,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dioscorea_pentaphylla,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dioscorea_pentaphylla,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_diospyros_mollis,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dolichandrone_spathacea,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_dolichandrone_spathacea,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_dracaena_angustifolia,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dracaena_angustifolia,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_duhaldea_cappa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_duhaldea_cappa,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_dysoxylum_binectariferum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_ecdysanthera_rosea,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_eclipta_prostrata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_elephantopus_scaber,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_elephantopus_scaber,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_embelia_ribes,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_entada_phaseoloides,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_entada_phaseoloides,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_entada_phaseoloides,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_entada_phaseoloides,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_ephedra_gerardiana,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_erythrina_suberosa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_erythrina_variegata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_erythrina_variegata,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_erythrina_variegata,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_erythrina_variegata,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_erythrina_variegata,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_euphoria_longana,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_eurycoma_longifolia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_excoecaria_agallocha,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_excoecaria_agallocha,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_ficus_hispida,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_ficus_hispida,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_ficus_racemosa,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_ficus_racemosa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_ficus_religiosa,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_flacourtia_jangomas,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_flacourtia_jangomas,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_garcinia_cowa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_cowa,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_cowa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_hanburyi,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_hanburyi,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_hanburyi,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_mangostana,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_mangostana,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_mangostana,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_mangostana,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_pedunculata,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_schomburgkiana,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_garcinia_schomburgkiana,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_gardenia_jasminoides,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_gardenia_jasminoides,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_gardenia_jasminoides,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_gardenia_jasminoides,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_gelsemium_elegans,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_gelsemium_elegans,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_gelsemium_elegans,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_glycosmis_pentaphylla,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_glycosmis_pentaphylla,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_glycosmis_pentaphylla,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_glycosmis_pentaphylla,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_glycyrrhiza_glabra,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_glycyrrhiza_glabra,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_glycyrrhiza_glabra,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_glycyrrhiza_glabra,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_gmelina_arborea,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_gmelina_arborea,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_gmelina_arborea,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_gymnema_sylvestre,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_gymnema_sylvestre,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_gynura_procumbens,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_gynura_procumbens,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_gynura_pseudochina,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_gynura_pseudochina,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hedyotis_diffusa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_hedyotis_diffusa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_helicteres_isora,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_helicteres_isora,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_helicteres_isora,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_hibiscus_tiliaceus,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_hibiscus_tiliaceus,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_hibiscus_tiliaceus,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_hibiscus_tiliaceus,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_hibiscus_tiliaceus,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_hiptage_benghalensis,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hiptage_benghalensis,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hiptage_benghalensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_holarrhena_pubescens,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_holarrhena_pubescens,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_holarrhena_pubescens,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_holarrhena_pubescens,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_holarrhena_pubescens,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_homalomena_pendula,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_homalomena_pendula,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_homalomena_pendula,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_houttuynia_cordata,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_houttuynia_cordata,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_hydnocarpus_kurzii,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hydnocarpus_kurzii,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hydnocarpus_kurzii,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hydnocarpus_kurzii,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_hygrophila_spinosa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hygrophila_spinosa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hygrophila_spinosa,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hygrophila_spinosa,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hygrophila_spinosa,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_hymenocallis_littoralis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_hymenocallis_littoralis,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_hymenocallis_littoralis,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_hymenocallis_littoralis,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_hypericum_japonicum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_hypericum_japonicum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_hypericum_japonicum,a published record inside the basin in MM; the workbook does not list MM,basin occurrence from GBIF
+country_vs_basin,sp_hypericum_japonicum,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_hypericum_perforatum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_ichnocarpus_frutescens,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_ichnocarpus_frutescens,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_ichnocarpus_frutescens,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_ichnocarpus_frutescens,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_ichnocarpus_frutescens,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_illicium_verum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_illicium_verum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_illicium_verum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_intsia_bijuga,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_ipomoea_aquatica,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_ipomoea_aquatica,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_ipomoea_aquatica,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_ipomoea_aquatica,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_ipomoea_aquatica,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_ixora_chinensis,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_ixora_chinensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_jatropha_curcas,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_jatropha_curcas,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_jatropha_curcas,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_justicia_adhatoda,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_justicia_adhatoda,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_justicia_gendarussa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_justicia_gendarussa,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_justicia_gendarussa,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_justicia_gendarussa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_justicia_gendarussa,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_kaempferia_galanga,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_kaempferia_galanga,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_kaempferia_parviflora,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_kaempferia_parviflora,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_kaempferia_parviflora,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_kaempferia_parviflora,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_kopsia_fruticosa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_kopsia_fruticosa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_lannea_grandis,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_lannea_grandis,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_lannea_grandis,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_lannea_grandis,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_lannea_grandis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_leonurus_japonicus,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_leonurus_japonicus,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_leucaena_leucocephala,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_leucaena_leucocephala,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_limonia_acidissima,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_limonia_acidissima,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_litsea_cubeba,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_lumnitzera_racemosa,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_madhuca_longifolia,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_madhuca_longifolia,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_madhuca_longifolia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_madhuca_longifolia,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_madhuca_longifolia,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mahonia_bealei,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mahonia_bealei,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mallotus_philippensis,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mallotus_philippensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_markhamia_stipulata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_markhamia_stipulata,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_markhamia_stipulata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_marsdenia_tenacissima,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_marsdenia_tenacissima,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_melastoma_malabathricum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_melastoma_malabathricum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_melia_azedarach,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_melia_azedarach,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_melia_azedarach,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_melia_azedarach,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_mesua_ferrea,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mesua_ferrea,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mesua_ferrea,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_millettia_pachycarpa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_millettia_pachycarpa,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_millettia_pachycarpa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_millettia_pachycarpa,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_mimosa_pudica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mimosa_pudica,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_mitragyna_rotundifolia,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_mitragyna_rotundifolia,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_mitragyna_rotundifolia,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_mitragyna_speciosa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mitragyna_speciosa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mitragyna_speciosa,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_mitragyna_speciosa,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_momordica_charantia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_momordica_cochinchinensis,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_momordica_cochinchinensis,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_morinda_citrifolia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_moringa_oleifera,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_moringa_oleifera,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_morus_alba,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_morus_alba,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_morus_alba,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_mucuna_pruriens,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_murraya_koenigii,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_murraya_koenigii,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_murraya_koenigii,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_murraya_koenigii,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_murraya_koenigii,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_nauclea_officinalis,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_nerium_oleander,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_nerium_oleander,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_nerium_oleander,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_nerium_oleander,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_nerium_oleander,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_nigella_sativa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_nigella_sativa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_nigella_sativa,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_nigella_sativa,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_nigella_sativa,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_nigella_sativa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_nypa_fruticans,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_ocimum_tenuiflorum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_ophiorrhiza_pumila,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_oroxylum_indicum,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_oroxylum_indicum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_oroxylum_indicum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_paederia_foetida,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_paederia_foetida,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_panax_vietnamensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_pandanus_amaryllifolius,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pandanus_amaryllifolius,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pandanus_amaryllifolius,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pandanus_amaryllifolius,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_paramignya_trimera,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_paramignya_trimera,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_passiflora_foetida,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_passiflora_foetida,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_peperomia_pellucida,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_peperomia_pellucida,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_peperomia_pellucida,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_peperomia_pellucida,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_peperomia_pellucida,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_phoenix_paludosa,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_phyllanthus_amarus,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_amarus,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_emblica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_niruri,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_niruri,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_niruri,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_niruri,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_niruri,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_phyllanthus_reticulatus,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_picrasma_quassioides,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_piper_betle,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_piper_betle,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_piper_longum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_piper_longum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_piper_longum,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_piper_nigrum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plantago_asiatica,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plantago_asiatica,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plantago_asiatica,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pluchea_indica,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pluchea_indica,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pluchea_indica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plumbago_indica,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plumbago_zeylanica,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plumbago_zeylanica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plumbago_zeylanica,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_plumbago_zeylanica,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_plumeria_rubra,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_plumeria_rubra,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_plumeria_rubra,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_plumeria_rubra,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_pogostemon_cablin,workbook reports the species from CN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pogostemon_cablin,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pogostemon_cablin,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pogostemon_cablin,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pogostemon_cablin,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_polygonum_chinense,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_premna_serratifolia,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_premna_serratifolia,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_premna_serratifolia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_premna_serratifolia,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_psidium_guajava,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pterocarpus_macrocarpus,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_pterocarpus_macrocarpus,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_punica_granatum,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_punica_granatum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_quassia_amara,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_randia_spinosa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_randia_spinosa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_randia_spinosa,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_randia_spinosa,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_randia_spinosa,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rauvolfia_cambodiana,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_rauvolfia_serpentina,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rauvolfia_serpentina,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rauvolfia_serpentina,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_rhinacanthus_nasutus,workbook reports the species from CN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rhinacanthus_nasutus,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rhinacanthus_nasutus,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rhizophora_apiculata,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_rhizophora_mucronata,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_rhododendron_moulmainense,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rhododendron_moulmainense,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rhododendron_moulmainense,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_rhodomyrtus_tomentosa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_rhodomyrtus_tomentosa,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_rhodomyrtus_tomentosa,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_rhodomyrtus_tomentosa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_rhodomyrtus_tomentosa,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_ricinus_communis,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rubia_cordifolia,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rubia_cordifolia,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rubia_cordifolia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_rubia_cordifolia,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_salacia_chinensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_salacia_chinensis,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_salacia_chinensis,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_salacia_chinensis,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_sambucus_javanica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_santalum_album,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_santalum_album,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_santalum_album,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_santalum_album,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_santalum_album,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_sapindus_saponaria,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_sapindus_saponaria,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_sapindus_saponaria,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_sapindus_saponaria,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_sargassum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_sargassum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_sargassum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_sargassum,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_saurauia_napaulensis,a published record inside the basin in MM; the workbook does not list MM,basin occurrence from GBIF
+country_vs_basin,sp_scoparia_dulcis,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_scoparia_dulcis,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_scoparia_dulcis,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_scoparia_dulcis,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_scoparia_dulcis,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_selaginella_pulvinata,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_selaginella_pulvinata,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senegalia_catechu,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senegalia_catechu,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senegalia_catechu,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senegalia_catechu,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alata,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alata,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alata,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alata,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alata,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alexandrina,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alexandrina,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alexandrina,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alexandrina,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_alexandrina,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_occidentalis,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_occidentalis,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_senna_occidentalis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_senna_tora,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_senna_tora,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_senna_tora,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_senna_tora,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_sida_acuta,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_sida_acuta,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_sida_acuta,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_sida_acuta,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_sida_acuta,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_smilax_glabra,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_smilax_glabra,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_indicum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_indicum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_indicum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_indicum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_indicum,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_trilobatum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_trilobatum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_violaceum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_violaceum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_solanum_violaceum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_sonneratia_caseolaris,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_sonneratia_caseolaris,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_sophora_flavescens,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_spondias_pinnata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_spondias_pinnata,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_spondias_pinnata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_stephania_epigaea,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stephania_epigaea,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stephania_epigaea,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stephania_pierrei,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stephania_pierrei,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stephania_pierrei,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stephania_pierrei,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stephania_rotunda,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stereospermum_tetragonum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stereospermum_tetragonum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stereospermum_tetragonum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stereospermum_tetragonum,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stereospermum_tetragonum,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_stereospermum_tetragonum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_streblus_asper,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_strophanthus_gratus,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_strophanthus_gratus,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_strychnos_axillaris,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_strychnos_axillaris,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_strychnos_axillaris,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_strychnos_axillaris,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_strychnos_nux,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_strychnos_nux,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_strychnos_potatorum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_strychnos_potatorum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_strychnos_potatorum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_strychnos_potatorum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_styphnolobium_japonicum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_styphnolobium_japonicum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_styphnolobium_japonicum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_styphnolobium_japonicum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_swertia_angustifolia,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_swertia_angustifolia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_swertia_angustifolia,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_swertia_angustifolia,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_syzygium_aromaticum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_aromaticum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_aromaticum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_aromaticum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_aromaticum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_cumini,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_cumini,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_globiflorum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_globiflorum,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_syzygium_globiflorum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tabernaemontana_divaricata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tabernaemontana_divaricata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_tadehagi_triquetrum,workbook reports the species from CN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tadehagi_triquetrum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tadehagi_triquetrum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tadehagi_triquetrum,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tamarindus_indica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tectona_grandis,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tectona_grandis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_terminalia_bellirica,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_bellirica,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_bellirica,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_chebula,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_chebula,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_citrina,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_citrina,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_citrina,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_terminalia_citrina,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tetrastigma_hemsleyanum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tetrastigma_hemsleyanum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tetrastigma_hemsleyanum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_thespesia_populnea,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_thevetia_peruviana,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_thunbergia_laurifolia,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_thunbergia_laurifolia,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tinospora_crispa,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tinospora_crispa,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_tithonia_diversifolia,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_tithonia_diversifolia,a published record inside the basin in KH; the workbook does not list KH,basin occurrence from GBIF
+country_vs_basin,sp_tithonia_diversifolia,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_tithonia_diversifolia,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_tithonia_diversifolia,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_toona_ciliata,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_toona_ciliata,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_toona_ciliata,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_toona_sinensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_trachelospermum_asiaticum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_trachelospermum_asiaticum,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_trachelospermum_asiaticum,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_trachelospermum_jasminoides,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_trachyspermum_roxburghianum,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_trachyspermum_roxburghianum,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_trachyspermum_roxburghianum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_trachyspermum_roxburghianum,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_trachyspermum_roxburghianum,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_trachyspermum_roxburghianum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_trichosanthes_cucumerina,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_trichosanthes_cucumerina,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_trichosanthes_cucumerina,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_triumfetta_rhomboidea,workbook reports the species from KH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_triumfetta_rhomboidea,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_triumfetta_rhomboidea,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_triumfetta_rhomboidea,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_tylophora_indica,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_urena_lobata,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_verbena_officinalis,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_verbena_officinalis,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vernonia_amygdalina,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vernonia_amygdalina,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vernonia_amygdalina,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vernonia_amygdalina,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vetiveria_zizanioides,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vetiveria_zizanioides,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vetiveria_zizanioides,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vetiveria_zizanioides,workbook reports the species from TH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vetiveria_zizanioides,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vetiveria_zizanioides,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_vitex_negundo,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vitex_negundo,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vitex_negundo,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_vitex_negundo,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_wedelia_chinensis,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_wrightia_tomentosa,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_wrightia_tomentosa,workbook reports the species from LA; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_wrightia_tomentosa,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_wrightia_tomentosa,workbook reports the species from VN; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_wrightia_tomentosa,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_xylocarpus_granatum,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_xylocarpus_moluccensis,a published record inside the basin in VN; the workbook does not list VN,basin occurrence from GBIF
+country_vs_basin,sp_zanthoxylum_acanthopodium,workbook reports the species from KH; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zanthoxylum_acanthopodium,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zanthoxylum_acanthopodium,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zanthoxylum_armatum,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+country_vs_basin,sp_zanthoxylum_rhetsa,a published record inside the basin in LA; the workbook does not list LA,basin occurrence from GBIF
+country_vs_basin,sp_zanthoxylum_rhetsa,a published record inside the basin in TH; the workbook does not list TH,basin occurrence from GBIF
+country_vs_basin,sp_zingiber_montanum,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zingiber_montanum,workbook reports the species from TH; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zingiber_montanum,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zingiber_officinale,workbook reports the species from MM; no published record in that country,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zingiber_zerumbet,workbook reports the species from MM; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zingiber_zerumbet,workbook reports the species from VN; records in that country lie outside the basin,country-level report kept; basin presence unconfirmed
+country_vs_basin,sp_zingiber_zerumbet,a published record inside the basin in CN; the workbook does not list CN,basin occurrence from GBIF
+conflicting_assessment,sp_dalbergia_oliveri,IUCN category EN in the workbook (unstated (workbook statement)) but CR in GBIF,both shown; verify against the IUCN Red List
+citation_issue,sp_aquilaria_crassna,"uses.csv use_aquilaria-crassna_r12_1: ASEAN 2024, Herbal & Medicinal Plants Vol.3, p.300; Wang et al. 2018, Molecules 23:828, doi:10.3390/molecules23040828 — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_dalbergia_cochinchinensis,"uses.csv use_dalbergia-cochinchinensis_r69_1: Hung et al. 2020, Forests 11:996, doi:10.3390/f11090996 — printed DOI rejected: first author differs (lin) and species not in title - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_dalbergia_oliveri,"uses.csv use_dalbergia-oliveri_r70_1: Hung et al. 2020, Forests 11:996, doi:10.3390/f11090996 — printed DOI rejected: first author differs (lin) and species not in title - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_eurycoma_longifolia,"uses.csv use_eurycoma-longifolia_r87_1: Bhat & Karim 2010, J Ethnopharmacol 132:1–10, PMID 20434529 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_mitragyna_speciosa,"uses.csv use_mitragyna-speciosa_r121_1: Urumarudappa et al. 2026, Adv Tradit Med, doi:10.1016/j.atmed.2026.03.002; DeFilipps & Krupnick 2018 — printed DOI rejected: DOI not found in Crossref - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_stephania_rotunda,"uses.csv use_stephania-rotunda_r174_1: Chea et al. 2007, J Ethnopharmacol 112:480–489, PMID 17624624 — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_andrographis_paniculata,"pharmacology.csv pha_ext_andrographis-paniculata_r3: Low M et al. 2024, Front Pharmacol, doi:10.3389/fphar.2024.1395021 — printed DOI rejected: DOI not found in Crossref - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_curcuma_comosa,"pharmacology.csv pha_ext_curcuma-comosa_r8: Aung ZMK et al. 2022, Heliyon, doi:10.1016/j.heliyon.2022.e12516 — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_kaempferia_parviflora,"pharmacology.csv pha_ext_kaempferia-parviflora_r9: Morikawa T et al. 2008, J Nat Prod — PMID 18725283 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation; journal differs from the citation (Journal",evidence graded on the resolved article; correct the citation
+citation_issue,sp_zingiber_officinale,"pharmacology.csv pha_ext_zingiber-officinale_r16: van Breemen RB et al. 2011, PLoS One — PMC3018740 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_zingiber_cassumunar,"pharmacology.csv pha_ext_zingiber-cassumunar_r18: Auranwiwat C et al. 2023, J Health Sci Med Res, doi:10.31584/jhsmr.2023.995 — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_blumea_balsamifera,"pharmacology.csv pha_ext_blumea-balsamifera_r20: Sari NM et al. 2023, Biomedich, doi:10.21580/biomedich.2023.301 — printed DOI rejected: DOI not found in Crossref - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_elephantopus_scaber,"pharmacology.csv pha_ext_elephantopus-scaber_r27: Wang J et al. 2014, Molecules — PMC4055671 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Evidence-based complementary and alterna)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_gynura_procumbens,"pharmacology.csv pha_ext_gynura-procumbens_r34: Cao MY et al. 2022, Nat Prod Res, doi:10.1080/09540105.2022.2098935 — confirmed by doi: peer-reviewed article; citation error: journal differs from the citation (Food and Agricultural Immunology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_thunbergia_laurifolia,"pharmacology.csv pha_ext_thunbergia-laurifolia_r37: Senghoi W et al. 2024, S Afr J Bot, doi:10.1016/j.sajb.2024.08.034 — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_thunbergia_laurifolia,"pharmacology.csv pha_ext_thunbergia-laurifolia_r38: Srimawong C et al. 2025, RSC Adv 15:22086, doi:10.1039/D5RA02755A — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_thunbergia_laurifolia,"pharmacology.csv pha_ext_thunbergia-laurifolia_r39: Wonkchalee O et al. 2012, PubMed PMID 22327320 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Parasitology research)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_barleria_prionitis,"pharmacology.csv pha_ext_barleria-prionitis_r43: Gangaram S et al. 2021, Molecules — PMC8747396 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Plants (Basel, Switzerland))",evidence graded on the resolved article; correct the citation
+citation_issue,sp_phyllanthus_emblica,"pharmacology.csv pha_ext_phyllanthus-emblica_r51: Majeed M et al. 2020, PubMed PMID 31487036 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of the science of food and agric)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_phyllanthus_emblica,"pharmacology.csv pha_ext_phyllanthus-emblica_r52: Majeed M et al. 2020, PubMed PMID 31487036 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of the science of food and agric)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_gymnema_sylvestre,"pharmacology.csv pha_ext_gymnema-sylvestre_r54: Chen G et al. 2017, Molecules — PMC5406464 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Frontiers in pharmacology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_aegle_marmelos,"pharmacology.csv pha_ext_aegle-marmelos_r62: Phytochemical Analysis and Evaluation of Antioxidant..., PMC11523027 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_centella_asiatica,"pharmacology.csv pha_ext_centella-asiatica_r67: Arribas-López E et al. 2022, PMC8956065 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_scoparia_dulcis,"pharmacology.csv pha_ext_scoparia-dulcis_r72: Antidiabetic Properties, Bioactive Constituents of Scoparia dulcis, doi:10.1155/2016/8243215 — confirmed by doi: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_morinda_citrifolia,"pharmacology.csv pha_ext_morinda-citrifolia_r75: Hepatoprotective Effects of Morinda citrifolia Leaf Extract, J Longev 2019:9714302 (cited in Hou S 2025, PMC11939675) — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_hygrophila_auriculata,"pharmacology.csv pha_ext_hygrophila-auriculata_r80: Shanmugasundaram P et al. 2006, PubMed PMID 16213687 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of ethnopharmacology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_achyranthes_aspera,"pharmacology.csv pha_ext_achyranthes-aspera_r86: Ha HA et al. 2024, PubMed PMID 38043891 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Environmental research)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_coscinium_fenestratum,"pharmacology.csv pha_ext_coscinium-fenestratum_r91: Nair GM et al. 2005, PubMed PMID 16112497 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_stephania_rotunda,"pharmacology.csv pha_ext_stephania-rotunda_r98: Baghdikian B et al. 2013, PubMed PMID 23127648 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of ethnopharmacology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_calotropis_gigantea,"pharmacology.csv pha_ext_calotropis-gigantea_r106: Nejhad AA et al. 2023, PMC10485245 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_calotropis_gigantea,"pharmacology.csv pha_ext_calotropis-gigantea_r108: Suknoppakit P et al. 2023, Heliyon, doi:10.1016/j.heliyon.2023.e20358 — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_brucea_javanica,"pharmacology.csv pha_ext_brucea-javanica_r110: Chen J et al. 2024, Brucea javanica review — PMC10871038 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Frontiers in pharmacology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_nauclea_officinalis,"pharmacology.csv pha_ext_nauclea-officinalis_r113: Liu B et al. 2022, Nauclea officinalis review — PMC9764569 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Chinese medicine)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_eurycoma_longifolia,"pharmacology.csv pha_ext_eurycoma-longifolia_r115: Cytotoxic and antimalarial constituents of the roots of Eurycoma longifolia, PubMed PMID 1800638 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_piper_nigrum,"pharmacology.csv pha_ext_piper-nigrum_r125: Alves FS et al. 2022, Membranes 10(1):21, doi:10.3399/membranes10010021 — printed DOI rejected: DOI not found in Crossref - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_rhodomyrtus_tomentosa,"pharmacology.csv pha_ext_rhodomyrtus-tomentosa_r127: Srisuwan S et al. 2017, PubMed PMID 28475464 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Microbial drug resistance (Larchmont, N.)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_diospyros_mollis,"pharmacology.csv pha_ext_diospyros-mollis_r136: Rauf A et al. 2024, Anticancer therapeutic potential of genus Diospyros — PMC11521686 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Food science & nutrition)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_catharanthus_roseus,"pharmacology.csv pha_ext_catharanthus-roseus_r138: Dhyani P et al. 2022, Anticancer potential of alkaloids — PMC9161525 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Cancer cell international)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_kopsia_fruticosa,"pharmacology.csv pha_ext_kopsia-fruticosa_r143: Long SY et al. 2018, Phytochemistry — S0367326X18308864 / PMID 29935259 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_aglaia_odorata,"pharmacology.csv pha_ext_aglaia-odorata_r146: Rivero-Cruz JF et al. 2020, PMC7022611 — printed PMID/PMC rejected: first author differs (rivero-cruz) and species not in title - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_lansium_domesticum,"pharmacology.csv pha_ext_lansium-domesticum_r147: Fadhilah K et al. 2020, PubMed PMID 34136135 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (F1000Research)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_xylocarpus_granatum,"pharmacology.csv pha_ext_xylocarpus-granatum_r150: Islam ME et al. 2025, PMC12639601 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_aphanamixis_polystachya,"pharmacology.csv pha_ext_aphanamixis-polystachya_r154: Niloticin apoptotic assessment, PMC11378019 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_melia_azedarach,"pharmacology.csv pha_ext_melia-azedarach_r159: Yuan CM et al. 2013, PubMed PMID 23250810 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Planta medica)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_dalbergia_cochinchinensis,"pharmacology.csv pha_ext_dalbergia-cochinchinensis_r166: Polyphenolic Diversity, Antioxidant Activity, and Anticancer effects, PMC13092726 — printed PMID/PMC rejected: first author differs (touhtouh) and species not in title - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_garcinia_hanburyi,"pharmacology.csv pha_ext_garcinia-hanburyi_r179: Seo MJ et al. 2019, Cell Death Dis, doi:10.1038/s41419-019-1360-4 — printed DOI rejected: resolved article is not about plants or natural products (Gambogic acid triggers vacuolization-associated ce) - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_morus_alba,"pharmacology.csv pha_ext_morus-alba_r187: Morusin as a drug candidate, Front Pharmacol 2025, doi:10.3389/fphar.2025.1704535 — confirmed by doi: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_morus_alba,pharmacology.csv pha_ext_morus-alba_r189: Exploring the therapeutic and anti-tumor properties of morusin — PMC10203489 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation,evidence graded on the resolved article; correct the citation
+citation_issue,sp_ichnocarpus_frutescens,"pharmacology.csv pha_ext_ichnocarpus-frutescens_r205: Kumarappan CT et al. 2007, PubMed PMID 17704739 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Experimental oncology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_toona_ciliata,"pharmacology.csv pha_ext_toona-ciliata_r215: Zhu GL et al. 2019, PubMed PMID 31503490 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of natural products)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_garcinia_atroviridis,"pharmacology.csv pha_ext_garcinia-atroviridis_r225: Mackeen MM et al. 2000, PubMed PMID 10996278 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Journal of ethnopharmacology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_derris_elliptica,"pharmacology.csv pha_ext_derris-elliptica_r240: Wu X et al. 2012, PubMed PMID 22414317 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Fitoterapia)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_bruguiera_gymnorrhiza,"pharmacology.csv pha_ext_bruguiera-gymnorrhiza_r252: Rahman NH et al. 2020, PMC7784945 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_excoecaria_agallocha,"pharmacology.csv pha_ext_excoecaria-agallocha_r263: Sabu KR et al. 2022, PMC8765538 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_lumnitzera_racemosa,"pharmacology.csv pha_ext_lumnitzera-racemosa_r267: Nguyen PT et al. 2015, PubMed PMID 25001899 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Archives of pharmacal research)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_hibiscus_tiliaceus,"pharmacology.csv pha_ext_hibiscus-tiliaceus_r280: Evaluation of pharmacological activity of Hibiscus tiliaceus, PMC4967069 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_brownlowia_tersa,"pharmacology.csv pha_ext_brownlowia-tersa_r291: Pervin R et al. 2022, J Biologically Active Prod Nat — 10.1080/10496475.2022.2077878 — confirmed by doi: peer-reviewed article; citation error: journal differs from the citation (Journal of Herbs, Spices &amp; Medicinal)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_andrographis_paniculata,"pharmacology.csv pha_cmp_andrographis-paniculata_r7: Chao & Lin 2010, Chin Med 5:17 (PMID 20374662); Xia et al. 2004 — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search",evidence graded on the resolved article; correct the citation
+citation_issue,sp_rhinacanthus_nasutus,"pharmacology.csv pha_cmp_rhinacanthus-nasutus_r35: Ngoc et al. 2019, Fitoterapia (PMID 29561167) — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Natural product research)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_thevetia_peruviana,"pharmacology.csv pha_cmp_thevetia-peruviana_r96: Vázquez-Martínez et al. 2024, PMC11396790 — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation",evidence graded on the resolved article; correct the citation
+citation_issue,sp_tylophora_indica,"pharmacology.csv pha_cmp_tylophora-indica_r103: Cyriac et al. 2020, PMC7211505 — printed PMID/PMC rejected: resolved article is not about plants or natural products (Tylophorine: Sources, Properties, Applications and) - v",evidence graded on the resolved article; correct the citation
+citation_issue,sp_urceola_rosea,pharmacology.csv pha_cmp_urceola-rosea_r104: Ngoc et al. 2018 (PMID 29101817) — confirmed by pmid: peer-reviewed article; citation error: first author differs from the citation,evidence graded on the resolved article; correct the citation
+citation_issue,sp_wedelia_chinensis,"pharmacology.csv pha_cmp_wedelia-chinensis_r126: Han et al. 2026, PMC12891205 — printed PMID/PMC rejected: year differs (2025) - verify",evidence graded on the resolved article; correct the citation
+citation_issue,sp_cassia_fistula,"pharmacology.csv pha_cmp_cassia-fistula_r171: Mehta et al. 2009, PMC2839395 — printed PMID/PMC rejected: resolved article is not about plants or natural products (A modified method for isolation of rhein from senn) - v",evidence graded on the resolved article; correct the citation
+citation_issue,sp_millettia_pachycarpa,"pharmacology.csv pha_cmp_millettia-pachycarpa_r187: Caboni et al. 2004 (PMID 15540952); Zhang et al. 2022 — printed PMID/PMC rejected: resolved article is not about plants or natural products (Rotenone, deguelin, their metabolites, and the rat) - v",evidence graded on the resolved article; correct the citation
+citation_issue,sp_artocarpus_heterophyllus,"pharmacology.csv pha_cmp_artocarpus-heterophyllus_r247: Septama et al. 2015, Phytomedicine (PMID 25856717); Septama 2018 — confirmed by pmid: peer-reviewed article; citation error: journal differs from the citation (Pharmaceutical biology)",evidence graded on the resolved article; correct the citation
+citation_issue,sp_mitragyna_speciosa,"pharmacology.csv pha_cmp_mitragyna-speciosa_r290: Kruegel et al. 2019, PMC6598159 — printed PMID/PMC rejected: resolved article is not about plants or natural products (7-Hydroxymitragynine Is an Active Metabolite of Mi) - v",evidence graded on the resolved article; correct the citation
+citation_issue,sp_kaempferia_parviflora,pharmacology.csv pha_cmp_kaempferia-parviflora_r394: Sawasdee & Chaiyana 2009 (PMID 19585019) — confirmed by query: peer-reviewed article; the printed identifier was wrong and the article was found by search,evidence graded on the resolved article; correct the citation
+coordinate_outlier,sp_rhizophora_apiculata,1964 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_cocos_nucifera,338 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_clitoria_ternatea,309 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_leucaena_leucocephala,306 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_bruguiera_gymnorrhiza,283 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_hibiscus_tiliaceus,255 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_mimosa_pudica,239 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_calotropis_gigantea,143 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_ceriops_tagal,133 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_catharanthus_roseus,133 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_melastoma_malabathricum,130 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_mangifera_indica,129 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_chromolaena_odorata,128 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_artocarpus_heterophyllus,114 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_thespesia_populnea,108 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_rhodomyrtus_tomentosa,105 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_ipomoea_aquatica,102 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_ricinus_communis,102 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_morinda_citrifolia,94 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_eclipta_prostrata,94 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_urena_lobata,92 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_peperomia_pellucida,88 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_tamarindus_indica,83 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_passiflora_foetida,79 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_ficus_hispida,78 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_paederia_foetida,76 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_litsea_cubeba,76 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_excoecaria_agallocha,76 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_lumnitzera_racemosa,75 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_melia_azedarach,72 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_avicennia_marina,68 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_nypa_fruticans,67 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_oroxylum_indicum,66 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_polygonum_chinense,65 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_cassia_fistula,64 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_houttuynia_cordata,64 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_streblus_asper,63 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_calophyllum_inophyllum,63 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_gardenia_jasminoides,58 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_cinnamomum_camphora,55 records fall outside the outline of their stated country,kept; rendered hollow if low precision; listed for review
+coordinate_outlier,sp_litsea_cubeba,1467 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_zanthoxylum_armatum,1440 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_vitex_negundo,1096 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_paederia_foetida,1055 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_houttuynia_cordata,819 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_sambucus_javanica,710 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_plantago_asiatica,642 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_mallotus_philippensis,628 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_rubia_cordifolia,614 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_morus_alba,554 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_hypericum_japonicum,483 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_verbena_officinalis,482 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_urena_lobata,451 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_gardenia_jasminoides,432 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_acorus_gramineus,429 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_smilax_glabra,387 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_picrasma_quassioides,367 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_sophora_flavescens,357 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_leonurus_japonicus,338 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_melastoma_malabathricum,316 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_trachelospermum_jasminoides,310 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_artemisia_annua,296 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_cannabis_sativa,289 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_eclipta_prostrata,270 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_melia_azedarach,268 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_cyperus_rotundus,260 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_acorus_calamus,259 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_millettia_pachycarpa,253 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_ailanthus_altissima,245 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_asparagus_cochinchinensis,237 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_duhaldea_cappa,237 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_cinnamomum_camphora,236 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_saurauia_napaulensis,197 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_hypericum_perforatum,196 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_buddleja_officinalis,191 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_rhododendron_moulmainense,190 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_dioscorea_bulbifera,188 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_buddleja_asiatica,188 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_alternanthera_sessilis,181 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity
+coordinate_outlier,sp_phyllanthus_emblica,178 low-precision records (coordinate uncertainty over 50 km or precision of 0.1 degrees),kept; rendered with reduced opacity

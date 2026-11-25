@@ -1,0 +1,12 @@
+data/raw/
+*.numbers
+.DS_Store
+.venv/
+__pycache__/
+node_modules/
+site/
+
+# Evidence-engine registers: restricted (owner decision 2026-11-25). The data
+# stays local for builds; only build-time aggregate numbers are published.
+data/evidence/
+web/data/evidence/

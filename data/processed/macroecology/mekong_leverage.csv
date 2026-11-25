@@ -1,0 +1,8 @@
+botanical_country,wgsrpd_code,vascular_diversity,medicinal_diversity,indomalaya_fitted,indomalaya_residual,leverage
+Cambodia,CBD,3933.0,2181.0,1818.7,362.3,0.03707
+China South-Central,CHC,20177.0,6264.0,6860.6,-596.6,0.35432
+China Southeast,CHS,11471.0,4749.0,4158.4,590.6,0.08341
+Laos,LAO,5150.0,2576.0,2196.4,379.6,0.03273
+Myanmar,MYA,9637.0,4425.0,3589.1,835.9,0.05606
+Thailand,THA,11109.0,4173.0,4046.0,127.0,0.07719
+Vietnam,VIE,11738.0,4413.0,4241.3,171.7,0.08826

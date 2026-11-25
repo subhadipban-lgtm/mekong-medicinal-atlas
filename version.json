@@ -1,0 +1,9 @@
+{
+  "version": "0.9.0",
+  "status": "release candidate",
+  "data_cutoff": "2026-11-24",
+  "dataset_doi": "10.5281/zenodo.24525569",
+  "concept_doi": "10.5281/zenodo.24525568",
+  "zenodo_record": "https://zenodo.org/records/24525569",
+  "notes": "v0.9.0 is archived on Zenodo with a version DOI. v1.0.0 is cut when the author list, affiliations and funding on the About page are confirmed and a DOI-citable GBIF download replaces the API snapshot."
+}

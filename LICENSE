@@ -1,0 +1,35 @@
+Mekong Medicinal Plant Atlas — compilation and code
+===================================================
+
+Code and the compiled tables are released under the Creative Commons Attribution 4.0
+International licence (CC-BY-4.0), except where a source states otherwise (see below).
+
+Occurrence records
+------------------
+The Darwin Core Archive and the occurrence GeoJSON layers are released under CC-BY-NC-4.0,
+because they include records published under that licence. Each record keeps the licence it was
+published with (CC0, CC-BY-4.0 or CC-BY-NC-4.0), given in its `license` field, and that licence
+prevails for that record. The records come from GBIF; each remains available from its publisher.
+
+Geospatial layers
+-----------------
+Mekong basin boundary: CC-BY-4.0, Tiwari et al., doi:10.5281/zenodo.7622998, derived from
+  Dang et al. (2022), Science of the Total Environment 831:154833.
+Mekong River centreline: rendered from the WWF-Laos ArcGIS service at run time (no licence
+  stated, not redistributed); the committed fallback is Natural Earth 1:10m (public domain).
+Country outlines and the Natural Earth river: public domain (naturalearthdata.com).
+Basemap: CARTO raster tiles, © CARTO and © OpenStreetMap contributors (ODbL).
+
+Photographs
+-----------
+iNaturalist, each image used under the licence shown on the page (CC0, CC-BY, CC-BY-SA, or a
+non-commercial variant). The photographer's attribution and the licence are displayed with every
+image. Non-commercial images may be used only for non-commercial purposes.
+
+Source workbook
+---------------
+The ethnobotanical, pharmacological and conservation content is derived from a research
+compilation whose rows cite their primary sources. The workbook itself is not redistributed.
+
+If you reuse this atlas, cite the version and, once minted, the dataset DOI, together with GBIF
+and World Flora Online for the underlying data.

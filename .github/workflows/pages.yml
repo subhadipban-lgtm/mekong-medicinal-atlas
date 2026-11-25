@@ -1,0 +1,39 @@
+# Publish the atlas site in web/ to GitHub Pages.
+# GitHub Pages can serve a branch's / or /docs folder directly, but this atlas keeps its site in
+# web/, so a workflow uploads that folder as the Pages artefact instead.
+#
+# The build and deploy steps are separate jobs: the deploy job starts only after the build job has
+# fully completed, which gives the Actions artifact API time to register the uploaded artefact.
+# With both steps in one job the deploy can query for the artefact milliseconds after the upload
+# finishes and see "0 artifacts", which is an eventual-consistency race, not a real failure.
+name: Deploy atlas site
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

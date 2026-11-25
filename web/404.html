@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Mekong Medicinal Plant Atlas</title>
+<meta name="description" content="The requested file does not exist in the Mekong Medicinal Plant Atlas.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="assets/css/atlas.css" rel="stylesheet">
+</head>
+<body>
+<main class="container px-3 px-lg-4 py-3">
+  <h1 class="h4">Page not found</h1>
+  <p class="small">The file you asked for does not exist at this address.</p>
+  <div class="card mb-3"><div class="card-body">
+    <h2 class="h6">Looking for a species?</h2>
+    <p class="small mb-2">Species pages live in the <code>species/</code> folder, one file per taxon.
+    If you opened a link like <code>ailanthus_altissima.html</code>, try it under <code>species/</code>:</p>
+    <p class="mb-1" id="speciesHint"></p>
+    <p class="small text-muted mb-0">Or browse the full list: <a href="species/index.html">all taxa</a> &middot;
+    <a href="explore.html">search the atlas</a></p>
+  </div></div>
+  <p class="small"><a href="index.html">Back to the atlas</a></p>
+</main>
+<script>
+(function () {
+  var slug = decodeURIComponent(location.pathname.split('/').pop().replace(/\.html$/i, ''));
+  if (/^[a-z][a-z0-9_]{4,}$/.test(slug)) {
+    var link = document.createElement('a');
+    link.href = 'species/' + slug + '.html';
+    link.className = 'taxon';
+    link.textContent = 'species/' + slug + '.html';
+    var hint = document.getElementById('speciesHint');
+    hint.appendChild(document.createTextNode('Try '));
+    hint.appendChild(link);
+  }
+})();
+</script>
+</body>
+</html>
