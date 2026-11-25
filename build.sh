@@ -41,6 +41,7 @@ if [[ $SITE_ONLY -eq 0 ]]; then
   run "$PYTHON" scripts/build_tables.py
   run "$PYTHON" scripts/build_dictionary.py
   run "$PYTHON" scripts/grade_evidence.py
+  run "$PYTHON" scripts/build_evidence_manifest.py
   run "$PYTHON" scripts/build_provenance.py
   run "$PYTHON" scripts/build_dwc.py
   run "$PYTHON" scripts/build_geo.py
@@ -49,6 +50,7 @@ if [[ $SITE_ONLY -eq 0 ]]; then
   if [ -f data/raw/ne_admin1/ne_10m_admin_1_states_provinces.shp ]; then run "$PYTHON" scripts/macroecology_layers.py; else echo "skipping macroecology layers: Natural Earth admin-1 missing"; fi
   if [ -f data/raw/admin1_vascular.json ]; then run "$PYTHON" scripts/internal_coldspots.py; else echo "skipping internal coldspots: data/raw/admin1_vascular.json missing (run scripts/harvest_admin1_vascular.py)"; fi
 fi
+if [[ $SITE_ONLY -eq 1 ]]; then $PYTHON scripts/build_evidence_manifest.py --manifest || exit 1; fi
 run "$PYTHON" scripts/build_site.py
 run "$PYTHON" scripts/qa_checks.py
 if command -v node >/dev/null; then run node scripts/browser_checks.js; run "$PYTHON" scripts/qa_checks.py; else echo "node not found: skipping the browser checks"; fi

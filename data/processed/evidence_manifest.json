@@ -1,0 +1,478 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-11-25",
+  "totals": {
+    "pubs": 2317,
+    "compounds": 119,
+    "resolved": 103,
+    "pilot_taxa": 20
+  },
+  "gms": {
+    "papers": 10,
+    "plants": 175,
+    "wcvp": 168,
+    "molecule_rows": 190
+  },
+  "taxa": [
+    {
+      "species_id": "sp_aegle_marmelos",
+      "name": "Aegle marmelos",
+      "family": "Rutaceae",
+      "n_pubs": 139,
+      "tiers": {
+        "traditional": 2,
+        "in vitro": 3,
+        "in vivo": 34,
+        "review": 95,
+        "clinical": 0,
+        "other": 5
+      },
+      "tier_total": 139,
+      "n_compounds": 7,
+      "n_resolved": 7,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_alstonia_scholaris",
+      "name": "Alstonia scholaris",
+      "family": "Apocynaceae",
+      "n_pubs": 118,
+      "tiers": {
+        "traditional": 3,
+        "in vitro": 4,
+        "in vivo": 32,
+        "review": 67,
+        "clinical": 0,
+        "other": 12
+      },
+      "tier_total": 118,
+      "n_compounds": 4,
+      "n_resolved": 4,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_andrographis_paniculata",
+      "name": "Andrographis paniculata",
+      "family": "Acanthaceae",
+      "n_pubs": 118,
+      "tiers": {
+        "traditional": 0,
+        "in vitro": 7,
+        "in vivo": 22,
+        "review": 82,
+        "clinical": 5,
+        "other": 2
+      },
+      "tier_total": 118,
+      "n_compounds": 4,
+      "n_resolved": 4,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_aquilaria_crassna",
+      "name": "Aquilaria crassna",
+      "family": "Thymelaeaceae",
+      "n_pubs": 105,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 4,
+        "in vivo": 65,
+        "review": 26,
+        "clinical": 3,
+        "other": 6
+      },
+      "tier_total": 105,
+      "n_compounds": 12,
+      "n_resolved": 11,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_artocarpus_heterophyllus",
+      "name": "Artocarpus heterophyllus",
+      "family": "Moraceae",
+      "n_pubs": 109,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 4,
+        "in vivo": 23,
+        "review": 77,
+        "clinical": 1,
+        "other": 3
+      },
+      "tier_total": 109,
+      "n_compounds": 7,
+      "n_resolved": 6,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_barleria_prionitis",
+      "name": "Barleria prionitis",
+      "family": "Acanthaceae",
+      "n_pubs": 100,
+      "tiers": {
+        "traditional": 4,
+        "in vitro": 1,
+        "in vivo": 49,
+        "review": 38,
+        "clinical": 1,
+        "other": 7
+      },
+      "tier_total": 100,
+      "n_compounds": 4,
+      "n_resolved": 3,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_brucea_javanica",
+      "name": "Brucea javanica",
+      "family": "Simaroubaceae",
+      "n_pubs": 113,
+      "tiers": {
+        "traditional": 0,
+        "in vitro": 5,
+        "in vivo": 30,
+        "review": 72,
+        "clinical": 2,
+        "other": 4
+      },
+      "tier_total": 113,
+      "n_compounds": 6,
+      "n_resolved": 5,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_catharanthus_roseus",
+      "name": "Catharanthus roseus",
+      "family": "Apocynaceae",
+      "n_pubs": 184,
+      "tiers": {
+        "traditional": 0,
+        "in vitro": 3,
+        "in vivo": 49,
+        "review": 121,
+        "clinical": 1,
+        "other": 10
+      },
+      "tier_total": 184,
+      "n_compounds": 6,
+      "n_resolved": 6,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_centella_asiatica",
+      "name": "Centella asiatica",
+      "family": "Apiaceae",
+      "n_pubs": 118,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 1,
+        "in vivo": 18,
+        "review": 97,
+        "clinical": 0,
+        "other": 1
+      },
+      "tier_total": 118,
+      "n_compounds": 4,
+      "n_resolved": 4,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_dalbergia_cochinchinensis",
+      "name": "Dalbergia cochinchinensis",
+      "family": "Fabaceae",
+      "n_pubs": 30,
+      "tiers": {
+        "traditional": 0,
+        "in vitro": 2,
+        "in vivo": 18,
+        "review": 3,
+        "clinical": 1,
+        "other": 6
+      },
+      "tier_total": 30,
+      "n_compounds": 9,
+      "n_resolved": 5,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_eurycoma_longifolia",
+      "name": "Eurycoma longifolia",
+      "family": "Simaroubaceae",
+      "n_pubs": 102,
+      "tiers": {
+        "traditional": 3,
+        "in vitro": 7,
+        "in vivo": 37,
+        "review": 49,
+        "clinical": 2,
+        "other": 4
+      },
+      "tier_total": 102,
+      "n_compounds": 6,
+      "n_resolved": 5,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_kaempferia_parviflora",
+      "name": "Kaempferia parviflora",
+      "family": "Zingiberaceae",
+      "n_pubs": 117,
+      "tiers": {
+        "traditional": 0,
+        "in vitro": 7,
+        "in vivo": 41,
+        "review": 59,
+        "clinical": 6,
+        "other": 4
+      },
+      "tier_total": 117,
+      "n_compounds": 5,
+      "n_resolved": 5,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_momordica_charantia",
+      "name": "Momordica charantia",
+      "family": "Cucurbitaceae",
+      "n_pubs": 117,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 2,
+        "in vivo": 16,
+        "review": 93,
+        "clinical": 3,
+        "other": 2
+      },
+      "tier_total": 117,
+      "n_compounds": 4,
+      "n_resolved": 1,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_morinda_citrifolia",
+      "name": "Morinda citrifolia",
+      "family": "Rubiaceae",
+      "n_pubs": 109,
+      "tiers": {
+        "traditional": 0,
+        "in vitro": 11,
+        "in vivo": 22,
+        "review": 72,
+        "clinical": 1,
+        "other": 3
+      },
+      "tier_total": 109,
+      "n_compounds": 6,
+      "n_resolved": 6,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_phyllanthus_amarus",
+      "name": "Phyllanthus amarus",
+      "family": "Phyllanthaceae",
+      "n_pubs": 115,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 5,
+        "in vivo": 20,
+        "review": 84,
+        "clinical": 2,
+        "other": 3
+      },
+      "tier_total": 115,
+      "n_compounds": 5,
+      "n_resolved": 5,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_phyllanthus_emblica",
+      "name": "Phyllanthus emblica",
+      "family": "Phyllanthaceae",
+      "n_pubs": 166,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 5,
+        "in vivo": 27,
+        "review": 126,
+        "clinical": 3,
+        "other": 4
+      },
+      "tier_total": 166,
+      "n_compounds": 3,
+      "n_resolved": 3,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_rhinacanthus_nasutus",
+      "name": "Rhinacanthus nasutus",
+      "family": "Acanthaceae",
+      "n_pubs": 109,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 12,
+        "in vivo": 34,
+        "review": 56,
+        "clinical": 1,
+        "other": 5
+      },
+      "tier_total": 109,
+      "n_compounds": 7,
+      "n_resolved": 5,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_scoparia_dulcis",
+      "name": "Scoparia dulcis",
+      "family": "Plantaginaceae",
+      "n_pubs": 100,
+      "tiers": {
+        "traditional": 5,
+        "in vitro": 4,
+        "in vivo": 31,
+        "review": 57,
+        "clinical": 2,
+        "other": 1
+      },
+      "tier_total": 100,
+      "n_compounds": 9,
+      "n_resolved": 8,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_tabernaemontana_divaricata",
+      "name": "Tabernaemontana divaricata",
+      "family": "Apocynaceae",
+      "n_pubs": 115,
+      "tiers": {
+        "traditional": 5,
+        "in vitro": 11,
+        "in vivo": 43,
+        "review": 52,
+        "clinical": 0,
+        "other": 4
+      },
+      "tier_total": 115,
+      "n_compounds": 6,
+      "n_resolved": 6,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    },
+    {
+      "species_id": "sp_zingiber_officinale",
+      "name": "Zingiber officinale",
+      "family": "Zingiberaceae",
+      "n_pubs": 133,
+      "tiers": {
+        "traditional": 1,
+        "in vitro": 7,
+        "in vivo": 26,
+        "review": 94,
+        "clinical": 0,
+        "other": 5
+      },
+      "tier_total": 133,
+      "n_compounds": 5,
+      "n_resolved": 4,
+      "network": {
+        "n_compounds": 0,
+        "n_high_confidence_targets": 0,
+        "n_pathways": 0,
+        "n_diseases": 0
+      }
+    }
+  ]
+}

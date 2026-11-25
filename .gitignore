@@ -1,7 +1,3 @@
-# Raw harvests are re-derived from source and are not committed, EXCEPT the
-# Shrestha et al. 2025 macroecology deposit, which is small, third-party,
-# licence-clear (CC-BY-4.0) and must travel with the repo for reproducibility
-# (see docs/zenodo_inventory.md).
 data/raw/*
 !data/raw/shrestha2025/
 *.numbers
@@ -11,14 +7,10 @@ __pycache__/
 node_modules/
 site/
 
-# Evidence-engine: the full publication / search-log tables are restricted and
-# stay local. The small AGGREGATE summaries that the Evidence page is built from
-# ARE committed (they are what the site already says it publishes), so the page
-# reproduces on a clean checkout without the restricted tables.
-data/evidence/*
-!data/evidence/contract/
-!data/evidence/pilot_species.csv
-!data/evidence/species_compound.csv
-!data/evidence/prisma_flow.json
+# Evidence-engine: the engine's inputs and intermediates are restricted local
+# build material and are never committed or published. The committed public
+# artefact is the numbers-only manifest data/processed/evidence_manifest.json,
+# derived by scripts/build_evidence_manifest.py (counts + tier totals only).
+data/evidence/
 web/data/evidence/
 occurrences_published.csv

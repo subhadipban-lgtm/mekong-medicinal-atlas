@@ -289,6 +289,30 @@ def load_evidence() -> dict:
     """
     out = {"summary": {}, "pubs": {}, "order": [], "generated": "",
            "totals": {"pubs": 0, "compounds": 0, "resolved": 0}}
+    # Prefer the committed, numbers-only manifest: identical aggregates, and
+    # sufficient on a clean checkout (the restricted inputs are not in the repo).
+    manifest_path = L.PROCESSED / "evidence_manifest.json"
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        out["generated"] = manifest.get("generated", "")
+        out["gms"] = manifest.get("gms")
+        for t in manifest["taxa"]:
+            sid = t["species_id"]
+            out["summary"][sid] = {
+                "name": t["name"], "family": t["family"],
+                "n_pubs": t["n_pubs"],
+                "tiers": t["tiers"],
+                "n_compounds": t["n_compounds"],
+                "n_resolved": t["n_resolved"],
+                "network": t.get("network", {}),
+            }
+            out["totals"]["pubs"] += t["n_pubs"]
+            out["totals"]["compounds"] += t["n_compounds"]
+            out["totals"]["resolved"] += t["n_resolved"]
+        out["order"] = sorted(out["summary"], key=lambda s: out["summary"][s]["name"].lower())
+        return out
+    # Full (restricted) build path: rebuild the aggregates directly from the
+    # local contract files + pilot/compounds present on disk.
     tiers_path = EVIDENCE / "contract" / "species_evidence_tier_counts.json"
     pubs_path = EVIDENCE / "contract" / "species_publications.json"
     pilot_path = EVIDENCE / "pilot_species.csv"
@@ -309,6 +333,21 @@ def load_evidence() -> dict:
         compounds[c["species_id"]]["n"] += 1
         if c["structure_status"] == "resolved":
             compounds[c["species_id"]]["resolved"] += 1
+    gms = None
+    gms_pub = EVIDENCE / "publications_gms.csv"
+    if gms_pub.exists():
+        n_gms_pubs = sum(1 for _ in L.read_csv(gms_pub))
+        n_gms_comp = n_gms_plants = n_gms_wcvp = 0
+        gms_comp = EVIDENCE / "compounds_gms.csv"
+        if gms_comp.exists():
+            n_gms_comp = sum(1 for _ in L.read_csv(gms_comp))
+        gms_cov = EVIDENCE / "gms_wcvp_coverage.csv"
+        if gms_cov.exists():
+            cov_rows = L.read_csv(gms_cov)
+            n_gms_plants = len(cov_rows)
+            n_gms_wcvp = sum(1 for r in cov_rows if r["in_wcvp"] == "1")
+        gms = {"papers": n_gms_pubs, "plants": n_gms_plants, "wcvp": n_gms_wcvp, "molecule_rows": n_gms_comp}
+    out["gms"] = gms
     for sid, row in pilot.items():
         n_pubs = len(pub_ids.get(sid, []))
         out["summary"][sid] = {
@@ -866,24 +905,14 @@ def evidence(d: dict) -> str:
                   '<span class="badge text-bg-warning">review</span> and await a human queue. Classification is machine-made '
                   'and never presented as evidence strength.</p>')
     gms_html = ""
-    gms_pub = EVIDENCE / "publications_gms.csv"
-    if gms_pub.exists():
-        n_gms_pubs = sum(1 for _ in L.read_csv(gms_pub))
-        n_gms_comp = n_gms_plants = n_gms_wcvp = 0
-        gms_comp = EVIDENCE / "compounds_gms.csv"
-        if gms_comp.exists():
-            n_gms_comp = sum(1 for _ in L.read_csv(gms_comp))
-        gms_cov = EVIDENCE / "gms_wcvp_coverage.csv"
-        if gms_cov.exists():
-            cov_rows = L.read_csv(gms_cov)
-            n_gms_plants = len(cov_rows)
-            n_gms_wcvp = sum(1 for r in cov_rows if r["in_wcvp"] == "1")
+    gms = ev.get("gms")
+    if gms:
         gms_html = f'''
 <h2 class="h5 section-title mt-4">GMS deep-search register <span class="text-muted fw-normal">(Semantic Scholar systematic review)</span></h2>
 <p class="small mb-2">A separate register (<code>GMS_DEEP_SEARCH</code>, disjoint from the pilot corpus by register discipline) holding another
-session's PRISMA pipeline over Semantic Scholar: <strong>{n(n_gms_pubs)}</strong> included papers,
-<strong>{n(n_gms_plants)}</strong> plants extracted (<strong>{n(n_gms_wcvp)}</strong> matched in WCVP),
-{n(n_gms_comp)} plant–molecule rows. Molecule/activity content is LLM-extracted from abstracts and treated as leads, not curated facts.
+session's PRISMA pipeline over Semantic Scholar: <strong>{n(gms["papers"])}</strong> included papers,
+<strong>{n(gms["plants"])}</strong> plants extracted (<strong>{n(gms["wcvp"])}</strong> matched in WCVP),
+{n(gms["molecule_rows"])} plant–molecule rows. Molecule/activity content is LLM-extracted from abstracts and treated as leads, not curated facts.
 The register tables are available from the authors on request.</p>'''
     return page("Evidence — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
