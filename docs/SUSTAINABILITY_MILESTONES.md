@@ -25,3 +25,7 @@
 ## QA gates
 
 1 inventory complete — yes (large archives pending inspection) · 2 SDM reporting — pending · 3 blocked CV — designed, pending · 4 scenarios — pending inspection · 5 intact-habitat exclusion — designed, pending · 6 use-score documented — yes · 7 distance threshold documented — yes · 8 pages render — verified in a browser · 9 dictionary — yes · 10 single driver — `run_sustainability.sh` to be written when all steps exist · 11 DOIs cited — yes (page + methods) · 12 drafts — yes with `[PENDING]` placeholders.
+
+## Storage incident — 2026-11-25
+
+The `/Volumes/Expansion` USB drive (the designated raw-data store) **disconnected twice** during the multi-GB downloads, the second time permanently (no longer visible in `diskutil list` / `/dev/disk4`). Loss: ~530 MB tail of SurfaceWater plus the four archives not yet started; the 11 small archives, the extracted dam/streamflow/socioeconomic files and all processed outputs in the repository are safe. **Blocked on a storage decision:** 21 GB cannot fit the internal disk (14 GB free) and must not go to the Drive-synced folder. Options recorded: reconnect the Expansion drive (possibly a different port/cable — it was flaky), attach another external drive, or run a one-archive-at-a-time plan on the internal disk for the four archives that fit (EM_Earth_Temperature likely exceeds it once extracted).
