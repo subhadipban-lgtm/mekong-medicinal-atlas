@@ -1,0 +1,19 @@
+layer,archive,upstream_source,upstream_citation,upstream_doi,processing_by_authors,documented_limitations
+Dams,Dams.zip,WLE Greater Mekong Dams Observatory,"CGIAR Research Program on Water, Land and Ecosystems (WLE), Greater Mekong",(no DOI; wle-mekong.cgiar.org),Aggregated into a single xlsx of 486 dams with lat/lon and attributes,Coordinates are lat/lon columns with no stated datum; storage and height fields incomplete for some dams
+Streamflow,Streamflow.zip,"Mohammed et al. 2018; Zhang 2020; Tang 2015",Multiple gauge studies,(per study),Curated as text series per gauge,30 gauges; uneven temporal coverage; no rating-curve metadata
+GHG,GHG.zip,EDGAR,"Crippa et al. 2019, Fossil CO2 and GHG emissions of all world countries",10.2760/687800,Gridded to the basin; annual text grid,Gross grid with lat/lon rows; country-level EDGAR resolution limits
+Groundwater,Groundwater.zip,"Duy 2021; Erban 2016; Fryar 2021",Borehole studies in the Vietnamese delta,(per study),Curated as point series,Point data only; no continuous gridded groundwater
+IrrigatedArea,IrrigatedArea.zip,FAO GMIA v5,FAO Global Map of Irrigated Areas version 5,(fao.org),Clipped to the basin,5 arc-min resolution; v5 based on 2005 reference
+CropYield,CropYield.zip,FAOSTAT,FAOSTAT crop yield statistics,(fao.org),Downloaded per country,Country-level only
+CropCalendar,CropCalendar.zip,GEOGLAM EW Calendars v1.0,EarthStat GEOGLAM crop calendars,(earthstat.org),Clipped to the Mekong,Version 1.0 calendars
+Wetlands,Wetlands.zip,"CIFOR (Gumbricht 2017); Tootchi 2019","Gumbricht et al. 2017; Tootchi et al. 2019",10.1088/1748-9326/aa65b3 (Tootchi),Clipped rasters,120 m class map is a snapshot
+SocioEconomic,SocioEconomic.zip,"Kummu 2020 (GDP); GPW v4 (SEDAC); Jones & O'Neill (SEDAC)",GDP and population grids and SSP projections,"10.1038/s41597-020-0381-2 (Kummu); 10.7927/m30p-j498 (Jones); 10.1088/1748-9326/11/8/084003",Clipped to the basin,1/8 degree projections are coarse (about 14 km); GPW counts are unadjusted
+DEM,_SupplementalData.zip,SRTM,SRTM 3 arc-second,(usgs.gov),Clipped basin DEM with derived basin mask,SRTM void and canopy bias in flat delta areas
+Basin boundary,_SupplementalData.zip,"Dang et al. 2022",Hydrologic balance and inundation dynamics of Tonle Sap,10.1016/j.scitotenv.2022.154833,Dissolved 96 catchment polygons,3 arc-second basin mask source
+Inundation,Inundation.zip,GIEMS d15 v1.0,(Global Inundation Extent from Multi-Satellites),(upstream),ReadMe only in the record,Data not included - access pending
+LULC,LULC.zip (companion record 7622998),"ESA CCI Land Cover; C3S",ESA CCI LC 300 m annual maps,(esa-landcover-cci.org),Clipped to the basin,300 m; mixed-class pixels in mosaic landscapes
+SurfaceWater,SurfaceWater.zip,(pending),(pending),(pending),(pending),(pending)
+EM_Earth_Temperature,EM_Earth_Temperature.zip,EM-Earth,(pending),(pending),(pending),(pending)
+EM_Earth_Precipitation,EM_Earth_Precipitation.zip,EM-Earth,(pending),(pending),(pending),(pending)
+ET,ET.zip,GLEAM,(pending),(pending),(pending),(pending)
+SoilMoiture,SoilMoiture.zip,GLEAM,(pending),(pending),(pending),(pending)
