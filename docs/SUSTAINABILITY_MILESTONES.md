@@ -29,3 +29,7 @@
 ## Storage incident — 2026-11-25
 
 The `/Volumes/Expansion` USB drive (the designated raw-data store) **disconnected twice** during the multi-GB downloads, the second time permanently (no longer visible in `diskutil list` / `/dev/disk4`). Loss: ~530 MB tail of SurfaceWater plus the four archives not yet started; the 11 small archives, the extracted dam/streamflow/socioeconomic files and all processed outputs in the repository are safe. **Blocked on a storage decision:** 21 GB cannot fit the internal disk (14 GB free) and must not go to the Drive-synced folder. Options recorded: reconnect the Expansion drive (possibly a different port/cable — it was flaky), attach another external drive, or run a one-archive-at-a-time plan on the internal disk for the four archives that fit (EM_Earth_Temperature likely exceeds it once extracted).
+
+## Network incident — 2026-11-25
+
+Zenodo became unreachable from this machine (curl exit 56 then http=000, 0 B/s over a 16-minute probe) while GitHub remained fast, so the retry onto the internal disk stalled at 2.3 MB of SoilMoiture. **Resume steps once connectivity and storage return:** remount or replace the external drive (or free internal space), then re-run `/tmp/zenodo_download.sh` (resume-capable, `curl -C -`) — the `mekong_sustainability` tree on the Expansion drive holds the manifest and the 11 small archives; the repository holds every processed output.
