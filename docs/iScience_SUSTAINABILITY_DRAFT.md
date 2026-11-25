@@ -1,0 +1,29 @@
+# iScience manuscript drafts — Ecological, climate, and sustainability layers
+
+*Draft sections, ready to paste. Numbers marked `[PENDING]` will be filled when the EM-Earth SDM and cultivation analyses complete; every other number is computed and shown on the site.*
+
+## Methods — "Ecological, climate, and sustainability layers"
+
+All environmental layers come from the hydroclimatic, ecological and socioeconomic synthesis of Tiwari et al. (Zenodo, doi:10.5281/zenodo.7803254; Scientific Data, doi:10.1038/s41597-023-02193-0, CC-BY-4.0); every archive was inventoried with its units, resolution, CRS and upstream source before use (docs/zenodo7803254_inventory.md). Layers were reprojected to a basin-tuned Albers equal-area conic projection and resampled to a common 5 km grid (31,922 in-basin cells; 798,050 km²), with bilinear resampling for continuous fields, mode for categorical land cover, and sum for population counts. Occurrence records from the atlas (153,798 published GBIF records) were assigned to grid cells; 195 of 333 taxa retained ≥10 in-basin records and entered the modelling, the remainder are reported as not assessed.
+
+**Species distribution models.** We fit an ensemble of [maxnet-MaxEnt and a penalized GLM; final choice documented in docs/sdm_methods.md] to spatially thinned presences (one record per 5 km cell) using four predictors: mean annual temperature, temperature seasonality, annual precipitation and precipitation seasonality from EM-Earth. Performance is reported from spatially blocked cross-validation (AUC and TSS); random k-fold is not used. Current suitability and conditional future suitability under the scenarios present in the record [exact scenario labels `[PENDING]`] were projected, and each taxon was assigned a climate-vulnerability tier from the projected change in suitable area: high loss (< −50%), moderate loss (−50 to −20%), stable (±20%), gain (> +20%).
+
+**Cultivation suitability.** A water-availability index combines GLEAM evapotranspiration, soil moisture and precipitation [formula and weights in docs/cultivation_methods.md; `[PENDING]`]. Cultivation suitability is the intersection of climatically suitable cells, cells above a documented water-availability threshold, and cells classified as non-forest or degraded in the ESA CCI land-cover series. This is a screening output; agronomic field validation is required before any recommendation.
+
+**Harvest pressure.** A proxy, not measured offtake: the product of min-max-normalized SSP2-2050 population density (Jones & O'Neill, SEDAC), per-cell species richness of atlas taxa, and a per-species evidence-grade-weighted use score (A=3, B=2, C=1, D=0.5), quantile-binned into low / moderate / high / very high.
+
+**Hydrological fragmentation.** Distance from each in-basin occurrence to the nearest of 232 major dams (height ≥15 m or capacity ≥15 MW; WLE registry). Taxa with >50% of occurrences within 10 km are classed high, 20–50% moderate, <20% low. This is a distance-based proxy and does not model flow alteration, sediment trapping or groundwater drawdown.
+
+## Results — "Climate risk, harvest pressure, and cultivation feasibility"
+
+`[PENDING: number and proportion of taxa per climate-vulnerability tier; the taxa with the largest projected range losses; the overlap between high harvest pressure and high climate vulnerability; the taxa with the greatest cultivation-feasible area.]`
+
+Currently available: the harvest-pressure proxy scores 281 taxa — 18 very high, 51 high, 44 moderate, 168 low; hydrological fragmentation assesses 285 taxa — 17 high, 99 moderate, 169 low (e.g. *Aglaia roxburghiana*, *Curcuma phaeocaulis*, *Garcinia pedunculata* have all their in-basin records within 10 km of a major dam, though several have very few records and are treated as indicative only).
+
+## Discussion
+
+We frame these layers as a forward-looking application of the atlas: not a conservation recommendation, but a screening tool that identifies taxa and districts where field validation, community-based management and germplasm conservation should be prioritized — for example the coincidence of high harvest pressure with high climate vulnerability `[PENDING]`, and taxa whose entire in-basin record lies inside dam influence zones.
+
+## Limitations
+
+Species distribution models are correlative and assume niche conservatism; future scenarios are conditional projections, not forecasts, and are restricted to the scenarios the source record actually contains. The harvest-pressure index is a proxy for potential collection pressure, not measured offtake, and is defined only for taxa with use records. The hydrological fragmentation analysis is distance-based and does not model flow alteration, sediment trapping or groundwater drawdown; several high-vulnerability taxa rest on very few records. Cultivation suitability is a screening output that requires agronomic validation and excludes intact forest by construction of its land-cover filter. 138 of 333 taxa have fewer than ten in-basin records and are reported as "not assessed" rather than modelled.

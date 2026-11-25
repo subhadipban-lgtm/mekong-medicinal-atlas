@@ -1,0 +1,165 @@
+{
+  "generated": "2026-11-25",
+  "per_species": {
+    "sp_aquilaria_crassna": {
+      "identified": 276,
+      "deduplicated": 105,
+      "included": 105,
+      "screened_out_nonpublication_type": 11,
+      "screened_out_no_medicinal_context": 16,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_dalbergia_cochinchinensis": {
+      "identified": 121,
+      "deduplicated": 30,
+      "included": 30,
+      "screened_out_nonpublication_type": 15,
+      "screened_out_no_medicinal_context": 24,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_aegle_marmelos": {
+      "identified": 3282,
+      "deduplicated": 139,
+      "included": 139,
+      "screened_out_nonpublication_type": 8,
+      "screened_out_no_medicinal_context": 23,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_rhinacanthus_nasutus": {
+      "identified": 991,
+      "deduplicated": 109,
+      "included": 109,
+      "screened_out_nonpublication_type": 81,
+      "screened_out_no_medicinal_context": 10,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_morinda_citrifolia": {
+      "identified": 4168,
+      "deduplicated": 109,
+      "included": 109,
+      "screened_out_nonpublication_type": 21,
+      "screened_out_no_medicinal_context": 19,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_tabernaemontana_divaricata": {
+      "identified": 533,
+      "deduplicated": 115,
+      "included": 115,
+      "screened_out_nonpublication_type": 2,
+      "screened_out_no_medicinal_context": 24,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_eurycoma_longifolia": {
+      "identified": 1325,
+      "deduplicated": 102,
+      "included": 102,
+      "screened_out_nonpublication_type": 33,
+      "screened_out_no_medicinal_context": 11,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_brucea_javanica": {
+      "identified": 1236,
+      "deduplicated": 113,
+      "included": 113,
+      "screened_out_nonpublication_type": 36,
+      "screened_out_no_medicinal_context": 9,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_artocarpus_heterophyllus": {
+      "identified": 2872,
+      "deduplicated": 109,
+      "included": 109,
+      "screened_out_nonpublication_type": 34,
+      "screened_out_no_medicinal_context": 11,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_zingiber_officinale": {
+      "identified": 19556,
+      "deduplicated": 133,
+      "included": 133,
+      "screened_out_nonpublication_type": 2,
+      "screened_out_no_medicinal_context": 27,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_kaempferia_parviflora": {
+      "identified": 719,
+      "deduplicated": 117,
+      "included": 117,
+      "screened_out_nonpublication_type": 4,
+      "screened_out_no_medicinal_context": 20,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_centella_asiatica": {
+      "identified": 7567,
+      "deduplicated": 118,
+      "included": 118,
+      "screened_out_nonpublication_type": 4,
+      "screened_out_no_medicinal_context": 27,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_catharanthus_roseus": {
+      "identified": 9491,
+      "deduplicated": 184,
+      "included": 184,
+      "screened_out_nonpublication_type": 0,
+      "screened_out_no_medicinal_context": 25,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_barleria_prionitis": {
+      "identified": 379,
+      "deduplicated": 100,
+      "included": 100,
+      "screened_out_nonpublication_type": 61,
+      "screened_out_no_medicinal_context": 3,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_andrographis_paniculata": {
+      "identified": 6845,
+      "deduplicated": 118,
+      "included": 118,
+      "screened_out_nonpublication_type": 1,
+      "screened_out_no_medicinal_context": 25,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_alstonia_scholaris": {
+      "identified": 1331,
+      "deduplicated": 118,
+      "included": 118,
+      "screened_out_nonpublication_type": 7,
+      "screened_out_no_medicinal_context": 27,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_scoparia_dulcis": {
+      "identified": 921,
+      "deduplicated": 100,
+      "included": 100,
+      "screened_out_nonpublication_type": 45,
+      "screened_out_no_medicinal_context": 4,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_phyllanthus_emblica": {
+      "identified": 5123,
+      "deduplicated": 166,
+      "included": 166,
+      "screened_out_nonpublication_type": 34,
+      "screened_out_no_medicinal_context": 6,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_phyllanthus_amarus": {
+      "identified": 1723,
+      "deduplicated": 115,
+      "included": 115,
+      "screened_out_nonpublication_type": 24,
+      "screened_out_no_medicinal_context": 13,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    },
+    "sp_momordica_charantia": {
+      "identified": 8151,
+      "deduplicated": 117,
+      "included": 117,
+      "screened_out_nonpublication_type": 55,
+      "screened_out_no_medicinal_context": 19,
+      "notes": "identified = EPMC hitCount + OpenAlex meta.count sums (cross-database overlap not yet quantified); M1 metadata slice limited per config"
+    }
+  }
+}

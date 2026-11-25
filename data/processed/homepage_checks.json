@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-25T18:05:37.407Z",
+  "generatedAt": "2026-11-25T18:20:21.263Z",
   "url": "http://127.0.0.1:8124/index.html",
-  "totalToReadyMs": 554,
+  "totalToReadyMs": 580,
   "toggle": {
     "loaded": true,
-    "loadMs": 301,
+    "loadMs": 303,
     "note": "All records shown; out-of-basin points are generalised to one point per species per half-degree cell."
   },
   "hide": {

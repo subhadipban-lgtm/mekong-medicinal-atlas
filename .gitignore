@@ -11,8 +11,14 @@ __pycache__/
 node_modules/
 site/
 
-# Evidence-engine registers: restricted (owner decision 2026-11-25). The data
-# stays local for builds; only build-time aggregate numbers are published.
-data/evidence/
+# Evidence-engine: the full publication / search-log tables are restricted and
+# stay local. The small AGGREGATE summaries that the Evidence page is built from
+# ARE committed (they are what the site already says it publishes), so the page
+# reproduces on a clean checkout without the restricted tables.
+data/evidence/*
+!data/evidence/contract/
+!data/evidence/pilot_species.csv
+!data/evidence/species_compound.csv
+!data/evidence/prisma_flow.json
 web/data/evidence/
 occurrences_published.csv

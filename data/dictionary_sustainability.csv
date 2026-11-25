@@ -1,0 +1,53 @@
+table,field,type,units,allowed_values,definition,source
+harvest_pressure_summary.csv,species_id,string,,sp_[a-z0-9_]+,"Atlas species identifier",occurrence_grid_assignment.csv
+harvest_pressure_summary.csv,local_use_score,float,weighted use records,0..,"Evidence-grade-weighted count of use records (A=3, B=2, C=1, D=0.5)",uses.csv
+harvest_pressure_summary.csv,mean_harvest_pressure_in_range,float,index 0..1,0..1,"Mean harvest-pressure proxy across the 5 km cells where the taxon occurs",harvest_pressure.tif
+harvest_pressure_summary.csv,harvest_pressure_class,string,,"low;moderate;high;very high","Quantile tier of mean_harvest_pressure_in_range (thresholds in docs/harvest_pressure_methods.md)",harvest_pressure_methods.md
+harvest_pressure_summary.csv,n_cells,int,cells,1..,"Number of in-basin cells with records used for the mean",occurrence_grid_assignment.csv
+hydrological_fragmentation.csv,species_id,string,,sp_[a-z0-9_]+,"Atlas species identifier",species_master.csv
+hydrological_fragmentation.csv,n_occurrences_in_basin,int,records,0..,"Published in-basin occurrence records",occurrences_published.csv
+hydrological_fragmentation.csv,n_within_10km_major_dam,int,records,0..,"Records within 10 km of a major dam (height>=15 m or capacity>=15 MW)",mekong_dams.csv
+hydrological_fragmentation.csv,pct_within_10km_major_dam,float,percent,0..100,"Share of records within 10 km of a major dam",mekong_dams.csv
+hydrological_fragmentation.csv,mean_distance_to_nearest_major_dam_km,float,km,0..,"Mean great-circle distance to the nearest major dam",mekong_dams.csv
+hydrological_fragmentation.csv,hydrological_vulnerability_class,string,,"high;moderate;low","high >50%; moderate 20-50%; low <20% within 10 km; distance-based proxy, not a flow model",hydrological_methods.md
+sdm_results.csv,species_id,string,,sp_[a-z0-9_]+,"Atlas species identifier",species_master.csv
+sdm_results.csv,scenario,string,,"scenarios present in Zenodo 7803254 only","Future climate scenario; no scenarios invented",zenodo7803254_inventory.md
+sdm_results.csv,climatically_suitable_area_current_km2,float,km2,0..,"Ensemble suitable area under current climate (5 km grid, equal-area)",env_stack_5000m.tif
+sdm_results.csv,projected_range_change_pct,float,percent,-100..,"Percentage change in suitable area vs current, per scenario; conditional projection, not a forecast",sdm_methods.md
+sdm_results.csv,climate_vulnerability_tier,string,,"high loss (>-50%);moderate loss (-50..-20%);stable (+-20%);gain (>+20%);not assessed","Vulnerability tier from projected_range_change_pct",sdm_methods.md
+sdm_performance.csv,species_id,string,,sp_[a-z0-9_]+,"Atlas species identifier",species_master.csv
+sdm_performance.csv,algorithm,string,,"maxent;glm;...","Algorithm used in the ensemble (two or more)",sdm_methods.md
+sdm_performance.csv,auc,float,0..1,0..1,"Area under the ROC curve, spatially blocked cross-validation",sdm_methods.md
+sdm_performance.csv,tss,float,-1..1,-1..1,"True skill statistic, spatially blocked cross-validation",sdm_methods.md
+sdm_performance.csv,n_records,int,records,10..,"Presence records after spatial thinning; <10 flagged insufficient",occurrence_grid_assignment.csv
+sdm_performance.csv,confidence_flag,string,,"ok;low-confidence (auc<0.7 or tss<0.4)","Confidence flag",sdm_methods.md
+cultivation_summary.csv,species_id,string,,sp_[a-z0-9_]+,"Atlas species identifier",species_master.csv
+cultivation_summary.csv,cultivation_feasible_area_km2,float,km2,0..,"Area of the screening intersection: climatically suitable AND water-available AND non-forest/degraded land",cultivation_methods.md
+cultivation_summary.csv,cultivation_feasibility_class,string,,"high;moderate;low;not feasible","Screening class; NOT an agronomic recommendation",cultivation_methods.md
+grid_cells.csv,cell_id,string,,rRRRRcCCCC,"Stable cell identifier on the 5 km grid",build_grid.py
+grid_cells.csv,row,int,,0..,"Grid row",build_grid.py
+grid_cells.csv,col,int,,0..,"Grid column",build_grid.py
+grid_cells.csv,x_aea,float,m,,"Albers equal-area easting of the cell centre",build_grid.py
+grid_cells.csv,y_aea,float,m,,"Albers equal-area northing of the cell centre",build_grid.py
+grid_cells.csv,center_lon,float,degrees,-180..180,"Cell centre longitude (WGS84)",build_grid.py
+grid_cells.csv,center_lat,float,degrees,-90..90,"Cell centre latitude (WGS84)",build_grid.py
+grid_cells.csv,area_km2,float,km2,25,"Cell area (constant in an equal-area projection)",build_grid.py
+grid_cells.csv,in_basin,int,,0;1,"1 = cell centre inside the Mekong basin boundary",mekong_basin.geojson
+occurrence_grid_assignment.csv,occurrenceID,string,,"as in occurrences_published.csv","Record identifier",occurrences_published.csv
+occurrence_grid_assignment.csv,species_id,string,,sp_[a-z0-9_]+,"Atlas species identifier",species_master.csv
+occurrence_grid_assignment.csv,cell_id,string,,rRRRRcCCCC,"Cell the record falls into",grid_cells.csv
+occurrence_grid_assignment.csv,in_basin,int,,0;1,"1 = cell centre inside the basin boundary",mekong_basin.geojson
+occurrence_grid_assignment.csv,basin_flag,string,,"in_basin;outside_basin","Basin position of the record itself",occurrences_published.csv
+mekong_dams.csv,dam_id,string,,,"Registry serial number",Zenodo 7803254 Dams.zip
+mekong_dams.csv,name,string,,,"Project name",Zenodo 7803254 Dams.zip
+mekong_dams.csv,country,string,,CAM;CHN;LAO;MMR;THA;VNM,"Country of the dam",Zenodo 7803254 Dams.zip
+mekong_dams.csv,river,string,,,"River the dam is on",Zenodo 7803254 Dams.zip
+mekong_dams.csv,lat,float,degrees,-90..90,"Dam latitude (WGS84)",Zenodo 7803254 Dams.zip
+mekong_dams.csv,lon,float,degrees,-180..180,"Dam longitude (WGS84)",Zenodo 7803254 Dams.zip
+mekong_dams.csv,status,string,,"COMM;UCON;PLAN;...","Construction status as recorded",Zenodo 7803254 Dams.zip
+mekong_dams.csv,height_m,float,m,0..,"Dam height; blank where unknown",Zenodo 7803254 Dams.zip
+mekong_dams.csv,capacity_mw,float,MW,0..,"Installed capacity; blank where unknown",Zenodo 7803254 Dams.zip
+mekong_dams.csv,storage_fsl,float,,"0..","Total storage at full supply level; blank where unknown",Zenodo 7803254 Dams.zip
+harvest_pressure_tiers.geojson,tier,string,,"low;moderate;high;very high","Harvest-pressure quantile tier of the polygon",harvest_pressure_methods.md
+harvest_pressure.tif,band 1,float32,index 0..1,0..1,"Harvest-pressure proxy per 5 km cell; NaN outside the basin",harvest_pressure_methods.md
+basin_grid.tif,band 1,uint8,,0;1;255,"1 = in-basin cell; 255 = nodata (outside grid)",build_grid.py
