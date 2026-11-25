@@ -1,0 +1,15 @@
+{
+  "n_taxa": 333,
+  "n_assessed": 162,
+  "n_insufficient_records": 119,
+  "n_no_basin_records": 52,
+  "n_low_confidence": 139,
+  "mean_auc": 0.569,
+  "mean_tss": 0.355,
+  "ssp585_tiers": {
+    "stable": 86,
+    "gain": 44,
+    "high loss": 3,
+    "moderate loss": 29
+  }
+}

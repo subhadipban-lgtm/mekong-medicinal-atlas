@@ -1,6 +1,6 @@
 {
-  "Python": "3.15.2",
-  "Python packages": "openpyxl 3.1.5, shapely 2.2.0, pyshp unknown",
+  "Python": "3.14.7",
+  "Python packages": "openpyxl 3.1.5, shapely 2.2.0, pyshp 3.1.9",
   "R / WorldFlora": "4.6.1 / 1.14-5 (taxonomic matching, scripts/match_wfo.R)",
   "Leaflet": "1.9.4",
   "Leaflet.markercluster": "1.5.3",

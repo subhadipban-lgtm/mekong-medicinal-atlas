@@ -1364,7 +1364,40 @@ def sustainability(d: dict) -> str:
         f'<td><span class="badge {"text-bg-danger" if r["hydrological_vulnerability_class"] == "high" else "text-bg-light"}">{e(r["hydrological_vulnerability_class"])}</span></td></tr>'
         for r in sorted(hydro, key=lambda r: -float(r["pct_within_10km_major_dam"]))[:15])
 
-    return page("Harvest pressure & hydrological risk \u2014 Mekong Medicinal Plant Atlas", f'''
+    sdm_block = ""
+    if sdm and any(r.get("projected_range_change_pct") for r in sdm):
+        vuln = [r for r in sdm if r.get("climate_vulnerability_tier") not in ("", "not assessed")]
+        top_sdm = "".join(
+            f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+            f'<td class="text-end">{e(r.get("projected_range_change_pct", ""))}%</td>'
+            f'<td><span class="badge text-bg-secondary">{e(r.get("climate_vulnerability_tier", ""))}</span></td></tr>'
+            for r in sorted(vuln, key=lambda r: float(r.get("projected_range_change_pct") or 0))[:15])
+        sdm_block = f'''<h2 class="h5 mt-4">Climate-vulnerable taxa</h2>
+        <p class="small text-muted">Projected change in climatically suitable area; conditional scenario projections, not forecasts.</p>
+        <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Projected range change</th><th>Vulnerability tier</th></tr></thead><tbody>{top_sdm}</tbody></table></div>'''
+    else:
+        sdm_block = '''<div class="alert alert-secondary small"><strong>SDM scope.</strong> 162 taxa had at least ten occupied 5 km cells and were modelled;
+        171 were not assessed (119 with 1&ndash;9 occupied cells, 52 with no in-basin records). Predictors are WorldClim 2.1
+        (2.5 arc-min, resolution-matched to the 5 km grid) as a documented substitution for EM-Earth; see the
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/sdm_methods.md" target="_blank" rel="noopener">SDM methods</a>.</div>'''
+
+    cult_block = ""
+    if cult:
+        top_cult = "".join(
+            f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+            f'<td class="text-end">{e(r.get("cultivation_feasible_area_km2", ""))}</td>'
+            f'<td>{e(r.get("cultivation_feasibility_class", ""))}</td></tr>'
+            for r in sorted(cult, key=lambda r: -float(r.get("cultivation_feasible_area_km2") or 0))[:15])
+        cult_block = f'''<h2 class="h5 mt-4">Cultivation-feasible area (screening)</h2>
+        <p class="small text-muted">Intersection of climatically suitable, water-available and already-converted land. A screening output; agronomic field validation is required before any recommendation.</p>
+        <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Feasible area (km&sup2;)</th><th>Feasibility class</th></tr></thead><tbody>{top_cult}</tbody></table></div>'''
+    else:
+        cult_block = '''<div class="alert alert-secondary small"><strong>Cultivation screening.</strong> Water availability uses WorldClim precipitation and a
+        Hargreaves PET estimate in place of GLEAM. Classes are the share of each taxon's climatically suitable range that is water-available and
+        already converted land. See the
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/cultivation_methods.md" target="_blank" rel="noopener">cultivation methods</a>.</div>'''
+
+    return page("Sustainability — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
   <h1 class="h4">Harvest pressure & hydrological risk</h1>
   <p class="small text-muted">Two operational indices of conservation pressure on the atlas taxa, built from the hydroclimatic synthesis of

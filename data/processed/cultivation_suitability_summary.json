@@ -1,0 +1,13 @@
+{
+  "n_taxa": 162,
+  "water_index_threshold": 0.2566,
+  "cells_water_available": 15961,
+  "cells_converted_non_forest": 18677,
+  "feasibility_classes": {
+    "not feasible": 36,
+    "moderate": 35,
+    "low": 90,
+    "high": 1
+  },
+  "note": "screening output; not an agronomic recommendation"
+}

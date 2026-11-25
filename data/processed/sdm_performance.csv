@@ -1,0 +1,334 @@
+species_id,accepted_name,n_records,n_cells,auc,tss,n_folds,confidence_flag,not_assessed_reason,n_insufficient_records,n_no_basin_records
+sp_acanthus_ilicifolius,Acanthus ilicifolius,87,0,,,0,not assessed,no_in_basin_records,0,1
+sp_achyranthes_aspera,Achyranthes aspera,373,23,0.4608,0.2152,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_acmella_oleracea,Acmella oleracea,2,1,,,0,not assessed,insufficient_records,1,0
+sp_acorus_calamus,Acorus calamus,398,13,0.7208,0.5911,4,ok,,0,0
+sp_acorus_gramineus,Acorus gramineus,688,14,0.6303,0.5021,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_acrostichum_aureum,Acrostichum aureum,200,12,0.0856,0.0622,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_adenanthera_pavonina,Adenanthera pavonina,64,10,0.4645,0.3709,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_aegiceras_corniculatum,Aegiceras corniculatum,69,0,,,0,not assessed,no_in_basin_records,0,1
+sp_aegle_marmelos,Aegle marmelos,35,10,0.7604,0.7129,3,ok,,0,0
+sp_aerva_lanata,Aerva lanata,0,0,,,0,not assessed,no_basin_records,0,1
+sp_aglaia,Aglaia,0,0,,,0,not assessed,no_basin_records,0,1
+sp_aglaia_elliptica,Aglaia elliptica,18,4,,,0,not assessed,insufficient_records,1,0
+sp_aglaia_foveolata,Aglaia foveolata,0,0,,,0,not assessed,no_basin_records,0,1
+sp_aglaia_odorata,Aglaia odorata,115,12,0.4365,0.3338,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_aglaia_roxburghiana,Aglaia roxburghiana,3,1,,,0,not assessed,insufficient_records,1,0
+sp_ailanthus_altissima,Ailanthus altissima,273,9,,,0,not assessed,insufficient_records,1,0
+sp_albizia_lebbeck,Albizia lebbeck,64,15,0.7956,0.7628,3,ok,,0,0
+sp_allamanda_cathartica,Allamanda cathartica,178,34,0.5128,0.2881,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_alpinia_galanga,Alpinia galanga,161,18,0.5098,0.3601,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_alpinia_officinarum,Alpinia officinarum,17,1,,,0,not assessed,insufficient_records,1,0
+sp_alpinia_zerumbet,Alpinia zerumbet,45,7,,,0,not assessed,insufficient_records,1,0
+sp_alstonia_macrophylla,Alstonia macrophylla,9,1,,,0,not assessed,insufficient_records,1,0
+sp_alstonia_scholaris,Alstonia scholaris,241,33,0.6348,0.4099,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_alternanthera_sessilis,Alternanthera sessilis,296,28,0.606,0.3164,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_alyxia_reinwardtii,Alyxia reinwardtii,60,7,,,0,not assessed,insufficient_records,1,0
+sp_amomum_villosum,Amomum villosum,57,9,,,0,not assessed,insufficient_records,1,0
+sp_andrographis_paniculata,Andrographis paniculata,163,31,0.7147,0.5194,4,ok,,0,0
+sp_anodendron_affine,Anodendron affine,61,1,,,0,not assessed,insufficient_records,1,0
+sp_aphanamixis_polystachya,Aphanamixis polystachya,306,27,0.5048,0.2903,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_aquilaria_crassna,Aquilaria crassna,19,3,,,0,not assessed,insufficient_records,1,0
+sp_aquilaria_malaccensis,Aquilaria malaccensis,1,1,,,0,not assessed,insufficient_records,1,0
+sp_aquilaria_sinensis,Aquilaria sinensis,10,1,,,0,not assessed,insufficient_records,1,0
+sp_arcangelisia_flava,Arcangelisia flava,10,2,,,0,not assessed,insufficient_records,1,0
+sp_areca_catechu,Areca catechu,94,19,0.5403,0.2741,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_argemone_mexicana,Argemone mexicana,47,7,,,0,not assessed,insufficient_records,1,0
+sp_argyreia_nervosa,Argyreia nervosa,18,2,,,0,not assessed,insufficient_records,1,0
+sp_argyreia_osyrensis,Argyreia osyrensis,209,29,0.6177,0.3235,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_aristolochia_indica,Aristolochia indica,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_aristolochia_tagala,Aristolochia tagala,95,7,,,0,not assessed,insufficient_records,1,0
+sp_artemisia_annua,Artemisia annua,388,6,,,0,not assessed,insufficient_records,1,0
+sp_artocarpus_heterophyllus,Artocarpus heterophyllus,649,92,0.4531,0.1607,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_artocarpus_lakoocha,Artocarpus lakoocha,15,3,,,0,not assessed,insufficient_records,1,0
+sp_asparagus_cochinchinensis,Asparagus cochinchinensis,453,5,,,0,not assessed,insufficient_records,1,0
+sp_avicennia_marina,Avicennia marina,99,4,,,0,not assessed,insufficient_records,1,0
+sp_azadirachta_indica,Azadirachta indica,199,52,0.7789,0.5798,3,ok,,0,0
+sp_bacopa_monnieri,Bacopa monnieri,60,6,,,0,not assessed,insufficient_records,1,0
+sp_barleria_prionitis,Barleria prionitis,42,4,,,0,not assessed,insufficient_records,1,0
+sp_bauhinia_purpurea,Bauhinia purpurea,114,15,0.3226,0.1211,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_biancaea_sappan,Biancaea sappan,234,19,0.53,0.3169,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_blumea_balsamifera,Blumea balsamifera,204,23,0.6378,0.406,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_boesenbergia_rotunda,Boesenbergia rotunda,78,13,0.4525,0.2262,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_bombax_ceiba,Bombax ceiba,303,37,0.5566,0.2565,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_brownlowia_tersa,Brownlowia tersa,2,2,,,0,not assessed,insufficient_records,1,0
+sp_brucea_javanica,Brucea javanica,124,30,0.4993,0.2524,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_bruguiera_gymnorrhiza,Bruguiera gymnorhiza,350,0,,,0,not assessed,no_in_basin_records,0,1
+sp_buddleja_asiatica,Buddleja asiatica,665,40,0.6161,0.3436,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_buddleja_officinalis,Buddleja officinalis,556,13,0.7798,0.695,1,ok,,0,0
+sp_butea_monosperma,Butea monosperma,210,53,0.7152,0.4892,4,ok,,0,0
+sp_butea_superba,Butea superba,2,1,,,0,not assessed,insufficient_records,1,0
+sp_caesalpinia_sappan,Caesalpinia sappan,0,0,,,0,not assessed,no_basin_records,0,1
+sp_callicarpa_macrophylla,Callicarpa macrophylla,170,7,,,0,not assessed,insufficient_records,1,0
+sp_calophyllum_inophyllum,Calophyllum inophyllum,53,4,,,0,not assessed,insufficient_records,1,0
+sp_calotropis_gigantea,Calotropis gigantea,818,122,0.5971,0.3124,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_camellia_sinensis,Camellia sinensis,743,18,0.6581,0.4795,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_cananga_odorata,Cananga odorata,73,16,0.4654,0.3445,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_cannabis_sativa,Cannabis sativa,637,17,0.3158,0.2229,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_capsicum_annuum,Capsicum annuum,329,36,0.5342,0.2551,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_cardiospermum_halicacabum,Cardiospermum halicacabum,285,60,0.562,0.2476,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_cassia_alata,Cassia alata,21,5,,,0,not assessed,insufficient_records,1,0
+sp_cassia_angustifolia,Cassia angustifolia,0,0,,,0,not assessed,no_basin_records,0,1
+sp_cassia_fistula,Cassia fistula,634,105,0.6356,0.3384,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_catharanthus_roseus,Catharanthus roseus,713,98,0.5999,0.2959,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_celosia_cristata,Celosia cristata,99,4,,,0,not assessed,insufficient_records,1,0
+sp_centella_asiatica,Centella asiatica,376,31,0.5438,0.2601,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_ceriops_tagal,Ceriops tagal,142,0,,,0,not assessed,no_in_basin_records,0,1
+sp_chloranthus_spicatus,Chloranthus spicatus,17,1,,,0,not assessed,insufficient_records,1,0
+sp_chonemorpha_fragrans,Chonemorpha fragrans,23,11,0.5428,0.3744,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_chromolaena_odorata,Chromolaena odorata,636,132,0.5342,0.1822,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_chrysanthemum_cinerariifolium,Chrysanthemum cinerariifolium,4,0,,,0,not assessed,no_in_basin_records,0,1
+sp_chukrasia_tabularis,Chukrasia tabularis,161,18,0.7009,0.463,3,ok,,0,0
+sp_cinnamomum_camphora,Cinnamomum camphora,273,4,,,0,not assessed,insufficient_records,1,0
+sp_cinnamomum_tamala,Cinnamomum tamala,117,9,,,0,not assessed,insufficient_records,1,0
+sp_cissampelos_pareira,Cissampelos pareira,89,13,0.6636,0.4406,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_cissus_quadrangularis,Cissus quadrangularis,14,3,,,0,not assessed,insufficient_records,1,0
+sp_citrus_hystrix,Citrus hystrix,100,22,0.5652,0.397,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_clausena,Clausena,0,0,,,0,not assessed,no_basin_records,0,1
+sp_clausena_harmandiana,Clausena harmandiana,22,8,,,0,not assessed,insufficient_records,1,0
+sp_clerodendrum_indicum,Clerodendrum indicum,77,12,0.4971,0.4032,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_clerodendrum_viscosum,Clerodendrum viscosum,3,0,,,0,not assessed,no_in_basin_records,0,1
+sp_clinacanthus_nutans,Clinacanthus nutans,62,13,0.3134,0.1028,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_clitoria_ternatea,Clitoria ternatea,973,143,0.5537,0.2111,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_cocos_nucifera,Cocos nucifera,600,84,0.5143,0.2041,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_coix_lacryma,Coix lacryma,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_combretum_quadrangulare,Combretum quadrangulare,76,26,0.6449,0.4493,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_coscinium_fenestratum,Coscinium fenestratum,6,1,,,0,not assessed,insufficient_records,1,0
+sp_costus_speciosus,Costus speciosus,58,10,0.62,0.4943,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_crateva_religiosa,Crateva religiosa,15,1,,,0,not assessed,insufficient_records,1,0
+sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,285,34,0.4667,0.1799,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_crinum_asiaticum,Crinum asiaticum,94,13,0.6353,0.4557,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_cryptolepis_dubia,Cryptolepis dubia,5,0,,,0,not assessed,no_in_basin_records,0,1
+sp_curculigo_orchioides,Curculigo orchioides,134,18,0.4369,0.213,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_curcuma_caesia,Curcuma caesia,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_curcuma_comosa,Curcuma comosa,3,0,,,0,not assessed,no_in_basin_records,0,1
+sp_curcuma_longa,Curcuma longa,99,13,0.3918,0.2115,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_curcuma_phaeocaulis,Curcuma phaeocaulis,6,1,,,0,not assessed,insufficient_records,1,0
+sp_curcuma_xanthorrhiza,Curcuma xanthorrhiza,0,0,,,0,not assessed,no_basin_records,0,1
+sp_curcuma_zedoaria,Curcuma zedoaria,66,6,,,0,not assessed,insufficient_records,1,0
+sp_cuscuta_reflexa,Cuscuta reflexa,82,5,,,0,not assessed,insufficient_records,1,0
+sp_cyclea_barbata,Cyclea barbata,36,5,,,0,not assessed,insufficient_records,1,0
+sp_cynometra_ramiflora,Cynometra ramiflora,8,1,,,0,not assessed,insufficient_records,1,0
+sp_cyperus_rotundus,Cyperus rotundus,379,24,0.5539,0.3491,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,62,17,0.6,0.4132,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_dalbergia_oliveri,Dalbergia oliveri,150,22,0.5142,0.3593,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_datura_metel,Datura metel,205,18,0.551,0.3544,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,49,16,0.5994,0.4289,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_dendrobium_devonianum,Dendrobium devonianum,70,13,0.7017,0.5441,3,ok,,0,0
+sp_dendrobium_nobile,Dendrobium nobile,83,5,,,0,not assessed,insufficient_records,1,0
+sp_derris_elliptica,Derris elliptica,36,3,,,0,not assessed,insufficient_records,1,0
+sp_desmodium_triquetrum,Desmodium triquetrum,33,9,,,0,not assessed,insufficient_records,1,0
+sp_dioscorea_bulbifera,Dioscorea bulbifera,731,39,0.6144,0.3433,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_dioscorea_pentaphylla,Dioscorea pentaphylla,450,23,0.6647,0.4463,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_diospyros_mollis,Diospyros mollis,123,27,0.6542,0.4351,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_dolichandrone_spathacea,Dolichandrone spathacea,7,3,,,0,not assessed,insufficient_records,1,0
+sp_dracaena_angustifolia,Dracaena angustifolia,66,19,0.4192,0.1908,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_duhaldea_cappa,Duhaldea cappa,602,28,0.7441,0.5318,3,ok,,0,0
+sp_dysoxylum_binectariferum,Dysoxylum binectariferum,63,4,,,0,not assessed,insufficient_records,1,0
+sp_ecdysanthera_rosea,Ecdysanthera rosea,84,5,,,0,not assessed,insufficient_records,1,0
+sp_eclipta_prostrata,Eclipta prostrata,753,55,0.601,0.2575,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_elephantopus_scaber,Elephantopus scaber,283,31,0.5195,0.3273,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_embelia_ribes,Embelia ribes,639,18,0.5911,0.354,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_entada_phaseoloides,Entada phaseoloides,150,9,,,0,not assessed,insufficient_records,1,0
+sp_ephedra_gerardiana,Ephedra gerardiana,43,3,,,0,not assessed,insufficient_records,1,0
+sp_erythrina,Erythrina,0,0,,,0,not assessed,no_basin_records,0,1
+sp_erythrina_suberosa,Erythrina suberosa,6,2,,,0,not assessed,insufficient_records,1,0
+sp_erythrina_variegata,Erythrina variegata,57,6,,,0,not assessed,insufficient_records,1,0
+sp_euphoria_longana,Dimocarpus longan,233,40,0.4709,0.2194,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_eurycoma_longifolia,Eurycoma longifolia,182,48,0.6127,0.3602,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_excoecaria_agallocha,Excoecaria agallocha,97,3,,,0,not assessed,insufficient_records,1,0
+sp_ficus_hispida,Ficus hispida,459,33,0.5301,0.282,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_ficus_racemosa,Ficus racemosa,282,26,0.5348,0.3108,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_ficus_religiosa,Ficus religiosa,572,47,0.7475,0.5753,4,ok,,0,0
+sp_flacourtia_jangomas,Flacourtia jangomas,18,4,,,0,not assessed,insufficient_records,1,0
+sp_garcinia_atroviridis,Garcinia atroviridis,0,0,,,0,not assessed,no_basin_records,0,1
+sp_garcinia_cowa,Garcinia cowa,139,20,0.3973,0.2442,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_garcinia_hanburyi,Garcinia hanburyi,41,4,,,0,not assessed,insufficient_records,1,0
+sp_garcinia_mangostana,Garcinia mangostana,57,10,0.5522,0.5522,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_garcinia_pedunculata,Garcinia pedunculata,32,1,,,0,not assessed,insufficient_records,1,0
+sp_garcinia_schomburgkiana,Garcinia schomburgkiana,11,4,,,0,not assessed,insufficient_records,1,0
+sp_gardenia_jasminoides,Gardenia jasminoides,533,16,0.5919,0.3697,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_gelsemium_elegans,Gelsemium elegans,409,16,0.7776,0.6293,3,ok,,0,0
+sp_glycosmis_pentaphylla,Glycosmis pentaphylla,205,21,0.4593,0.2461,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_glycyrrhiza_glabra,Glycyrrhiza glabra,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_gmelina_arborea,Gmelina arborea,80,19,0.5354,0.3701,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_gymnema_sylvestre,Gymnema sylvestre,60,4,,,0,not assessed,insufficient_records,1,0
+sp_gynura_procumbens,Gynura procumbens,37,2,,,0,not assessed,insufficient_records,1,0
+sp_gynura_pseudochina,Gynura pseudochina,125,11,0.551,0.4154,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_gyrinops_salicifolia,Gyrinops salicifolia,0,0,,,0,not assessed,no_basin_records,0,1
+sp_hedyotis_diffusa,Scleromitrion diffusum,25,3,,,0,not assessed,insufficient_records,1,0
+sp_helicteres_isora,Helicteres isora,151,17,0.5572,0.3309,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_heritiera_littoralis,Heritiera littoralis,35,0,,,0,not assessed,no_in_basin_records,0,1
+sp_hibiscus_tiliaceus,Hibiscus tiliaceus,275,21,0.3626,0.2269,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_hiptage_benghalensis,Hiptage benghalensis,172,14,0.2792,0.1427,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_holarrhena_antidysenterica,Holarrhena pubescens,0,0,,,0,not assessed,no_basin_records,0,1
+sp_holarrhena_pubescens,Holarrhena pubescens,209,26,0.4723,0.2764,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_homalomena_pendula,Homalomena pendula,3,1,,,0,not assessed,insufficient_records,1,0
+sp_houttuynia_cordata,Houttuynia cordata,2016,33,0.6309,0.3246,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_hydnocarpus_kurzii,Hydnocarpus kurzii,23,1,,,0,not assessed,insufficient_records,1,0
+sp_hygrophila_auriculata,Hygrophila auriculata,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_hygrophila_spinosa,Hygrophila spinosa,0,0,,,0,not assessed,no_basin_records,0,1
+sp_hymenocallis_littoralis,Hymenocallis littoralis,85,9,,,0,not assessed,insufficient_records,1,0
+sp_hypericum_japonicum,Hypericum japonicum,865,27,0.6271,0.3675,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_hypericum_perforatum,Hypericum perforatum,703,1,,,0,not assessed,insufficient_records,1,0
+sp_ichnocarpus_frutescens,Ichnocarpus frutescens,232,27,0.5138,0.2983,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_illicium_verum,Illicium verum,237,3,,,0,not assessed,insufficient_records,1,0
+sp_intsia_bijuga,Intsia bijuga,4,1,,,0,not assessed,insufficient_records,1,0
+sp_ipomoea_aquatica,Ipomoea aquatica,685,123,0.6667,0.2792,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_ixora_chinensis,Ixora chinensis,82,12,0.5043,0.3693,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_jatropha_curcas,Jatropha curcas,326,34,0.5147,0.23,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_justicia_adhatoda,Justicia adhatoda,142,15,0.4961,0.2999,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_justicia_gendarussa,Justicia gendarussa,86,12,0.59,0.4006,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_kaempferia_galanga,Kaempferia galanga,54,23,0.6005,0.4694,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_kaempferia_parviflora,Kaempferia parviflora,23,4,,,0,not assessed,insufficient_records,1,0
+sp_kopsia_fruticosa,Kopsia fruticosa,72,5,,,0,not assessed,insufficient_records,1,0
+sp_lannea_grandis,Lannea grandis,7,3,,,0,not assessed,insufficient_records,1,0
+sp_lansium_domesticum,Lansium domesticum,11,0,,,0,not assessed,no_in_basin_records,0,1
+sp_leonurus_japonicus,Leonurus japonicus,838,17,0.4527,0.3085,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_leucaena_leucocephala,Leucaena leucocephala,813,93,0.531,0.1693,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_limonia_acidissima,Limonia acidissima,17,4,,,0,not assessed,insufficient_records,1,0
+sp_litsea_cubeba,Litsea cubeba,2403,43,0.6291,0.3135,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_lumnitzera_racemosa,Lumnitzera racemosa,164,3,,,0,not assessed,insufficient_records,1,0
+sp_madhuca_longifolia,Madhuca longifolia,2,0,,,0,not assessed,no_in_basin_records,0,1
+sp_mahonia_bealei,Mahonia bealei,235,1,,,0,not assessed,insufficient_records,1,0
+sp_mallotus_philippensis,Mallotus philippensis,1487,40,0.5392,0.2234,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_mangifera_indica,Mangifera indica,796,92,0.5746,0.2361,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_markhamia_stipulata,Markhamia stipulata,243,28,0.5157,0.2976,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_marsdenia_tenacissima,Marsdenia tenacissima,105,6,,,0,not assessed,insufficient_records,1,0
+sp_melastoma_malabathricum,Melastoma malabathricum,1050,51,0.4783,0.1887,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_melia_azedarach,Melia azedarach,714,35,0.4547,0.159,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_mesua_ferrea,Mesua ferrea,85,9,,,0,not assessed,insufficient_records,1,0
+sp_millettia_pachycarpa,Millettia pachycarpa,576,16,0.7103,0.5267,3,ok,,0,0
+sp_mimosa_pudica,Mimosa pudica,1077,184,0.6517,0.3767,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_mitragyna_rotundifolia,Mitragyna rotundifolia,97,11,0.5504,0.3784,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_mitragyna_speciosa,Mitragyna speciosa,6,2,,,0,not assessed,insufficient_records,1,0
+sp_momordica_charantia,Momordica charantia,453,89,0.6931,0.4167,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_momordica_cochinchinensis,Momordica cochinchinensis,335,34,0.3391,0.1453,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_morinda_citrifolia,Morinda citrifolia,306,66,0.55,0.2238,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_moringa_oleifera,Moringa oleifera,120,37,0.6246,0.4309,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_morus_alba,Morus alba,739,23,0.4574,0.2788,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_mucuna_pruriens,Mucuna pruriens,152,29,0.4253,0.1252,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_murraya_koenigii,Murraya koenigii,77,16,0.6598,0.4716,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_nauclea_officinalis,Nauclea officinalis,24,2,,,0,not assessed,insufficient_records,1,0
+sp_nerium_oleander,Nerium oleander,259,35,0.6039,0.3716,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_nigella_sativa,Nigella sativa,2,1,,,0,not assessed,insufficient_records,1,0
+sp_nypa_fruticans,Nypa fruticans,506,38,,,0,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_ocimum_tenuiflorum,Ocimum tenuiflorum,148,28,0.7253,0.4945,3,ok,,0,0
+sp_ophiorrhiza_pumila,Ophiorrhiza pumila,16,3,,,0,not assessed,insufficient_records,1,0
+sp_oroxylum_indicum,Oroxylum indicum,298,33,0.7104,0.4743,4,ok,,0,0
+sp_paederia_foetida,Paederia foetida,2621,42,0.5708,0.3135,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_panax_vietnamensis,Panax vietnamensis,52,5,,,0,not assessed,insufficient_records,1,0
+sp_pandanus_amaryllifolius,Pandanus amaryllifolius,11,2,,,0,not assessed,insufficient_records,1,0
+sp_paramignya_trimera,Paramignya trimera,0,0,,,0,not assessed,no_basin_records,0,1
+sp_parsonsia_alboflavescens,Parsonsia alboflavescens,10,0,,,0,not assessed,no_in_basin_records,0,1
+sp_passiflora_foetida,Passiflora foetida,366,59,0.5117,0.2511,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_peperomia_pellucida,Peperomia pellucida,317,63,0.5605,0.2646,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_phoenix_paludosa,Phoenix paludosa,24,1,,,0,not assessed,insufficient_records,1,0
+sp_phyllanthus_amarus,Phyllanthus amarus,90,13,0.6768,0.5206,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_phyllanthus_emblica,Phyllanthus emblica,755,69,0.4864,0.1662,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_phyllanthus_niruri,Phyllanthus niruri,27,0,,,0,not assessed,no_in_basin_records,0,1
+sp_phyllanthus_reticulatus,Phyllanthus reticulatus,427,39,0.4874,0.2272,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_picrasma_quassioides,Picrasma quassioides,1030,11,0.5779,0.5779,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_piper_betle,Piper betle,50,5,,,0,not assessed,insufficient_records,1,0
+sp_piper_longum,Piper longum,93,7,,,0,not assessed,insufficient_records,1,0
+sp_piper_nigrum,Piper nigrum,100,12,0.444,0.3473,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_plantago_asiatica,Plantago asiatica,1121,15,0.6049,0.3785,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_pluchea_indica,Pluchea indica,118,7,,,0,not assessed,insufficient_records,1,0
+sp_plumbago_indica,Plumbago indica,88,15,0.4051,0.2085,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_plumbago_zeylanica,Plumbago zeylanica,296,21,0.4969,0.2252,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_plumeria_rubra,Plumeria rubra,86,16,0.6098,0.366,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_pogostemon_cablin,Pogostemon cablin,7,0,,,0,not assessed,no_in_basin_records,0,1
+sp_polygonum_chinense,Persicaria chinensis,759,60,0.633,0.3887,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_premna_serratifolia,Premna serratifolia,55,4,,,0,not assessed,insufficient_records,1,0
+sp_psidium_guajava,Psidium guajava,551,55,0.5504,0.2295,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,949,275,0.6944,0.4145,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_punica_granatum,Punica granatum,598,37,0.6339,0.439,5,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_quassia_amara,Quassia amara,14,1,,,0,not assessed,insufficient_records,1,0
+sp_randia_spinosa,Randia spinosa,5,0,,,0,not assessed,no_in_basin_records,0,1
+sp_rauvolfia_cambodiana,Rauvolfia cambodiana,11,2,,,0,not assessed,insufficient_records,1,0
+sp_rauvolfia_serpentina,Rauvolfia serpentina,64,9,,,0,not assessed,insufficient_records,1,0
+sp_rhinacanthus_nasutus,Rhinacanthus nasutus,39,7,,,0,not assessed,insufficient_records,1,0
+sp_rhizophora_apiculata,Rhizophora apiculata,2835,3,,,0,not assessed,insufficient_records,1,0
+sp_rhizophora_mucronata,Rhizophora mucronata,116,0,,,0,not assessed,no_in_basin_records,0,1
+sp_rhododendron_moulmainense,Rhododendron moulmainense,418,15,0.8074,0.6945,4,ok,,0,0
+sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,246,13,0.5273,0.362,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_ricinus_communis,Ricinus communis,879,97,0.6042,0.2614,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_rubia_cordifolia,Rubia cordifolia,1001,22,0.7367,0.5458,3,ok,,0,0
+sp_salacia_chinensis,Salacia chinensis,80,17,0.4339,0.354,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_sambucus_javanica,Sambucus javanica,1780,41,0.5125,0.2209,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_santalum_album,Santalum album,13,6,,,0,not assessed,insufficient_records,1,0
+sp_sapindus_saponaria,Sapindus saponaria,50,5,,,0,not assessed,insufficient_records,1,0
+sp_sargassum,Sargassum,0,0,,,0,not assessed,no_basin_records,0,1
+sp_saurauia_napaulensis,Saurauia napaulensis,714,27,0.6901,0.4547,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_scoparia_dulcis,Scoparia dulcis,0,0,,,0,not assessed,no_basin_records,0,1
+sp_selaginella_pulvinata,Selaginella pulvinata,229,13,0.6418,0.3352,2,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_senegalia_catechu,Senegalia catechu,35,5,,,0,not assessed,insufficient_records,1,0
+sp_senna_alata,Senna alata,0,0,,,0,not assessed,no_basin_records,0,1
+sp_senna_alexandrina,Senna alexandrina,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_senna_occidentalis,Senna occidentalis,297,37,0.6895,0.4303,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_senna_tora,Senna tora,304,19,0.628,0.4476,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_sida_acuta,Sida acuta,125,24,0.6167,0.4056,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_smilax_glabra,Smilax glabra,710,22,0.6248,0.4263,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_solanum_indicum,Solanum indicum,0,0,,,0,not assessed,no_basin_records,0,1
+sp_solanum_trilobatum,Solanum trilobatum,163,19,0.8557,0.6488,1,ok,,0,0
+sp_solanum_violaceum,Solanum violaceum,237,39,0.4813,0.1395,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_sonneratia_caseolaris,Sonneratia caseolaris,141,15,0.1926,0.1926,1,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_sophora_flavescens,Sophora flavescens,400,7,,,0,not assessed,insufficient_records,1,0
+sp_spondias_pinnata,Spondias pinnata,284,37,0.6318,0.4163,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_stephania_epigaea,Stephania epigaea,47,3,,,0,not assessed,insufficient_records,1,0
+sp_stephania_erecta,Stephania erecta,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_stephania_pierrei,Stephania pierrei,0,0,,,0,not assessed,no_basin_records,0,1
+sp_stephania_rotunda,Stephania rotunda,39,6,,,0,not assessed,insufficient_records,1,0
+sp_stephania_tetrandra,Stephania tetrandra,5,0,,,0,not assessed,no_in_basin_records,0,1
+sp_stereospermum_tetragonum,Stereospermum tetragonum,79,8,,,0,not assessed,insufficient_records,1,0
+sp_streblus_asper,Streblus asper,262,38,0.7284,0.5166,4,ok,,0,0
+sp_strophanthus_gratus,Strophanthus gratus,6,2,,,0,not assessed,insufficient_records,1,0
+sp_strychnos_axillaris,Strychnos axillaris,20,8,,,0,not assessed,insufficient_records,1,0
+sp_strychnos_nux,Strychnos nux-vomica,54,13,0.4027,0.2498,1,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_strychnos_potatorum,Strychnos potatorum,0,0,,,0,not assessed,no_basin_records,0,1
+sp_styphnolobium_japonicum,Styphnolobium japonicum,229,6,,,0,not assessed,insufficient_records,1,0
+sp_swertia_angustifolia,Swertia angustifolia,183,11,0.8671,0.8655,2,ok,,0,0
+sp_syzygium_aromaticum,Syzygium aromaticum,5,1,,,0,not assessed,insufficient_records,1,0
+sp_syzygium_cumini,Syzygium cumini,452,71,0.4603,0.1726,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_syzygium_globiflorum,Syzygium globiflorum,59,6,,,0,not assessed,insufficient_records,1,0
+sp_tabernaemontana_divaricata,Tabernaemontana divaricata,230,37,0.5946,0.3156,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_tabernanthe_iboga,Tabernanthe iboga,0,0,,,0,not assessed,no_basin_records,0,1
+sp_tadehagi_triquetrum,Tadehagi triquetrum,0,0,,,0,not assessed,no_basin_records,0,1
+sp_tamarindus_indica,Tamarindus indica,488,78,0.6171,0.288,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_tectona_grandis,Tectona grandis,434,62,0.7415,0.5136,4,ok,,0,0
+sp_terminalia_bellirica,Terminalia bellirica,92,9,,,0,not assessed,insufficient_records,1,0
+sp_terminalia_chebula,Terminalia chebula,159,24,0.6464,0.4723,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_terminalia_citrina,Terminalia citrina,5,2,,,0,not assessed,insufficient_records,1,0
+sp_tetrastigma_hemsleyanum,Tetrastigma hemsleyanum,297,2,,,0,not assessed,insufficient_records,1,0
+sp_thespesia_populnea,Thespesia populnea,187,3,,,0,not assessed,insufficient_records,1,0
+sp_thevetia_peruviana,Thevetia peruviana,92,7,,,0,not assessed,insufficient_records,1,0
+sp_thunbergia_laurifolia,Thunbergia laurifolia,159,16,0.4663,0.3024,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_tinospora_crispa,Tinospora crispa,48,14,0.5287,0.3328,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_tithonia_diversifolia,Tithonia diversifolia,200,49,0.6036,0.3962,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_toona_ciliata,Toona ciliata,139,16,0.6195,0.4728,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_toona_sinensis,Toona sinensis,184,5,,,0,not assessed,insufficient_records,1,0
+sp_trachelospermum_asiaticum,Trachelospermum asiaticum,37,5,,,0,not assessed,insufficient_records,1,0
+sp_trachelospermum_jasminoides,Trachelospermum jasminoides,486,6,,,0,not assessed,insufficient_records,1,0
+sp_trachyspermum_roxburghianum,Trachyspermum roxburghianum,4,2,,,0,not assessed,insufficient_records,1,0
+sp_trichosanthes_cucumerina,Trichosanthes cucumerina,51,8,,,0,not assessed,insufficient_records,1,0
+sp_triumfetta_rhomboidea,Triumfetta rhomboidea,243,14,0.5097,0.3169,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_tylophora_indica,Tylophora indica,11,1,,,0,not assessed,insufficient_records,1,0
+sp_urceola_rosea,Urceola rosea,0,0,,,0,not assessed,no_basin_records,0,1
+sp_urena_lobata,Urena lobata,1350,100,0.5404,0.1911,4,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_verbena_officinalis,Verbena officinalis,1449,26,0.6662,0.4761,3,low-confidence (auc<0.7 or tss<0.4),,0,0
+sp_vernonia_amygdalina,Vernonia amygdalina,0,0,,,0,not assessed,no_basin_records,0,1
+sp_vetiveria_zizanioides,Vetiveria zizanioides,5,1,,,0,not assessed,insufficient_records,1,0
+sp_vitex_negundo,Vitex negundo,1428,9,,,0,not assessed,insufficient_records,1,0
+sp_wedelia_chinensis,Wedelia chinensis,5,3,,,0,not assessed,insufficient_records,1,0
+sp_wrightia_hanleyi,Wrightia hanleyi,0,0,,,0,not assessed,no_basin_records,0,1
+sp_wrightia_tinctoria,Wrightia tinctoria,1,0,,,0,not assessed,no_in_basin_records,0,1
+sp_wrightia_tomentosa,Wrightia tomentosa,51,4,,,0,not assessed,insufficient_records,1,0
+sp_xylocarpus_granatum,Xylocarpus granatum,74,0,,,0,not assessed,no_in_basin_records,0,1
+sp_xylocarpus_moluccensis,Xylocarpus moluccensis,24,0,,,0,not assessed,no_in_basin_records,0,1
+sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,573,19,0.7428,0.5648,4,ok,,0,0
+sp_zanthoxylum_armatum,Zanthoxylum armatum,3207,17,0.7821,0.6667,1,ok,,0,0
+sp_zanthoxylum_rhetsa,Zanthoxylum rhetsa,11,3,,,0,not assessed,insufficient_records,1,0
+sp_zingiber_cassumunar,Zingiber cassumunar,2,0,,,0,not assessed,no_in_basin_records,0,1
+sp_zingiber_montanum,Zingiber montanum,33,7,,,0,not assessed,insufficient_records,1,0
+sp_zingiber_officinale,Zingiber officinale,30,8,,,0,not assessed,insufficient_records,1,0
+sp_zingiber_zerumbet,Zingiber zerumbet,162,30,0.4105,0.1302,3,low-confidence (auc<0.7 or tss<0.4),,0,0

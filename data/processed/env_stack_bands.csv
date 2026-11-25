@@ -1,0 +1,39 @@
+band,variable,units,resampling,source
+1,bio01_baseline,degC,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio1
+2,bio02_baseline,degC,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio2
+3,bio04_baseline,dimensionless (CV x100),bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio4
+4,bio05_baseline,degC,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio5
+5,bio06_baseline,degC,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio6
+6,bio12_baseline,mm/yr,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio12
+7,bio13_baseline,mm,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio13
+8,bio14_baseline,mm,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio14
+9,bio15_baseline,dimensionless (CV),bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio15
+10,bio16_baseline,mm,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio16
+11,bio17_baseline,mm,bilinear,WorldClim 2.1 baseline (2.5 arc-min) bio17
+12,bio01_ssp245,degC,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio1
+13,bio02_ssp245,degC,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio2
+14,bio04_ssp245,dimensionless (CV x100),bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio4
+15,bio05_ssp245,degC,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio5
+16,bio06_ssp245,degC,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio6
+17,bio12_ssp245,mm/yr,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio12
+18,bio13_ssp245,mm,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio13
+19,bio14_ssp245,mm,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio14
+20,bio15_ssp245,dimensionless (CV),bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio15
+21,bio16_ssp245,mm,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio16
+22,bio17_ssp245,mm,bilinear,WorldClim 2.1 ssp245 (2.5 arc-min) bio17
+23,bio01_ssp585,degC,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio1
+24,bio02_ssp585,degC,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio2
+25,bio04_ssp585,dimensionless (CV x100),bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio4
+26,bio05_ssp585,degC,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio5
+27,bio06_ssp585,degC,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio6
+28,bio12_ssp585,mm/yr,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio12
+29,bio13_ssp585,mm,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio13
+30,bio14_ssp585,mm,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio14
+31,bio15_ssp585,dimensionless (CV),bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio15
+32,bio16_ssp585,mm,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio16
+33,bio17_ssp585,mm,bilinear,WorldClim 2.1 ssp585 (2.5 arc-min) bio17
+34,pet_annual_baseline,mm/yr,derived,Hargreaves (1985) from WorldClim bio01+bio02
+35,precip_minus_pet_baseline,mm/yr,derived,bio12 - PET
+36,wetland_fraction_baseline,fraction 0-1,average of presence mask,CIFOR wetland V3b 2016
+37,irrigated_pct_baseline,percent,bilinear,FAO GMIA v5
+38,landcover_class_2020,ESA CCI class code,mode,C3S-LCCS 2020 300 m
