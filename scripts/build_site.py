@@ -633,10 +633,10 @@ def macroecology(d: dict) -> str:
 
     return page("Macroecology — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
-  <h1 class="h4 mb-1">Macroecology <span class="text-muted fw-normal">— the Shrestha framework at Mekong scale</span></h1>
-  <p class="small text-muted">Shrestha et al. 2025 (Current Biology, <a href="https://doi.org/{SHRESTHA_DOI}" target="_blank" rel="noopener">doi:{SHRESTHA_DOI}</a>)
-  modelled medicinal plant diversity across 369 botanical countries and identified human occupancy time as its second-most important predictor. This page reproduces
-  their residual analysis on their published data for the seven botanical countries that contain the Mekong basin, and extends it to sub-national (province) scale.</p>
+  <h1 class="h4 mb-1">Macroecology <span class="text-muted fw-normal">— medicinal plant diversity at Mekong scale</span></h1>
+  <p class="small text-muted">A global analysis of medicinal plant diversity across 369 botanical countries<sup>1</sup> identified human occupancy time as its
+  second-most important predictor. This page reproduces the residual analysis on the published data for the seven botanical countries that contain the
+  Mekong basin, and extends it to sub-national (province) scale.</p>
 
   <div class="row g-3 mb-3">
     <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(len(resid))}</div><div class="l">Mekong botanical countries</div></div></div>
@@ -714,8 +714,13 @@ def macroecology(d: dict) -> str:
     <li><strong>Scripts</strong>: <code>scripts/macroecology.py</code>, <code>scripts/macroecology_layers.py</code>, <code>scripts/wcvp_match.py</code>,
     <code>scripts/harvest_admin1_vascular.py</code>, <code>scripts/internal_coldspots.py</code>. Inputs cached under <code>data/raw/shrestha2025/</code>.</li>
     <li><strong>MPNS v12</strong>: mpns.science.kew.org was unavailable (Cloudflare 5xx) on 2026-11-25; MPNS membership badges show as pending and the country-level
-    medicinal values come from the Shrestha dataset, which is MPNS-derived.</li>
+    medicinal values come from the published dataset, which is MPNS-derived.</li>
   </ul>
+  <h2 class="h5 section-title">References</h2>
+  <ol class="small">
+    <li>Shrestha et al., The human fingerprint of medicinal plant species diversity, Current Biology (2025),
+    <a href="https://doi.org/{SHRESTHA_DOI}" target="_blank" rel="noopener">doi:{SHRESTHA_DOI}</a>.</li>
+  </ol>
 </main>
 <script>
 document.addEventListener('DOMContentLoaded', () => {{
@@ -769,7 +774,7 @@ document.addEventListener('DOMContentLoaded', () => {{
   }});
 }});
 </script>
-''', "macroecology", "Macroecological context for the Mekong atlas: the Shrestha et al. 2025 residual framework reproduced at Mekong scale and extended to province level.", "none.js", need=("map",))
+''', "macroecology", "Macroecological context for the Mekong atlas: medicinal plant diversity residuals reproduced at Mekong scale and extended to province level.", "none.js", need=("map",))
 
 
 def evidence(d: dict) -> str:
@@ -931,7 +936,7 @@ def species_page(d: dict, r: dict) -> str:
     if parts:
         extra += ('<dt>Macroecological context</dt><dd class="small">Among this taxon\'s countries, '
                   + "; ".join(parts)
-                  + f' (Shrestha et al. 2025, <a href="https://doi.org/{SHRESTHA_DOI}" target="_blank" rel="noopener">doi:{SHRESTHA_DOI}</a>).</dd>')
+                  + f'<sup>1</sup><br><span class="text-muted">¹ Shrestha et al., The human fingerprint of medicinal plant species diversity, Current Biology (2025), doi:{SHRESTHA_DOI}.</span></dd>')
     cons_html = ""
     if cons:
         cons_html = f'''
@@ -1108,8 +1113,8 @@ def methods(d: dict) -> str:
   <h2 class="h5 section-title">Software</h2>
   <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Component</th><th>Version</th></tr></thead><tbody>{versions}</tbody></table></div>
 
-  <h2 class="h5 section-title">Macroecology <span class="text-muted fw-normal">(Shrestha et al. 2025 framework)</span></h2>
-  <p class="small">The atlas reproduces the residual analysis of Shrestha et al. 2025 (Current Biology, doi:{SHRESTHA_DOI}) on their published
+  <h2 class="h5 section-title">Macroecology <span class="text-muted fw-normal">(global residual framework)</span></h2>
+  <p class="small">The atlas reproduces the residual analysis of a global study of 369 botanical countries<sup>1</sup> on the published
   data for the seven botanical countries that contain the Mekong basin, and extends it to admin-1 (province) scale as an internal
   under-documentation screen. Model: ordinary least squares, medicinal richness ~ vascular richness, over all botanical countries except
   Antarctica and Oceania (the authors' exclusion); significance at |residual| &gt; 1.96 SD per their residual_histogram.R. Reproduction is
@@ -1119,6 +1124,7 @@ def methods(d: dict) -> str:
   the authors' country-level column) are flagged as fieldwork priorities — the documented difference from the global model is stated on the
   macroecology page and in the manuscript. Human occupancy is reused at its published resolution, never re-derived; language diversity
   (Glottolog points aggregated to admin-1) is mapped as context only, since the global model found only indirect climate-mediated effects.</p>
+  <p class="small text-muted">¹ Shrestha et al., The human fingerprint of medicinal plant species diversity, Current Biology (2025), doi:{SHRESTHA_DOI}.</p>
 
   <h2 class="h5 section-title">Evidence engine <span class="text-muted fw-normal">(pilot)</span></h2>
   <p class="small">A parallel evidence layer maps publications, compounds and — from its Milestone 2 — compound–target–pathway networks for atlas taxa.
