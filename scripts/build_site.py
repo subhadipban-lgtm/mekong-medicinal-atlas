@@ -35,6 +35,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import atlas_lib as L  # noqa: E402
+from sustainability.species_section import render as sustain_section  # noqa: E402
 
 VERSION = L.read_json(L.ROOT / "version.json")
 DATA_CUTOFF = VERSION["data_cutoff"]
@@ -124,6 +125,7 @@ def shrestha_commit() -> str:
 NAV = [("index.html", "Atlas", "index"), ("explore.html", "Explore", "explore"),
        ("species/index.html", "Species", "species"), ("evidence.html", "Evidence", "evidence"),
        ("macroecology.html", "Macroecology", "macroecology"),
+       ("sustainability.html", "Sustainability", "sustainability"),
        ("methods.html", "Methods", "methods"),
        ("about.html", "About", "about")]
 
@@ -336,6 +338,17 @@ def load() -> dict:
     d["layers"] = L.read_json(L.GEO / "_layer_provenance.json")
     d["ev"] = load_evidence()
     d["macro"] = load_macroecology()
+    for key, name in (("sust_pressure", "harvest_pressure_summary.csv"),
+                      ("sust_hydro", "hydrological_fragmentation.csv"),
+                      ("sust_sdm", "sdm_results.csv"),
+                      ("sust_sdm_perf", "sdm_performance.csv"),
+                      ("sust_cult", "cultivation_summary.csv")):
+        path = L.PROCESSED / name
+        d[key] = L.read_csv(path) if path.exists() else []
+    d["sust_pressure_by"] = {r["species_id"]: r for r in d["sust_pressure"]}
+    d["sust_hydro_by"] = {r["species_id"]: r for r in d["sust_hydro"]}
+    d["sust_sdm_by"] = {r["species_id"]: r for r in d["sust_sdm"]}
+    d["sust_cult_by"] = {r["species_id"]: r for r in d["sust_cult"]}
     return d
 
 
@@ -411,6 +424,9 @@ def software_versions(layers: dict) -> dict:
 # ------------------------------------------------------------------ pages
 def home(d: dict) -> str:
     sp, ev, geo = d["species_master"], d["evidence"], d["geo"]
+    sust_hp = sum(1 for r in d["sust_pressure"] if r["harvest_pressure_class"] in ("high", "very high"))
+    sust_hy = sum(1 for r in d["sust_hydro"] if r["hydrological_vulnerability_class"] == "high")
+    sust_sdm_state = "pending" if not d["sust_sdm"] else "ready"
     in_basin = geo["inside_basin"]
     grades = ev.get("species_by_grade", {})
     countries = "".join(f'<option value="{c}">{e(COUNTRY_NAMES[c])}</option>'
@@ -442,6 +458,8 @@ def home(d: dict) -> str:
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
         <div class="small mt-2"><a class="text-light" href="evidence.html">Evidence engine (pilot):
           {n(d["ev"]["totals"]["pubs"])} publications mapped across {n(len(d["ev"]["order"]))} taxa</a></div>
+        <div class="small mt-2"><a class="text-light" href="sustainability.html">Sustainability:
+          {e(sust_hp)} taxa with high or very high harvest pressure · {e(sust_hy)} hydro-vulnerable · climate SDM {e(sust_sdm_state)}</a></div>
       </div>
     </div>
   </div>
@@ -964,6 +982,7 @@ auto-classified into evidence tiers; <strong>{n(ev_pilot["n_compounds"])}</stron
     gbif_link = ""
     if r["gbif_taxon_key"]:
         gbif_link = '<a href="https://www.gbif.org/species/' + e(r["gbif_taxon_key"]) + '" target="_blank" rel="noopener">GBIF</a> · '
+    sust_html = sustain_section(d, sid)
     return page(f"{name} — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
   <nav aria-label="breadcrumb"><ol class="breadcrumb small"><li class="breadcrumb-item"><a href="index.html">Atlas</a></li>
@@ -1007,6 +1026,7 @@ auto-classified into evidence tiers; <strong>{n(ev_pilot["n_compounds"])}</stron
   {pharm_table(pharm)}
   {cons_html}
   {ev_html}
+  {sust_html}
   <h2 class="h5 section-title">How to cite this page</h2>
   <div class="citation-box">Mekong Medicinal Plant Atlas (version {e(VERSION["version"])}). <i>{e(name)}</i>. Occurrence data: GBIF (harvested {e(DATA_CUTOFF)}),
   generalised for sensitive species. Basin boundary: Tiwari et al., Zenodo, doi:10.5281/zenodo.7622998.
@@ -1221,6 +1241,131 @@ def about(d: dict) -> str:
 ''', "about", "About the Mekong Medicinal Plant Atlas", "none.js", need=())
 
 
+def sustainability(d: dict) -> str:
+    pressure = d["sust_pressure"]
+    hydro = d["sust_hydro"]
+    sdm = d["sust_sdm"]
+    cult = d["sust_cult"]
+    names = {s["species_id"]: s["accepted_name"] for s in d["species_master"]}
+    sdm_by = {r["species_id"]: r for r in sdm}
+    cult_by = {r["species_id"]: r for r in cult}
+
+    def row_pressure(r):
+        label = {"low": "Low", "moderate": "Moderate", "high": "High", "very high": "Very high"}[r["harvest_pressure_class"]]
+        color = {"low": "text-bg-light", "moderate": "text-bg-warning", "high": "text-bg-orange", "very high": "text-bg-danger"}[r["harvest_pressure_class"]]
+        return (f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+                f'<td>{e(r["local_use_score"])}</td>'
+                f'<td>{e(r["mean_harvest_pressure_in_range"])}</td>'
+                f'<td><span class="badge {color}">{e(label)}</span></td></tr>')
+
+    top_pressure = "".join(row_pressure(r) for r in sorted(pressure, key=lambda r: -float(r["mean_harvest_pressure_in_range"]))[:15])
+    high_pressure_n = sum(1 for r in pressure if r["harvest_pressure_class"] in ("high", "very high"))
+
+    top_hydro = "".join(
+        f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+        f'<td class="text-end">{e(r["n_occurrences_in_basin"])}</td>'
+        f'<td class="text-end">{e(r["pct_within_10km_major_dam"])}%</td>'
+        f'<td><span class="badge {"text-bg-danger" if r["hydrological_vulnerability_class"] == "high" else "text-bg-light"}">{e(r["hydrological_vulnerability_class"])}</span></td></tr>'
+        for r in sorted(hydro, key=lambda r: -float(r["pct_within_10km_major_dam"]))[:15])
+
+    sdm_block = ""
+    if sdm and sdm[0].get("projected_range_change_pct"):
+        vuln = [r for r in sdm if r.get("climate_vulnerability_tier") not in ("", "not assessed")]
+        top_sdm = "".join(
+            f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+            f'<td class="text-end">{e(r.get("projected_range_change_pct", ""))}%</td>'
+            f'<td><span class="badge text-bg-secondary">{e(r.get("climate_vulnerability_tier", ""))}</span></td></tr>'
+            for r in sorted(vuln, key=lambda r: float(r.get("projected_range_change_pct") or 0))[:15])
+        sdm_block = f'''<h2 class="h5 mt-4">Climate-vulnerable taxa</h2>
+        <p class="small text-muted">Projected change in climatically suitable area; conditional scenario projections, not forecasts.</p>
+        <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Projected range change</th><th>Vulnerability tier</th></tr></thead><tbody>{top_sdm}</tbody></table></div>'''
+    else:
+        sdm_block = '''<div class="alert alert-warning small"><strong>Climate-vulnerability analysis pending.</strong>
+        The EM-Earth climate archives are still downloading; SDM results and the vulnerability tiers will appear here.
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/sdm_methods.md" target="_blank" rel="noopener">Methods document</a>.</div>'''
+
+    cult_block = ""
+    if cult:
+        top_cult = "".join(
+            f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+            f'<td class="text-end">{e(r.get("cultivation_feasible_area_km2", ""))}</td>'
+            f'<td>{e(r.get("cultivation_feasibility_class", ""))}</td></tr>'
+            for r in sorted(cult, key=lambda r: -float(r.get("cultivation_feasible_area_km2") or 0))[:15])
+        cult_block = f'''<h2 class="h5 mt-4">Cultivation-feasible area (screening)</h2>
+        <p class="small text-muted">Intersection of climatically suitable, water-available and already-converted land. A screening output; agronomic field validation is required before any recommendation.</p>
+        <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Feasible area (km&sup2;)</th><th>Feasibility class</th></tr></thead><tbody>{top_cult}</tbody></table></div>'''
+    else:
+        cult_block = '''<div class="alert alert-warning small"><strong>Cultivation-suitability analysis pending.</strong>
+        It waits on the GLEAM evapotranspiration and soil-moisture archives. <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/cultivation_methods.md" target="_blank" rel="noopener">Methods document</a>.</div>'''
+
+    return page("Sustainability — Mekong Medicinal Plant Atlas", f'''
+<main class="container-fluid px-3 px-lg-4 py-3">
+  <h1 class="h4">Sustainability, climate risk and cultivation</h1>
+  <p class="small text-muted">Screening layers built from the hydroclimatic synthesis of Tiwari et al. 2023
+  (<a href="https://doi.org/10.1038/s41597-023-02193-0" target="_blank" rel="noopener">Scientific Data</a>,
+  <a href="https://doi.org/10.5281/zenodo.7803254" target="_blank" rel="noopener">Zenodo 7803254</a>, CC-BY-4.0).
+  These are forward-looking screening tools, not conservation or agronomic recommendations: the harvest-pressure index is a proxy, not
+  measured offtake; future scenarios are conditional projections, not forecasts; cultivation suitability needs field validation.</p>
+
+  <div class="row g-3 mb-3">
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#166a4f">{len(sdm_by)}</div>
+      <div class="l small text-muted">taxa with a climate-vulnerability assessment (pending SDM)</div></div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#b36b00">{e(high_pressure_n)}</div>
+      <div class="l small text-muted">taxa with high or very high harvest pressure ({e(len(pressure))} scored)</div></div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#1f5f8b">{e(sum(1 for r in hydro if r["hydrological_vulnerability_class"] == "high"))}</div>
+      <div class="l small text-muted">taxa with high hydrological vulnerability near dams ({e(len(hydro))} assessed)</div></div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#166a4f">{e(len(cult_by))}</div>
+      <div class="l small text-muted">taxa with a cultivation assessment (pending)</div></div></div></div>
+  </div>
+
+  <div class="map-shell map-explore">
+    <div class="map" id="map" role="application" aria-label="Sustainability summary map"></div>
+    <div class="map-tools">{north_arrow()}</div>
+    <div class="map-status" id="sustStatus">Loading layers…</div>
+    <div class="map-legend legend-grade">
+      <div><strong>Sustainability layers</strong> (switch in the layer control)</div>
+      <div><span class="sw" style="background:#f2efe9"></span>harvest pressure: low</div>
+      <div><span class="sw" style="background:#e5c37f"></span>moderate</div>
+      <div><span class="sw" style="background:#cf8a4e"></span>high</div>
+      <div><span class="sw" style="background:#a63d2f"></span>very high</div>
+      <div><span class="sw" style="background:#1f5f8b;border-radius:2px"></span>major dam · circle = 10 km buffer</div>
+    </div>
+  </div>
+
+  <h2 class="h5 mt-4">Highest harvest pressure</h2>
+  <p class="small text-muted">By the evidence-weighted mean harvest-pressure proxy across the cells where the taxon occurs
+  (<a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harvest_pressure_methods.md" target="_blank" rel="noopener">methods</a>).</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th>Use score</th><th>Mean pressure</th><th>Class</th></tr></thead><tbody>{top_pressure}</tbody></table></div>
+
+  <h2 class="h5 mt-4">Hydrologically fragmented taxa</h2>
+  <p class="small text-muted">Share of in-basin occurrences within 10 km of a major dam (distance-based proxy;
+  <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">methods</a>).</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">In-basin records</th><th class="text-end">Within 10 km</th><th>Class</th></tr></thead><tbody>{top_hydro}</tbody></table></div>
+
+  {sdm_block}
+  {cult_block}
+
+  <h2 class="h5 mt-4">Methods and reproducibility</h2>
+  <ul class="small">
+    <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harmonization_methods.md" target="_blank" rel="noopener">Harmonization</a> —
+      5 km Albers equal-area grid, 31,922 in-basin cells, per-variable resampling rules.</li>
+    <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harvest_pressure_methods.md" target="_blank" rel="noopener">Harvest pressure</a> —
+      SSP2-2050 population × species richness × evidence-weighted use score.</li>
+    <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">Hydrological fragmentation</a> —
+      distance to 232 major dams, 10 km threshold.</li>
+    <li>SDM and cultivation methods will be published with their results; the pipeline is
+      <code>scripts/sustainability/</code> and the driver is <code>scripts/sustainability/run_sustainability.sh</code>.</li>
+  </ul>
+  <p class="small text-muted">Source data: Tiwari et al. 2023, Zenodo doi:10.5281/zenodo.7803254 (CC-BY-4.0); inventory and provenance in
+  <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/zenodo7803254_inventory.md" target="_blank" rel="noopener">docs/</a>.</p>
+</main>
+''', "sustainability", "Sustainability layers of the Mekong Medicinal Plant Atlas", "sustainability.js", need=("map",))
+
+
 def main() -> int:
     d = load()
     if not d["species_master"][0]["evidence_grade"]:
@@ -1248,7 +1393,7 @@ def main() -> int:
         if src.exists():
             shutil.copyfile(src, geo_dest / layer)
     pages = {"index.html": home(d), "explore.html": explore(d), "evidence.html": evidence(d),
-             "macroecology.html": macroecology(d),
+             "macroecology.html": macroecology(d), "sustainability.html": sustainability(d),
              "methods.html": methods(d),
              "about.html": about(d), "species/index.html": species_index(d)}
     pages.update({f"species/{slug_of(r['species_id'])}.html": species_page(d, r) for r in d["species_master"]})
