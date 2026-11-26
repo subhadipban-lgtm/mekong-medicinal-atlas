@@ -473,10 +473,10 @@ def software_versions(layers: dict) -> dict:
 def home(d: dict) -> str:
     sp, ev, geo = d["species_master"], d["evidence"], d["geo"]
     sust_hp = sum(1 for r in d["sust_pressure"] if r["harvest_pressure_class"] in ("high", "very high"))
-    bio_high = sum(1 for r in d["bioeconomy_by"].values()
-                   if r.get("bioeconomy_priority_tier") == "high")
+    bio_unknown = sum(1 for r in d["bioeconomy_by"].values()
+                   if r.get("bioeconomy_priority_tier", "unknown") == "unknown")
     sust_hy = sum(1 for r in d["sust_hydro"] if r["hydrological_vulnerability_class"] == "high")
-    sust_sdm_state = "in progress" if not d["sust_sdm"] else "ready"
+    sust_sdm_state = "not assessed" if not any(r.get("projected_range_change_pct") for r in d["sust_sdm"]) else "exploratory results available"
     in_basin = geo["inside_basin"]
     grades = ev.get("species_by_grade", {})
     countries = "".join(f'<option value="{c}">{e(COUNTRY_NAMES[c])}</option>'
@@ -504,13 +504,13 @@ def home(d: dict) -> str:
           <div class="col-6 stat"><div class="n">{n(in_basin["species"])}</div><div class="l">taxa with records inside the basin</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["uses"]))}</div><div class="l">ethnobotanical use records</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["pharmacology"]))}</div><div class="l">pharmacology records</div></div>
-          <div class="col-6 stat"><div class="n">{n(bio_high)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary">taxa in the high-priority bioeconomy tier</a></div></div>
+          <div class="col-6 stat"><div class="n">{n(bio_unknown)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary">taxa awaiting bioeconomy assessment</a></div></div>
         </div>
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
         <div class="small mt-2"><a class="text-light" href="evidence.html">Evidence engine (pilot):
           {n(d["ev"]["totals"]["pubs"])} records · {n(d["ev"]["totals"].get("unique_pubs", 1880))} unique publications across {n(len(d["ev"]["order"]))} taxa</a></div>
-        <div class="small mt-2"><a class="text-light" href="sustainability.html">Harvest pressure &amp; hydrological risk:
-          {e(sust_hp)} taxa high or very high harvest pressure · {e(sust_hy)} hydro-vulnerable · climate SDM {e(sust_sdm_state)}</a></div>
+        <div class="small mt-2"><a class="text-light" href="sustainability.html">Sustainability:
+          {e(sust_hp)} taxa with high / very high pressure proxies · {e(sust_hy)} with high dam proximity · climate SDM {e(sust_sdm_state)}</a></div>
       </div>
     </div>
   </div>
@@ -777,6 +777,7 @@ def macroecology(d: dict) -> str:
     </div>
   </div>
 
+  <details class="my-3"><summary>Interpretation of the global framework</summary>
   <h2 class="h5 section-title">Reading the Mekong through the global framework</h2>
   <div class="card"><div class="card-body small">
     <p>The Mekong\u2019s documented medicinal flora sits on one of the world\u2019s oldest continuously occupied cultural landscapes. All seven botanical countries that
@@ -795,6 +796,7 @@ def macroecology(d: dict) -> str:
     internal coldspot analysis below tests at sub-national scale.</p>
   </div></div>
 
+  </details>
   <h2 class="h5 section-title mt-4">Internal coldspots <span class="text-muted fw-normal">— the sub-national extension</span></h2>
   {cold_note}
   {f'<div class="table-responsive mb-3"><table class="table table-striped table-atlas"><thead><tr><th>Province</th><th>Country</th><th class="text-end">Vascular species</th><th class="text-end">Documented medicinal taxa</th><th class="text-end">Residual</th><th class="text-end">p</th><th class="text-end">Occupancy (kyr)</th><th></th></tr></thead><tbody>{prio_rows}</tbody></table></div>' if prio_rows else ""}
@@ -812,6 +814,7 @@ def macroecology(d: dict) -> str:
   <p class="small text-muted mt-2">Layers toggle in the map control. Occupancy values are Shrestha et al.\u2019s published country-level column (reused, not re-derived);
   language richness is aggregated from Glottolog language points to admin-1 polygons and shown as context only.</p>
 
+  <details class="my-3"><summary>Macroecology methods and references</summary>
   <h2 class="h5 section-title">Methods and reproducibility</h2>
   <ul class="small">
     <li><strong>Data</strong>: Shrestha et al. 2025 repository (<code>nawalshrestha/med_plants</code>, data.csv, reused under the paper\u2019s DOI and commit hash recorded in the source register);
@@ -834,6 +837,7 @@ def macroecology(d: dict) -> str:
     <li>Shrestha et al., The human fingerprint of medicinal plant species diversity, Current Biology (2025),
     <a href="https://doi.org/{SHRESTHA_DOI}" target="_blank" rel="noopener">doi:{SHRESTHA_DOI}</a>.</li>
   </ol>
+  </details>
 </section>
 <script>
 document.addEventListener('DOMContentLoaded', () => {{
@@ -1603,6 +1607,9 @@ def about(d: dict) -> str:
 
 
 def sustainability(d: dict) -> str:
+    performance = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "sdm_performance.csv")}
+    assessed = [r for r in performance.values() if r["confidence_flag"] != "not assessed"]
+    low_confidence = sum(r["confidence_flag"].startswith("low") for r in assessed)
     pressure = d["sust_pressure"]
     hydro = d["sust_hydro"]
     sdm = d["sust_sdm"]
@@ -1615,7 +1622,8 @@ def sustainability(d: dict) -> str:
         return (f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
                 f'<td>{e(r["local_use_score"])}</td>'
                 f'<td>{e(r["mean_harvest_pressure_in_range"])}</td>'
-                f'<td><span class="badge {color}">{e(label)}</span></td></tr>')
+                f'<td><span class="badge {color}">{e(label)} proxy</span>'
+                f'{"<div class=small>No recorded use; demographic proxy only</div>" if float(r["local_use_score"] or 0) == 0 else ""}</td></tr>')
 
     top_pressure = "".join(row_pressure(r) for r in sorted(pressure, key=lambda r: -float(r["mean_harvest_pressure_in_range"]))[:15])
     high_pressure_n = sum(1 for r in pressure if r["harvest_pressure_class"] in ("high", "very high"))
@@ -1625,22 +1633,26 @@ def sustainability(d: dict) -> str:
         f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
         f'<td class="text-end">{e(r["n_occurrences_in_basin"])}</td>'
         f'<td class="text-end">{e(r["pct_within_10km_major_dam"])}%</td>'
-        f'<td><span class="badge {"text-bg-danger" if r["hydrological_vulnerability_class"] == "high" else "text-bg-light"}">{e(r["hydrological_vulnerability_class"])}</span></td></tr>'
+        f'<td><span class="badge {"text-bg-danger" if r["hydrological_vulnerability_class"] == "high" else "text-bg-light"}">{e(r["hydrological_vulnerability_class"])} proximity</span>'
+        f'{"<div class=small>Sparse evidence: fewer than 10 records</div>" if int(r["n_occurrences_in_basin"]) < 10 else ""}</td></tr>'
         for r in sorted(hydro, key=lambda r: -float(r["pct_within_10km_major_dam"]))[:15])
 
     sdm_block = ""
     if sdm and any(r.get("projected_range_change_pct") for r in sdm):
-        vuln = [r for r in sdm if r.get("climate_vulnerability_tier") not in ("", "not assessed")]
+        vuln = [r for r in sdm if r.get("scenario") == "ssp585" and r.get("projected_range_change_pct") not in (None, "")]
         top_sdm = "".join(
             f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
             f'<td class="text-end">{e(r.get("projected_range_change_pct", ""))}%</td>'
-            f'<td><span class="badge text-bg-secondary">{e(r.get("climate_vulnerability_tier", ""))}</span></td></tr>'
+            f'<td><span class="badge text-bg-secondary">{e(r.get("climate_vulnerability_tier", ""))}</span></td>'
+            f'<td>{e(performance.get(r["species_id"], {}).get("confidence_flag", "not assessed"))}</td></tr>'
             for r in sorted(vuln, key=lambda r: float(r.get("projected_range_change_pct") or 0))[:15])
-        sdm_block = f'''<h2 class="h5 mt-4">Climate-vulnerable taxa</h2>
-        <p class="small text-muted">Projected change in climatically suitable area; conditional scenario projections, not forecasts.</p>
-        <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Projected range change</th><th>Vulnerability tier</th></tr></thead><tbody>{top_sdm}</tbody></table></div>'''
+        sdm_block = f'''<h2 id="climate-screening" class="h5 mt-4">Climate screening — SSP5-8.5, 2041–2060</h2>
+        <p class="small text-muted">Projected change in climatically suitable area using WorldClim 2.1 and MIROC6; conditional scenario projections, not forecasts.
+        {len(assessed)} taxa modelled; {len(performance) - len(assessed)} not assessed. <strong>{low_confidence} of {len(assessed)} models have low confidence (AUC &lt; 0.7 or TSS &lt; 0.4).</strong>
+        The table shows the 15 largest projected losses, including low-confidence models; it is not a conservation priority ranking.</p>
+        <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Projected range change</th><th>Vulnerability tier</th><th>Model confidence</th></tr></thead><tbody>{top_sdm}</tbody></table></div>'''
     else:
-        sdm_block = '''<div class="alert alert-secondary small"><strong>SDM scope.</strong> 162 taxa had at least ten occupied 5 km cells and were modelled;
+        sdm_block = '''<div class="alert alert-secondary small"><strong id="climate-screening">SDM scope.</strong> 162 taxa had at least ten occupied 5 km cells and were modelled;
         171 were not assessed (119 with 1&ndash;9 occupied cells, 52 with no in-basin records). Predictors are WorldClim 2.1
         (2.5 arc-min, resolution-matched to the 5 km grid) as a documented substitution for EM-Earth; see the
         <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/sdm_methods.md" target="_blank" rel="noopener">SDM methods</a>.</div>'''
@@ -1652,11 +1664,11 @@ def sustainability(d: dict) -> str:
             f'<td class="text-end">{e(r.get("cultivation_feasible_area_km2", ""))}</td>'
             f'<td>{e(r.get("cultivation_feasibility_class", ""))}</td></tr>'
             for r in sorted(cult, key=lambda r: -float(r.get("cultivation_feasible_area_km2") or 0))[:15])
-        cult_block = f'''<h2 class="h5 mt-4">Cultivation-feasible area (screening)</h2>
-        <p class="small text-muted">Intersection of climatically suitable, water-available and already-converted land. A screening output; agronomic field validation is required before any recommendation.</p>
+        cult_block = f'''<h2 id="cultivation-screening" class="h5 mt-4">Cultivation-feasible area (screening)</h2>
+        <p class="small text-muted">Intersection of climatically suitable, water-available and already-converted land. Uses WorldClim precipitation and Hargreaves PET in place of GLEAM. Inherits uncertainty from the climate models; agronomic field validation is required before any recommendation.</p>
         <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Feasible area (km&sup2;)</th><th>Feasibility class</th></tr></thead><tbody>{top_cult}</tbody></table></div>'''
     else:
-        cult_block = '''<div class="alert alert-secondary small"><strong>Cultivation screening.</strong> Water availability uses WorldClim precipitation and a
+        cult_block = '''<div class="alert alert-secondary small"><strong id="cultivation-screening">Cultivation screening.</strong> Water availability uses WorldClim precipitation and a
         Hargreaves PET estimate in place of GLEAM. Classes are the share of each taxon's climatically suitable range that is water-available and
         already converted land. See the
         <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/cultivation_methods.md" target="_blank" rel="noopener">cultivation methods</a>.</div>'''
@@ -1665,10 +1677,13 @@ def sustainability(d: dict) -> str:
 <main class="container-fluid px-3 px-lg-4 py-3">
   <h1 class="h4">Sustainability</h1>
   <p class="text-muted">Medicinal plant diversity, harvest pressure and hydrological risk across the Mekong basin.</p>
+  <p class="small">Use these layers to explore research gaps and environmental exposure. Pressure and dam proximity are proxies; climate and cultivation outputs are exploratory screens.</p>
   <nav class="nav nav-pills gap-2 mb-4" aria-label="Sustainability sections">
     <a class="nav-link" href="#macroecology">Macroecology</a>
     <a class="nav-link" href="#harvest-pressure">Harvest pressure</a>
     <a class="nav-link" href="#hydrological-risk">Hydrological risk</a>
+    <a class="nav-link" href="#climate-screening">Climate screening</a>
+    <a class="nav-link" href="#cultivation-screening">Cultivation screening</a>
   </nav>
 {macroecology(d)}
   <section id="harvest-pressure" class="mt-4" aria-labelledby="pressure-heading">
@@ -1686,13 +1701,13 @@ def sustainability(d: dict) -> str:
       <div class="l small text-muted">taxa scored for harvest pressure</div></div></div></div>
     <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
       <div class="n" style="font-size:1.5rem;font-weight:700;color:#b36b00">{e(high_pressure_n)}</div>
-      <div class="l small text-muted">taxa high / very high</div></div></div></div>
+      <div class="l small text-muted">taxa with high / very high pressure proxies</div></div></div></div>
     <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
       <div class="n" style="font-size:1.5rem;font-weight:700;color:#1f5f8b">{e(len(hydro))}</div>
       <div class="l small text-muted">taxa assessed for hydrological fragmentation</div></div></div></div>
     <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
       <div class="n" style="font-size:1.5rem;font-weight:700;color:#a63d2f">{e(high_hydro_n)}</div>
-      <div class="l small text-muted">taxa high hydrological vulnerability</div></div></div></div>
+      <div class="l small text-muted">taxa with high dam proximity</div></div></div></div>
   </div>
 
   <div class="map-shell map-explore">
@@ -1709,7 +1724,7 @@ def sustainability(d: dict) -> str:
     </div>
   </div>
 
-  <h2 class="h5 mt-4">Highest harvest pressure</h2>
+  <h2 class="h5 mt-4">Highest harvest-pressure proxies</h2>
   <p class="small text-muted mb-1"><strong>Note on the use score.</strong> Use score is 0.0 for taxa with no recorded ethnobotanical use in the current
   corpus. For these taxa the pressure score reflects population density and species richness only and should be read as a demographic proxy,
   not as evidence of harvest pressure on the species.</p>
@@ -1718,20 +1733,14 @@ def sustainability(d: dict) -> str:
   <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th>Use score</th><th>Mean pressure</th><th>Class</th></tr></thead><tbody>{top_pressure}</tbody></table></div>
 
   <h2 id="hydrological-risk" class="h5 mt-4">Hydrological risk</h2>
-  <p class="small text-muted">Share of in-basin occurrences within 10 km of a major dam (distance-based proxy;
+  <p class="small text-muted">Share of in-basin occurrences within 10 km of a major dam (distance-based proxy, not a measured ecological impact). Fewer than 10 records is flagged as sparse evidence for interpretation, without changing the underlying class (see
   <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">methods</a>).</p>
   <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">In-basin records</th><th class="text-end">Within 10 km</th><th>Class</th></tr></thead><tbody>{top_hydro}</tbody></table></div>
 
-  <h2 class="h5 mt-4">In progress</h2>
-  <ul class="small">
-    <li><strong>Climate-vulnerability SDM</strong> — species distribution models under future climate scenarios (SSP2-2050) will produce a
-      projected range change and a climate-vulnerability tier per taxon. Planned for Milestone 3; waits on the EM-Earth climate archives.
-      <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/sdm_methods.md" target="_blank" rel="noopener">Methods document</a>.</li>
-    <li><strong>Cultivation suitability</strong> — an agronomic and land-use feasibility screen (climatically suitable × water-available × already-converted land)
-      will produce a cultivation-suitability class per taxon. Planned for Milestone 3; waits on the GLEAM evapotranspiration and soil-moisture archives.
-      <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/cultivation_methods.md" target="_blank" rel="noopener">Methods document</a>.</li>
-  </ul>
+  {sdm_block}
+  {cult_block}
 
+  <details class="my-3"><summary>Pressure, hydrology and screening methods</summary>
   <h2 class="h5 mt-4">Methods and reproducibility</h2>
   <ul class="small">
     <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harmonization_methods.md" target="_blank" rel="noopener">Harmonization</a> —
@@ -1740,11 +1749,12 @@ def sustainability(d: dict) -> str:
       SSP2-2050 population × species richness × evidence-weighted use score.</li>
     <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">Hydrological fragmentation</a> —
       distance to 232 major dams, 10 km threshold.</li>
-    <li>SDM and cultivation methods will be published with their results; the pipeline is
-      <code>scripts/sustainability/</code> and the driver is <code>scripts/sustainability/run_sustainability.sh</code>.</li>
+    <li><a href="{REPO}/blob/main/docs/sdm_methods.md">Climate model methods and validation</a>.</li>
+    <li><a href="{REPO}/blob/main/docs/cultivation_methods.md">Cultivation screening methods</a>.</li>
   </ul>
   <p class="small text-muted">Source data: Tiwari et al. 2023, Zenodo doi:10.5281/zenodo.7803254 (CC-BY-4.0); inventory and provenance in
   <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/zenodo7803254_inventory.md" target="_blank" rel="noopener">docs/</a>.</p>
+  </details>
 </section>
 </main>
 ''', "sustainability", "Macroecology, harvest pressure and hydrological risk for Mekong medicinal plant taxa.", "sustainability.js", need=("map",))
@@ -1773,10 +1783,12 @@ def main() -> int:
     geo_dest = web_data / "geo"
     geo_dest.mkdir(parents=True, exist_ok=True)
     for layer in ("human_occupancy_mekong.geojson", "language_diversity_mekong.geojson",
-                  "global_residual_mekong.geojson", "internal_coldspots_mekong.geojson"):
+                  "global_residual_mekong.geojson", "internal_coldspots_mekong.geojson",
+                  "mekong_dams.geojson", "harvest_pressure_tiers.geojson"):
         src = L.GEO / layer
-        if src.exists():
-            shutil.copyfile(src, geo_dest / layer)
+        if not src.exists():
+            sys.exit(f"Required map layer missing: {src}")
+        shutil.copyfile(src, geo_dest / layer)
     bio_cells = L.PROCESSED / "bioeconomy_priority_cells.geojson"
     if bio_cells.exists():
         shutil.copyfile(bio_cells, geo_dest / "bioeconomy_priority_cells.geojson")

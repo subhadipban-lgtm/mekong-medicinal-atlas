@@ -8,13 +8,15 @@
     if (!el) return;
     M.create(el, { countries: true }).then(ms => {
       const overlays = M.addOverlays(ms, false);
+      const failures = [];
       const promises = [
         M.getJSON('data/geo/harvest_pressure_tiers.geojson').then(gj => {
           const layer = L.geoJSON(gj, { style: f => ({ color: f.properties.fill, weight: 0.5, fillColor: f.properties.fill, fillOpacity: 0.55 }),
             onEachFeature: (f, l) => l.bindTooltip('Harvest-pressure tier: ' + f.properties.tier, { sticky: true }) });
           overlays['Harvest-pressure proxy (tiers)'] = layer;
+          layer.addTo(ms.map);
           return layer;
-        }).catch(() => null),
+        }).catch(() => failures.push("Harvest-pressure layer unavailable")),
         M.getJSON('data/geo/mekong_dams.geojson').then(gj => {
           const major = L.featureGroup();
           const buffers = L.featureGroup();
@@ -29,13 +31,14 @@
               .addTo(major);
             L.circle(ll, { radius: 10000, color: '#1f5f8b', weight: 1, fill: false, opacity: 0.6, dashArray: '4 4' }).addTo(buffers);
           });
-          overlays['Major dams (232)'] = major;
+          overlays['Major dams (' + major.getLayers().length + ')'] = major;
+          major.addTo(ms.map);
           overlays['Dam influence buffer (10 km)'] = buffers;
-        }).catch(() => null),
+        }).catch(() => failures.push("Dam and buffer layers unavailable")),
       ];
       Promise.all(promises).then(() => {
         L.control.layers({ 'CartoDB Positron': ms.base }, overlays, { collapsed: false, position: 'topleft' }).addTo(ms.map);
-        document.getElementById('sustStatus').textContent = 'Toggle the layers with the control (top left).';
+        document.getElementById('sustStatus').textContent = failures.length ? failures.join('; ') : 'Toggle the layers with the control (top left).';
       });
     }).catch(err => {
       const el = document.getElementById('sustStatus');
