@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Sustainability — Mekong Medicinal Plant Atlas</title>
+<meta name="description" content="Harvest-pressure proxy and hydrological-fragmentation indices for Mekong medicinal plant taxa.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="assets/css/atlas.css" rel="stylesheet">
+<link href="assets/vendor/leaflet/leaflet.css" rel="stylesheet"><link href="assets/vendor/markercluster/MarkerCluster.css" rel="stylesheet"><link href="assets/vendor/markercluster/MarkerCluster.Default.css" rel="stylesheet">
+</head>
+<body data-page="harvest_pressure">
+<nav class="navbar navbar-expand-md navbar-atlas navbar-dark">
+  <div class="container-fluid px-3 px-lg-4">
+    <a class="navbar-brand" href="index.html">🌿 Mekong Medicinal Plant Atlas</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#atlasNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="atlasNav"><ul class="navbar-nav ms-auto"><a class="nav-link" data-page="index" href="index.html">Atlas</a><a class="nav-link" data-page="explore" href="explore.html">Explore</a><a class="nav-link" data-page="species" href="species/index.html">Species</a><a class="nav-link" data-page="evidence" href="evidence.html">Evidence</a><a class="nav-link" data-page="macroecology" href="macroecology.html">Macroecology</a><a class="nav-link active" data-page="harvest_pressure" href="sustainability.html">Harvest pressure & hydrological risk</a><a class="nav-link" data-page="methods" href="methods.html">Methods</a><a class="nav-link" data-page="data" href="data.html">Data</a><a class="nav-link" data-page="about" href="about.html">About</a></ul></div>
+  </div>
+</nav>
+
+<main class="container-fluid px-3 px-lg-4 py-3">
+  <h1 class="h4">Harvest pressure & hydrological risk</h1>
+  <p class="small text-muted">Two operational indices of conservation pressure on the atlas taxa, built from the hydroclimatic synthesis of
+  Tiwari et al. 2023 (<a href="https://doi.org/10.1038/s41597-023-02193-0" target="_blank" rel="noopener">Scientific Data</a>,
+  <a href="https://doi.org/10.5281/zenodo.7803254" target="_blank" rel="noopener">Zenodo 7803254</a>, CC-BY-4.0): a harvest-pressure proxy
+  (2050 population density × species richness × graded use score) and a hydrological-fragmentation index (share of in-basin occurrences within
+  10 km of a major dam). The harvest-pressure index is a proxy, not measured offtake; the hydrological index is distance-based and does not model
+  flow alteration, sediment trapping or groundwater drawdown.</p>
+
+  <div class="row g-3 mb-3">
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#166a4f">281</div>
+      <div class="l small text-muted">taxa scored for harvest pressure</div></div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#b36b00">69</div>
+      <div class="l small text-muted">taxa high / very high</div></div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#1f5f8b">285</div>
+      <div class="l small text-muted">taxa assessed for hydrological fragmentation</div></div></div></div>
+    <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body">
+      <div class="n" style="font-size:1.5rem;font-weight:700;color:#a63d2f">17</div>
+      <div class="l small text-muted">taxa high hydrological vulnerability</div></div></div></div>
+  </div>
+
+  <div class="map-shell map-explore">
+    <div class="map" id="map" role="application" aria-label="Harvest pressure and hydrological risk summary map"></div>
+    <div class="map-tools"><div class="north-arrow" title="North is up"><svg width="18" height="26" viewBox="0 0 18 26" role="img" aria-label="North arrow"><polygon points="9,1 15,19 9,15 3,19" fill="#166a4f"/><text x="9" y="25" text-anchor="middle" font-size="8" font-weight="700" fill="#1c2420">N</text></svg></div></div>
+    <div class="map-status" id="sustStatus">Loading layers…</div>
+    <div class="map-legend legend-grade">
+      <div><strong>Sustainability layers</strong> (switch in the layer control)</div>
+      <div><span class="sw" style="background:#f2efe9"></span>harvest pressure: low</div>
+      <div><span class="sw" style="background:#e5c37f"></span>moderate</div>
+      <div><span class="sw" style="background:#cf8a4e"></span>high</div>
+      <div><span class="sw" style="background:#a63d2f"></span>very high</div>
+      <div><span class="sw" style="background:#1f5f8b;border-radius:2px"></span>major dam · circle = 10 km buffer</div>
+    </div>
+  </div>
+
+  <h2 class="h5 mt-4">Highest harvest pressure</h2>
+  <p class="small text-muted mb-1"><strong>Note on the use score.</strong> Use score is 0.0 for taxa with no recorded ethnobotanical use in the current
+  corpus. For these taxa the pressure score reflects population density and species richness only and should be read as a demographic proxy,
+  not as evidence of harvest pressure on the species.</p>
+  <p class="small text-muted">By the evidence-weighted mean harvest-pressure proxy across the cells where the taxon occurs
+  (<a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harvest_pressure_methods.md" target="_blank" rel="noopener">methods</a>).</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th>Use score</th><th>Mean pressure</th><th>Class</th></tr></thead><tbody><tr><td><a class="taxon" href="species/gynura_procumbens.html">Gynura procumbens</a></td><td>0.0</td><td>0.042804</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/avicennia_marina.html">Avicennia marina</a></td><td>0.0</td><td>0.035945</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/dysoxylum_binectariferum.html">Dysoxylum binectariferum</a></td><td>0.0</td><td>0.035945</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/stereospermum_tetragonum.html">Stereospermum tetragonum</a></td><td>3.0</td><td>0.028673</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/lannea_grandis.html">Lannea grandis</a></td><td>3.0</td><td>0.028536</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/mesua_ferrea.html">Mesua ferrea</a></td><td>3.0</td><td>0.025487</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/costus_speciosus.html">Costus speciosus</a></td><td>3.0</td><td>0.024311</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/tetrastigma_hemsleyanum.html">Tetrastigma hemsleyanum</a></td><td>3.0</td><td>0.022183</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/aristolochia_tagala.html">Aristolochia tagala</a></td><td>3.0</td><td>0.02054</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/callicarpa_macrophylla.html">Callicarpa macrophylla</a></td><td>3.0</td><td>0.02054</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/thevetia_peruviana.html">Thevetia peruviana</a></td><td>0.0</td><td>0.02054</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/justicia_adhatoda.html">Justicia adhatoda</a></td><td>3.0</td><td>0.017625</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/triumfetta_rhomboidea.html">Triumfetta rhomboidea</a></td><td>3.0</td><td>0.016385</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/rauvolfia_serpentina.html">Rauvolfia serpentina</a></td><td>2.0</td><td>0.015975</td><td><span class="badge text-bg-danger">Very high</span></td></tr><tr><td><a class="taxon" href="species/ephedra_gerardiana.html">Ephedra gerardiana</a></td><td>3.0</td><td>0.014789</td><td><span class="badge text-bg-danger">Very high</span></td></tr></tbody></table></div>
+
+  <h2 class="h5 mt-4">Hydrologically fragmented taxa</h2>
+  <p class="small text-muted">Share of in-basin occurrences within 10 km of a major dam (distance-based proxy;
+  <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">methods</a>).</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">In-basin records</th><th class="text-end">Within 10 km</th><th>Class</th></tr></thead><tbody><tr><td><a class="taxon" href="species/aglaia_roxburghiana.html">Aglaia roxburghiana</a></td><td class="text-end">1</td><td class="text-end">100.0%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/curcuma_phaeocaulis.html">Curcuma phaeocaulis</a></td><td class="text-end">1</td><td class="text-end">100.0%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/garcinia_pedunculata.html">Garcinia pedunculata</a></td><td class="text-end">1</td><td class="text-end">100.0%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/nigella_sativa.html">Nigella sativa</a></td><td class="text-end">2</td><td class="text-end">100.0%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/dysoxylum_binectariferum.html">Dysoxylum binectariferum</a></td><td class="text-end">46</td><td class="text-end">73.91%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/ecdysanthera_rosea.html">Ecdysanthera rosea</a></td><td class="text-end">37</td><td class="text-end">72.97%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/streblus_asper.html">Streblus asper</a></td><td class="text-end">126</td><td class="text-end">61.11%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/terminalia_bellirica.html">Terminalia bellirica</a></td><td class="text-end">37</td><td class="text-end">59.46%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/wrightia_tomentosa.html">Wrightia tomentosa</a></td><td class="text-end">17</td><td class="text-end">58.82%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/syzygium_globiflorum.html">Syzygium globiflorum</a></td><td class="text-end">28</td><td class="text-end">57.14%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/mesua_ferrea.html">Mesua ferrea</a></td><td class="text-end">36</td><td class="text-end">55.56%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/glycosmis_pentaphylla.html">Glycosmis pentaphylla</a></td><td class="text-end">145</td><td class="text-end">54.48%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/hiptage_benghalensis.html">Hiptage benghalensis</a></td><td class="text-end">48</td><td class="text-end">54.17%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/spondias_pinnata.html">Spondias pinnata</a></td><td class="text-end">163</td><td class="text-end">52.76%</td><td><span class="badge text-bg-danger">high</span></td></tr><tr><td><a class="taxon" href="species/cratoxylum_cochinchinense.html">Cratoxylum cochinchinense</a></td><td class="text-end">133</td><td class="text-end">52.63%</td><td><span class="badge text-bg-danger">high</span></td></tr></tbody></table></div>
+
+  <h2 class="h5 mt-4">In progress</h2>
+  <ul class="small">
+    <li><strong>Climate-vulnerability SDM</strong> — species distribution models under future climate scenarios (SSP2-2050) will produce a
+      projected range change and a climate-vulnerability tier per taxon. Planned for Milestone 3; waits on the EM-Earth climate archives.
+      <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/sdm_methods.md" target="_blank" rel="noopener">Methods document</a>.</li>
+    <li><strong>Cultivation suitability</strong> — an agronomic and land-use feasibility screen (climatically suitable × water-available × already-converted land)
+      will produce a cultivation-suitability class per taxon. Planned for Milestone 3; waits on the GLEAM evapotranspiration and soil-moisture archives.
+      <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/cultivation_methods.md" target="_blank" rel="noopener">Methods document</a>.</li>
+  </ul>
+
+  <h2 class="h5 mt-4">Methods and reproducibility</h2>
+  <ul class="small">
+    <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harmonization_methods.md" target="_blank" rel="noopener">Harmonization</a> —
+      5 km Albers equal-area grid, 31,922 in-basin cells, per-variable resampling rules.</li>
+    <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harvest_pressure_methods.md" target="_blank" rel="noopener">Harvest pressure</a> —
+      SSP2-2050 population × species richness × evidence-weighted use score.</li>
+    <li><a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">Hydrological fragmentation</a> —
+      distance to 232 major dams, 10 km threshold.</li>
+    <li>SDM and cultivation methods will be published with their results; the pipeline is
+      <code>scripts/sustainability/</code> and the driver is <code>scripts/sustainability/run_sustainability.sh</code>.</li>
+  </ul>
+  <p class="small text-muted">Source data: Tiwari et al. 2023, Zenodo doi:10.5281/zenodo.7803254 (CC-BY-4.0); inventory and provenance in
+  <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/zenodo7803254_inventory.md" target="_blank" rel="noopener">docs/</a>.</p>
+</main>
+
+<footer class="atlas">
+  <div class="container-fluid px-3 px-lg-4">
+    <div class="row g-3">
+      <div class="col-md-5">
+        <strong>Mekong Medicinal Plant Atlas</strong> · version 0.9.0 · data as of 2026-11-24<br>
+        Occurrence records from <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a>; names from the GBIF backbone and
+        <a href="https://www.worldfloraonline.org" target="_blank" rel="noopener">World Flora Online</a>; basin boundary
+        <a href="https://doi.org/10.5281/zenodo.7622998" target="_blank" rel="noopener">Tiwari et al. (Zenodo, CC-BY 4.0)</a>;
+        photos © iNaturalist contributors under their own licences.<br>
+        <strong>Dataset DOI: <a href="https://doi.org/10.5281/zenodo.24525569" target="_blank" rel="noopener">10.5281/zenodo.24525569</a></strong> (concept DOI 10.5281/zenodo.24525568).
+      </div>
+      <div class="col-md-4">
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas" target="_blank" rel="noopener">Source code and documentation</a><br>
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/QA_REPORT.md" target="_blank" rel="noopener">QA report</a> ·
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/CONFLICT_REPORT.md" target="_blank" rel="noopener">Conflict report</a> ·
+        <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/data_dictionary.md" target="_blank" rel="noopener">Data dictionary</a>
+      </div>
+      <div class="col-md-3 text-md-end">Research resource; not medical advice.<br><a href="about.html">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="assets/vendor/leaflet/leaflet.js"></script><script src="assets/vendor/markercluster/leaflet.markercluster.js"></script><script src="assets/js/common.js"></script><script src="assets/js/map.js"></script><script src="assets/js/sustainability.js"></script>
+</body>
+</html>

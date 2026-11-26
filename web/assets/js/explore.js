@@ -201,6 +201,38 @@
         readControls(); apply(true);
       });
       document.getElementById('exportVisible').addEventListener('click', exportVisible);
+
+      /* ---- bioeconomy priority overlay (off by default, loads lazily) ---- */
+      const bioChk = document.getElementById('bioeconLayer');
+      const bioNote = document.getElementById('bioeconNote');
+      let bioLayer = null, bioLoading = false;
+      if (bioChk) bioChk.addEventListener('change', () => {
+        if (!bioChk.checked) {
+          if (bioLayer) ms.map.removeLayer(bioLayer);
+          if (bioNote) bioNote.textContent = 'Overlay off. Enable it to count high-priority bioeconomy taxa per 5 km cell.';
+          return;
+        }
+        if (bioLoading) return;
+        bioLoading = true;
+        if (bioNote) bioNote.textContent = 'Loading the bioeconomy overlay…';
+        M.getJSON('data/geo/bioeconomy_priority_cells.geojson', 20000).then(gj => {
+          bioLayer = L.geoJSON(gj, {
+            style: f => ({ color: '#8b1a1a', weight: 0.5, fillColor: '#b71c1c', fillOpacity: 0.45 }),
+            onEachFeature: (f, l) => l.bindTooltip('5 km cell with ' + f.properties.count_high +
+              ' high-priority bioeconomy taxa', { sticky: true })
+          }).addTo(ms.map);
+          bioLoading = false;
+          const leg = document.getElementById('bioeconLegend');
+          if (leg) leg.hidden = false;
+          if (bioNote) bioNote.textContent = gj.features.length
+            ? gj.features.length + ' cells with at least one high-priority bioeconomy taxon.'
+            : 'No atlas taxon currently has a high-priority bioeconomy tier, so the layer is empty. See the Data tab for why.';
+        }).catch(err => {
+          bioLoading = false;
+          bioChk.checked = false;
+          if (bioNote) bioNote.textContent = 'The bioeconomy overlay could not be loaded: ' + err.message;
+        });
+      });
       document.getElementById('loading').remove();
     }).catch(err => {
       const el = document.getElementById('loading');

@@ -12,8 +12,7 @@ Data
   web/data/species.json            the species table used by the maps and DataTables
   web/data/site_stats.json         headline numbers
   web/data/software_versions.json  versions recorded on the Methods page
-  web/data/tables/                 CSV and JSON tables for download
-  web/data/dwca/                   the Darwin Core Archive
+  web/data/geo/                   runtime map layers (fetched by the pages; not a download page)
   web/data/geo/                    written by scripts/build_geo.py and fetch_baselayers.py
 
 Nothing in the output depends on the date the script is run, so repeated builds are identical.
@@ -130,8 +129,9 @@ def shrestha_commit() -> str:
 NAV = [("index.html", "Atlas", "index"), ("explore.html", "Explore", "explore"),
        ("species/index.html", "Species", "species"), ("evidence.html", "Evidence", "evidence"),
        ("macroecology.html", "Macroecology", "macroecology"),
+       ("sustainability.html", "Harvest pressure & hydrological risk", "harvest_pressure"),
        ("methods.html", "Methods", "methods"),
-       ("download.html", "Download", "download"),
+       ("data.html", "Data", "data"),
        ("about.html", "About", "about")]
 
 
@@ -222,6 +222,8 @@ def page(title: str, body: str, active: str, description: str, script: str, need
         scripts += ["assets/vendor/datatables/dataTables.min.js", "assets/vendor/datatables/dataTables.bootstrap5.min.js"]
     if "map" in need:
         scripts += ["assets/js/common.js", "assets/js/map.js", f"assets/js/{script}"]
+    elif script and script != "none.js":
+        scripts += ["assets/js/common.js", f"assets/js/{script}"]
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -417,6 +419,7 @@ def load() -> dict:
     d["sust_pressure_by"] = {r["species_id"]: r for r in d["sust_pressure"]}
     d["sust_hydro_by"] = {r["species_id"]: r for r in d["sust_hydro"]}
     d["sust_sdm_by"] = {r["species_id"]: r for r in d["sust_sdm"]}
+    d["bioeconomy_by"] = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "bioeconomy_profiles.csv")}
     d["sust_cult_by"] = {r["species_id"]: r for r in d["sust_cult"]}
     return d
 
@@ -439,39 +442,6 @@ def species_json(d: dict) -> list[dict]:
             "n_pharm": len(d["pharm_by"].get(r["species_id"], [])), "same_as": r["same_gbif_taxon_as"],
         })
     return out
-
-
-def copy_downloads() -> dict[str, int]:
-    sizes: dict[str, int] = {}
-    tables = L.WEB / "data" / "tables"
-    tables.mkdir(parents=True, exist_ok=True)
-    for name in ("species_master", "uses", "pharmacology", "conservation_trade", "references", "occurrence_summary_by_species",
-                 "evidence_grade_provenance", "evidence_summary.json", "occurrence_build_summary.json"):
-        src = L.PROCESSED / (name if name.endswith(".json") else name + ".csv")
-        if not src.exists():
-            continue
-        shutil.copyfile(src, tables / src.name)
-        sizes[f"tables/{src.name}"] = src.stat().st_size
-    dwc = L.WEB / "data" / "dwca"
-    dwc.mkdir(parents=True, exist_ok=True)
-    # Keep the published DWCA as-is on a --site-only rebuild (it is not regenerated
-    # here and the committed copy carries the dataset citation); populate only if absent.
-    zip_dest = dwc / "dwca-mekong-medicinal-plant-atlas.zip"
-    if not zip_dest.exists() and (L.DWC / "dwca.zip").exists():
-        shutil.copyfile(L.DWC / "dwca.zip", zip_dest)
-        sizes["dwca/dwca-mekong-medicinal-plant-atlas.zip"] = (L.DWC / "dwca.zip").stat().st_size
-        if (L.DWC / "eml.xml").exists():
-            shutil.copyfile(L.DWC / "eml.xml", dwc / "eml.xml")
-            sizes["dwca/eml.xml"] = (L.DWC / "eml.xml").stat().st_size
-    elif zip_dest.exists():
-        sizes["dwca/dwca-mekong-medicinal-plant-atlas.zip"] = zip_dest.stat().st_size
-        if (dwc / "eml.xml").exists():
-            sizes["dwca/eml.xml"] = (dwc / "eml.xml").stat().st_size
-    for layer in ("occurrences.geojson", "occurrences_outside_basin.geojson", "mekong_basin.geojson",
-                  "mekong_basin_display.geojson", "mekong_river_naturalearth.geojson", "countries_outline.geojson"):
-        shutil.copyfile(L.GEO / layer, L.WEB / "data" / "geo" / layer)
-        sizes[f"geo/{layer}"] = (L.GEO / layer).stat().st_size
-    return sizes
 
 
 def software_versions(layers: dict) -> dict:
@@ -504,6 +474,8 @@ def software_versions(layers: dict) -> dict:
 def home(d: dict) -> str:
     sp, ev, geo = d["species_master"], d["evidence"], d["geo"]
     sust_hp = sum(1 for r in d["sust_pressure"] if r["harvest_pressure_class"] in ("high", "very high"))
+    bio_high = sum(1 for r in d["bioeconomy_by"].values()
+                   if r.get("bioeconomy_priority_tier") == "high")
     sust_hy = sum(1 for r in d["sust_hydro"] if r["hydrological_vulnerability_class"] == "high")
     sust_sdm_state = "in progress" if not d["sust_sdm"] else "ready"
     in_basin = geo["inside_basin"]
@@ -533,11 +505,12 @@ def home(d: dict) -> str:
           <div class="col-6 stat"><div class="n">{n(in_basin["species"])}</div><div class="l">taxa with records inside the basin</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["uses"]))}</div><div class="l">ethnobotanical use records</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["pharmacology"]))}</div><div class="l">pharmacology records</div></div>
+          <div class="col-6 stat"><div class="n">{n(bio_high)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary">taxa in the high-priority bioeconomy tier</a></div></div>
         </div>
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
         <div class="small mt-2"><a class="text-light" href="evidence.html">Evidence engine (pilot):
           {n(d["ev"]["totals"]["pubs"])} records · {n(d["ev"]["totals"].get("unique_pubs", 1880))} unique publications across {n(len(d["ev"]["order"]))} taxa</a></div>
-        <div class="small mt-2"><a class="text-light" href="sustainability.html">Sustainability:
+        <div class="small mt-2"><a class="text-light" href="sustainability.html">Harvest pressure &amp; hydrological risk:
           {e(sust_hp)} taxa high or very high harvest pressure · {e(sust_hy)} hydro-vulnerable · climate SDM {e(sust_sdm_state)}</a></div>
       </div>
     </div>
@@ -616,12 +589,22 @@ def explore(d: dict) -> str:
         <label class="mt-2" for="fLifeForm">Life form</label><select class="form-select" id="fLifeForm"></select>
         <label class="mt-2" for="fIucn">IUCN status</label><select class="form-select" id="fIucn"></select>
         <label class="mt-2" for="fCites">CITES appendix</label><select class="form-select" id="fCites"></select>
+        <div class="mt-3 border-top pt-2">
+          <input class="form-check-input" type="checkbox" id="bioeconLayer" autocomplete="off">
+          <label class="form-check-label small" for="bioeconLayer"><strong>Bioeconomy priority</strong> overlay</label>
+          <div class="small text-muted mt-1" id="bioeconNote">Off by default. Colours each 5 km cell by the count of high-priority bioeconomy taxa it holds; a count of taxa, not a value.</div>
+        </div>
         <div class="d-grid gap-2 mt-3"><button class="btn btn-sm btn-outline-secondary" type="button" id="resetFilters">Reset filters</button></div>
       </form>
     </div></div></div>
     <div class="map-tools">{north_arrow()}</div>
     <div class="map-status" id="mapStatus">Loading records…</div>
     {MAP_LEGEND}
+    <div class="map-legend legend-bioecon" id="bioeconLegend" hidden>
+      <div><strong>Bioeconomy priority</strong> <span class="text-muted small">cells with at least one high-priority taxon</span></div>
+      <div><span class="sw" style="background:#b71c1c"></span>≥1 high-priority bioeconomy taxa in the cell</div>
+      <div class="small text-muted">Count of taxa per 5 km cell, not a monetary value.</div>
+    </div>
     <div id="loading" class="map-status" style="top:.7rem;left:.7rem;bottom:auto">Loading {n(d["geo"]["inside_basin"]["records"])} records…</div>
   </div>
   <div class="d-flex flex-wrap align-items-baseline gap-3 mt-4">
@@ -844,7 +827,7 @@ def macroecology(d: dict) -> str:
     medicinal taxa per province. Differences from the global model are documented in the manuscript.</li>
     <li><strong>Scripts</strong>: <code>scripts/macroecology.py</code>, <code>scripts/macroecology_layers.py</code>, <code>scripts/wcvp_match.py</code>,
     <code>scripts/harvest_admin1_vascular.py</code>, <code>scripts/internal_coldspots.py</code>. Inputs cached under <code>data/raw/shrestha2025/</code>.</li>
-    <li><strong>MPNS v12</strong>: mpns.science.kew.org was unavailable (Cloudflare 5xx) on 2026-11-25; MPNS membership badges show as pending and the country-level
+    <li><strong>MPNS v12</strong>: mpns.science.kew.org was unavailable (Cloudflare 5xx) on 2026-11-25; MPNS membership badges show as unavailable and the country-level
     medicinal values come from the published dataset, which is MPNS-derived.</li>
   </ul>
   <h2 class="h5 section-title">References</h2>
@@ -997,6 +980,46 @@ def pharm_table(pharm: list[dict]) -> str:
             '<th>Constituent or extract</th><th>Assay</th><th>Potency</th><th>Source</th><th>Grade</th></tr></thead><tbody>' + rows + "</tbody></table></div>")
 
 
+def bioeconomy_section(d: dict, sid: str) -> str:
+    prof = d["bioeconomy_by"].get(sid)
+    available = prof and str(prof.get("bioeconomy_profile_available", "False")) == "True"
+    if not available:
+        return ('<details class="mt-3"><summary class="h5 section-title" style="display:list-item">Bioeconomy</summary>'
+                '<p class="small text-muted mb-0">No bioeconomy profile available for this taxon. The bioeconomy screening layer '
+                'catalogues value-chain, trade, certification and livelihood evidence only where a citable study covers the taxon; '
+                'in this release no atlas taxon is covered by the two value-chain studies retrieved, so no profile exists yet. '
+                'See the <a href="data.html">Data catalog</a> and Methods.</p></details>')
+
+    def cell(key, label):
+        v = prof.get(key) or ""
+        return f'<tr><th scope="row" class="text-nowrap">{e(label)}</th><td>{e(v if v else "unknown")}</td></tr>'
+
+    price = ""
+    if str(prof.get("market_price_proxy") or "").strip():
+        price = (f'<tr><th scope="row">Market price proxy</th><td>{e(prof["market_price_proxy"])} '
+                 f'{e(prof.get("market_price_currency_unit") or "")} '
+                 f'({e(prof.get("market_price_date") or "date unknown")}) '
+                 f'<span class="text-muted small">proxy, not a valuation</span></td></tr>')
+    tier = prof.get("bioeconomy_priority_tier") or "unknown"
+    srcs = e(prof.get("source_ids") or "")
+    return ('<details class="mt-3"><summary class="h5 section-title" style="display:list-item">Bioeconomy</summary>'
+            '<p class="small text-muted">Screening codings with their sources; see the '
+            '<a href="data.html">Data catalog</a> and <a href="methods.html">Methods</a>. Market prices are proxies, not valuations.</p>'
+            '<div class="table-responsive"><table class="table table-sm table-atlas"><tbody>'
+            + cell("value_chain_type", "Value chain type")
+            + cell("trade_exposure", "Trade exposure")
+            + cell("certification_readiness", "Certification readiness")
+            + cell("livelihood_dependence", "Livelihood dependence")
+            + cell("equity_flag", "Equity flag")
+            + cell("valuation_method", "Valuation method")
+            + price
+            + f'<tr><th scope="row">Bioeconomy priority tier</th><td><strong>{e(tier)}</strong> '
+              '<span class="text-muted small">(derived; see Methods)</span></td></tr>'
+            + f'<tr><th scope="row">Sources</th><td class="small">{srcs}</td></tr>'
+            + f'<tr><th scope="row">Notes</th><td class="small">{e(prof.get("notes") or "")}</td></tr>'
+            + '</tbody></table></div></details>')
+
+
 def species_page(d: dict, r: dict) -> str:
     sid = r["species_id"]
     uses, pharm, cons = d["uses_by"].get(sid, []), d["pharm_by"].get(sid, []), d["cons_by"].get(sid)
@@ -1029,13 +1052,13 @@ def species_page(d: dict, r: dict) -> str:
             flags.append(f'<span class="badge text-bg-warning" title="Closest WCVP name: {e(cov["wcvp_accepted_name"])} - verify spelling">WCVP spelling check</span>')
         else:
             flags.append('<span class="badge text-bg-secondary" title="No WCVP name match recorded">WCVP unmatched</span>')
-        flags.append('<span class="badge text-bg-secondary" title="MPNS v12 unavailable on 2026-11-25; membership pending">MPNS pending</span>')
+        flags.append('<span class="badge text-bg-secondary" title="MPNS v12 unavailable on 2026-11-25; membership not assessed">MPNS unavailable</span>')
     extra = ""
     if r["sensitive_species"] == "yes":
         extra += f'<dt>Sensitive species</dt><dd>Coordinates of its records are generalised: {e(r["sensitivity_reason"])}</dd>'
     if r["same_gbif_taxon_as"]:
         other = r["same_gbif_taxon_as"]
-        extra += (f'<dt>Same species as</dt><dd>This name and <a href="{slug_of(other)}.html"><i>{e(other[3:].replace("_", " "))}</i></a> '
+        extra += (f'<dt>Same species as</dt><dd>This name and <a href="species/{slug_of(other)}.html"><i>{e(other[3:].replace("_", " "))}</i></a> '
                   'are one accepted species; its occurrence records are listed there.</dd>')
     if synonyms:
         extra += "<dt>Synonyms</dt><dd>" + e("; ".join(synonyms[:12]) + (" …" if len(synonyms) > 12 else "")) + "</dd>"
@@ -1088,6 +1111,7 @@ auto-classified into evidence tiers; <strong>{n(ev_pilot["n_compounds"])}</stron
     if r["gbif_taxon_key"]:
         gbif_link = '<a href="https://www.gbif.org/species/' + e(r["gbif_taxon_key"]) + '" target="_blank" rel="noopener">GBIF</a> · '
     sust_html = sustain_section(d, sid)
+    bio_html = bioeconomy_section(d, sid)
     return page(f"{name} — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
   <nav aria-label="breadcrumb"><ol class="breadcrumb small"><li class="breadcrumb-item"><a href="index.html">Atlas</a></li>
@@ -1132,6 +1156,7 @@ auto-classified into evidence tiers; <strong>{n(ev_pilot["n_compounds"])}</stron
   {cons_html}
   {ev_html}
   {sust_html}
+  {bio_html}
   <h2 class="h5 section-title">How to cite this page</h2>
   <div class="citation-box">Mekong Medicinal Plant Atlas (version {e(VERSION["version"])}). <i>{e(name)}</i>. Occurrence data: GBIF (harvested {e(DATA_CUTOFF)}),
   generalised for sensitive species. Basin boundary: Tiwari et al., Zenodo, doi:10.5281/zenodo.7622998.
@@ -1150,7 +1175,7 @@ def species_index(d: dict) -> str:
         for r in by_genus[genus]:
             ev_link = (f' · <a class="small" href="../evidence.html">evidence</a>'
                        if r["species_id"] in d["ev"]["summary"] else "")
-            items += (f'<li class="mb-1"><a class="taxon" href="{slug_of(r["species_id"])}.html">{e(r["accepted_name"])}</a> '
+            items += (f'<li class="mb-1"><a class="taxon" href="species/{slug_of(r["species_id"])}.html">{e(r["accepted_name"])}</a> '
                       f'{badge_grade(r["evidence_grade"])} {badge_iucn(r["iucn_category_code"])} '
                       f'<span class="text-muted">{n(r["n_occurrence_in_basin"])} in basin</span>{ev_link}</li>')
         parts.append(f'<div class="col-md-6 col-xl-4 mb-3"><h3 class="h6"><i>{e(genus)}</i> '
@@ -1170,7 +1195,7 @@ def methods(d: dict) -> str:
 
     def status(note: str) -> str:
         low = note.lower()
-        return "access pending" if any(p in low for p in pending) else "used"
+        return "not yet accessed" if any(p in low for p in pending) else "used"
 
     refs = "".join(
         f'<tr><td><code>{e(r["source_id"])}</code></td><td>{e(r["full_citation"])}</td><td>{e(r["license"])}</td>'
@@ -1194,7 +1219,8 @@ def methods(d: dict) -> str:
         med_txt = f"{med_a:g} independent source{'s' if med_a != 1 else ''}"
         prov_html = (f'<p class="small mt-3">Grade A was assigned to <strong>{len(prov_a)}</strong> taxa on the basis of a median of '
                      f'<strong>{med_txt}</strong> per taxon (range {min(prov_a)}\u2013{max(prov_a)}). <strong>{single}</strong> taxa are supported by a '
-                     f'single source and are flagged in the <a href="data/tables/evidence_grade_provenance.csv" download>provenance file</a> as low-redundancy.</p>')
+                     f'single source and are flagged in the <a href="data.html">provenance file</a> (evidence_grade_provenance, '
+                     'catalogued on the Data tab and archived with the atlas on Zenodo) as low-redundancy.</p>')
     rubric = "".join(
         f'<tr><td>{badge_grade(g)}</td><td>{e(GRADE_TEXT[g])}</td><td class="text-end">{n(ev.get("species_by_grade", {}).get(g, 0))}</td>'
         f'<td class="text-end">{n(ev.get("rows_by_grade", {}).get("uses.csv", {}).get(g, 0))}</td>'
@@ -1284,10 +1310,27 @@ def methods(d: dict) -> str:
   pagination arrives with the scheduled living review. Target promotion (Milestone 2) uses a two-independent-lines rule: prediction in two engines,
   or prediction plus literature-mined support.</p>
 
+  <h2 class="h5 section-title">Bioeconomy extraction <span class="text-muted fw-normal">(screening layer)</span></h2>
+  <p class="small">The bioeconomy layer records, per taxon, the value-chain type, trade exposure, certification readiness,
+  livelihood dependence, equity flag, valuation method and a market-price proxy where one is documented. Sources are registered in
+  <a href="{REPO}/blob/main/docs/bioeconomy_sources.csv" target="_blank" rel="noopener">docs/bioeconomy_sources.csv</a>; the coding rules and the
+  priority-tier derivation are in <a href="{REPO}/blob/main/docs/bioeconomy_priority_rule.md" target="_blank" rel="noopener">docs/bioeconomy_priority_rule.md</a>.
+  The priority tier (high / medium / low / unknown) is derived, never coded: a taxon is <code>high</code> only when all three inputs — documented
+  trade exposure, documented moderate-or-high livelihood dependence, and an applicable certification standard — are in place.</p>
+  <p class="small">Scope was narrowed to the two value-chain studies retrieved for this release: the Cao Bang Geopark jiaogulan study
+  (PLOS ONE, doi:10.1371/journal.pone.0324746) and the Naban River Watershed study (Ethnobotany Research and Applications,
+  doi:10.32859/ERA.19.21.1-12). <strong>Neither study covers any of the 333 atlas taxa</strong> (they cover <i>Gynostemma pentaphyllum</i>,
+  <i>Asparagus filicinus</i>, <i>A. subscandens</i>, <i>Paris polyphylla</i>, <i>Stemona tuberosa</i> and <i>Tacca chantrieri</i>), so every
+  coded field is <code>unknown</code> in this release. <code>unknown</code> is the documented result, not a gap to be filled: no
+  pharmacology-corpus inference was made, no market price was imputed, and no per-species bioprospecting value is claimed (the published
+  bioprospecting range of roughly $200 to $2M per plant is cited in the literature only as context). Documented CITES appendices in
+  <code>conservation_trade.csv</code> are noted per taxon as pointers for a later coding pass. Market prices, where they exist in the two
+  studies, are proxies with an explicit currency, unit, date and source — not valuations, and never aggregated.</p>
+
   <h2 class="h5 section-title">Limitations</h2>
   <ul class="small">
     <li>Ethnobotanical, pharmacological and trade content comes from a project workbook that cites primary literature per row; the workbook itself is not redistributed.</li>
-    <li>Local names in Khmer, Lao, Thai, Vietnamese, Burmese and Chinese are not yet recorded: the Tier-2 reference books and the Lancang-Mekong Traditional Medicine Resources Database are access pending.</li>
+    <li>Local names in Khmer, Lao, Thai, Vietnamese, Burmese and Chinese are not yet recorded: the Tier-2 reference books and the Lancang-Mekong Traditional Medicine Resources Database are not yet accessed.</li>
     <li>Occurrence records are not re-identified and carry the names GBIF supplies; {n(len(occ.get("genus_level_taxa_without_occurrence_data", [])))} workbook entries name only a genus and have no occurrence data.</li>
     <li>The GBIF harvest is an API snapshot without a download DOI; a DOI-citable GBIF download should replace it at release.</li>
     <li>IUCN categories come from the workbook trade sheet and from GBIF, not from the IUCN API.</li>
@@ -1298,65 +1341,232 @@ def methods(d: dict) -> str:
 ''', "methods", "Methods of the Mekong Medicinal Plant Atlas: sources, evidence grading, coordinate generalisation, software.", "none.js", need=())
 
 
-def download(d: dict) -> str:
-    sizes = copy_downloads()
-    rows = [
-        ("dwca/dwca-mekong-medicinal-plant-atlas.zip", "Darwin Core Archive", "ZIP", "Published occurrence records as Darwin Core terms, with archive and dataset metadata.", "CC-BY-NC-4.0; each record keeps its own licence"),
-        ("tables/species_master.csv", "Species master", "CSV", "One row per taxon: names, grades, conservation status, occurrence counts.", "Research compilation; primary sources cited per row"),
-        ("tables/uses.csv", "Ethnobotanical use records", "CSV", "Use, ailment category, part used, country, source and evidence grade.", "Research compilation; primary sources cited per row"),
-        ("tables/pharmacology.csv", "Pharmacology records", "CSV", "Extract assays and isolated compounds with potency, source and evidence grade.", "Research compilation; primary sources cited per row"),
-        ("tables/conservation_trade.csv", "Conservation and trade", "CSV", "IUCN category and its basis, CITES appendix, trade notes.", "Cited public sources"),
-        ("tables/occurrence_summary_by_species.csv", "Occurrence counts by species", "CSV", "Published records per species: inside basin, outside basin, specimen-based, generalised.", "CC-BY-NC-4.0"),
-        ("tables/references.csv", "Source register", "CSV", "Every source with licence, access date and status.", "Metadata"),
-        ("tables/evidence_grade_provenance.csv", "Evidence-grade provenance", "CSV", "Per taxon: best evidence grade, number of distinct sources behind its uses and pharmacology, and the source IDs.", "Metadata"),
-        ("tables/evidence_summary.json", "Evidence summary", "JSON", "Grade counts and the citation issues found while grading.", "Metadata"),
-        ("geo/occurrences.geojson", "Occurrence records inside the basin", "GeoJSON", "One point per published record inside the basin.", "CC-BY-NC-4.0"),
-        ("geo/occurrences_outside_basin.geojson", "Records outside the basin (generalised)", "GeoJSON", "One point per species per half-degree cell.", "CC-BY-NC-4.0"),
-        ("geo/mekong_basin.geojson", "Mekong basin boundary", "GeoJSON", "Full-resolution boundary, EPSG:4326.", "CC-BY-4.0, Tiwari et al., doi:10.5281/zenodo.7622998"),
-        ("geo/mekong_river_naturalearth.geojson", "Mekong River centreline", "GeoJSON", "Natural Earth 1:10m line.", "Public domain"),
-    ]
-    # Only advertise files actually written to web/data, so no download link 404s.
-    rows = [r for r in rows if (L.WEB / "data" / r[0]).exists()]
-    table_rows = "".join(
-        f'<tr><td><a href="data/{e(path)}" download>{e(path.split("/")[-1])}</a></td><td>{e(label)}</td><td>{e(fmt)}</td>'
-        f'<td>{e(desc)}</td><td class="text-nowrap">{human(sizes.get(path, 0))}</td><td>{e(lic)}</td></tr>' for path, label, fmt, desc, lic in rows)
-    return page("Download — Mekong Medicinal Plant Atlas", f'''
-<main class="container-fluid px-3 px-lg-4 py-3">
-  <h1 class="h4">Download the data</h1>
-  <div class="alert alert-success small"><strong>Cite the dataset as:</strong> Banerjee, S. (2026). Mekong Medicinal Plant Atlas: occurrence records of medicinal plant taxa in the Mekong River basin.
-  Zenodo. <a href="https://doi.org/{e(VERSION["dataset_doi"])}" target="_blank" rel="noopener">https://doi.org/{e(VERSION["dataset_doi"])}</a>. The concept DOI {e(VERSION["concept_doi"])}
-  always resolves to the latest version.</div>
-  <div class="table-responsive"><table class="table table-striped table-atlas"><thead><tr><th>File</th><th>Content</th><th>Format</th><th>Description</th><th>Size</th><th>Licence</th></tr></thead><tbody>{table_rows}</tbody></table></div>
-  <h2 class="h5 section-title">Evidence engine — data access</h2>
-  <p class="small">The pilot evidence engine (20 taxa) publishes aggregate summaries through a public
-  <a href="https://api-service-dyzfz7h7lq-uc.a.run.app/contract/manifest.json" target="_blank" rel="noopener">api-service manifest</a> and a
-  <a href="https://storage.googleapis.com/mekong-evidence-engine-public/contract/manifest.json" target="_blank" rel="noopener">public GCS bucket</a>. The site displays the aggregate counts;
-  the underlying full tables are restricted and available from the authors on request.</p>
+def load_registry() -> list[dict]:
+    """The Zenodo registry. Every dataset shown on the Data tab must have a row here; the build
+    fails when one does not, so a dataset can never silently exist without a deposit plan."""
+    path = L.PROCESSED / "zenodo_registry.csv"
+    if not path.exists():
+        sys.exit("data: data/processed/zenodo_registry.csv is missing; every catalogued dataset needs a Zenodo row")
+    rows = L.read_csv(path)
+    for r in rows:
+        if not (r.get("license") or "").strip():
+            sys.exit(f"data: dataset {r['dataset_id']} has no licence in zenodo_registry.csv")
+        if not (r.get("version") or "").strip():
+            sys.exit(f"data: dataset {r['dataset_id']} has no version in zenodo_registry.csv")
+        doi = (r.get("version_doi") or "").strip()
+        if not (doi.startswith("DOI pending") or doi.startswith("10.")):
+            sys.exit(f"data: dataset {r['dataset_id']} has an invalid DOI {doi!r}; use a Zenodo DOI "
+                     "or 'DOI pending — contact corresponding author'")
+    return rows
+
+
+def _doi_cell(r: dict) -> str:
+    doi = (r.get("version_doi") or "").strip()
+    if doi.startswith("10."):
+        return (f'<a href="https://doi.org/{e(doi)}" target="_blank" rel="noopener">{e(doi)}</a>'
+                f'<div class="small text-muted">concept {e(r.get("concept_doi"))}</div>')
+    return f'<span class="text-muted">{e(doi)}</span><div class="small text-muted">{e(r.get("deposit_plan", ""))}</div>'
+
+
+def _bibtex(r: dict) -> str:
+    key = "mekong_atlas_" + r["dataset_id"] + "_v" + r["version"].replace(".", "_")
+    title = "Mekong Medicinal Plant Atlas — " + r["dataset_name"] + " (version " + r["version"] + ")"
+    lines = ["@misc{" + key + ",",
+             "  author       = {Banerjee, Subhadip and Charoensub, Rawiwan},",
+             "  title        = {" + title + "},",
+             "  year         = {2026},",
+             "  publisher    = {Zenodo},",
+             "  version      = {" + r["version"] + "},",
+             "  license      = {" + r["license"] + "},"]
+    doi = (r.get("version_doi") or "").strip()
+    if doi.startswith("10."):
+        lines += ["  doi          = {" + doi + "},",
+                  "  url          = {https://doi.org/" + doi + "}"]
+    else:
+        lines += ["  note         = {DOI pending — contact the corresponding author}"]
+    lines.append("}")
+    return "\n".join(lines)
+
+
+def data(d: dict) -> str:
+    """The Data tab: a catalog and citation page, not a download page.
+
+    Every dataset row comes from data/processed/zenodo_registry.csv. A row carries a Zenodo DOI or
+    the literal state 'DOI pending — contact corresponding author'; licence and version are
+    mandatory and the build fails without them (see load_registry).
+    """
+    reg = load_registry()
+
+    cat_rows = []
+    for r in reg:
+        rows_n = str(r["rows"])
+        rows_cell = n(rows_n) if rows_n.isdigit() else e(rows_n)
+        cat_rows.append(
+            f'<tr><td><strong id="ds-{e(r["dataset_id"])}">{e(r["dataset_name"])}</strong>'
+            f'<div class="small text-muted"><code>{e(r["dataset_id"])}</code></div></td>'
+            f'<td class="small">{e(r["description"])}</td>'
+            f'<td class="text-nowrap">{rows_cell}</td>'
+            f'<td class="small">{e(r["format"])}</td>'
+            f'<td class="text-nowrap">{e(r["version"])}</td>'
+            f'<td class="small">{e(r["license"])}</td>'
+            f'<td class="small">{_doi_cell(r)}</td>'
+            f'<td class="small">{e(r["related_publication"])}</td>'
+            f'<td class="small">{e(r["dataset_id"])}</td></tr>')
+    catalog_html = "".join(cat_rows)
+
+    cm_path = L.ROOT / "data" / "evidence_manifest.json"
+    if not cm_path.exists():
+        sys.exit("data: data/evidence_manifest.json is missing (run scripts/build_contract_manifest.py)")
+    cm = json.loads(cm_path.read_text(encoding="utf-8"))
+    base = "https://subhadipban-lgtm.github.io/mekong-medicinal-plant-atlas/data/evidence/"
+    ep_rows = []
+    for ep in cm["endpoints"]:
+        status = ep["access_status"]
+        badge = "text-bg-warning" if status.startswith("pending") else "text-bg-secondary"
+        if status.startswith("pending"):
+            example = '<span class="text-muted">endpoint not built — no public request</span>'
+        else:
+            example = f'<code>curl -i &quot;{base}{e(ep["endpoint"])}&quot;</code>'
+        sha = ep.get("sha256")
+        ep_rows.append(
+            f'<tr><td><code>{e(ep["endpoint"])}</code></td>'
+            f'<td><span class="badge {badge}">{e(status)}</span></td>'
+            f'<td class="small">{e(ep.get("schema_version") or "—")}</td>'
+            f'<td class="small">{e(ep["rows"]) if ep.get("rows") is not None else "—"}</td>'
+            f'<td class="small text-break"><code>{(sha[:16] + "…") if sha else "—"}</code></td>'
+            f'<td class="small">{example}</td></tr>')
+    contract_html = "".join(ep_rows)
+
+    dict_rows = []
+    ndict = 0
+    for path in sorted((L.ROOT / "data").glob("dictionary_*.csv")):
+        name = path.stem.replace("dictionary_", "")
+        ndict += 1
+        for f in L.read_csv(path):
+            field = f.get("field") or ""
+            definition = f.get("definition") or ""
+            allowed = f.get("allowed_values") or f.get("allowed_values_or_units") or ""
+            typ = f.get("type") or "—"
+            src = f.get("source_requirement") or f.get("source") or ""
+            dict_rows.append(
+                f'<tr><td><code>{e(name)}</code></td>'
+                f'<td><code>{e(field)}</code></td>'
+                f'<td class="small">{e(definition)}</td>'
+                f'<td class="small">{e(typ)}</td>'
+                f'<td class="small">{e(allowed)}</td>'
+                f'<td class="small">{e(src)}</td></tr>')
+    dict_html = "".join(dict_rows)
+
+    cite_blocks = []
+    for r in reg:
+        doi = (r.get("version_doi") or "").strip()
+        if doi.startswith("10."):
+            cite = (f'Mekong Medicinal Plant Atlas: {e(r["dataset_name"])}, version {e(r["version"])}. '
+                    f'Banerjee S, Charoensub R. 2026. Zenodo. '
+                    f'<a href="https://doi.org/{e(doi)}" target="_blank" rel="noopener">https://doi.org/{e(doi)}</a> '
+                    f'(concept DOI {e(r["concept_doi"])}). Licence: {e(r["license"])}.')
+        else:
+            cite = (f'Mekong Medicinal Plant Atlas: {e(r["dataset_name"])}, version {e(r["version"])}. '
+                    f'Banerjee S, Charoensub R. 2026. DOI pending — contact the corresponding author. '
+                    f'Licence: {e(r["license"])}.')
+        cite_blocks.append(
+            f'<details class="mb-2"><summary class="small">{e(r["dataset_name"])} · v{e(r["version"])}</summary>'
+            f'<div class="citation-box small mt-2">{cite}</div>'
+            f'<pre class="small bg-light p-2 mt-1">{e(_bibtex(r))}</pre></details>')
+
+    total = len(reg)
+    deposited = sum(1 for r in reg if (r.get("version_doi") or "").startswith("10."))
+    pending = total - deposited
+    site_doi = VERSION["dataset_doi"]
+    concept_doi = VERSION["concept_doi"]
+
+    return page("Data — Mekong Medicinal Plant Atlas", f'''
+<main class="container-fluid px-3 px-lg-4 py-4">
+  <h1 class="h4">Data catalog</h1>
+
+  <h2 class="h5 section-title">1 · Overview</h2>
+  <p class="small">All static datasets are archived on Zenodo with DOIs. Live contract JSON is served
+  from <code>/data/evidence/</code> with CORS enabled where it is public. This page is the catalog.
+  It describes each dataset, its schema, its licence, its version, and how to cite it.
+  {n(total)} datasets are catalogued: {n(deposited)} deposited and {n(pending)} with a DOI pending.
+  This is <strong>not</strong> a download page; the files live on Zenodo.</p>
+
+  <h2 class="h5 section-title">2 · Dataset catalog</h2>
+  <div class="table-responsive"><table class="table table-sm table-striped table-atlas align-middle" id="catalogTable">
+    <thead><tr><th>Dataset</th><th>Description</th><th>Rows</th><th>Format</th><th>Version</th>
+    <th>Licence</th><th>Zenodo DOI</th><th>Related publication</th><th>Dictionary</th></tr></thead>
+    <tbody>{catalog_html}</tbody></table></div>
+  <p class="small text-muted">A "DOI pending" row states what will be deposited and under which concept
+  DOI; no DOI is invented. The bioeconomy layer is a screening layer and is 100% <code>unknown</code> in
+  this release, because no atlas taxon is covered by the two value-chain studies citable to date;
+  <code>unknown</code> is the documented result, not a gap to be filled.</p>
+
+  <h2 class="h5 section-title">3 · Live contract (the living layer)</h2>
+  <p class="small">The evidence engine publishes JSON to <code>/data/evidence/</code>. Those endpoints are
+  <strong>restricted</strong> in this release: they are not published on the site, and the data are
+  available from the corresponding author on request. The table states each endpoint's real status,
+  its schema version, its row count and the first 16 characters of its SHA-256, so a requester can
+  verify that the copy they receive is the one this build describes. The <code>curl</code> line is
+  shown for reference only: an anonymous request to a restricted endpoint returns 404, and no endpoint
+  is presented as working.</p>
   <div class="table-responsive"><table class="table table-sm table-atlas">
-    <thead><tr><th>Data</th><th>Contents</th><th>Access</th></tr></thead>
-    <tbody>
-      <tr><td>Contract JSONs (7 files)</td><td>per-taxon publication IDs, evidence-tier counts, network/docking status, review status, whats-new feed</td><td><span class="badge text-bg-success">public</span> api-service · GCS</td></tr>
-      <tr><td>Numbers-only manifest</td><td>2,317 tier-mapped records = 1,880 unique publications; 119 compounds (103 PubChem); 190 rows awaiting review</td><td><span class="badge text-bg-success">public</span> this page (Evidence)</td></tr>
-      <tr><td>Full publication tables</td><td>publications.csv (17,787 harvest rows), abstracts, classification details</td><td><span class="badge text-bg-warning">restricted</span> authors on request</td></tr>
-      <tr><td>Search log / PRISMA flow</td><td>query strings, hit counts, screening counts</td><td><span class="badge text-bg-warning">restricted</span> authors on request</td></tr>
-      <tr><td>Compound tables</td><td>species_compound.csv with structures</td><td><span class="badge text-bg-warning">restricted</span> authors on request</td></tr>
-      <tr><td>Review queue + decisions</td><td>190 pending rows; reviewer decisions + κ export (when human review begins)</td><td><span class="badge text-bg-warning">restricted</span> reviewers only</td></tr>
-      <tr><td>Network pharmacology</td><td>target predictions, concordance, ADMET, docking</td><td><span class="badge text-bg-secondary">pending external access</span></td></tr>
-      <tr><td>Raw API cache</td><td>Europe PMC / OpenAlex / PubChem responses</td><td><span class="badge text-bg-danger">private</span> build input</td></tr>
-    </tbody></table></div>
-  <h2 class="h5 section-title">Licence</h2>
-  <p class="small">The occurrence archive is released under CC-BY-NC-4.0 because it includes records published under that licence; each record's own licence (CC0, CC-BY-4.0 or CC-BY-NC-4.0) is given in its
-  <code>license</code> field and prevails for that record. The basin boundary is CC-BY 4.0 (Tiwari et al.). Natural Earth layers are public domain. The project tables are a research compilation whose rows cite their
-  primary sources; the source workbook is not redistributed.</p>
-  <h2 class="h5 section-title">Suggested citation</h2>
-  <div class="citation-box">Mekong Medicinal Plant Atlas, version {e(VERSION["version"])} (data as of {e(DATA_CUTOFF)}). Occurrence data from GBIF; taxonomic backbone GBIF and World Flora Online;
-  basin boundary Tiwari et al., Zenodo, doi:10.5281/zenodo.7622998. Repository: {REPO}. Dataset DOI: <a href="https://doi.org/{e(VERSION["dataset_doi"])}" target="_blank" rel="noopener">https://doi.org/{e(VERSION["dataset_doi"])}</a>.</div>
-  <h2 class="h5 section-title">Darwin Core terms in the archive</h2>
-  <p class="small">occurrenceID, basisOfRecord, eventDate, year, month, day, scientificName, acceptedNameUsage, taxonRank, kingdom, family, genus, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters,
-  geodeticDatum, country, countryCode, stateProvince, county, locality, recordedBy, identifiedBy, occurrenceStatus, establishmentMeans, associatedReferences, license, rightsHolder, institutionCode, collectionCode,
-  catalogNumber, datasetName, dataGeneralizations, informationWithheld. Definitions are in the <a href="{REPO}/blob/main/docs/data_dictionary.md" target="_blank" rel="noopener">data dictionary</a>.</p>
+    <thead><tr><th>Endpoint</th><th>Status</th><th>Schema</th><th>Rows</th><th>SHA-256</th><th>Example request</th></tr></thead>
+    <tbody>{contract_html}</tbody></table></div>
+  <p class="small">This is the only live endpoint set on the site. Everything else is archived on Zenodo.
+  Access requests: open an issue in the <a href="{REPO}/issues" target="_blank" rel="noopener">repository</a>
+  or write to the corresponding author listed on the <a href="about.html">About</a> page, quoting the
+  endpoint name and the SHA-256 above.</p>
+
+  <h2 class="h5 section-title">4 · Data dictionary</h2>
+  <p class="small text-muted">Filterable table rendered from the union of {n(ndict)} <code>data/dictionary_*.csv</code>
+  files. Type a dataset name or a field name to filter.</p>
+  <div class="table-responsive"><table class="table table-sm table-striped table-atlas" id="dictTable">
+    <thead><tr><th>Dataset</th><th>Field</th><th>Definition</th><th>Type</th><th>Allowed values</th><th>Source requirement</th></tr></thead>
+    <tbody>{dict_html}</tbody></table></div>
+
+  <h2 class="h5 section-title">5 · How to cite</h2>
+  <p class="small">Site-level citation for the atlas as a whole:</p>
+  <div class="citation-box small">Banerjee S, Charoensub R. 2026. Mekong Medicinal Plant Atlas (version {e(VERSION["version"])},
+  data as of {e(DATA_CUTOFF)}). Zenodo. <a href="https://doi.org/{e(site_doi)}" target="_blank" rel="noopener">https://doi.org/{e(site_doi)}</a>
+  (concept DOI {e(concept_doi)}).</div>
+  <p class="small mt-3">Per-dataset citation and a ready-to-paste BibTeX entry:</p>
+  {"".join(cite_blocks)}
+
+  <h2 class="h5 section-title">6 · Provenance and reproducibility</h2>
+  <ul class="small">
+    <li>Evidence-engine environment: <a href="{REPO}/blob/main/docs/evidence_environment.md" target="_blank" rel="noopener">docs/evidence_environment.md</a></li>
+    <li>Harvest-pressure and hydrological layer environment: <a href="{REPO}/blob/main/docs/sustainability_environment.md" target="_blank" rel="noopener">docs/sustainability_environment.md</a></li>
+    <li>Bioeconomy sources, retrieval dates and licences: <a href="{REPO}/blob/main/docs/bioeconomy_sources.csv" target="_blank" rel="noopener">docs/bioeconomy_sources.csv</a></li>
+    <li>Zenodo deposit order and metadata: <a href="{REPO}/blob/main/docs/zenodo_deposit_plan.md" target="_blank" rel="noopener">docs/zenodo_deposit_plan.md</a></li>
+  </ul>
+  <p class="small">The site is reproducible from the archived data with the pinned interpreter
+  (Python 3.14.7; see the Methods page) and one command: <code>./build.sh --site-only</code>.
+  Raw caches (GBIF, World Flora Online, WCVP, Natural Earth, Shrestha et al. 2025, Zenodo 7803254)
+  are listed in <code>docs/</code> with their source DOIs; raw inputs are not redistributed where their
+  licence does not permit it.</p>
+
+  <h2 class="h5 section-title">7 · Contact and issues</h2>
+  <p class="small">Corresponding author: Subhadip Banerjee, Medicinal Plant Innovation Centre,
+  Mae Fah Luang University, Chiang Rai, Thailand 57100 — reachable through the
+  <a href="{REPO}/issues" target="_blank" rel="noopener">GitHub issue tracker</a>. Please include the
+  dataset name and the DOI version (or the SHA-256 for a contract endpoint) in any error report, so the
+  exact build can be identified.</p>
 </main>
-''', "download", "Download the Mekong Medicinal Plant Atlas data", "none.js", need=())
+''', "data", "Catalog of every dataset in the Mekong Medicinal Plant Atlas: schema, licence, version and Zenodo DOI.",
+        "data.js", need=("table",))
+
+
+def scan_download_links(pages: dict[str, str]) -> list[tuple[str, str]]:
+    """Return every in-site href to a raw data file. Only the live contract endpoints under
+    data/evidence/ are permitted; everything else must point at Zenodo."""
+    pattern = re.compile(r'href="([^"]+\.(?:csv|json|geojson|tif|graphml|sdf|xml))(?:\?[^"]*)?"')
+    bad = []
+    for name, html in pages.items():
+        for href in pattern.findall(html):
+            if href.startswith(("http://", "https://", "data/evidence/", "//")):
+                continue
+            bad.append((name, href))
+    return bad
 
 
 def about(d: dict) -> str:
@@ -1384,6 +1594,8 @@ def about(d: dict) -> str:
 def sustainability(d: dict) -> str:
     pressure = d["sust_pressure"]
     hydro = d["sust_hydro"]
+    sdm = d["sust_sdm"]
+    cult = d["sust_cult"]
     names = {s["species_id"]: s["accepted_name"] for s in d["species_master"]}
 
     def row_pressure(r):
@@ -1522,11 +1734,11 @@ def main() -> int:
     d = load()
     if not d["species_master"][0]["evidence_grade"]:
         sys.exit("evidence grades are empty: run scripts/grade_evidence.py before building the site")
-    data = L.WEB / "data"
-    data.mkdir(parents=True, exist_ok=True)
-    (data / "species.json").write_text(json.dumps(species_json(d), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    L.write_json(data / "software_versions.json", software_versions(d["layers"]))
-    L.write_json(data / "site_stats.json", {
+    web_data = L.WEB / "data"
+    web_data.mkdir(parents=True, exist_ok=True)
+    (web_data / "species.json").write_text(json.dumps(species_json(d), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    L.write_json(web_data / "software_versions.json", software_versions(d["layers"]))
+    L.write_json(web_data / "site_stats.json", {
         "version": VERSION["version"], "data_cutoff": DATA_CUTOFF, "taxa": len(d["species_master"]),
         "taxa_species_level": sum(s["taxon_rank"] == "species" for s in d["species_master"]),
         "use_records": len(d["uses"]), "pharmacology_records": len(d["pharmacology"]),
@@ -1537,22 +1749,31 @@ def main() -> int:
         "species_by_grade": d["evidence"].get("species_by_grade", {})})
     # macroecology geo layers for the macroecology page (CSVs stay in the
     # repository and the Zenodo deposit - no CSVs on the website)
-    geo_dest = data / "geo"
+    geo_dest = web_data / "geo"
     geo_dest.mkdir(parents=True, exist_ok=True)
     for layer in ("human_occupancy_mekong.geojson", "language_diversity_mekong.geojson",
                   "global_residual_mekong.geojson", "internal_coldspots_mekong.geojson"):
         src = L.GEO / layer
         if src.exists():
             shutil.copyfile(src, geo_dest / layer)
+    bio_cells = L.PROCESSED / "bioeconomy_priority_cells.geojson"
+    if bio_cells.exists():
+        shutil.copyfile(bio_cells, geo_dest / "bioeconomy_priority_cells.geojson")
     pages = {"index.html": home(d), "explore.html": explore(d), "evidence.html": evidence(d),
              "macroecology.html": macroecology(d),
+             "sustainability.html": sustainability(d),
              "methods.html": methods(d),
-             "about.html": about(d), "download.html": download(d), "species/index.html": species_index(d)}
+             "data.html": data(d),
+             "about.html": about(d), "species/index.html": species_index(d)}
     pages.update({f"species/{slug_of(r['species_id'])}.html": species_page(d, r) for r in d["species_master"]})
     for path, content in pages.items():
         target = L.WEB / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content, encoding="utf-8")
+    bad = scan_download_links(pages)
+    if bad:
+        sys.exit("build: in-site data-download links are not permitted (use Zenodo DOIs): "
+                 + "; ".join(f"{p} -> {h}" for p, h in bad[:10]))
     print(f"pages written: {len(pages)} ({len(d['species_master'])} taxon pages) · version {VERSION['version']}")
     return 0
 

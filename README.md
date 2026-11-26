@@ -19,9 +19,13 @@ The atlas covers Cambodia, China (Yunnan and Guangxi), Laos, Myanmar, Thailand a
 | `index.html` | Overview with the basin map and headline statistics |
 | `explore.html` | Full occurrence map with clustering and filters, and a searchable species table |
 | `species/index.html`, `species/<name>.html` | One page per taxon: distribution map, ethnobotany, pharmacology, conservation, external links, citation |
+| `harvest_pressure.html` → `sustainability.html` | Harvest-pressure and hydrological-fragmentation indices, with the summary map |
 | `methods.html` | Sources, the grading rubric, the coordinate generalisation policy, software versions, limitations |
-| `download.html` | The Darwin Core Archive, CSV tables and GeoJSON layers, with licences |
+| `data.html` | The data catalog: every dataset with schema, licence, version and Zenodo DOI; the live contract manifest |
 | `about.html` | Authorship, funding and contact |
+
+The old `download.html` now redirects to `data.html`; datasets are archived on Zenodo
+(concept DOI 10.5281/zenodo.24525568), not served from the site.
 
 ## The data
 
@@ -31,6 +35,9 @@ The atlas covers Cambodia, China (Yunnan and Guangxi), Laos, Myanmar, Thailand a
 | `data/processed/uses.csv` | 207 | one ethnobotanical use record |
 | `data/processed/pharmacology.csv` | 690 | one extract assay or isolated compound |
 | `data/processed/conservation_trade.csv` | 16 | one conservation or trade statement |
+| `data/processed/bioeconomy_profiles.csv` | 333 | one bioeconomy screening profile per taxon (all `unknown` in this release) |
+| `data/processed/bioeconomy_priority_summary.csv` | 4 | priority-tier counts and species lists |
+| `data/processed/zenodo_registry.csv` | 16 | one catalogued dataset with licence, version and Zenodo DOI or deposit plan |
 | `data/processed/references.csv` | 19 | one source |
 | `data/processed/occurrences.csv` | about 154,000 | one harvested GBIF record (published records marked) |
 | `data/processed/occurrence_summary_by_species.csv` | 333 | occurrence counts per taxon |

@@ -58,6 +58,6 @@ def render(d: dict, sid: str) -> str:
     return ('<details class="mt-3"><summary class="h5 section-title" style="display:list-item">Harvest pressure &amp; hydrological risk</summary>'
             '<p class="small text-muted">Screening layers from the hydroclimatic synthesis of Tiwari et al. 2023 '
             '(<a href="https://doi.org/10.5281/zenodo.7803254" target="_blank" rel="noopener">Zenodo 7803254</a>); '
-            'methods are linked from the <a href="harvest_pressure.html">Harvest pressure &amp; hydrological risk page</a>.</p>'
+            'methods are linked from the <a href="sustainability.html">Harvest pressure &amp; hydrological risk page</a>.</p>'
             '<div class="table-responsive"><table class="table table-sm table-atlas"><tbody>'
             + "".join(rows) + '</tbody></table></div></details>')

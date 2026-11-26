@@ -1,0 +1,182 @@
+table,field,type,units,allowed_values,definition,source_requirement
+species_master,species_id,string,n/a,regular expression `sp_[a-z0-9_]+`,Stable identifier: sp_ plus the normalised workbook name.,see docs/data_dictionary.md
+species_master,accepted_name,string,n/a,any text,"Scientific name accepted in the GBIF backbone (genus and species, without authors).",see docs/data_dictionary.md
+species_master,scientific_name_authorship,string,n/a,any text,"Author string of the accepted name, as given by GBIF.",see docs/data_dictionary.md
+species_master,family,string,n/a,any text,Family in the GBIF backbone.,see docs/data_dictionary.md
+species_master,genus,string,n/a,any text,Genus of the accepted name.,see docs/data_dictionary.md
+species_master,taxon_rank,string,n/a,"**species**, **genus**",Resolution of the workbook entry. Four entries name only a genus.,see docs/data_dictionary.md
+species_master,synonyms,json-list,n/a,any text,Synonyms of the taxon in the GBIF backbone.,see docs/data_dictionary.md
+species_master,common_names_json,json-list,n/a,any text,Reserved for English common names; empty because none are verified yet.,see docs/data_dictionary.md
+species_master,local_names_json,json-object,n/a,any text,"Reserved for local names in Khmer, Lao, Thai, Vietnamese, Burmese and Chinese; empty pending the Tier-2 reference books.",see docs/data_dictionary.md
+species_master,countries_present,string,n/a,"regular expression `((CN|TH|VN|LA|KH|MM)(,(CN|TH|VN|LA|KH|MM))*)?`",Basin countries in which the workbook reports the species (ISO 3166-1 alpha-2).,see docs/data_dictionary.md
+species_master,mekong_basin_presence,string,n/a,any text,"How basin presence is known: workbook country list, GBIF country-level records, or unknown.",see docs/data_dictionary.md
+species_master,life_form,string,n/a,"**Tree**, **Shrub**, **Herb**, **Climber**, **Herb (epiphyte)**, **Alga**, **unknown**",Life form as recorded in the workbook.,see docs/data_dictionary.md
+species_master,parts_used,string,n/a,any text,"Plant parts used, as recorded in the workbook.",see docs/data_dictionary.md
+species_master,habitat,string,n/a,must be blank (reserved),Reserved; no habitat data verified.,see docs/data_dictionary.md
+species_master,wild_cultivated_status,string,n/a,"**wild**, **cultivated**, **both**, **unknown**","Whether the species is wild, cultivated or both.",see docs/data_dictionary.md
+species_master,iucn_status_verbatim,text,n/a,any text,Threat status as written in the workbook trade sheet.,see docs/data_dictionary.md
+species_master,iucn_category_code,string,n/a,"**CR**, **EN**, **VU**, **NT**, **LC**, **DD**, **CR/EN**, (blank)","IUCN Red List category, from the workbook where it names IUCN, otherwise from GBIF.",see docs/data_dictionary.md
+species_master,threat_category_reported,string,n/a,"**CR**, **EN**, **VU**, **NT**, **LC**, **DD**, **CR/EN**, (blank)","Category words found in the threat statement, whatever their basis.",see docs/data_dictionary.md
+species_master,assessment_basis,string,n/a,"**IUCN**, **unstated (workbook statement)**, **national red list**, **specialist literature**, **unconfirmed**, **not stated**, **not assessed**, **GBIF iucnRedListCategory**","Who assessed the category: IUCN, a national red list, specialist literature, or unconfirmed.",see docs/data_dictionary.md
+species_master,national_status,text,n/a,any text,"National red-list statement, when the workbook gives one.",see docs/data_dictionary.md
+species_master,cites_status_verbatim,text,n/a,any text,CITES and national regulatory status as written in the workbook.,see docs/data_dictionary.md
+species_master,cites_appendix,string,n/a,"**I**, **II**, **III**, **not listed**, **unknown**",CITES appendix in which the species is listed.,see docs/data_dictionary.md
+species_master,trade_status,text,n/a,any text,Trade pressure as described in the workbook.,see docs/data_dictionary.md
+species_master,source_ids,string,n/a,semicolon-separated references.source_id values,Identifiers of the sources contributing to the row.,see docs/data_dictionary.md
+species_master,evidence_grade,string,n/a,"**A**, **B**, **C**, **D**",Best evidence grade among the species' use and pharmacology records.,see docs/data_dictionary.md
+species_master,gbif_taxon_key,string,n/a,regular expression `\d*`,GBIF backbone usage key.,see docs/data_dictionary.md
+species_master,gbif_match_type,string,n/a,"**EXACT**, **FUZZY**, **HIGHERRANK**, **MANUAL**, (blank)",How the workbook name was matched to GBIF; MANUAL marks the nine names resolved by hand.,see docs/data_dictionary.md
+species_master,gbif_confidence,string,n/a,regular expression `\d*`,Confidence of the GBIF name match (0-100).,see docs/data_dictionary.md
+species_master,gbif_count_api_by_country,string,n/a,regular expression `((CN|TH|VN|LA|KH|MM):\d+(;(CN|TH|VN|LA|KH|MM):\d+)*)?`,"All GBIF records per basin country from occurrence/count, including records without coordinates.",see docs/data_dictionary.md
+species_master,gbif_count_api_total,int,records,**0..**,Sum of gbif_count_api_by_country.,see docs/data_dictionary.md
+species_master,in_tier1,bool,n/a,any text,Species appears in the workbook's ethnobotanical inventory.,see docs/data_dictionary.md
+species_master,in_tier2,bool,n/a,any text,Species has extract assay rows in the workbook.,see docs/data_dictionary.md
+species_master,in_tier3,bool,n/a,any text,Species has isolated-compound rows in the workbook.,see docs/data_dictionary.md
+species_master,wfo_accepted_name,string,n/a,any text,Name accepted in the World Flora Online backbone.,see docs/data_dictionary.md
+species_master,wfo_family,string,n/a,any text,Family in the World Flora Online backbone.,see docs/data_dictionary.md
+species_master,wfo_status,string,n/a,any text,"Taxonomic status in World Flora Online (Accepted, Unchecked).",see docs/data_dictionary.md
+species_master,gbif_vs_wfo,string,n/a,"**agree**, **differ**, **no_wfo_match**",Whether GBIF and World Flora Online agree on genus and species.,see docs/data_dictionary.md
+species_master,same_gbif_taxon_as,string,n/a,regular expression `(sp_[a-z0-9_]+)?`,Set when two workbook names are one accepted species; points to the entry that keeps the occurrence records.,see docs/data_dictionary.md
+species_master,notes,text,n/a,any text,Free notes.,see docs/data_dictionary.md
+species_master,iucn_category_code_gbif,string,n/a,"**CR**, **EN**, **VU**, **NT**, **LC**, **DD**, (blank)",Most severe IUCN category that GBIF attaches to the species' records.,see docs/data_dictionary.md
+species_master,n_occurrence_records,int,records,**0..**,Published occurrence records of the species in the six basin countries.,see docs/data_dictionary.md
+species_master,n_occurrence_in_basin,int,records,**0..**,Published records that fall inside the Mekong basin boundary.,see docs/data_dictionary.md
+species_master,n_occurrence_outside_basin,int,records,**0..**,Published records that fall outside the basin boundary.,see docs/data_dictionary.md
+species_master,n_occurrence_specimen,int,records,**0..**,"Published records based on preserved, living or material specimens.",see docs/data_dictionary.md
+species_master,n_occurrence_generalised,int,records,**0..**,Published records whose coordinates were generalised.,see docs/data_dictionary.md
+species_master,occurrence_by_country,string,n/a,regular expression `((CN|TH|VN|LA|KH|MM):\d+(;(CN|TH|VN|LA|KH|MM):\d+)*)?`,Published records per basin country.,see docs/data_dictionary.md
+species_master,occurrence_countries,string,n/a,"regular expression `((CN|TH|VN|LA|KH|MM)(,(CN|TH|VN|LA|KH|MM))*)?`",Basin countries with at least one published record.,see docs/data_dictionary.md
+species_master,sensitive_species,string,n/a,"**yes**, **no**",Species is threatened or CITES-listed and has published records.,see docs/data_dictionary.md
+species_master,sensitivity_reason,string,n/a,any text,Why the species is treated as sensitive.,see docs/data_dictionary.md
+species_master,bioeconomy_profile_available,bool,n/a,"**True**, **False**",A bioeconomy profile carries at least one coding that is not 'unknown' (see build_bioeconomy.py).,see docs/data_dictionary.md
+species_master,bioeconomy_priority_tier,string,n/a,"**high**, **medium**, **low**, **unknown**","Derived tier from trade_exposure, livelihood_dependence and certification_readiness; docs/bioeconomy_priority_rule.md.",see docs/data_dictionary.md
+species_master,bioeconomy_source_ids,string,n/a,any text,Semicolon-separated bioeconomy source ids (docs/bioeconomy_sources.csv).,see docs/data_dictionary.md
+uses,use_id,string,n/a,regular expression `use_[a-z0-9_-]+_r\d+_\d+`,Stable identifier built from the species and the worksheet row.,see docs/data_dictionary.md
+uses,species_id,string,n/a,a species_master.species_id,Species the use is reported for.,see docs/data_dictionary.md
+uses,country,string,n/a,any text,"Basin countries the source reports the use from, or mekong-region.",see docs/data_dictionary.md
+uses,ethnic_group,string,n/a,must be blank (reserved),Reserved; the workbook does not record ethnic groups.,see docs/data_dictionary.md
+uses,ailment_category,string,n/a,"**gastrointestinal**, **respiratory**, **dermatological**, **musculoskeletal**, **metabolic**, **infectious**, **reproductive**, **neurological**, **cardiovascular**, **genitourinary**, **other**",Use category assigned from the use text by a fixed keyword rule (scripts/build_tables.py).,see docs/data_dictionary.md
+uses,specific_use,text,n/a,any text,Use as recorded in the workbook.,see docs/data_dictionary.md
+uses,used_part,string,n/a,any text,"Plant part used, as recorded.",see docs/data_dictionary.md
+uses,preparation,string,n/a,must be blank (reserved),Reserved; preparation is not recorded in the workbook.,see docs/data_dictionary.md
+uses,administration,string,n/a,must be blank (reserved),Reserved; route of administration is not recorded.,see docs/data_dictionary.md
+uses,source_id,string,n/a,semicolon-separated references.source_id values,Identifiers of the sources of the record.,see docs/data_dictionary.md
+uses,evidence_grade,string,n/a,"**A**, **B**, **C**, **D**",Evidence grade A-D under the atlas rubric.,see docs/data_dictionary.md
+uses,source_citation,text,n/a,any text,Citation as printed in the workbook.,see docs/data_dictionary.md
+uses,grade_basis,text,n/a,any text,How the grade was decided.,see docs/data_dictionary.md
+uses,resolved_doi,string,n/a,any text,"DOI of the confirmed article, when one was resolved.",see docs/data_dictionary.md
+uses,notes,text,n/a,must be blank (reserved),Reserved.,see docs/data_dictionary.md
+pharmacology,pharma_id,string,n/a,regular expression `pha_(ext|cmp)_[a-z0-9_-]+_r\d+`,"Stable identifier; ext = extract assay, cmp = isolated compound.",see docs/data_dictionary.md
+pharmacology,species_id,string,n/a,a species_master.species_id,Species the record concerns.,see docs/data_dictionary.md
+pharmacology,record_type,string,n/a,"**extract_assay**, **isolated_compound**",Kind of record.,see docs/data_dictionary.md
+pharmacology,reported_activity,text,n/a,any text,Activity as reported in the workbook.,see docs/data_dictionary.md
+pharmacology,chemical_constituents,string,n/a,any text,Compound and its class for isolated-compound records.,see docs/data_dictionary.md
+pharmacology,extract_or_fraction,string,n/a,any text,Extract or fraction tested.,see docs/data_dictionary.md
+pharmacology,plant_part,string,n/a,any text,Plant part extracted.,see docs/data_dictionary.md
+pharmacology,assay_or_study_type,text,n/a,any text,Assay or model used.,see docs/data_dictionary.md
+pharmacology,potency_verbatim,string,n/a,any text,Potency as printed in the workbook; nq where only a qualitative result was reported.,see docs/data_dictionary.md
+pharmacology,potency_value,float,see potency_unit,any text,Numeric potency where the workbook gives one.,see docs/data_dictionary.md
+pharmacology,potency_unit,string,n/a,any text,Unit of potency_value.,see docs/data_dictionary.md
+pharmacology,potency_status,string,n/a,"**quantified**, **qualitative**, **nq**, (blank)",Whether the source reported a number.,see docs/data_dictionary.md
+pharmacology,source_id,string,n/a,semicolon-separated references.source_id values,Identifiers of the sources of the record.,see docs/data_dictionary.md
+pharmacology,evidence_grade,string,n/a,"**A**, **B**, **C**, **D**",Evidence grade A-D under the atlas rubric.,see docs/data_dictionary.md
+pharmacology,source_citation,text,n/a,any text,Citation as printed in the workbook.,see docs/data_dictionary.md
+pharmacology,grade_basis,text,n/a,any text,How the grade was decided.,see docs/data_dictionary.md
+pharmacology,resolved_doi,string,n/a,any text,"DOI of the confirmed article, when one was resolved.",see docs/data_dictionary.md
+pharmacology,notes,text,n/a,must be blank (reserved),Reserved.,see docs/data_dictionary.md
+conservation_trade,conservation_id,string,n/a,regular expression `con_[a-z0-9_-]+`,Stable identifier.,see docs/data_dictionary.md
+conservation_trade,species_id,string,n/a,regular expression `sp_[a-z0-9_]+`,Species the statement concerns.,see docs/data_dictionary.md
+conservation_trade,species_verbatim,text,n/a,any text,Name as written in the trade sheet.,see docs/data_dictionary.md
+conservation_trade,iucn_status,text,n/a,any text,Threat statement as written.,see docs/data_dictionary.md
+conservation_trade,iucn_category_code,string,n/a,"**CR**, **EN**, **VU**, **NT**, **LC**, **DD**, **CR/EN**, (blank)",IUCN category where the statement names IUCN.,see docs/data_dictionary.md
+conservation_trade,threat_category_reported,string,n/a,"**CR**, **EN**, **VU**, **NT**, **LC**, **DD**, **CR/EN**, (blank)",Category words found in the statement.,see docs/data_dictionary.md
+conservation_trade,assessment_basis,string,n/a,"**IUCN**, **unstated (workbook statement)**, **national red list**, **specialist literature**, **unconfirmed**, **not stated**, **not assessed**, **GBIF iucnRedListCategory**",Who assessed the category.,see docs/data_dictionary.md
+conservation_trade,cites_appendix,string,n/a,"**I**, **II**, **III**, **not listed**, **unknown**",CITES appendix.,see docs/data_dictionary.md
+conservation_trade,cites_status_verbatim,text,n/a,any text,CITES and regulatory statement as written.,see docs/data_dictionary.md
+conservation_trade,national_status,text,n/a,any text,National red-list statement.,see docs/data_dictionary.md
+conservation_trade,trade_notes,text,n/a,any text,Trade pressure as written.,see docs/data_dictionary.md
+conservation_trade,source_id,string,n/a,semicolon-separated references.source_id values,Identifiers of the sources.,see docs/data_dictionary.md
+conservation_trade,in_spine,string,n/a,"**yes**, **no**",Whether the row joins to a species in species_master.,see docs/data_dictionary.md
+conservation_trade,scope_flag,text,n/a,any text,Why a row that is not a species-level spine entry is kept.,see docs/data_dictionary.md
+conservation_trade,notes,text,n/a,any text,Source as written in the trade sheet.,see docs/data_dictionary.md
+references,source_id,string,n/a,regular expression `SRC-\d{3}`,Stable source identifier.,see docs/data_dictionary.md
+references,full_citation,text,n/a,any text,Citation of the source.,see docs/data_dictionary.md
+references,source_type,string,n/a,any text,"Kind of source (database, book, gis, peer_reviewed, ...).",see docs/data_dictionary.md
+references,url_or_doi,string,n/a,any text,"URL, DOI or local reference of the source.",see docs/data_dictionary.md
+references,access_date,date,n/a,any text,Date the source was last accessed; blank where access is pending.,see docs/data_dictionary.md
+references,license,string,n/a,any text,Licence or terms of the source.,see docs/data_dictionary.md
+references,reliability_tier,string,n/a,"**A**, **B**, **C**, **D**, **n/a**",Grade the rubric assigns to this type of source; n/a for infrastructure.,see docs/data_dictionary.md
+references,notes,text,n/a,any text,How the source is used and any access restriction.,see docs/data_dictionary.md
+occurrence_summary_by_species,species_id,string,n/a,a species_master.species_id,Species.,see docs/data_dictionary.md
+occurrence_summary_by_species,accepted_name,string,n/a,any text,Accepted name.,see docs/data_dictionary.md
+occurrence_summary_by_species,n_occurrence_records,int,records,**0..**,Published records in the six basin countries.,see docs/data_dictionary.md
+occurrence_summary_by_species,n_occurrence_in_basin,int,records,**0..**,Published records inside the basin boundary.,see docs/data_dictionary.md
+occurrence_summary_by_species,n_occurrence_outside_basin,int,records,**0..**,Published records outside the basin boundary.,see docs/data_dictionary.md
+occurrence_summary_by_species,n_occurrence_specimen,int,records,**0..**,Specimen-based published records.,see docs/data_dictionary.md
+occurrence_summary_by_species,n_occurrence_generalised,int,records,**0..**,Published records with generalised coordinates.,see docs/data_dictionary.md
+occurrence_summary_by_species,occurrence_by_country,string,n/a,regular expression `((CN|TH|VN|LA|KH|MM):\d+(;(CN|TH|VN|LA|KH|MM):\d+)*)?`,Published records per basin country.,see docs/data_dictionary.md
+bioeconomy_profiles,species_id,string,n/a,a species_master.species_id,Join key to the atlas taxon.,see docs/data_dictionary.md
+bioeconomy_profiles,value_chain_type,string,n/a,"**wild-informal**, **wild-formal**, **cultivated-informal**, **cultivated-formal**, **mixed**, **unknown**",Dominant marketing channel documented in a value-chain study.,see docs/data_dictionary.md
+bioeconomy_profiles,trade_exposure,string,n/a,"**CITES-listed**, **BioTrade-supported**, **export-commodity**, **domestic-only**, **no-trade-data**, **unknown**",Documented commercial trade status.,see docs/data_dictionary.md
+bioeconomy_profiles,certification_readiness,string,n/a,"**GACP-eligible**, **FairWild-eligible**, **both**, **neither**, **unknown**","Applicable certification standard, derived from cultivation status (docs/bioeconomy_priority_rule.md).",see docs/data_dictionary.md
+bioeconomy_profiles,livelihood_dependence,string,n/a,"**high**, **moderate**, **low**, **unknown**",Documented income reliance of households on the taxon.,see docs/data_dictionary.md
+bioeconomy_profiles,equity_flag,string,n/a,"**equitable**, **inequitable**, **not-assessed**, **unknown**",Documented benefit-distribution finding; never inferred from trade status.,see docs/data_dictionary.md
+bioeconomy_profiles,valuation_method,string,n/a,"**market-price**, **bioprospecting-estimate**, **none**, **unknown**",Kind of economic valuation available; bioprospecting estimates are never per species.,see docs/data_dictionary.md
+bioeconomy_profiles,market_price_proxy,float,see market_price_currency_unit,**0..**,"Documented price observation. A proxy, not a valuation. Null when unknown.",see docs/data_dictionary.md
+bioeconomy_profiles,market_price_currency_unit,string,n/a,any text,"Currency and unit of market_price_proxy, e.g. VND/kg.",see docs/data_dictionary.md
+bioeconomy_profiles,market_price_date,date,n/a,any text,ISO date of the price observation.,see docs/data_dictionary.md
+bioeconomy_profiles,market_price_source_id,string,n/a,any text,Source id of the price observation.,see docs/data_dictionary.md
+bioeconomy_profiles,coded_confidence,string,n/a,"**high**, **medium**, **low**",Confidence in the coding of this row.,see docs/data_dictionary.md
+bioeconomy_profiles,coded_by,string,n/a,any text,Agent identifier that coded the row.,see docs/data_dictionary.md
+bioeconomy_profiles,reviewed_by,string,n/a,any text,"Human reviewer, or 'pending'.",see docs/data_dictionary.md
+bioeconomy_profiles,source_ids,string,n/a,any text,Semicolon-separated bioeconomy source ids used.,see docs/data_dictionary.md
+bioeconomy_profiles,bioeconomy_priority_tier,string,n/a,"**high**, **medium**, **low**, **unknown**",Derived tier (docs/bioeconomy_priority_rule.md).,see docs/data_dictionary.md
+bioeconomy_profiles,bioeconomy_profile_available,bool,n/a,"**True**, **False**",True when at least one coded field is not 'unknown'.,see docs/data_dictionary.md
+bioeconomy_profiles,notes,text,n/a,any text,Free-text provenance.,see docs/data_dictionary.md
+bioeconomy_priority_summary,bioeconomy_priority_tier,string,n/a,"**high**, **medium**, **low**, **unknown**",Priority tier.,see docs/data_dictionary.md
+bioeconomy_priority_summary,count,int,taxa,**0..**,Number of atlas taxa in the tier.,see docs/data_dictionary.md
+bioeconomy_priority_summary,species_ids,string,n/a,any text,Semicolon-separated species_id list for the tier (empty when the count is 0).,see docs/data_dictionary.md
+occurrences,occurrenceID,string,n/a,any text,"Darwin Core. Identifier of the record; the publisher's, or its GBIF URL.",see docs/data_dictionary.md
+occurrences,basisOfRecord,string,n/a,"**PRESERVED_SPECIMEN**, **MATERIAL_SAMPLE**, **LIVING_SPECIMEN**, **FOSSIL_SPECIMEN**, **HUMAN_OBSERVATION**, **MACHINE_OBSERVATION**, **OBSERVATION**, **OCCURRENCE**, **MATERIAL_CITATION**",Darwin Core. Nature of the record.,see docs/data_dictionary.md
+occurrences,eventDate,string,n/a,regular expression `(?:-?\d{4}(-\d{2}(-\d{2}(T\d{2}(:\d{2}(:\d{2})?)?(\.\d+)?(Z|[+-]\d{2}:?\d{2})?)?)?)?(?:/-?\d{4}(-\d{2}(-\d{2}(T\d{2}(:\d{2}(:\d{2})?)?(\.\d+)?(Z|[+-]\d{2}:?\d{2})?)?)?)?)?)?`,Darwin Core. Date of the record at the precision the publisher gave; an ISO 8601 interval start/end for records spanning dates.,see docs/data_dictionary.md
+occurrences,year,int,year,**1500..2100**,Darwin Core. Year of the record.,see docs/data_dictionary.md
+occurrences,month,int,month,**1..12**,Darwin Core. Month of the record.,see docs/data_dictionary.md
+occurrences,day,int,day of month,**1..31**,Darwin Core. Day of the record.,see docs/data_dictionary.md
+occurrences,scientificName,string,n/a,any text,Darwin Core. Name under which the record was published.,see docs/data_dictionary.md
+occurrences,acceptedNameUsage,string,n/a,any text,Darwin Core. Accepted name of the taxon in the GBIF backbone.,see docs/data_dictionary.md
+occurrences,taxonRank,string,n/a,"**species**, **subspecies**, **variety**, **genus**, **form**, **unranked**, (blank)",Darwin Core. Rank of scientificName.,see docs/data_dictionary.md
+occurrences,kingdom,string,n/a,any text,Darwin Core. Kingdom.,see docs/data_dictionary.md
+occurrences,family,string,n/a,any text,Darwin Core. Family.,see docs/data_dictionary.md
+occurrences,genus,string,n/a,any text,Darwin Core. Genus.,see docs/data_dictionary.md
+occurrences,decimalLatitude,float,decimal degrees,**-90..90**,"Darwin Core. Latitude in WGS 84, generalised for sensitive species.",see docs/data_dictionary.md
+occurrences,decimalLongitude,float,decimal degrees,**-180..180**,"Darwin Core. Longitude in WGS 84, generalised for sensitive species.",see docs/data_dictionary.md
+occurrences,coordinateUncertaintyInMeters,float,metres,**0..**,Darwin Core. Horizontal uncertainty; never smaller than the generalisation cell.,see docs/data_dictionary.md
+occurrences,geodeticDatum,string,n/a,"**WGS84**, **EPSG:4326**",Darwin Core. Geodetic datum of the coordinates.,see docs/data_dictionary.md
+occurrences,country,string,n/a,any text,Darwin Core. Country name.,see docs/data_dictionary.md
+occurrences,countryCode,string,n/a,"**CN**, **TH**, **VN**, **LA**, **KH**, **MM**",Darwin Core. ISO 3166-1 alpha-2 country code.,see docs/data_dictionary.md
+occurrences,stateProvince,string,n/a,any text,Darwin Core. First-order administrative division.,see docs/data_dictionary.md
+occurrences,county,string,n/a,any text,Darwin Core. Second-order administrative division.,see docs/data_dictionary.md
+occurrences,locality,text,n/a,any text,Darwin Core. Locality text; removed for sensitive species.,see docs/data_dictionary.md
+occurrences,recordedBy,string,n/a,any text,Darwin Core. Collector or observer.,see docs/data_dictionary.md
+occurrences,identifiedBy,string,n/a,any text,Darwin Core. Person who identified the record.,see docs/data_dictionary.md
+occurrences,occurrenceStatus,string,n/a,"**present**, **absent**, (blank)",Darwin Core. Presence or absence.,see docs/data_dictionary.md
+occurrences,establishmentMeans,string,n/a,"**native**, **introduced**, **naturalised**, **invasive**, **managed**, **uncertain**, (blank)","Darwin Core. Establishment means, where the publisher states one.",see docs/data_dictionary.md
+occurrences,associatedReferences,string,n/a,any text,Darwin Core. GBIF page of the dataset the record comes from.,see docs/data_dictionary.md
+occurrences,license,string,n/a,any text,Darwin Core. Licence of the record as published.,see docs/data_dictionary.md
+occurrences,rightsHolder,string,n/a,any text,Darwin Core. Rights holder.,see docs/data_dictionary.md
+occurrences,institutionCode,string,n/a,any text,Darwin Core. Institution holding the record.,see docs/data_dictionary.md
+occurrences,collectionCode,string,n/a,any text,Darwin Core. Collection code.,see docs/data_dictionary.md
+occurrences,catalogNumber,string,n/a,any text,Darwin Core. Catalogue number.,see docs/data_dictionary.md
+occurrences,datasetName,string,n/a,any text,Darwin Core. Name of the GBIF dataset.,see docs/data_dictionary.md
+occurrences,dataGeneralizations,text,n/a,any text,Darwin Core. Generalisation applied to the record.,see docs/data_dictionary.md
+occurrences,informationWithheld,text,n/a,any text,Darwin Core. Information withheld from the record.,see docs/data_dictionary.md
+occurrences,species_id,string,n/a,a species_master.species_id,Atlas. Species the record is assigned to.,see docs/data_dictionary.md
+occurrences,evidence_grade,string,n/a,"**A**, **B**, **C**, **D**","Atlas. C for records with an open licence, a recognised basis and verifiable metadata; D otherwise.",see docs/data_dictionary.md
+occurrences,coordinate_quality_flag,string,n/a,"**high**, **medium**, **low**",Atlas. Quality from coordinate precision and uncertainty.,see docs/data_dictionary.md
+occurrences,basin_flag,string,n/a,"**in_basin**, **outside_basin**",Atlas. Whether the point falls inside the Mekong basin boundary.,see docs/data_dictionary.md
+occurrences,generalized,string,n/a,"**yes**, **no**",Atlas. Whether the coordinates were generalised by the atlas.,see docs/data_dictionary.md
+occurrences,sensitivity_reason,string,n/a,any text,Atlas. Why the species is treated as sensitive.,see docs/data_dictionary.md
+occurrences,gbif_key,string,n/a,regular expression `\d+`,Atlas. GBIF occurrence key.,see docs/data_dictionary.md
+occurrences,dataset_key,string,n/a,regular expression `[0-9a-f-]{36}`,Atlas. GBIF dataset key (UUID).,see docs/data_dictionary.md
+occurrences,iucn_red_list_category_gbif,string,n/a,"**CR**, **EN**, **VU**, **NT**, **LC**, **DD**, (blank)",Atlas. IUCN category GBIF gives the species.,see docs/data_dictionary.md
+occurrences,source_id,string,n/a,**SRC-003**,Atlas. Source register entry for GBIF records.,see docs/data_dictionary.md

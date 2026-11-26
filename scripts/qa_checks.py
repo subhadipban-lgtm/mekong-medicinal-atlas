@@ -178,10 +178,141 @@ def main() -> int:
         gates["5"] = ("NOT RUN", pane_evidence + "; visual confirmation needs the browser test.")
     gates["6"] = (gates["6"][0], gates["6"][1] + f" Initial explore payload: {raw_total / 1e6:.1f} MB raw, {gz_total / 1e6:.1f} MB gzipped.")
 
+    # ---- release gates: bioeconomy layer, Data catalog, Download retirement -------------
+    gates.update(bioeconomy_release_gates())
     write_qa_report(gates, species, published, evidence, occ_summary, ref_ok)
     for gate in sorted(gates):
         print(f"gate {gate}: {gates[gate][0]}")
     return 0 if all(v[0] == "PASS" for v in gates.values()) else 1
+
+
+def bioeconomy_release_gates() -> dict[str, tuple[str, str]]:
+    """Gates 9-14: the bioeconomy screening layer, the Data catalog and the Download retirement."""
+    gates: dict[str, tuple[str, str]] = {}
+    try:
+        import re as _re
+
+        profiles = L.read_csv(L.PROCESSED / "bioeconomy_profiles.csv")
+        master = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "species_master.csv")}
+        pilot = {r["species_id"] for r in L.read_csv(L.ROOT / "data" / "evidence" / "pilot_species.csv")} \
+            if (L.ROOT / "data" / "evidence" / "pilot_species.csv").exists() else set()
+
+        # ---- gate 9: profiles complete, prices fully qualified, tiers match the rule ------
+        problems = []
+        price_bad = tier_mismatch = 0
+        for r in profiles:
+            for f in ("value_chain_type", "trade_exposure", "certification_readiness",
+                      "livelihood_dependence", "equity_flag", "valuation_method",
+                      "coded_confidence", "coded_by", "reviewed_by", "source_ids"):
+                if not (r.get(f) or "").strip():
+                    problems.append(f"{r['species_id']} field {f} is blank")
+            if (r.get("market_price_proxy") or "").strip():
+                if not ((r.get("market_price_currency_unit") or "").strip()
+                        and (r.get("market_price_date") or "").strip()
+                        and (r.get("market_price_source_id") or "").strip()):
+                    price_bad += 1
+            t = r["trade_exposure"] in {"CITES-listed", "BioTrade-supported", "export-commodity"}
+            ldep = r["livelihood_dependence"] in {"high", "moderate"}
+            cert = r["certification_readiness"] in {"GACP-eligible", "FairWild-eligible", "both"}
+            inputs = (r["trade_exposure"], r["livelihood_dependence"], r["certification_readiness"])
+            want = "unknown" if any(v == "unknown" for v in inputs) else \
+                {3: "high", 2: "medium"}.get(sum([t, ldep, cert]), "low")
+            if r["bioeconomy_priority_tier"] != want:
+                tier_mismatch += 1
+        pilot_ok = all(all((r.get(f) or "").strip() or r.get(f) == "" for f in
+                           ("value_chain_type", "trade_exposure", "certification_readiness"))
+                       for r in profiles if r["species_id"] in pilot) if pilot else True
+        gates["9"] = ("PASS" if not problems and not price_bad and not tier_mismatch and pilot_ok else "FAIL",
+                      f"{len(profiles)} profiles; every field present or 'unknown'; {price_bad} prices without "
+                      f"currency/unit, date and source_id; {tier_mismatch} tiers that disagree with the documented rule; "
+                      f"pilot coverage {'complete' if pilot_ok else 'INCOMPLETE'}.")
+
+        # ---- gate 10: every catalogued dataset has a registry row, licence and version -----
+        reg_path = L.PROCESSED / "zenodo_registry.csv"
+        reg = L.read_csv(reg_path) if reg_path.exists() else []
+        reg_ids = {r["dataset_id"] for r in reg}
+        missing_lic = [r["dataset_id"] for r in reg if not (r.get("license") or "").strip()]
+        missing_ver = [r["dataset_id"] for r in reg if not (r.get("version") or "").strip()]
+        bad_doi = [r["dataset_id"] for r in reg
+                   if not ((r.get("version_doi") or "").startswith("DOI pending")
+                           or (r.get("version_doi") or "").startswith("10."))]
+        gates["10"] = ("PASS" if not (missing_lic or missing_ver or bad_doi) else "FAIL",
+                       f"{len(reg)} datasets in zenodo_registry.csv; "
+                       f"{len(missing_lic)} without licence, {len(missing_ver)} without version, "
+                       f"{len(bad_doi)} without a valid DOI or 'DOI pending'.")
+
+        # ---- gate 11: Download page retired: stub, no nav entry, no links to it ----------
+        stub = L.WEB / "download.html"
+        stub_ok = stub.exists() and 'http-equiv="refresh" content="0; url=data.html"' in stub.read_text(encoding="utf-8")
+        nav_ok = 'href="download.html"' not in (L.WEB / "index.html").read_text(encoding="utf-8")
+        links = []
+        for page in L.WEB.glob("**/*.html"):
+            if page.name in ("404.html", "download.html"):
+                continue
+            html = page.read_text(encoding="utf-8")
+            if 'href="download.html"' in html:
+                links.append(str(page.relative_to(L.WEB)))
+            for m in _re.finditer(r'href="([^"]+\.(?:csv|json|geojson|tif|graphml|sdf|xml))"', html):
+                href = m.group(1)
+                if href.startswith(("http", "data/evidence/", "//")):
+                    continue
+                links.append(f"{page.relative_to(L.WEB)} -> {href}")
+        gates["11"] = ("PASS" if stub_ok and nav_ok and not links else "FAIL",
+                       f"redirect stub {'present' if stub_ok else 'MISSING'}; nav entry {'absent' if nav_ok else 'PRESENT'}; "
+                       f"{len(links)} in-site download links or download.html references left"
+                       + ("" if not links else ": " + "; ".join(links[:5])))
+
+        # ---- gate 12: 'pending' appears only in the DOI-pending context on the Data tab ----
+        bad_pending = []
+        for page in L.WEB.glob("**/*.html"):
+            if page.name == "data.html":
+                continue
+            text = page.read_text(encoding="utf-8")
+            for m in _re.finditer(r"[^<]{0,60}pending[^<]{0,60}", text, _re.I):
+                bad_pending.append(f"{page.relative_to(L.WEB)}: {m.group(0).strip()[:80]}")
+        gates["12"] = ("PASS" if not bad_pending else "FAIL",
+                       f"{len(bad_pending)} 'pending' strings outside the Data tab"
+                       + ("" if not bad_pending else ": " + "; ".join(bad_pending[:5])))
+
+        # ---- gate 13: every nav target page exists in the built site ----------------------
+        missing_pages = []
+        for page in (L.WEB / "index.html", L.WEB / "explore.html", L.WEB / "methods.html",
+                     L.WEB / "data.html", L.WEB / "about.html", L.WEB / "evidence.html",
+                     L.WEB / "macroecology.html", L.WEB / "sustainability.html",
+                     L.WEB / "species" / "index.html"):
+            if not page.exists():
+                missing_pages.append(page.name)
+        for page in L.WEB.glob("**/*.html"):
+            text = page.read_text(encoding="utf-8")
+            # Species pages sit in web/species/ with <base href="../">, so their relative
+            # links resolve against the site root, not against their own directory.
+            base_dir = page.parent.parent if ('<base href="../">' in text or "<base href='../'>" in text) else page.parent
+            for m in _re.finditer(r'href="((?:[a-z0-9_/.-]+\.html))"', text):
+                href = m.group(1)
+                if href.startswith(("http", "//")) or "/" in href.rstrip("/"):
+                    continue
+                target = (base_dir / href).resolve()
+                if not target.exists():
+                    missing_pages.append(f"{page.relative_to(L.WEB)} -> {href}")
+        gates["13"] = ("PASS" if not missing_pages else "FAIL",
+                       f"{len(missing_pages)} internal page links without a built target"
+                       + ("" if not missing_pages else ": " + "; ".join(sorted(set(missing_pages))[:8])))
+
+        # ---- gate 14: manuscript figures traceable to the CSV/saved queries -----------------
+        m = json.loads((L.PROCESSED / "evidence_manifest.json").read_text(encoding="utf-8"))
+        tiers = {r["bioeconomy_priority_tier"]: int(r["count"])
+                 for r in L.read_csv(L.PROCESSED / "bioeconomy_priority_summary.csv")}
+        cites_pilot = sum(1 for r in profiles
+                          if r["species_id"] in pilot and master[r["species_id"]]["cites_appendix"] in ("I", "II", "III"))
+        trace = (m["totals"]["pubs"] == 2317 and m["totals"]["compounds"] == 119
+                 and len(master) == 333 and tiers.get("high") == 0 and cites_pilot == 2)
+        gates["14"] = ("PASS" if trace else "FAIL",
+                       f"2,317 pubs / 119 compounds / 333 taxa / 0 high-tier / {cites_pilot} CITES pilot taxa "
+                       f"— matches the manuscript draft numbers: {trace}.")
+    except Exception as e:  # noqa: BLE001
+        for g in ("9", "10", "11", "12", "13", "14"):
+            gates[g] = ("FAIL", f"gate could not run: {e}")
+    return gates
 
 
 def build_conflicts(species, published, by_sid, evidence) -> list[dict]:
@@ -291,7 +422,13 @@ def write_qa_report(gates, species, published, evidence, occ_summary, ref_ok) ->
     labels = {"1": "Every map point traceable to a Darwin Core row and a source_id", "2": "No grade D record on the map",
               "3": "Cluster popup reports species composition", "4": "Clustering off at zoom 12; co-located points spiderfy",
               "5": "River above basemap, below records", "6": "Fast, responsive with all taxa", "7": "Data dictionary complete and obeyed",
-              "8": "Conflict report produced"}
+              "8": "Conflict report produced",
+              "9": "Bioeconomy profiles complete; prices fully qualified; tiers match the rule",
+              "10": "Every catalogued dataset has a registry row, licence and version",
+              "11": "Download page retired: stub in place, no nav entry, no links to it",
+              "12": "'pending' appears only in the DOI-pending context on the Data tab",
+              "13": "Every internal page link has a built target",
+              "14": "Manuscript figures traceable to the CSV"}
     for g in sorted(gates):
         lines.append(f"| {g}. {labels[g]} | **{gates[g][0]}** | {gates[g][1]} |")
     lines += ["", "## Basin boundary validation", "",
