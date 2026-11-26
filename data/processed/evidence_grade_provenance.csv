@@ -1,334 +1,334 @@
-species_id,accepted_name,grade,n_sources,source_ids,notes
-sp_acanthus_ilicifolius,Acanthus ilicifolius,A,7,SRC-001; SRC-014,
-sp_achyranthes_aspera,Achyranthes aspera,A,2,SRC-001; SRC-014,
-sp_acmella_oleracea,Acmella oleracea,A,2,SRC-001; SRC-014,
-sp_acorus_calamus,Acorus calamus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_acorus_gramineus,Acorus gramineus,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_acrostichum_aureum,Acrostichum aureum,A,3,SRC-001; SRC-014,
-sp_adenanthera_pavonina,Adenanthera pavonina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_aegiceras_corniculatum,Aegiceras corniculatum,A,2,SRC-001; SRC-014,
-sp_aegle_marmelos,Aegle marmelos,A,10,SRC-001; SRC-014,
-sp_aerva_lanata,Aerva lanata,A,3,SRC-001; SRC-014,
-sp_aglaia,Aglaia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_aglaia_elliptica,Aglaia elliptica,C,2,SRC-001; SRC-014,
-sp_aglaia_foveolata,Aglaia foveolata,A,3,SRC-001; SRC-014,
-sp_aglaia_odorata,Aglaia odorata,A,3,SRC-001; SRC-014,
-sp_aglaia_roxburghiana,Aglaia roxburghiana,A,2,SRC-001; SRC-014,
-sp_ailanthus_altissima,Ailanthus altissima,A,6,SRC-001; SRC-014,
-sp_albizia_lebbeck,Albizia lebbeck,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_allamanda_cathartica,Allamanda cathartica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_alpinia_galanga,Alpinia galanga,A,6,SRC-001; SRC-014,
-sp_alpinia_officinarum,Alpinia officinarum,A,4,SRC-001; SRC-014,
-sp_alpinia_zerumbet,Alpinia zerumbet,A,3,SRC-001; SRC-014,
-sp_alstonia_macrophylla,Alstonia macrophylla,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_alstonia_scholaris,Alstonia scholaris,A,8,SRC-001; SRC-014,
-sp_alternanthera_sessilis,Alternanthera sessilis,A,2,SRC-001; SRC-014,
-sp_alyxia_reinwardtii,Alyxia reinwardtii,C,3,SRC-001; SRC-014,
-sp_amomum_villosum,Amomum villosum,A,2,SRC-001; SRC-014,
-sp_andrographis_paniculata,Andrographis paniculata,A,10,SRC-001; SRC-014,
-sp_anodendron_affine,Anodendron affine,A,3,SRC-001; SRC-014,
-sp_aphanamixis_polystachya,Aphanamixis polystachya,A,7,SRC-001; SRC-014,
-sp_aquilaria_crassna,Aquilaria crassna,A,12,SRC-001; SRC-014,
-sp_aquilaria_malaccensis,Aquilaria malaccensis,A,3,SRC-001; SRC-014,
-sp_aquilaria_sinensis,Aquilaria sinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_arcangelisia_flava,Arcangelisia flava,A,3,SRC-001; SRC-014,
-sp_areca_catechu,Areca catechu,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_argemone_mexicana,Argemone mexicana,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_argyreia_nervosa,Argyreia nervosa,A,2,SRC-001; SRC-014,
-sp_argyreia_osyrensis,Argyreia osyrensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_aristolochia_indica,Aristolochia indica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_aristolochia_tagala,Aristolochia tagala,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_artemisia_annua,Artemisia annua,A,3,SRC-001; SRC-014,
-sp_artocarpus_heterophyllus,Artocarpus heterophyllus,A,8,SRC-001; SRC-014,
-sp_artocarpus_lakoocha,Artocarpus lakoocha,A,4,SRC-001; SRC-014,
-sp_asparagus_cochinchinensis,Asparagus cochinchinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_avicennia_marina,Avicennia marina,A,2,SRC-001; SRC-014,
-sp_azadirachta_indica,Azadirachta indica,A,5,SRC-001; SRC-014,
-sp_bacopa_monnieri,Bacopa monnieri,A,7,SRC-001; SRC-014,
-sp_barleria_prionitis,Barleria prionitis,A,8,SRC-001; SRC-014,
-sp_bauhinia_purpurea,Bauhinia purpurea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_biancaea_sappan,Biancaea sappan,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_blumea_balsamifera,Blumea balsamifera,A,6,SRC-001; SRC-014,
-sp_boesenbergia_rotunda,Boesenbergia rotunda,A,7,SRC-001; SRC-014,
-sp_bombax_ceiba,Bombax ceiba,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_brownlowia_tersa,Brownlowia tersa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_brucea_javanica,Brucea javanica,A,9,SRC-001; SRC-014,
-sp_bruguiera_gymnorrhiza,Bruguiera gymnorhiza,A,3,SRC-001; SRC-014,
-sp_buddleja_asiatica,Buddleja asiatica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_buddleja_officinalis,Buddleja officinalis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_butea_monosperma,Butea monosperma,A,5,SRC-001; SRC-014,
-sp_butea_superba,Butea superba,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_caesalpinia_sappan,Caesalpinia sappan,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_callicarpa_macrophylla,Callicarpa macrophylla,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_calophyllum_inophyllum,Calophyllum inophyllum,A,5,SRC-001; SRC-014,
-sp_calotropis_gigantea,Calotropis gigantea,A,3,SRC-001; SRC-014,
-sp_camellia_sinensis,Camellia sinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cananga_odorata,Cananga odorata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cannabis_sativa,Cannabis sativa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_capsicum_annuum,Capsicum annuum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cardiospermum_halicacabum,Cardiospermum halicacabum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cassia_alata,Cassia alata,A,2,SRC-001; SRC-014,
-sp_cassia_angustifolia,Cassia angustifolia,C,2,SRC-001; SRC-014,
-sp_cassia_fistula,Cassia fistula,A,4,SRC-001; SRC-014,
-sp_catharanthus_roseus,Catharanthus roseus,A,6,SRC-001; SRC-014,
-sp_celosia_cristata,Celosia cristata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_centella_asiatica,Centella asiatica,A,6,SRC-001; SRC-014,
-sp_ceriops_tagal,Ceriops tagal,A,3,SRC-001; SRC-014,
-sp_chloranthus_spicatus,Chloranthus spicatus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_chonemorpha_fragrans,Chonemorpha fragrans,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_chromolaena_odorata,Chromolaena odorata,A,3,SRC-001; SRC-014,
-sp_chrysanthemum_cinerariifolium,Chrysanthemum cinerariifolium,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_chukrasia_tabularis,Chukrasia tabularis,A,6,SRC-001; SRC-014,
-sp_cinnamomum_camphora,Cinnamomum camphora,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cinnamomum_tamala,Cinnamomum tamala,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cissampelos_pareira,Cissampelos pareira,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cissus_quadrangularis,Cissus quadrangularis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_citrus_hystrix,Citrus hystrix,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_clausena,Clausena,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_clausena_harmandiana,Clausena harmandiana,A,4,SRC-001; SRC-014,
-sp_clerodendrum_indicum,Clerodendrum indicum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_clerodendrum_viscosum,Clerodendrum viscosum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_clinacanthus_nutans,Clinacanthus nutans,A,7,SRC-001; SRC-014,
-sp_clitoria_ternatea,Clitoria ternatea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cocos_nucifera,Cocos nucifera,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_coix_lacryma,Coix lacryma,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_combretum_quadrangulare,Combretum quadrangulare,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_coscinium_fenestratum,Coscinium fenestratum,A,8,SRC-001; SRC-014,
-sp_costus_speciosus,Costus speciosus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_crateva_religiosa,Crateva religiosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_crinum_asiaticum,Crinum asiaticum,A,2,SRC-001; SRC-014,
-sp_cryptolepis_dubia,Cryptolepis dubia,A,2,SRC-001; SRC-014,
-sp_curculigo_orchioides,Curculigo orchioides,A,4,SRC-001; SRC-014,
-sp_curcuma_caesia,Curcuma caesia,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_curcuma_comosa,Curcuma comosa,A,7,SRC-001; SRC-014,
-sp_curcuma_longa,Curcuma longa,A,6,SRC-001; SRC-014,
-sp_curcuma_phaeocaulis,Curcuma phaeocaulis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_curcuma_xanthorrhiza,Curcuma xanthorrhiza,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_curcuma_zedoaria,Curcuma zedoaria,A,5,SRC-001; SRC-014,
-sp_cuscuta_reflexa,Cuscuta reflexa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_cyclea_barbata,Cyclea barbata,C,2,SRC-001; SRC-014,
-sp_cynometra_ramiflora,Cynometra ramiflora,A,2,SRC-001; SRC-014,
-sp_cyperus_rotundus,Cyperus rotundus,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,A,9,SRC-001; SRC-014,
-sp_dalbergia_oliveri,Dalbergia oliveri,C,3,SRC-001; SRC-014,
-sp_datura_metel,Datura metel,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_dendrobium_devonianum,Dendrobium devonianum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_dendrobium_nobile,Dendrobium nobile,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_derris_elliptica,Derris elliptica,A,3,SRC-001; SRC-014,
-sp_desmodium_triquetrum,Desmodium triquetrum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_euphoria_longana,Dimocarpus longan,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_dioscorea_bulbifera,Dioscorea bulbifera,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_dioscorea_pentaphylla,Dioscorea pentaphylla,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_diospyros_mollis,Diospyros mollis,A,7,SRC-001; SRC-014,
-sp_dolichandrone_spathacea,Dolichandrone spathacea,A,2,SRC-001; SRC-014,
-sp_dracaena_angustifolia,Dracaena angustifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_duhaldea_cappa,Duhaldea cappa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_dysoxylum_binectariferum,Dysoxylum binectariferum,A,2,SRC-001; SRC-014,
-sp_ecdysanthera_rosea,Ecdysanthera rosea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_eclipta_prostrata,Eclipta prostrata,A,6,SRC-001; SRC-014,
-sp_elephantopus_scaber,Elephantopus scaber,A,5,SRC-001; SRC-014,
-sp_embelia_ribes,Embelia ribes,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_entada_phaseoloides,Entada phaseoloides,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_ephedra_gerardiana,Ephedra gerardiana,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_erythrina,Erythrina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_erythrina_suberosa,Erythrina suberosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_erythrina_variegata,Erythrina variegata,A,3,SRC-001; SRC-014,
-sp_eurycoma_longifolia,Eurycoma longifolia,A,11,SRC-001; SRC-014,
-sp_excoecaria_agallocha,Excoecaria agallocha,A,2,SRC-001; SRC-014,
-sp_ficus_hispida,Ficus hispida,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_ficus_racemosa,Ficus racemosa,A,3,SRC-001; SRC-014,
-sp_ficus_religiosa,Ficus religiosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_flacourtia_jangomas,Flacourtia jangomas,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_garcinia_atroviridis,Garcinia atroviridis,A,2,SRC-001; SRC-014,
-sp_garcinia_cowa,Garcinia cowa,A,7,SRC-001; SRC-014,
-sp_garcinia_hanburyi,Garcinia hanburyi,A,5,SRC-001; SRC-014,
-sp_garcinia_mangostana,Garcinia mangostana,A,11,SRC-001; SRC-014,
-sp_garcinia_pedunculata,Garcinia pedunculata,A,2,SRC-001; SRC-014,
-sp_garcinia_schomburgkiana,Garcinia schomburgkiana,A,2,SRC-001; SRC-014,
-sp_gardenia_jasminoides,Gardenia jasminoides,C,4,SRC-001; SRC-014,
-sp_gelsemium_elegans,Gelsemium elegans,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_glycosmis_pentaphylla,Glycosmis pentaphylla,A,4,SRC-001; SRC-014,
-sp_glycyrrhiza_glabra,Glycyrrhiza glabra,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_gmelina_arborea,Gmelina arborea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_gymnema_sylvestre,Gymnema sylvestre,A,7,SRC-001; SRC-014,
-sp_gynura_procumbens,Gynura procumbens,A,2,SRC-001; SRC-014,
-sp_gynura_pseudochina,Gynura pseudochina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_gyrinops_salicifolia,Gyrinops salicifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_helicteres_isora,Helicteres isora,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_heritiera_littoralis,Heritiera littoralis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_hibiscus_tiliaceus,Hibiscus tiliaceus,A,2,SRC-001; SRC-014,
-sp_hiptage_benghalensis,Hiptage benghalensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_holarrhena_antidysenterica,Holarrhena pubescens,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_holarrhena_pubescens,Holarrhena pubescens,A,5,SRC-001; SRC-014,
-sp_homalomena_pendula,Homalomena pendula,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_houttuynia_cordata,Houttuynia cordata,A,4,SRC-001; SRC-014,
-sp_hydnocarpus_kurzii,Hydnocarpus kurzii,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_hygrophila_auriculata,Hygrophila auriculata,A,6,SRC-001; SRC-014,
-sp_hygrophila_spinosa,Hygrophila spinosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_hymenocallis_littoralis,Hymenocallis littoralis,A,2,SRC-001; SRC-014,
-sp_hypericum_japonicum,Hypericum japonicum,A,2,SRC-001; SRC-014,
-sp_hypericum_perforatum,Hypericum perforatum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_ichnocarpus_frutescens,Ichnocarpus frutescens,A,2,SRC-001; SRC-014,
-sp_illicium_verum,Illicium verum,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_intsia_bijuga,Intsia bijuga,C,2,SRC-001; SRC-014,
-sp_ipomoea_aquatica,Ipomoea aquatica,A,6,SRC-001; SRC-014,
-sp_ixora_chinensis,Ixora chinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_jatropha_curcas,Jatropha curcas,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_justicia_adhatoda,Justicia adhatoda,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_justicia_gendarussa,Justicia gendarussa,A,2,SRC-001; SRC-014,
-sp_kaempferia_galanga,Kaempferia galanga,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_kaempferia_parviflora,Kaempferia parviflora,A,8,SRC-001; SRC-014,
-sp_kopsia_fruticosa,Kopsia fruticosa,A,4,SRC-001; SRC-014,
-sp_lannea_grandis,Lannea grandis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_lansium_domesticum,Lansium domesticum,A,6,SRC-001; SRC-014,
-sp_leonurus_japonicus,Leonurus japonicus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_leucaena_leucocephala,Leucaena leucocephala,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_limonia_acidissima,Limonia acidissima,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_litsea_cubeba,Litsea cubeba,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_lumnitzera_racemosa,Lumnitzera racemosa,A,2,SRC-001; SRC-014,
-sp_madhuca_longifolia,Madhuca longifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_mahonia_bealei,Mahonia bealei,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_mallotus_philippensis,Mallotus philippensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_mangifera_indica,Mangifera indica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_markhamia_stipulata,Markhamia stipulata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_marsdenia_tenacissima,Marsdenia tenacissima,A,6,SRC-001; SRC-014,
-sp_melastoma_malabathricum,Melastoma malabathricum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_melia_azedarach,Melia azedarach,A,5,SRC-001; SRC-014,
-sp_mesua_ferrea,Mesua ferrea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_millettia_pachycarpa,Millettia pachycarpa,A,4,SRC-001; SRC-014,
-sp_mimosa_pudica,Mimosa pudica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_mitragyna_rotundifolia,Mitragyna rotundifolia,C,2,SRC-001; SRC-014,
-sp_mitragyna_speciosa,Mitragyna speciosa,A,7,SRC-001; SRC-014,
-sp_momordica_charantia,Momordica charantia,A,7,SRC-001; SRC-014,
-sp_momordica_cochinchinensis,Momordica cochinchinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_morinda_citrifolia,Morinda citrifolia,A,12,SRC-001; SRC-014,
-sp_moringa_oleifera,Moringa oleifera,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_morus_alba,Morus alba,A,8,SRC-001; SRC-014,
-sp_mucuna_pruriens,Mucuna pruriens,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_murraya_koenigii,Murraya koenigii,A,4,SRC-001; SRC-014,
-sp_nauclea_officinalis,Nauclea officinalis,A,6,SRC-001; SRC-014,
-sp_nerium_oleander,Nerium oleander,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_nigella_sativa,Nigella sativa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_nypa_fruticans,Nypa fruticans,A,2,SRC-001; SRC-014,
-sp_ocimum_tenuiflorum,Ocimum tenuiflorum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_ophiorrhiza_pumila,Ophiorrhiza pumila,A,4,SRC-001; SRC-014,
-sp_oroxylum_indicum,Oroxylum indicum,B,2,SRC-001; SRC-014,
-sp_paederia_foetida,Paederia foetida,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_panax_vietnamensis,Panax vietnamensis,A,6,SRC-001; SRC-014,
-sp_pandanus_amaryllifolius,Pandanus amaryllifolius,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_paramignya_trimera,Paramignya trimera,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_parsonsia_alboflavescens,Parsonsia alboflavescens,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_passiflora_foetida,Passiflora foetida,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_peperomia_pellucida,Peperomia pellucida,A,3,SRC-001; SRC-014,
-sp_polygonum_chinense,Persicaria chinensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_phoenix_paludosa,Phoenix paludosa,A,2,SRC-001; SRC-014,
-sp_phyllanthus_amarus,Phyllanthus amarus,A,5,SRC-001; SRC-014,
-sp_phyllanthus_emblica,Phyllanthus emblica,A,5,SRC-001; SRC-014,
-sp_phyllanthus_niruri,Phyllanthus niruri,A,4,SRC-001; SRC-014,
-sp_phyllanthus_reticulatus,Phyllanthus reticulatus,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_picrasma_quassioides,Picrasma quassioides,A,7,SRC-001; SRC-014,
-sp_piper_betle,Piper betle,A,4,SRC-001; SRC-014,
-sp_piper_longum,Piper longum,A,2,SRC-001; SRC-014,
-sp_piper_nigrum,Piper nigrum,A,5,SRC-001; SRC-014,
-sp_plantago_asiatica,Plantago asiatica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_pluchea_indica,Pluchea indica,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_plumbago_indica,Plumbago indica,A,5,SRC-001; SRC-014,
-sp_plumbago_zeylanica,Plumbago zeylanica,A,2,SRC-001; SRC-014,
-sp_plumeria_rubra,Plumeria rubra,A,3,SRC-001; SRC-014,
-sp_pogostemon_cablin,Pogostemon cablin,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_premna_serratifolia,Premna serratifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_psidium_guajava,Psidium guajava,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,A,4,SRC-001; SRC-014,
-sp_punica_granatum,Punica granatum,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_quassia_amara,Quassia amara,A,3,SRC-001; SRC-014,
-sp_randia_spinosa,Randia spinosa,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_rauvolfia_cambodiana,Rauvolfia cambodiana,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_rauvolfia_serpentina,Rauvolfia serpentina,A,4,SRC-001; SRC-014,
-sp_rhinacanthus_nasutus,Rhinacanthus nasutus,A,8,SRC-001; SRC-014,
-sp_rhizophora_apiculata,Rhizophora apiculata,A,3,SRC-001; SRC-014,
-sp_rhizophora_mucronata,Rhizophora mucronata,A,4,SRC-001; SRC-014,
-sp_rhododendron_moulmainense,Rhododendron moulmainense,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,A,5,SRC-001; SRC-014,
-sp_ricinus_communis,Ricinus communis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_rubia_cordifolia,Rubia cordifolia,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_salacia_chinensis,Salacia chinensis,A,4,SRC-001; SRC-014,
-sp_sambucus_javanica,Sambucus javanica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_santalum_album,Santalum album,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_sapindus_saponaria,Sapindus saponaria,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_sargassum,Sargassum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_saurauia_napaulensis,Saurauia napaulensis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_hedyotis_diffusa,Scleromitrion diffusum,C,2,SRC-001; SRC-014,
-sp_scoparia_dulcis,Scoparia dulcis,A,6,SRC-001; SRC-014,
-sp_selaginella_pulvinata,Selaginella pulvinata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_senegalia_catechu,Senegalia catechu,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_senna_alata,Senna alata,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_senna_alexandrina,Senna alexandrina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_senna_occidentalis,Senna occidentalis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_senna_tora,Senna tora,A,3,SRC-001; SRC-014,
-sp_sida_acuta,Sida acuta,A,3,SRC-001; SRC-014,
-sp_smilax_glabra,Smilax glabra,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_solanum_indicum,Solanum indicum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_solanum_trilobatum,Solanum trilobatum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_solanum_violaceum,Solanum violaceum,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_sonneratia_caseolaris,Sonneratia caseolaris,A,2,SRC-001; SRC-014,
-sp_sophora_flavescens,Sophora flavescens,A,4,SRC-001; SRC-014,
-sp_spondias_pinnata,Spondias pinnata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_stephania_epigaea,Stephania epigaea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_stephania_erecta,Stephania erecta,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_stephania_pierrei,Stephania pierrei,A,6,SRC-001; SRC-014,
-sp_stephania_rotunda,Stephania rotunda,A,6,SRC-001; SRC-014,
-sp_stephania_tetrandra,Stephania tetrandra,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_stereospermum_tetragonum,Stereospermum tetragonum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_streblus_asper,Streblus asper,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_strophanthus_gratus,Strophanthus gratus,C,2,SRC-001; SRC-014,
-sp_strychnos_axillaris,Strychnos axillaris,A,2,SRC-001; SRC-014,
-sp_strychnos_nux,Strychnos nux-vomica,A,5,SRC-001; SRC-014,
-sp_strychnos_potatorum,Strychnos potatorum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_styphnolobium_japonicum,Styphnolobium japonicum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_swertia_angustifolia,Swertia angustifolia,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_syzygium_aromaticum,Syzygium aromaticum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_syzygium_cumini,Syzygium cumini,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_syzygium_globiflorum,Syzygium globiflorum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_tabernaemontana_divaricata,Tabernaemontana divaricata,A,8,SRC-001; SRC-014,
-sp_tabernanthe_iboga,Tabernanthe iboga,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_tadehagi_triquetrum,Tadehagi triquetrum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_tamarindus_indica,Tamarindus indica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_tectona_grandis,Tectona grandis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_terminalia_bellirica,Terminalia bellirica,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_terminalia_chebula,Terminalia chebula,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_terminalia_citrina,Terminalia citrina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_tetrastigma_hemsleyanum,Tetrastigma hemsleyanum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_thespesia_populnea,Thespesia populnea,A,2,SRC-001; SRC-014,
-sp_thevetia_peruviana,Thevetia peruviana,A,2,SRC-001; SRC-014,
-sp_thunbergia_laurifolia,Thunbergia laurifolia,A,6,SRC-001; SRC-014,
-sp_tinospora_crispa,Tinospora crispa,A,5,SRC-001; SRC-014,
-sp_tithonia_diversifolia,Tithonia diversifolia,A,5,SRC-001; SRC-014,
-sp_toona_ciliata,Toona ciliata,A,3,SRC-001; SRC-014,
-sp_toona_sinensis,Toona sinensis,A,5,SRC-001; SRC-014,
-sp_trachelospermum_asiaticum,Trachelospermum asiaticum,A,2,SRC-001; SRC-014,
-sp_trachelospermum_jasminoides,Trachelospermum jasminoides,A,3,SRC-001; SRC-014,
-sp_trachyspermum_roxburghianum,Trachyspermum roxburghianum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_trichosanthes_cucumerina,Trichosanthes cucumerina,A,2,SRC-001; SRC-014,
-sp_triumfetta_rhomboidea,Triumfetta rhomboidea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_tylophora_indica,Tylophora indica,A,4,SRC-001; SRC-014,
-sp_urceola_rosea,Urceola rosea,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_urena_lobata,Urena lobata,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_verbena_officinalis,Verbena officinalis,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_vernonia_amygdalina,Vernonia amygdalina,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_vetiveria_zizanioides,Vetiveria zizanioides,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_vitex_negundo,Vitex negundo,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_wedelia_chinensis,Wedelia chinensis,A,4,SRC-001; SRC-014,
-sp_wrightia_hanleyi,Wrightia hanleyi,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_wrightia_tinctoria,Wrightia tinctoria,A,2,SRC-001; SRC-014,
-sp_wrightia_tomentosa,Wrightia tomentosa,A,2,SRC-001; SRC-014,
-sp_xylocarpus_granatum,Xylocarpus granatum,A,7,SRC-001; SRC-014,
-sp_xylocarpus_moluccensis,Xylocarpus moluccensis,A,2,SRC-001; SRC-014,
-sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_zanthoxylum_armatum,Zanthoxylum armatum,C,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_zanthoxylum_rhetsa,Zanthoxylum rhetsa,A,3,SRC-001; SRC-014,
-sp_zingiber_cassumunar,Zingiber cassumunar,A,2,SRC-001; SRC-014,
-sp_zingiber_montanum,Zingiber montanum,A,1,SRC-001; SRC-014,low-redundancy: a single independent source
-sp_zingiber_officinale,Zingiber officinale,A,6,SRC-001; SRC-014,
-sp_zingiber_zerumbet,Zingiber zerumbet,B,1,SRC-001; SRC-014,low-redundancy: a single independent source
+species_id,accepted_name,grade,n_sources,n_verified_sources,verified_A,verified_B,verified_C,source_ids,notes
+sp_acanthus_ilicifolius,Acanthus ilicifolius,A,7,4,4,0,0,doi:10.1016/j.focha.2024.100807; doi:10.1016/s0031-9422(00)00362-9; doi:10.1080/14786419.2023.2218009; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_achyranthes_aspera,Achyranthes aspera,D,2,1,1,0,0,doi:10.1016/j.envres.2023.117802,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_acmella_oleracea,Acmella oleracea,A,2,2,2,0,0,doi:10.1055/a-0715-2002; doi:10.1055/a-1903-2226,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_acorus_calamus,Acorus calamus,D,1,1,1,0,0,doi:10.1186/s13002-023-00609-0,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_acorus_gramineus,Acorus gramineus,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_acrostichum_aureum,Acrostichum aureum,D,3,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_adenanthera_pavonina,Adenanthera pavonina,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aegiceras_corniculatum,Aegiceras corniculatum,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aegle_marmelos,Aegle marmelos,A,9,3,3,0,0,doi:10.2144/fsoa-2022-0068; doi:10.3897/phytokeys.102.24380; doi:10.7759/cureus.70491,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aerva_lanata,Aerva lanata,A,2,2,2,0,0,doi:10.1055/s-2006-961427; doi:10.4103/0973-7847.91120,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aglaia,Aglaia,D,1,1,1,0,0,doi:10.1002/chin.201152265,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aglaia_elliptica,Aglaia elliptica,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aglaia_foveolata,Aglaia foveolata,D,3,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aglaia_odorata,Aglaia odorata,D,3,1,1,0,0,doi:10.1007/978-3-7091-0748-5_1,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aglaia_roxburghiana,Aglaia roxburghiana,D,2,1,1,0,0,doi:10.1016/s0378-8741(99)00063-x,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ailanthus_altissima,Ailanthus altissima,A,5,4,4,0,0,doi:10.1021/jf020686+; doi:10.1371/journal.pone.0250712; doi:10.3390/app112311331; doi:10.5962/p.251181,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_albizia_lebbeck,Albizia lebbeck,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_allamanda_cathartica,Allamanda cathartica,D,1,1,1,0,0,doi:10.3390/molecules24071238,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_alpinia_galanga,Alpinia galanga,A,6,2,2,0,0,doi:10.1016/j.jafr.2026.102939; doi:10.3390/biology14081098,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_alpinia_officinarum,Alpinia officinarum,A,4,2,2,0,0,doi:10.1016/j.bioorg.2020.104526; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_alpinia_zerumbet,Alpinia zerumbet,D,3,1,1,0,0,doi:10.3390/molecules200916306,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_alstonia_macrophylla,Alstonia macrophylla,D,1,1,1,0,0,doi:10.1021/acsomega.9b00082,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_alstonia_scholaris,Alstonia scholaris,A,8,2,2,0,0,doi:10.1093/ecam/nek011; doi:10.3390/molecules21020139,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_alternanthera_sessilis,Alternanthera sessilis,A,2,2,2,0,0,doi:10.1186/s12906-023-03923-y; doi:10.7324/japs.2016.601222,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_alyxia_reinwardtii,Alyxia reinwardtii,D,3,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_amomum_villosum,Amomum villosum,A,2,2,2,0,0,doi:10.1016/j.heliyon.2024.e27492; doi:10.3390/molecules24091663,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_andrographis_paniculata,Andrographis paniculata,A,8,3,3,0,0,doi:10.1186/1749-8546-5-17; doi:10.3389/fphar.2022.920435; doi:10.3390/nu12020523,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_anodendron_affine,Anodendron affine,A,2,2,2,0,0,doi:10.1016/s0040-4020(01)92789-9; doi:10.3390/antiox15010097,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aphanamixis_polystachya,Aphanamixis polystachya,A,7,3,3,0,0,doi:10.1016/j.phyplu.2023.100448; doi:10.1039/d4md00318g; doi:10.3390/molecules21091167,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aquilaria_crassna,Aquilaria crassna,A,12,4,4,0,0,doi:10.1016/j.fitote.2016.07.014; doi:10.1021/acsomega.3c04656; doi:10.3390/molecules21101313; doi:10.3390/molecules23020342,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aquilaria_malaccensis,Aquilaria malaccensis,D,3,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aquilaria_sinensis,Aquilaria sinensis,D,1,1,1,0,0,doi:10.3762/bjoc.19.75,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_arcangelisia_flava,Arcangelisia flava,D,3,1,1,0,0,doi:10.1016/j.arabjc.2021.103346,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_areca_catechu,Areca catechu,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_argemone_mexicana,Argemone mexicana,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_argyreia_nervosa,Argyreia nervosa,D,2,1,1,0,0,doi:10.1016/j.forsciint.2015.02.011,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_argyreia_osyrensis,Argyreia osyrensis,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aristolochia_indica,Aristolochia indica,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_aristolochia_tagala,Aristolochia tagala,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_artemisia_annua,Artemisia annua,D,3,1,1,0,0,doi:10.1007/s11101-010-9166-0,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_artocarpus_heterophyllus,Artocarpus heterophyllus,A,7,4,4,0,0,doi:10.1016/j.toxrep.2018.02.006; doi:10.3109/13880209.2014.996819; doi:10.3897/phytokeys.102.24380; doi:10.7324/japs.2018.8608,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_artocarpus_lakoocha,Artocarpus lakoocha,A,4,3,3,0,0,doi:10.1038/s41598-026-38501-y; doi:10.1155/jfbc/8016598; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_asparagus_cochinchinensis,Asparagus cochinchinensis,D,1,1,1,0,0,doi:10.3109/13880209.2011.619700,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_avicennia_marina,Avicennia marina,D,2,1,1,0,0,doi:10.3390/ph18091308,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_azadirachta_indica,Azadirachta indica,A,5,2,2,0,0,doi:10.1038/s41598-026-48147-5; doi:10.1080/10575639708043721,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_bacopa_monnieri,Bacopa monnieri,A,7,4,4,0,0,doi:10.1016/j.sajb.2023.03.007; doi:10.1021/acsomega.2c05318; doi:10.3329/dujps.v22i2.67407; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_barleria_prionitis,Barleria prionitis,A,8,3,3,0,0,doi:10.1021/np980086y; doi:10.3390/plants11010082; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_bauhinia_purpurea,Bauhinia purpurea,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_biancaea_sappan,Biancaea sappan,D,1,1,1,0,0,doi:10.3390/plants9070813,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_blumea_balsamifera,Blumea balsamifera,A,6,3,3,0,0,doi:10.1021/acsomega.3c01247; doi:10.1021/np100646n; doi:10.15835/nbha52213633,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_boesenbergia_rotunda,Boesenbergia rotunda,A,7,4,4,0,0,doi:10.1016/j.foodchem.2008.12.057; doi:10.1186/s13020-025-01285-w; doi:10.3390/antiox13010074; doi:10.3390/molecules29215186,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_bombax_ceiba,Bombax ceiba,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_brownlowia_tersa,Brownlowia tersa,D,1,1,1,0,0,doi:10.1080/10496475.2022.2077878,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_brucea_javanica,Brucea javanica,A,7,5,5,0,0,doi:10.1055/s-0028-1083884; doi:10.3389/fphar.2022.853119; doi:10.3389/fphar.2023.1317620; doi:10.3390/pathogens14070646; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_bruguiera_gymnorrhiza,Bruguiera gymnorhiza,D,3,1,1,0,0,doi:10.4103/japtr.japtr_81_20,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_buddleja_asiatica,Buddleja asiatica,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_buddleja_officinalis,Buddleja officinalis,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_butea_monosperma,Butea monosperma,A,5,3,3,0,0,doi:10.1038/s41598-020-60076-5; doi:10.1124/jpet.109.165209; doi:10.32604/biocell.2012.36.063,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_butea_superba,Butea superba,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_caesalpinia_sappan,Caesalpinia sappan,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_callicarpa_macrophylla,Callicarpa macrophylla,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_calophyllum_inophyllum,Calophyllum inophyllum,A,5,2,2,0,0,doi:10.1155/2023/6613670; doi:10.1371/journal.pone.0185674,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_calotropis_gigantea,Calotropis gigantea,A,3,2,2,0,0,doi:10.1016/j.heliyon.2023.e16375; doi:10.1038/s41598-023-42086-1,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_camellia_sinensis,Camellia sinensis,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cananga_odorata,Cananga odorata,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cannabis_sativa,Cannabis sativa,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_capsicum_annuum,Capsicum annuum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cardiospermum_halicacabum,Cardiospermum halicacabum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cassia_alata,Cassia alata,A,2,2,2,0,0,doi:10.1186/s12906-023-03914-z; doi:10.3390/ph17030380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cassia_angustifolia,Cassia angustifolia,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cassia_fistula,Cassia fistula,D,4,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_catharanthus_roseus,Catharanthus roseus,A,6,3,3,0,0,doi:10.1111/tpj.14111; doi:10.1186/s12935-022-02624-9; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_celosia_cristata,Celosia cristata,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_centella_asiatica,Centella asiatica,A,6,2,2,0,0,doi:10.1111/jcmm.17635; doi:10.3390/ijerph19063266,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ceriops_tagal,Ceriops tagal,D,3,1,1,0,0,doi:10.3390/md23030131,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_chloranthus_spicatus,Chloranthus spicatus,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_chonemorpha_fragrans,Chonemorpha fragrans,D,1,1,1,0,0,doi:10.4103/0974-8490.72327,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_chromolaena_odorata,Chromolaena odorata,D,3,1,1,0,0,doi:10.3390/plants9070813,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_chrysanthemum_cinerariifolium,Chrysanthemum cinerariifolium,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_chukrasia_tabularis,Chukrasia tabularis,A,5,3,3,0,0,doi:10.1016/j.phytochem.2004.08.010; doi:10.3329/bpj.v18i2.24310; doi:10.3390/molecules18010373,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cinnamomum_camphora,Cinnamomum camphora,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cinnamomum_tamala,Cinnamomum tamala,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cissampelos_pareira,Cissampelos pareira,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cissus_quadrangularis,Cissus quadrangularis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_citrus_hystrix,Citrus hystrix,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_clausena,Clausena,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_clausena_harmandiana,Clausena harmandiana,A,2,2,2,0,0,doi:10.1055/s-2000-8558; doi:10.3390/molecules24183385,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_clerodendrum_indicum,Clerodendrum indicum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_clerodendrum_viscosum,Clerodendrum viscosum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_clinacanthus_nutans,Clinacanthus nutans,A,7,4,4,0,0,doi:10.3390/biology13100815; doi:10.3390/molecules27113607; doi:10.4103/0973-1296.176111; doi:10.4314/tjpr.v17i2.25,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_clitoria_ternatea,Clitoria ternatea,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cocos_nucifera,Cocos nucifera,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_coix_lacryma,Coix lacryma,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_combretum_quadrangulare,Combretum quadrangulare,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_coscinium_fenestratum,Coscinium fenestratum,D,8,1,1,0,0,doi:10.1016/j.fitote.2005.04.005,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_costus_speciosus,Costus speciosus,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_crateva_religiosa,Crateva religiosa,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,D,1,1,1,0,0,doi:10.1016/j.phytol.2010.11.006,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_crinum_asiaticum,Crinum asiaticum,D,2,1,1,0,0,doi:10.1016/j.heliyon.2024.e25049,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cryptolepis_dubia,Cryptolepis dubia,D,2,1,1,0,0,doi:10.1016/j.bmcl.2024.129650,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_curculigo_orchioides,Curculigo orchioides,A,4,3,3,0,0,doi:10.1016/j.fitote.2010.06.003; doi:10.3390/ijerph192215218; doi:10.3390/molecules26113396,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_curcuma_caesia,Curcuma caesia,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_curcuma_comosa,Curcuma comosa,A,7,6,6,0,0,doi:10.1016/j.heliyon.2022.e11228; doi:10.1016/j.phymed.2013.02.008; doi:10.1021/jf802702c; doi:10.1289/ehp.0900613; doi:10.3389/fnut.2025.1619725; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_curcuma_longa,Curcuma longa,D,6,1,1,0,0,doi:10.3390/foods14244205,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_curcuma_phaeocaulis,Curcuma phaeocaulis,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_curcuma_xanthorrhiza,Curcuma xanthorrhiza,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_curcuma_zedoaria,Curcuma zedoaria,A,5,2,2,0,0,doi:10.1016/j.thromres.2012.04.005; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cuscuta_reflexa,Cuscuta reflexa,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cyclea_barbata,Cyclea barbata,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cynometra_ramiflora,Cynometra ramiflora,D,2,1,1,0,0,doi:10.1177/1934578x241257377,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_cyperus_rotundus,Cyperus rotundus,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,A,8,3,3,0,0,doi:10.1016/s1674-6384(16)60014-x; doi:10.1177/1934578x211049673; doi:10.3390/molecules27041321,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dalbergia_oliveri,Dalbergia oliveri,D,3,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_datura_metel,Datura metel,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dendrobium_devonianum,Dendrobium devonianum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dendrobium_nobile,Dendrobium nobile,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_derris_elliptica,Derris elliptica,D,3,1,1,0,0,doi:10.1016/j.fitote.2012.02.015,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_desmodium_triquetrum,Desmodium triquetrum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dioscorea_bulbifera,Dioscorea bulbifera,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dioscorea_pentaphylla,Dioscorea pentaphylla,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_diospyros_mollis,Diospyros mollis,A,7,2,2,0,0,doi:10.1002/fsn3.4375; doi:10.1007/s11101-025-10200-y,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dolichandrone_spathacea,Dolichandrone spathacea,D,2,1,1,0,0,doi:10.1055/s-0043-125339,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dracaena_angustifolia,Dracaena angustifolia,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_duhaldea_cappa,Duhaldea cappa,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_dysoxylum_binectariferum,Dysoxylum binectariferum,A,2,2,2,0,0,doi:10.1016/j.bmcl.2016.06.046; doi:10.1371/journal.pone.0137991,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ecdysanthera_rosea,Ecdysanthera rosea,D,1,1,1,0,0,doi:10.1016/j.fitote.2014.10.008,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_eclipta_prostrata,Eclipta prostrata,A,6,3,3,0,0,doi:10.3390/molecules28217354; doi:10.3390/plants13010033; doi:10.7324/japs.2015.50308,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_elephantopus_scaber,Elephantopus scaber,A,5,4,4,0,0,doi:10.1155/2014/569594; doi:10.3390/molecules21030385; doi:10.3390/plants9070813; doi:10.5567/pharmacologia.2014.272.285,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_embelia_ribes,Embelia ribes,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_entada_phaseoloides,Entada phaseoloides,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ephedra_gerardiana,Ephedra gerardiana,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_erythrina,Erythrina,D,1,1,1,0,0,doi:10.1038/s41598-025-17130-x,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_erythrina_suberosa,Erythrina suberosa,D,1,1,1,0,0,doi:10.1002/jps.2600590828,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_erythrina_variegata,Erythrina variegata,A,3,2,2,0,0,doi:10.1016/s0031-9422(00)85296-6; doi:10.3390/antiox14091035,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_euphoria_longana,Dimocarpus longan,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_eurycoma_longifolia,Eurycoma longifolia,A,10,6,6,0,0,doi:10.1016/j.fitote.2010.04.006; doi:10.1016/j.fitote.2013.10.009; doi:10.1021/np50077a020; doi:10.1177/1934578x1000500704; doi:10.2174/2215083807666210402141035; doi:10.3390/molecules21030331,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_excoecaria_agallocha,Excoecaria agallocha,D,2,1,1,0,0,doi:10.2147/jep.s339383,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ficus_hispida,Ficus hispida,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ficus_racemosa,Ficus racemosa,A,3,2,2,0,0,doi:10.1155/2016/3874516; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ficus_religiosa,Ficus religiosa,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_flacourtia_jangomas,Flacourtia jangomas,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_garcinia_atroviridis,Garcinia atroviridis,A,2,2,2,0,0,doi:10.1016/j.fbio.2022.102285; doi:10.1016/s0378-8741(00)00245-2,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_garcinia_cowa,Garcinia cowa,D,6,1,1,0,0,doi:10.1055/s-2006-959502,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_garcinia_hanburyi,Garcinia hanburyi,A,5,2,2,0,0,doi:10.1002/mrc.1260310406; doi:10.3892/ijo.2015.3166,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_garcinia_mangostana,Garcinia mangostana,A,11,6,6,0,0,doi:10.1016/j.fitote.2021.104880; doi:10.3390/antiox15080998; doi:10.3390/biom14111382; doi:10.3390/molecules22050683; doi:10.3390/molecules28196991; doi:10.4103/jpbs.jpbs_991_25,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_garcinia_pedunculata,Garcinia pedunculata,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_garcinia_schomburgkiana,Garcinia schomburgkiana,A,2,2,2,0,0,doi:10.1016/j.phytochem.2023.113701; doi:10.7324/japs.2016.60618,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_gardenia_jasminoides,Gardenia jasminoides,D,4,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_gelsemium_elegans,Gelsemium elegans,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_glycosmis_pentaphylla,Glycosmis pentaphylla,A,4,2,2,0,0,doi:10.1016/0031-9422(89)80089-5; doi:10.1039/c5ob00695c,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_glycyrrhiza_glabra,Glycyrrhiza glabra,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_gmelina_arborea,Gmelina arborea,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_gymnema_sylvestre,Gymnema sylvestre,A,6,4,4,0,0,doi:10.1155/2014/830285; doi:10.3164/jcbn.2007010; doi:10.3389/fphar.2017.00228; doi:10.7324/japs.2012.21201,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_gynura_procumbens,Gynura procumbens,A,2,2,2,0,0,doi:10.1080/09540105.2022.2098935; doi:10.3390/ijms22168716,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_gynura_pseudochina,Gynura pseudochina,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_gyrinops_salicifolia,Gyrinops salicifolia,D,1,1,1,0,0,doi:10.1016/j.fitote.2016.07.015,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hedyotis_diffusa,Scleromitrion diffusum,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_helicteres_isora,Helicteres isora,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_heritiera_littoralis,Heritiera littoralis,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hibiscus_tiliaceus,Hibiscus tiliaceus,D,2,1,1,0,0,doi:10.1186/s40064-016-2891-0,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hiptage_benghalensis,Hiptage benghalensis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_holarrhena_antidysenterica,Holarrhena pubescens,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_holarrhena_pubescens,Holarrhena pubescens,A,5,2,2,0,0,doi:10.14202/vetworld.2015.1392-1395; doi:10.3390/biom10091341,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_homalomena_pendula,Homalomena pendula,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_houttuynia_cordata,Houttuynia cordata,A,4,3,3,0,0,doi:10.1186/s44149-025-00203-9; doi:10.3389/fphar.2021.714694; doi:10.3390/molecules27248893,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hydnocarpus_kurzii,Hydnocarpus kurzii,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hygrophila_auriculata,Hygrophila auriculata,D,4,1,1,0,0,doi:10.1016/j.jep.2005.08.058,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hygrophila_spinosa,Hygrophila spinosa,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hymenocallis_littoralis,Hymenocallis littoralis,D,2,1,1,0,0,doi:10.1186/1475-2867-7-10,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hypericum_japonicum,Hypericum japonicum,D,2,1,1,0,0,doi:10.1021/acsomega.1c06335,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_hypericum_perforatum,Hypericum perforatum,D,1,1,1,0,0,doi:10.3390/pharmaceutics14051104,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ichnocarpus_frutescens,Ichnocarpus frutescens,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_illicium_verum,Illicium verum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_intsia_bijuga,Intsia bijuga,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ipomoea_aquatica,Ipomoea aquatica,A,6,3,3,0,0,doi:10.1088/1742-6596/1402/5/055091; doi:10.1186/s12967-015-0430-3; doi:10.3389/fnut.2023.1304903,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ixora_chinensis,Ixora chinensis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_jatropha_curcas,Jatropha curcas,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_justicia_adhatoda,Justicia adhatoda,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_justicia_gendarussa,Justicia gendarussa,D,2,1,1,0,0,doi:10.1016/j.intimp.2018.04.004,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_kaempferia_galanga,Kaempferia galanga,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_kaempferia_parviflora,Kaempferia parviflora,A,8,4,4,0,0,doi:10.1002/ptr.2858; doi:10.1016/j.indcrop.2022.116030; doi:10.1016/j.jep.2008.07.033; doi:10.3390/foods14234012,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_kopsia_fruticosa,Kopsia fruticosa,D,3,1,1,0,0,doi:10.1016/j.fitote.2018.06.017,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_lannea_grandis,Lannea grandis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_lansium_domesticum,Lansium domesticum,A,6,4,4,0,0,doi:10.1007/s11418-019-01319-2; doi:10.1021/np100943x; doi:10.12688/f1000research.21072.2; doi:10.3390/molecules28052144,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_leonurus_japonicus,Leonurus japonicus,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_leucaena_leucocephala,Leucaena leucocephala,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_limonia_acidissima,Limonia acidissima,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_litsea_cubeba,Litsea cubeba,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_lumnitzera_racemosa,Lumnitzera racemosa,D,2,1,1,0,0,doi:10.1007/s12272-014-0429-y,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_madhuca_longifolia,Madhuca longifolia,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mahonia_bealei,Mahonia bealei,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mallotus_philippensis,Mallotus philippensis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mangifera_indica,Mangifera indica,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_markhamia_stipulata,Markhamia stipulata,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_marsdenia_tenacissima,Marsdenia tenacissima,A,6,5,5,0,0,doi:10.1080/10286020.2011.570263; doi:10.1080/14786419.2024.2356657; doi:10.1182/blood.v110.11.4310.4310; doi:10.3389/fonc.2018.00473; doi:10.3390/agronomy14051063,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_melastoma_malabathricum,Melastoma malabathricum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_melia_azedarach,Melia azedarach,A,5,2,2,0,0,doi:10.1055/s-0032-1328069; doi:10.3390/ijms23105329,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mesua_ferrea,Mesua ferrea,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_millettia_pachycarpa,Millettia pachycarpa,D,4,1,1,0,0,doi:10.1021/acsomega.2c02163,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mimosa_pudica,Mimosa pudica,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mitragyna_rotundifolia,Mitragyna rotundifolia,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mitragyna_speciosa,Mitragyna speciosa,D,7,1,1,0,0,doi:10.1124/jpet.120.000189,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_momordica_charantia,Momordica charantia,A,7,2,2,0,0,doi:10.3390/ijms18122555; doi:10.4103/0975-7406.168032,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_momordica_cochinchinensis,Momordica cochinchinensis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_morinda_citrifolia,Morinda citrifolia,A,11,4,4,0,0,doi:10.1371/journal.pone.0270970; doi:10.3390/antiox14030295; doi:10.3390/molecules180810042; doi:10.3390/molecules30183831,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_moringa_oleifera,Moringa oleifera,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_morus_alba,Morus alba,A,8,3,3,0,0,doi:10.3389/fmolb.2023.1168298; doi:10.3389/fphar.2025.1704535; doi:10.3390/molecules26247642,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_mucuna_pruriens,Mucuna pruriens,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_murraya_koenigii,Murraya koenigii,A,4,2,2,0,0,doi:10.1016/j.jep.2016.10.014; doi:10.3390/molecules27030971,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_nauclea_officinalis,Nauclea officinalis,A,6,4,4,0,0,doi:10.1016/j.jep.2016.12.007; doi:10.1186/s13020-022-00691-8; doi:10.3109/13880209.2014.895910; doi:10.3390/molecules27165176,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_nerium_oleander,Nerium oleander,D,1,1,1,0,0,doi:10.3389/fphar.2022.822726,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_nigella_sativa,Nigella sativa,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_nypa_fruticans,Nypa fruticans,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ocimum_tenuiflorum,Ocimum tenuiflorum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ophiorrhiza_pumila,Ophiorrhiza pumila,A,4,3,3,0,0,doi:10.1016/j.phytochem.2012.04.019; doi:10.1186/s12915-021-01051-y; doi:10.1186/s13020-020-0291-4,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_oroxylum_indicum,Oroxylum indicum,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_paederia_foetida,Paederia foetida,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_panax_vietnamensis,Panax vietnamensis,A,6,3,3,0,0,doi:10.1177/1934578x1801301036; doi:10.1248/cpb.41.2010; doi:10.3390/molecules31101570,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_pandanus_amaryllifolius,Pandanus amaryllifolius,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_paramignya_trimera,Paramignya trimera,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_parsonsia_alboflavescens,Parsonsia alboflavescens,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_passiflora_foetida,Passiflora foetida,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_peperomia_pellucida,Peperomia pellucida,A,3,2,2,0,0,doi:10.3389/fpls.2021.641717; doi:10.3390/molecules25214914,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_phoenix_paludosa,Phoenix paludosa,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_phyllanthus_amarus,Phyllanthus amarus,A,5,2,2,0,0,doi:10.1093/jaoacint/qsaa133; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_phyllanthus_emblica,Phyllanthus emblica,A,5,2,2,0,0,doi:10.1002/jsfa.10020; doi:10.1007/s11130-006-0001-0,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_phyllanthus_niruri,Phyllanthus niruri,A,4,2,2,0,0,doi:10.1016/j.bbrc.2017.09.080; doi:10.1155/2014/834815,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_phyllanthus_reticulatus,Phyllanthus reticulatus,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_picrasma_quassioides,Picrasma quassioides,A,6,2,2,0,0,doi:10.3390/nu12092584; doi:10.3892/etm.2021.10792,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_piper_betle,Piper betle,A,4,2,2,0,0,doi:10.1007/s42770-024-01567-9; doi:10.1590/0001-3765201820180285,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_piper_longum,Piper longum,D,2,1,1,0,0,doi:10.3390/ph18101581,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_piper_nigrum,Piper nigrum,D,5,1,1,0,0,doi:10.3390/ph18101581,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_plantago_asiatica,Plantago asiatica,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_pluchea_indica,Pluchea indica,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_plumbago_indica,Plumbago indica,A,5,2,2,0,0,doi:10.1159/000210028; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_plumbago_zeylanica,Plumbago zeylanica,A,2,2,2,0,0,doi:10.1002/chin.198819333; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_plumeria_rubra,Plumeria rubra,D,3,1,1,0,0,doi:10.4103/0971-5916.91005,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_pogostemon_cablin,Pogostemon cablin,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_polygonum_chinense,Persicaria chinensis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_premna_serratifolia,Premna serratifolia,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_psidium_guajava,Psidium guajava,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,A,3,3,3,0,0,doi:10.1016/j.heliyon.2023.e13644; doi:10.1055/s-2005-864130; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_punica_granatum,Punica granatum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_quassia_amara,Quassia amara,A,3,3,3,0,0,doi:10.1016/j.jep.2006.04.017; doi:10.1016/j.jep.2009.07.037; doi:10.1128/aac.00951-09,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_randia_spinosa,Randia spinosa,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rauvolfia_cambodiana,Rauvolfia cambodiana,D,1,1,1,0,0,doi:10.56499/jppres22.1344_10.3.486,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rauvolfia_serpentina,Rauvolfia serpentina,D,4,1,1,0,0,doi:10.1093/chromsci/44.9.557,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rhinacanthus_nasutus,Rhinacanthus nasutus,A,8,3,3,0,0,doi:10.1080/14786419.2018.1452004; doi:10.31557/apjcp.2018.19.12.3605; doi:10.3390/nu12123776,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rhizophora_apiculata,Rhizophora apiculata,A,3,2,2,0,0,doi:10.1007/s13205-018-1222-2; doi:10.1080/10286020.2011.589838,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rhizophora_mucronata,Rhizophora mucronata,D,4,1,1,0,0,doi:10.4103/ayu.ayu_182_15,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rhododendron_moulmainense,Rhododendron moulmainense,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,A,5,4,4,0,0,doi:10.1089/mdr.2016.0284; doi:10.1155/2012/697183; doi:10.14202/vetworld.2025.877-887; doi:10.3390/antibiotics10020108,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_ricinus_communis,Ricinus communis,D,1,1,1,0,0,doi:10.3390/plants9070813,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_rubia_cordifolia,Rubia cordifolia,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_salacia_chinensis,Salacia chinensis,D,3,1,1,0,0,doi:10.3390/nu7031480,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_sambucus_javanica,Sambucus javanica,D,1,1,1,0,0,doi:10.3390/plants9070813,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_santalum_album,Santalum album,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_sapindus_saponaria,Sapindus saponaria,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_sargassum,Sargassum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_saurauia_napaulensis,Saurauia napaulensis,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_scoparia_dulcis,Scoparia dulcis,A,6,3,3,0,0,doi:10.1039/d1ra05090g; doi:10.1155/2016/8243215; doi:10.3390/plants9070813,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_selaginella_pulvinata,Selaginella pulvinata,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_senegalia_catechu,Senegalia catechu,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_senna_alata,Senna alata,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_senna_alexandrina,Senna alexandrina,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_senna_occidentalis,Senna occidentalis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_senna_tora,Senna tora,A,3,3,3,0,0,doi:10.1016/j.heliyon.2023.e12855; doi:10.3923/ajpp.2008.96.100; doi:10.61289/jibs2025.02.20.436,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_sida_acuta,Sida acuta,D,3,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_smilax_glabra,Smilax glabra,D,1,1,1,0,0,doi:10.15835/nbha52213633,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_solanum_indicum,Solanum indicum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_solanum_trilobatum,Solanum trilobatum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_solanum_violaceum,Solanum violaceum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_sonneratia_caseolaris,Sonneratia caseolaris,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_sophora_flavescens,Sophora flavescens,D,4,1,1,0,0,doi:10.3389/fphar.2024.1353234,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_spondias_pinnata,Spondias pinnata,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_stephania_epigaea,Stephania epigaea,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_stephania_erecta,Stephania erecta,D,1,1,1,0,0,doi:10.1021/np50091a005,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_stephania_pierrei,Stephania pierrei,A,5,4,4,0,0,doi:10.1002/ptr.2617; doi:10.1016/j.jep.2007.02.005; doi:10.1038/s41467-024-45690-5; doi:10.1186/s12870-025-06422-z,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_stephania_rotunda,Stephania rotunda,A,4,3,3,0,0,doi:10.1016/j.jep.2007.02.005; doi:10.1016/j.jep.2012.10.052; doi:10.3109/14756360902932792,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_stephania_tetrandra,Stephania tetrandra,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_stereospermum_tetragonum,Stereospermum tetragonum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_streblus_asper,Streblus asper,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_strophanthus_gratus,Strophanthus gratus,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_strychnos_axillaris,Strychnos axillaris,D,2,1,1,0,0,doi:10.1016/0378-8741(88)90073-6,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_strychnos_nux,Strychnos nux-vomica,A,5,3,3,0,0,doi:10.1007/s10616-014-9723-2; doi:10.3390/molecules19044395; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_strychnos_potatorum,Strychnos potatorum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_styphnolobium_japonicum,Styphnolobium japonicum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_swertia_angustifolia,Swertia angustifolia,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_syzygium_aromaticum,Syzygium aromaticum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_syzygium_cumini,Syzygium cumini,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_syzygium_globiflorum,Syzygium globiflorum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tabernaemontana_divaricata,Tabernaemontana divaricata,A,7,2,2,0,0,doi:10.1016/j.bmcl.2015.07.036; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tabernanthe_iboga,Tabernanthe iboga,D,1,1,1,0,0,doi:10.1021/acsomega.1c00745,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tadehagi_triquetrum,Tadehagi triquetrum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tamarindus_indica,Tamarindus indica,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tectona_grandis,Tectona grandis,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_terminalia_bellirica,Terminalia bellirica,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_terminalia_chebula,Terminalia chebula,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_terminalia_citrina,Terminalia citrina,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tetrastigma_hemsleyanum,Tetrastigma hemsleyanum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_thespesia_populnea,Thespesia populnea,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_thevetia_peruviana,Thevetia peruviana,D,2,1,1,0,0,doi:10.3390/molecules29174083,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_thunbergia_laurifolia,Thunbergia laurifolia,A,6,5,5,0,0,doi:10.1007/s00436-012-2846-5; doi:10.1016/j.pbb.2014.05.004; doi:10.1016/j.sajb.2024.09.059; doi:10.1039/d5ra02501j; doi:10.3390/molecules30244795,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tinospora_crispa,Tinospora crispa,A,5,2,2,0,0,doi:10.1016/j.heliyon.2021.e08078; doi:10.1016/j.jff.2015.04.011,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tithonia_diversifolia,Tithonia diversifolia,D,5,1,1,0,0,doi:10.1016/j.fitote.2017.11.002,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_toona_ciliata,Toona ciliata,D,3,1,1,0,0,doi:10.1021/acs.jnatprod.8b00954,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_toona_sinensis,Toona sinensis,A,5,2,2,0,0,doi:10.1016/j.bjp.2018.07.009; doi:10.3389/fvets.2023.1337291,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_trachelospermum_asiaticum,Trachelospermum asiaticum,A,2,2,2,0,0,doi:10.3390/biom10030378; doi:10.3390/molecules22091406,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_trachelospermum_jasminoides,Trachelospermum jasminoides,D,3,1,1,0,0,doi:10.1055/s-2005-837761,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_trachyspermum_roxburghianum,Trachyspermum roxburghianum,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_trichosanthes_cucumerina,Trichosanthes cucumerina,D,2,1,1,0,0,doi:10.2306/scienceasia1513-1874.2021.s012,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_triumfetta_rhomboidea,Triumfetta rhomboidea,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_tylophora_indica,Tylophora indica,A,4,2,2,0,0,doi:10.1016/j.arabjc.2020.05.037; doi:10.1186/1476-4598-12-82,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_urceola_rosea,Urceola rosea,D,1,1,1,0,0,doi:10.1016/j.jpba.2017.10.031,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_urena_lobata,Urena lobata,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_verbena_officinalis,Verbena officinalis,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_vernonia_amygdalina,Vernonia amygdalina,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_vetiveria_zizanioides,Vetiveria zizanioides,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_vitex_negundo,Vitex negundo,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_wedelia_chinensis,Wedelia chinensis,A,4,2,2,0,0,doi:10.1186/s12906-021-03373-4; doi:10.3390/molecules28020793,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_wrightia_hanleyi,Wrightia hanleyi,D,1,1,1,0,0,doi:10.1021/acs.jnatprod.8b00567,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_wrightia_tinctoria,Wrightia tinctoria,D,2,1,1,0,0,doi:10.4103/jomfp.jomfp_32_24,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_wrightia_tomentosa,Wrightia tomentosa,A,2,2,2,0,0,doi:10.1016/0031-9422(92)80469-u; doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_xylocarpus_granatum,Xylocarpus granatum,A,7,4,4,0,0,doi:10.1016/j.jgeb.2025.100611; doi:10.1021/np900625w; doi:10.1038/s41598-021-85383-3; doi:10.1155/2021/8922196,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_xylocarpus_moluccensis,Xylocarpus moluccensis,D,2,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,D,1,1,1,0,0,doi:10.3897/phytokeys.102.24380,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_zanthoxylum_armatum,Zanthoxylum armatum,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_zanthoxylum_rhetsa,Zanthoxylum rhetsa,A,3,2,2,0,0,doi:10.4236/ajac.2018.98030; doi:10.4236/pp.2019.103012,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_zingiber_cassumunar,Zingiber cassumunar,A,2,2,2,0,0,doi:10.31584/jhsmr.2023995; doi:10.3390/molecules26082377,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_zingiber_montanum,Zingiber montanum,D,1,1,1,0,0,doi:10.15835/nbha52213633,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_zingiber_officinale,Zingiber officinale,A,6,3,3,0,0,doi:10.1016/j.fitote.2010.09.004; doi:10.3389/fphar.2022.902551; doi:10.3390/ijms18010168,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.
+sp_zingiber_zerumbet,Zingiber zerumbet,D,1,0,0,0,0,,Bibliographic provenance only; study design and claim support not assessed. Species grade requires two distinct DOI sources of the same type; D includes insufficient verification.

@@ -12,7 +12,7 @@ The atlas covers Cambodia, China (Yunnan and Guangxi), Laos, Myanmar, Thailand a
 - **Ethnobotany** — recorded medicinal uses, with the ailment category, the part used and the source.
 - **Pharmacology** — extract assays and isolated compounds, with the reported activity, assay, potency and source.
 - **Conservation** — IUCN category (with its basis), CITES appendix and trade notes.
-- **Evidence grade** — an A–D grade on every record saying how the claim is supported.
+- **Evidence grade** — provisional A–D source-provenance categories, separate from study design and claim support.
 
 ## What is on the site
 

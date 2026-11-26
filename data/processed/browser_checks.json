@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-25T18:30:12.002Z",
+  "generatedAt": "2026-11-26T10:17:16.918Z",
   "url": "http://127.0.0.1:8123/explore.html",
-  "domContentLoadedMs": 158,
-  "interactiveMs": 566,
+  "domContentLoadedMs": 229,
+  "interactiveMs": 2169,
   "gate3": {
     "passed": true,
     "evidence": "5 clusters tested at zooms 4, 5, 6, 7, 8; in each, the species list and record counts a popup shows match an independent tally of the underlying records"
@@ -17,6 +17,6 @@
   },
   "gate6": {
     "passed": true,
-    "evidence": "explore page interactive 566 ms after navigation (budget 5000 ms) with 16,143 in-basin points loaded"
+    "evidence": "explore page interactive 2169 ms after navigation (budget 5000 ms) with 16,143 in-basin points loaded"
   }
 }

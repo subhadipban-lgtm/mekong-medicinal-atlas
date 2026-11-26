@@ -1,496 +1,496 @@
-species_id,accepted_name,scenario,climatically_suitable_area_current_km2,projected_range_change_pct,climate_vulnerability_tier
-sp_acanthus_ilicifolius,Acanthus ilicifolius,current,,,not assessed
-sp_achyranthes_aspera,Achyranthes aspera,ssp245,182750.0,-8.54,stable
-sp_achyranthes_aspera,Achyranthes aspera,ssp585,182750.0,-12.9,stable
-sp_acmella_oleracea,Acmella oleracea,current,,,not assessed
-sp_acorus_calamus,Acorus calamus,ssp245,113525.0,-12.07,stable
-sp_acorus_calamus,Acorus calamus,ssp585,113525.0,-13.9,stable
-sp_acorus_gramineus,Acorus gramineus,ssp245,156900.0,-12.33,stable
-sp_acorus_gramineus,Acorus gramineus,ssp585,156900.0,-14.79,stable
-sp_acrostichum_aureum,Acrostichum aureum,ssp245,674050.0,0.57,stable
-sp_acrostichum_aureum,Acrostichum aureum,ssp585,674050.0,0.67,stable
-sp_adenanthera_pavonina,Adenanthera pavonina,ssp245,283375.0,10.41,stable
-sp_adenanthera_pavonina,Adenanthera pavonina,ssp585,283375.0,13.95,stable
-sp_aegiceras_corniculatum,Aegiceras corniculatum,current,,,not assessed
-sp_aegle_marmelos,Aegle marmelos,ssp245,22075.0,173.5,gain
-sp_aegle_marmelos,Aegle marmelos,ssp585,22075.0,260.02,gain
-sp_aerva_lanata,Aerva lanata,current,,,not assessed
-sp_aglaia,Aglaia,current,,,not assessed
-sp_aglaia_elliptica,Aglaia elliptica,current,,,not assessed
-sp_aglaia_foveolata,Aglaia foveolata,current,,,not assessed
-sp_aglaia_odorata,Aglaia odorata,ssp245,376425.0,14.43,stable
-sp_aglaia_odorata,Aglaia odorata,ssp585,376425.0,15.93,stable
-sp_aglaia_roxburghiana,Aglaia roxburghiana,current,,,not assessed
-sp_ailanthus_altissima,Ailanthus altissima,current,,,not assessed
-sp_albizia_lebbeck,Albizia lebbeck,ssp245,132600.0,-1.23,stable
-sp_albizia_lebbeck,Albizia lebbeck,ssp585,132600.0,-4.62,stable
-sp_allamanda_cathartica,Allamanda cathartica,ssp245,517075.0,12.09,stable
-sp_allamanda_cathartica,Allamanda cathartica,ssp585,517075.0,15.63,stable
-sp_alpinia_galanga,Alpinia galanga,ssp245,302900.0,0.31,stable
-sp_alpinia_galanga,Alpinia galanga,ssp585,302900.0,-0.02,stable
-sp_alpinia_officinarum,Alpinia officinarum,current,,,not assessed
-sp_alpinia_zerumbet,Alpinia zerumbet,current,,,not assessed
-sp_alstonia_macrophylla,Alstonia macrophylla,current,,,not assessed
-sp_alstonia_scholaris,Alstonia scholaris,ssp245,339975.0,2.67,stable
-sp_alstonia_scholaris,Alstonia scholaris,ssp585,339975.0,0.29,stable
-sp_alternanthera_sessilis,Alternanthera sessilis,ssp245,390050.0,0.11,stable
-sp_alternanthera_sessilis,Alternanthera sessilis,ssp585,390050.0,-4.54,stable
-sp_alyxia_reinwardtii,Alyxia reinwardtii,current,,,not assessed
-sp_amomum_villosum,Amomum villosum,current,,,not assessed
-sp_andrographis_paniculata,Andrographis paniculata,ssp245,222050.0,32.94,gain
-sp_andrographis_paniculata,Andrographis paniculata,ssp585,222050.0,40.73,gain
-sp_anodendron_affine,Anodendron affine,current,,,not assessed
-sp_aphanamixis_polystachya,Aphanamixis polystachya,ssp245,170250.0,-47.3,moderate loss
-sp_aphanamixis_polystachya,Aphanamixis polystachya,ssp585,170250.0,-58.53,high loss
-sp_aquilaria_crassna,Aquilaria crassna,current,,,not assessed
-sp_aquilaria_malaccensis,Aquilaria malaccensis,current,,,not assessed
-sp_aquilaria_sinensis,Aquilaria sinensis,current,,,not assessed
-sp_arcangelisia_flava,Arcangelisia flava,current,,,not assessed
-sp_areca_catechu,Areca catechu,ssp245,564475.0,10.76,stable
-sp_areca_catechu,Areca catechu,ssp585,564475.0,12.56,stable
-sp_argemone_mexicana,Argemone mexicana,current,,,not assessed
-sp_argyreia_nervosa,Argyreia nervosa,current,,,not assessed
-sp_argyreia_osyrensis,Argyreia osyrensis,ssp245,78725.0,-40.49,moderate loss
-sp_argyreia_osyrensis,Argyreia osyrensis,ssp585,78725.0,-53.48,high loss
-sp_aristolochia_indica,Aristolochia indica,current,,,not assessed
-sp_aristolochia_tagala,Aristolochia tagala,current,,,not assessed
-sp_artemisia_annua,Artemisia annua,current,,,not assessed
-sp_artocarpus_heterophyllus,Artocarpus heterophyllus,ssp245,642400.0,-4.77,stable
-sp_artocarpus_heterophyllus,Artocarpus heterophyllus,ssp585,642400.0,-2.65,stable
-sp_artocarpus_lakoocha,Artocarpus lakoocha,current,,,not assessed
-sp_asparagus_cochinchinensis,Asparagus cochinchinensis,current,,,not assessed
-sp_avicennia_marina,Avicennia marina,current,,,not assessed
-sp_azadirachta_indica,Azadirachta indica,ssp245,149300.0,38.8,gain
-sp_azadirachta_indica,Azadirachta indica,ssp585,149300.0,47.29,gain
-sp_bacopa_monnieri,Bacopa monnieri,current,,,not assessed
-sp_barleria_prionitis,Barleria prionitis,current,,,not assessed
-sp_bauhinia_purpurea,Bauhinia purpurea,ssp245,549425.0,2.16,stable
-sp_bauhinia_purpurea,Bauhinia purpurea,ssp585,549425.0,-0.92,stable
-sp_biancaea_sappan,Biancaea sappan,ssp245,176250.0,10.71,stable
-sp_biancaea_sappan,Biancaea sappan,ssp585,176250.0,13.13,stable
-sp_blumea_balsamifera,Blumea balsamifera,ssp245,243675.0,-8.37,stable
-sp_blumea_balsamifera,Blumea balsamifera,ssp585,243675.0,-12.31,stable
-sp_boesenbergia_rotunda,Boesenbergia rotunda,ssp245,384500.0,-12.26,stable
-sp_boesenbergia_rotunda,Boesenbergia rotunda,ssp585,384500.0,-14.4,stable
-sp_bombax_ceiba,Bombax ceiba,ssp245,247950.0,-0.9,stable
-sp_bombax_ceiba,Bombax ceiba,ssp585,247950.0,-5.03,stable
-sp_brownlowia_tersa,Brownlowia tersa,current,,,not assessed
-sp_brucea_javanica,Brucea javanica,ssp245,74675.0,38.57,gain
-sp_brucea_javanica,Brucea javanica,ssp585,74675.0,49.18,gain
-sp_bruguiera_gymnorrhiza,Bruguiera gymnorhiza,current,,,not assessed
-sp_buddleja_asiatica,Buddleja asiatica,ssp245,110775.0,-20.27,moderate loss
-sp_buddleja_asiatica,Buddleja asiatica,ssp585,110775.0,-24.92,moderate loss
-sp_buddleja_officinalis,Buddleja officinalis,ssp245,115450.0,-11.22,stable
-sp_buddleja_officinalis,Buddleja officinalis,ssp585,115450.0,-13.77,stable
-sp_butea_monosperma,Butea monosperma,ssp245,230800.0,49.29,gain
-sp_butea_monosperma,Butea monosperma,ssp585,230800.0,56.75,gain
-sp_butea_superba,Butea superba,current,,,not assessed
-sp_caesalpinia_sappan,Caesalpinia sappan,current,,,not assessed
-sp_callicarpa_macrophylla,Callicarpa macrophylla,current,,,not assessed
-sp_calophyllum_inophyllum,Calophyllum inophyllum,current,,,not assessed
-sp_calotropis_gigantea,Calotropis gigantea,ssp245,232925.0,65.29,gain
-sp_calotropis_gigantea,Calotropis gigantea,ssp585,232925.0,80.23,gain
-sp_camellia_sinensis,Camellia sinensis,ssp245,146000.0,-29.98,moderate loss
-sp_camellia_sinensis,Camellia sinensis,ssp585,146000.0,-36.71,moderate loss
-sp_cananga_odorata,Cananga odorata,ssp245,341175.0,-4.48,stable
-sp_cananga_odorata,Cananga odorata,ssp585,341175.0,-0.8,stable
-sp_cannabis_sativa,Cannabis sativa,ssp245,389675.0,-20.16,moderate loss
-sp_cannabis_sativa,Cannabis sativa,ssp585,389675.0,-24.55,moderate loss
-sp_capsicum_annuum,Capsicum annuum,ssp245,417450.0,-2.32,stable
-sp_capsicum_annuum,Capsicum annuum,ssp585,417450.0,-3.54,stable
-sp_cardiospermum_halicacabum,Cardiospermum halicacabum,ssp245,428525.0,10.22,stable
-sp_cardiospermum_halicacabum,Cardiospermum halicacabum,ssp585,428525.0,14.12,stable
-sp_cassia_alata,Cassia alata,current,,,not assessed
-sp_cassia_angustifolia,Cassia angustifolia,current,,,not assessed
-sp_cassia_fistula,Cassia fistula,ssp245,256700.0,43.84,gain
-sp_cassia_fistula,Cassia fistula,ssp585,256700.0,54.81,gain
-sp_catharanthus_roseus,Catharanthus roseus,ssp245,408700.0,3.31,stable
-sp_catharanthus_roseus,Catharanthus roseus,ssp585,408700.0,7.95,stable
-sp_celosia_cristata,Celosia cristata,current,,,not assessed
-sp_centella_asiatica,Centella asiatica,ssp245,250800.0,-1.53,stable
-sp_centella_asiatica,Centella asiatica,ssp585,250800.0,-7.11,stable
-sp_ceriops_tagal,Ceriops tagal,current,,,not assessed
-sp_chloranthus_spicatus,Chloranthus spicatus,current,,,not assessed
-sp_chonemorpha_fragrans,Chonemorpha fragrans,ssp245,329200.0,3.38,stable
-sp_chonemorpha_fragrans,Chonemorpha fragrans,ssp585,329200.0,0.61,stable
-sp_chromolaena_odorata,Chromolaena odorata,ssp245,207600.0,53.41,gain
-sp_chromolaena_odorata,Chromolaena odorata,ssp585,207600.0,62.09,gain
-sp_chrysanthemum_cinerariifolium,Chrysanthemum cinerariifolium,current,,,not assessed
-sp_chukrasia_tabularis,Chukrasia tabularis,ssp245,233600.0,14.69,stable
-sp_chukrasia_tabularis,Chukrasia tabularis,ssp585,233600.0,19.21,stable
-sp_cinnamomum_camphora,Cinnamomum camphora,current,,,not assessed
-sp_cinnamomum_tamala,Cinnamomum tamala,current,,,not assessed
-sp_cissampelos_pareira,Cissampelos pareira,ssp245,126300.0,2.97,stable
-sp_cissampelos_pareira,Cissampelos pareira,ssp585,126300.0,-1.25,stable
-sp_cissus_quadrangularis,Cissus quadrangularis,current,,,not assessed
-sp_citrus_hystrix,Citrus hystrix,ssp245,191525.0,30.7,gain
-sp_citrus_hystrix,Citrus hystrix,ssp585,191525.0,39.46,gain
-sp_clausena,Clausena,current,,,not assessed
-sp_clausena_harmandiana,Clausena harmandiana,current,,,not assessed
-sp_clerodendrum_indicum,Clerodendrum indicum,ssp245,367250.0,-6.95,stable
-sp_clerodendrum_indicum,Clerodendrum indicum,ssp585,367250.0,-2.39,stable
-sp_clerodendrum_viscosum,Clerodendrum viscosum,current,,,not assessed
-sp_clinacanthus_nutans,Clinacanthus nutans,ssp245,271450.0,19.62,stable
-sp_clinacanthus_nutans,Clinacanthus nutans,ssp585,271450.0,23.03,gain
-sp_clitoria_ternatea,Clitoria ternatea,ssp245,411625.0,21.1,gain
-sp_clitoria_ternatea,Clitoria ternatea,ssp585,411625.0,27.01,gain
-sp_cocos_nucifera,Cocos nucifera,ssp245,356925.0,-6.4,stable
-sp_cocos_nucifera,Cocos nucifera,ssp585,356925.0,-4.0,stable
-sp_coix_lacryma,Coix lacryma,current,,,not assessed
-sp_combretum_quadrangulare,Combretum quadrangulare,ssp245,121800.0,23.62,gain
-sp_combretum_quadrangulare,Combretum quadrangulare,ssp585,121800.0,28.94,gain
-sp_coscinium_fenestratum,Coscinium fenestratum,current,,,not assessed
-sp_costus_speciosus,Costus speciosus,ssp245,92775.0,22.45,gain
-sp_costus_speciosus,Costus speciosus,ssp585,92775.0,31.77,gain
-sp_crateva_religiosa,Crateva religiosa,current,,,not assessed
-sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,ssp245,311575.0,1.53,stable
-sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,ssp585,311575.0,-4.59,stable
-sp_crinum_asiaticum,Crinum asiaticum,ssp245,424400.0,2.07,stable
-sp_crinum_asiaticum,Crinum asiaticum,ssp585,424400.0,6.82,stable
-sp_cryptolepis_dubia,Cryptolepis dubia,current,,,not assessed
-sp_curculigo_orchioides,Curculigo orchioides,ssp245,195025.0,-10.56,stable
-sp_curculigo_orchioides,Curculigo orchioides,ssp585,195025.0,-15.31,stable
-sp_curcuma_caesia,Curcuma caesia,current,,,not assessed
-sp_curcuma_comosa,Curcuma comosa,current,,,not assessed
-sp_curcuma_longa,Curcuma longa,ssp245,281050.0,3.48,stable
-sp_curcuma_longa,Curcuma longa,ssp585,281050.0,7.48,stable
-sp_curcuma_phaeocaulis,Curcuma phaeocaulis,current,,,not assessed
-sp_curcuma_xanthorrhiza,Curcuma xanthorrhiza,current,,,not assessed
-sp_curcuma_zedoaria,Curcuma zedoaria,current,,,not assessed
-sp_cuscuta_reflexa,Cuscuta reflexa,current,,,not assessed
-sp_cyclea_barbata,Cyclea barbata,current,,,not assessed
-sp_cynometra_ramiflora,Cynometra ramiflora,current,,,not assessed
-sp_cyperus_rotundus,Cyperus rotundus,ssp245,263425.0,-10.49,stable
-sp_cyperus_rotundus,Cyperus rotundus,ssp585,263425.0,-16.2,stable
-sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,ssp245,117800.0,41.79,gain
-sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,ssp585,117800.0,46.03,gain
-sp_dalbergia_oliveri,Dalbergia oliveri,ssp245,314075.0,-15.2,stable
-sp_dalbergia_oliveri,Dalbergia oliveri,ssp585,314075.0,-21.99,moderate loss
-sp_datura_metel,Datura metel,ssp245,100250.0,-8.5,stable
-sp_datura_metel,Datura metel,ssp585,100250.0,-11.45,stable
-sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,ssp245,214850.0,-13.97,stable
-sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,ssp585,214850.0,-23.14,moderate loss
-sp_dendrobium_devonianum,Dendrobium devonianum,ssp245,117050.0,-25.05,moderate loss
-sp_dendrobium_devonianum,Dendrobium devonianum,ssp585,117050.0,-29.77,moderate loss
-sp_dendrobium_nobile,Dendrobium nobile,current,,,not assessed
-sp_derris_elliptica,Derris elliptica,current,,,not assessed
-sp_desmodium_triquetrum,Desmodium triquetrum,current,,,not assessed
-sp_dioscorea_bulbifera,Dioscorea bulbifera,ssp245,170875.0,-39.21,moderate loss
-sp_dioscorea_bulbifera,Dioscorea bulbifera,ssp585,170875.0,-48.44,moderate loss
-sp_dioscorea_pentaphylla,Dioscorea pentaphylla,ssp245,148100.0,0.86,stable
-sp_dioscorea_pentaphylla,Dioscorea pentaphylla,ssp585,148100.0,-1.45,stable
-sp_diospyros_mollis,Diospyros mollis,ssp245,237950.0,13.87,stable
-sp_diospyros_mollis,Diospyros mollis,ssp585,237950.0,19.14,stable
-sp_dolichandrone_spathacea,Dolichandrone spathacea,current,,,not assessed
-sp_dracaena_angustifolia,Dracaena angustifolia,ssp245,238700.0,-20.06,moderate loss
-sp_dracaena_angustifolia,Dracaena angustifolia,ssp585,238700.0,-26.09,moderate loss
-sp_duhaldea_cappa,Duhaldea cappa,ssp245,95050.0,-31.48,moderate loss
-sp_duhaldea_cappa,Duhaldea cappa,ssp585,95050.0,-36.85,moderate loss
-sp_dysoxylum_binectariferum,Dysoxylum binectariferum,current,,,not assessed
-sp_ecdysanthera_rosea,Ecdysanthera rosea,current,,,not assessed
-sp_eclipta_prostrata,Eclipta prostrata,ssp245,302550.0,8.58,stable
-sp_eclipta_prostrata,Eclipta prostrata,ssp585,302550.0,9.73,stable
-sp_elephantopus_scaber,Elephantopus scaber,ssp245,334625.0,-8.52,stable
-sp_elephantopus_scaber,Elephantopus scaber,ssp585,334625.0,-12.8,stable
-sp_embelia_ribes,Embelia ribes,ssp245,275175.0,-19.1,stable
-sp_embelia_ribes,Embelia ribes,ssp585,275175.0,-26.16,moderate loss
-sp_entada_phaseoloides,Entada phaseoloides,current,,,not assessed
-sp_ephedra_gerardiana,Ephedra gerardiana,current,,,not assessed
-sp_erythrina,Erythrina,current,,,not assessed
-sp_erythrina_suberosa,Erythrina suberosa,current,,,not assessed
-sp_erythrina_variegata,Erythrina variegata,current,,,not assessed
-sp_euphoria_longana,Dimocarpus longan,ssp245,434050.0,21.13,gain
-sp_euphoria_longana,Dimocarpus longan,ssp585,434050.0,25.49,gain
-sp_eurycoma_longifolia,Eurycoma longifolia,ssp245,221500.0,-12.17,stable
-sp_eurycoma_longifolia,Eurycoma longifolia,ssp585,221500.0,-8.69,stable
-sp_excoecaria_agallocha,Excoecaria agallocha,current,,,not assessed
-sp_ficus_hispida,Ficus hispida,ssp245,123450.0,17.03,stable
-sp_ficus_hispida,Ficus hispida,ssp585,123450.0,25.07,gain
-sp_ficus_racemosa,Ficus racemosa,ssp245,157175.0,20.2,gain
-sp_ficus_racemosa,Ficus racemosa,ssp585,157175.0,21.52,gain
-sp_ficus_religiosa,Ficus religiosa,ssp245,272550.0,17.78,stable
-sp_ficus_religiosa,Ficus religiosa,ssp585,272550.0,21.89,gain
-sp_flacourtia_jangomas,Flacourtia jangomas,current,,,not assessed
-sp_garcinia_atroviridis,Garcinia atroviridis,current,,,not assessed
-sp_garcinia_cowa,Garcinia cowa,ssp245,164300.0,4.37,stable
-sp_garcinia_cowa,Garcinia cowa,ssp585,164300.0,-1.14,stable
-sp_garcinia_hanburyi,Garcinia hanburyi,current,,,not assessed
-sp_garcinia_mangostana,Garcinia mangostana,ssp245,417725.0,-5.0,stable
-sp_garcinia_mangostana,Garcinia mangostana,ssp585,417725.0,-5.39,stable
-sp_garcinia_pedunculata,Garcinia pedunculata,current,,,not assessed
-sp_garcinia_schomburgkiana,Garcinia schomburgkiana,current,,,not assessed
-sp_gardenia_jasminoides,Gardenia jasminoides,ssp245,292675.0,-7.66,stable
-sp_gardenia_jasminoides,Gardenia jasminoides,ssp585,292675.0,-12.95,stable
-sp_gelsemium_elegans,Gelsemium elegans,ssp245,64175.0,-14.57,stable
-sp_gelsemium_elegans,Gelsemium elegans,ssp585,64175.0,-19.59,stable
-sp_glycosmis_pentaphylla,Glycosmis pentaphylla,ssp245,389600.0,-12.35,stable
-sp_glycosmis_pentaphylla,Glycosmis pentaphylla,ssp585,389600.0,-19.22,stable
-sp_glycyrrhiza_glabra,Glycyrrhiza glabra,current,,,not assessed
-sp_gmelina_arborea,Gmelina arborea,ssp245,142825.0,-31.37,moderate loss
-sp_gmelina_arborea,Gmelina arborea,ssp585,142825.0,-39.19,moderate loss
-sp_gymnema_sylvestre,Gymnema sylvestre,current,,,not assessed
-sp_gynura_procumbens,Gynura procumbens,current,,,not assessed
-sp_gynura_pseudochina,Gynura pseudochina,ssp245,213000.0,-16.33,stable
-sp_gynura_pseudochina,Gynura pseudochina,ssp585,213000.0,-23.12,moderate loss
-sp_gyrinops_salicifolia,Gyrinops salicifolia,current,,,not assessed
-sp_hedyotis_diffusa,Scleromitrion diffusum,current,,,not assessed
-sp_helicteres_isora,Helicteres isora,ssp245,174225.0,42.79,gain
-sp_helicteres_isora,Helicteres isora,ssp585,174225.0,53.69,gain
-sp_heritiera_littoralis,Heritiera littoralis,current,,,not assessed
-sp_hibiscus_tiliaceus,Hibiscus tiliaceus,ssp245,348900.0,-11.66,stable
-sp_hibiscus_tiliaceus,Hibiscus tiliaceus,ssp585,348900.0,-11.18,stable
-sp_hiptage_benghalensis,Hiptage benghalensis,ssp245,282225.0,-18.14,stable
-sp_hiptage_benghalensis,Hiptage benghalensis,ssp585,282225.0,-22.15,moderate loss
-sp_holarrhena_antidysenterica,Holarrhena pubescens,current,,,not assessed
-sp_holarrhena_pubescens,Holarrhena pubescens,ssp245,410475.0,15.2,stable
-sp_holarrhena_pubescens,Holarrhena pubescens,ssp585,410475.0,20.77,gain
-sp_homalomena_pendula,Homalomena pendula,current,,,not assessed
-sp_houttuynia_cordata,Houttuynia cordata,ssp245,191850.0,2.49,stable
-sp_houttuynia_cordata,Houttuynia cordata,ssp585,191850.0,0.78,stable
-sp_hydnocarpus_kurzii,Hydnocarpus kurzii,current,,,not assessed
-sp_hygrophila_auriculata,Hygrophila auriculata,current,,,not assessed
-sp_hygrophila_spinosa,Hygrophila spinosa,current,,,not assessed
-sp_hymenocallis_littoralis,Hymenocallis littoralis,current,,,not assessed
-sp_hypericum_japonicum,Hypericum japonicum,ssp245,211675.0,-18.89,stable
-sp_hypericum_japonicum,Hypericum japonicum,ssp585,211675.0,-25.19,moderate loss
-sp_hypericum_perforatum,Hypericum perforatum,current,,,not assessed
-sp_ichnocarpus_frutescens,Ichnocarpus frutescens,ssp245,68600.0,54.37,gain
-sp_ichnocarpus_frutescens,Ichnocarpus frutescens,ssp585,68600.0,76.06,gain
-sp_illicium_verum,Illicium verum,current,,,not assessed
-sp_intsia_bijuga,Intsia bijuga,current,,,not assessed
-sp_ipomoea_aquatica,Ipomoea aquatica,ssp245,270700.0,49.47,gain
-sp_ipomoea_aquatica,Ipomoea aquatica,ssp585,270700.0,59.54,gain
-sp_ixora_chinensis,Ixora chinensis,ssp245,321225.0,0.68,stable
-sp_ixora_chinensis,Ixora chinensis,ssp585,321225.0,4.97,stable
-sp_jatropha_curcas,Jatropha curcas,ssp245,233350.0,25.99,gain
-sp_jatropha_curcas,Jatropha curcas,ssp585,233350.0,28.76,gain
-sp_justicia_adhatoda,Justicia adhatoda,ssp245,99100.0,8.32,stable
-sp_justicia_adhatoda,Justicia adhatoda,ssp585,99100.0,16.07,stable
-sp_justicia_gendarussa,Justicia gendarussa,ssp245,260025.0,-13.95,stable
-sp_justicia_gendarussa,Justicia gendarussa,ssp585,260025.0,-17.66,stable
-sp_kaempferia_galanga,Kaempferia galanga,ssp245,315775.0,16.55,stable
-sp_kaempferia_galanga,Kaempferia galanga,ssp585,315775.0,22.58,gain
-sp_kaempferia_parviflora,Kaempferia parviflora,current,,,not assessed
-sp_kopsia_fruticosa,Kopsia fruticosa,current,,,not assessed
-sp_lannea_grandis,Lannea grandis,current,,,not assessed
-sp_lansium_domesticum,Lansium domesticum,current,,,not assessed
-sp_leonurus_japonicus,Leonurus japonicus,ssp245,79200.0,-27.78,moderate loss
-sp_leonurus_japonicus,Leonurus japonicus,ssp585,79200.0,-31.88,moderate loss
-sp_leucaena_leucocephala,Leucaena leucocephala,ssp245,367450.0,8.44,stable
-sp_leucaena_leucocephala,Leucaena leucocephala,ssp585,367450.0,12.21,stable
-sp_limonia_acidissima,Limonia acidissima,current,,,not assessed
-sp_litsea_cubeba,Litsea cubeba,ssp245,211950.0,-19.33,stable
-sp_litsea_cubeba,Litsea cubeba,ssp585,211950.0,-28.03,moderate loss
-sp_lumnitzera_racemosa,Lumnitzera racemosa,current,,,not assessed
-sp_madhuca_longifolia,Madhuca longifolia,current,,,not assessed
-sp_mahonia_bealei,Mahonia bealei,current,,,not assessed
-sp_mallotus_philippensis,Mallotus philippensis,ssp245,240150.0,-11.34,stable
-sp_mallotus_philippensis,Mallotus philippensis,ssp585,240150.0,-16.95,stable
-sp_mangifera_indica,Mangifera indica,ssp245,416275.0,17.98,stable
-sp_mangifera_indica,Mangifera indica,ssp585,416275.0,22.02,gain
-sp_markhamia_stipulata,Markhamia stipulata,ssp245,300250.0,2.98,stable
-sp_markhamia_stipulata,Markhamia stipulata,ssp585,300250.0,0.82,stable
-sp_marsdenia_tenacissima,Marsdenia tenacissima,current,,,not assessed
-sp_melastoma_malabathricum,Melastoma malabathricum,ssp245,228900.0,-12.59,stable
-sp_melastoma_malabathricum,Melastoma malabathricum,ssp585,228900.0,-18.96,stable
-sp_melia_azedarach,Melia azedarach,ssp245,145125.0,-25.44,moderate loss
-sp_melia_azedarach,Melia azedarach,ssp585,145125.0,-30.54,moderate loss
-sp_mesua_ferrea,Mesua ferrea,current,,,not assessed
-sp_millettia_pachycarpa,Millettia pachycarpa,ssp245,93875.0,-6.28,stable
-sp_millettia_pachycarpa,Millettia pachycarpa,ssp585,93875.0,-6.71,stable
-sp_mimosa_pudica,Mimosa pudica,ssp245,447925.0,9.18,stable
-sp_mimosa_pudica,Mimosa pudica,ssp585,447925.0,9.56,stable
-sp_mitragyna_rotundifolia,Mitragyna rotundifolia,ssp245,127300.0,5.85,stable
-sp_mitragyna_rotundifolia,Mitragyna rotundifolia,ssp585,127300.0,3.55,stable
-sp_mitragyna_speciosa,Mitragyna speciosa,current,,,not assessed
-sp_momordica_charantia,Momordica charantia,ssp245,177750.0,81.25,gain
-sp_momordica_charantia,Momordica charantia,ssp585,177750.0,96.08,gain
-sp_momordica_cochinchinensis,Momordica cochinchinensis,ssp245,539275.0,4.71,stable
-sp_momordica_cochinchinensis,Momordica cochinchinensis,ssp585,539275.0,6.38,stable
-sp_morinda_citrifolia,Morinda citrifolia,ssp245,356400.0,32.04,gain
-sp_morinda_citrifolia,Morinda citrifolia,ssp585,356400.0,38.71,gain
-sp_moringa_oleifera,Moringa oleifera,ssp245,268175.0,26.8,gain
-sp_moringa_oleifera,Moringa oleifera,ssp585,268175.0,35.62,gain
-sp_morus_alba,Morus alba,ssp245,145200.0,-1.84,stable
-sp_morus_alba,Morus alba,ssp585,145200.0,-3.37,stable
-sp_mucuna_pruriens,Mucuna pruriens,ssp245,399500.0,-22.1,moderate loss
-sp_mucuna_pruriens,Mucuna pruriens,ssp585,399500.0,-26.38,moderate loss
-sp_murraya_koenigii,Murraya koenigii,ssp245,93950.0,6.68,stable
-sp_murraya_koenigii,Murraya koenigii,ssp585,93950.0,14.26,stable
-sp_nauclea_officinalis,Nauclea officinalis,current,,,not assessed
-sp_nerium_oleander,Nerium oleander,ssp245,277575.0,20.35,gain
-sp_nerium_oleander,Nerium oleander,ssp585,277575.0,29.98,gain
-sp_nigella_sativa,Nigella sativa,current,,,not assessed
-sp_nypa_fruticans,Nypa fruticans,ssp245,11600.0,-2.37,stable
-sp_nypa_fruticans,Nypa fruticans,ssp585,11600.0,-12.5,stable
-sp_ocimum_tenuiflorum,Ocimum tenuiflorum,ssp245,144625.0,37.77,gain
-sp_ocimum_tenuiflorum,Ocimum tenuiflorum,ssp585,144625.0,46.97,gain
-sp_ophiorrhiza_pumila,Ophiorrhiza pumila,current,,,not assessed
-sp_oroxylum_indicum,Oroxylum indicum,ssp245,138825.0,27.39,gain
-sp_oroxylum_indicum,Oroxylum indicum,ssp585,138825.0,29.64,gain
-sp_paederia_foetida,Paederia foetida,ssp245,187950.0,-9.24,stable
-sp_paederia_foetida,Paederia foetida,ssp585,187950.0,-11.97,stable
-sp_panax_vietnamensis,Panax vietnamensis,current,,,not assessed
-sp_pandanus_amaryllifolius,Pandanus amaryllifolius,current,,,not assessed
-sp_paramignya_trimera,Paramignya trimera,current,,,not assessed
-sp_parsonsia_alboflavescens,Parsonsia alboflavescens,current,,,not assessed
-sp_passiflora_foetida,Passiflora foetida,ssp245,386650.0,28.02,gain
-sp_passiflora_foetida,Passiflora foetida,ssp585,386650.0,35.5,gain
-sp_peperomia_pellucida,Peperomia pellucida,ssp245,351600.0,9.71,stable
-sp_peperomia_pellucida,Peperomia pellucida,ssp585,351600.0,14.83,stable
-sp_phoenix_paludosa,Phoenix paludosa,current,,,not assessed
-sp_phyllanthus_amarus,Phyllanthus amarus,ssp245,207825.0,29.09,gain
-sp_phyllanthus_amarus,Phyllanthus amarus,ssp585,207825.0,37.54,gain
-sp_phyllanthus_emblica,Phyllanthus emblica,ssp245,256100.0,2.41,stable
-sp_phyllanthus_emblica,Phyllanthus emblica,ssp585,256100.0,-4.07,stable
-sp_phyllanthus_niruri,Phyllanthus niruri,current,,,not assessed
-sp_phyllanthus_reticulatus,Phyllanthus reticulatus,ssp245,122850.0,35.39,gain
-sp_phyllanthus_reticulatus,Phyllanthus reticulatus,ssp585,122850.0,41.66,gain
-sp_picrasma_quassioides,Picrasma quassioides,ssp245,35550.0,-1.2,stable
-sp_picrasma_quassioides,Picrasma quassioides,ssp585,35550.0,-0.07,stable
-sp_piper_betle,Piper betle,current,,,not assessed
-sp_piper_longum,Piper longum,current,,,not assessed
-sp_piper_nigrum,Piper nigrum,ssp245,287625.0,-25.72,moderate loss
-sp_piper_nigrum,Piper nigrum,ssp585,287625.0,-24.63,moderate loss
-sp_plantago_asiatica,Plantago asiatica,ssp245,68975.0,-18.88,stable
-sp_plantago_asiatica,Plantago asiatica,ssp585,68975.0,-21.06,moderate loss
-sp_pluchea_indica,Pluchea indica,current,,,not assessed
-sp_plumbago_indica,Plumbago indica,ssp245,372825.0,3.54,stable
-sp_plumbago_indica,Plumbago indica,ssp585,372825.0,8.85,stable
-sp_plumbago_zeylanica,Plumbago zeylanica,ssp245,115100.0,10.32,stable
-sp_plumbago_zeylanica,Plumbago zeylanica,ssp585,115100.0,11.79,stable
-sp_plumeria_rubra,Plumeria rubra,ssp245,168875.0,4.1,stable
-sp_plumeria_rubra,Plumeria rubra,ssp585,168875.0,1.98,stable
-sp_pogostemon_cablin,Pogostemon cablin,current,,,not assessed
-sp_polygonum_chinense,Persicaria chinensis,ssp245,145075.0,-26.76,moderate loss
-sp_polygonum_chinense,Persicaria chinensis,ssp585,145075.0,-34.76,moderate loss
-sp_premna_serratifolia,Premna serratifolia,current,,,not assessed
-sp_psidium_guajava,Psidium guajava,ssp245,169200.0,27.97,gain
-sp_psidium_guajava,Psidium guajava,ssp585,169200.0,28.03,gain
-sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,ssp245,183325.0,-21.97,moderate loss
-sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,ssp585,183325.0,-44.36,moderate loss
-sp_punica_granatum,Punica granatum,ssp245,176600.0,-2.12,stable
-sp_punica_granatum,Punica granatum,ssp585,176600.0,-8.28,stable
-sp_quassia_amara,Quassia amara,current,,,not assessed
-sp_randia_spinosa,Randia spinosa,current,,,not assessed
-sp_rauvolfia_cambodiana,Rauvolfia cambodiana,current,,,not assessed
-sp_rauvolfia_serpentina,Rauvolfia serpentina,current,,,not assessed
-sp_rhinacanthus_nasutus,Rhinacanthus nasutus,current,,,not assessed
-sp_rhizophora_apiculata,Rhizophora apiculata,current,,,not assessed
-sp_rhizophora_mucronata,Rhizophora mucronata,current,,,not assessed
-sp_rhododendron_moulmainense,Rhododendron moulmainense,ssp245,95050.0,-10.39,stable
-sp_rhododendron_moulmainense,Rhododendron moulmainense,ssp585,95050.0,-12.44,stable
-sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,ssp245,244375.0,-35.66,moderate loss
-sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,ssp585,244375.0,-44.48,moderate loss
-sp_ricinus_communis,Ricinus communis,ssp245,312025.0,28.83,gain
-sp_ricinus_communis,Ricinus communis,ssp585,312025.0,35.57,gain
-sp_rubia_cordifolia,Rubia cordifolia,ssp245,63000.0,20.67,gain
-sp_rubia_cordifolia,Rubia cordifolia,ssp585,63000.0,23.69,gain
-sp_salacia_chinensis,Salacia chinensis,ssp245,287300.0,-1.18,stable
-sp_salacia_chinensis,Salacia chinensis,ssp585,287300.0,-1.6,stable
-sp_sambucus_javanica,Sambucus javanica,ssp245,320925.0,-11.07,stable
-sp_sambucus_javanica,Sambucus javanica,ssp585,320925.0,-14.22,stable
-sp_santalum_album,Santalum album,current,,,not assessed
-sp_sapindus_saponaria,Sapindus saponaria,current,,,not assessed
-sp_sargassum,Sargassum,current,,,not assessed
-sp_saurauia_napaulensis,Saurauia napaulensis,ssp245,106900.0,-16.07,stable
-sp_saurauia_napaulensis,Saurauia napaulensis,ssp585,106900.0,-20.0,stable
-sp_scoparia_dulcis,Scoparia dulcis,current,,,not assessed
-sp_selaginella_pulvinata,Selaginella pulvinata,ssp245,275.0,1045.45,gain
-sp_selaginella_pulvinata,Selaginella pulvinata,ssp585,275.0,1227.27,gain
-sp_senegalia_catechu,Senegalia catechu,current,,,not assessed
-sp_senna_alata,Senna alata,current,,,not assessed
-sp_senna_alexandrina,Senna alexandrina,current,,,not assessed
-sp_senna_occidentalis,Senna occidentalis,ssp245,237925.0,29.29,gain
-sp_senna_occidentalis,Senna occidentalis,ssp585,237925.0,36.65,gain
-sp_senna_tora,Senna tora,ssp245,111150.0,24.97,gain
-sp_senna_tora,Senna tora,ssp585,111150.0,33.18,gain
-sp_sida_acuta,Sida acuta,ssp245,243050.0,0.8,stable
-sp_sida_acuta,Sida acuta,ssp585,243050.0,4.25,stable
-sp_smilax_glabra,Smilax glabra,ssp245,136675.0,-18.47,stable
-sp_smilax_glabra,Smilax glabra,ssp585,136675.0,-20.25,moderate loss
-sp_solanum_indicum,Solanum indicum,current,,,not assessed
-sp_solanum_trilobatum,Solanum trilobatum,ssp245,141450.0,7.74,stable
-sp_solanum_trilobatum,Solanum trilobatum,ssp585,141450.0,5.5,stable
-sp_solanum_violaceum,Solanum violaceum,ssp245,207350.0,14.82,stable
-sp_solanum_violaceum,Solanum violaceum,ssp585,207350.0,13.19,stable
-sp_sonneratia_caseolaris,Sonneratia caseolaris,ssp245,458750.0,-0.34,stable
-sp_sonneratia_caseolaris,Sonneratia caseolaris,ssp585,458750.0,0.47,stable
-sp_sophora_flavescens,Sophora flavescens,current,,,not assessed
-sp_spondias_pinnata,Spondias pinnata,ssp245,217050.0,-0.52,stable
-sp_spondias_pinnata,Spondias pinnata,ssp585,217050.0,-6.3,stable
-sp_stephania_epigaea,Stephania epigaea,current,,,not assessed
-sp_stephania_erecta,Stephania erecta,current,,,not assessed
-sp_stephania_pierrei,Stephania pierrei,current,,,not assessed
-sp_stephania_rotunda,Stephania rotunda,current,,,not assessed
-sp_stephania_tetrandra,Stephania tetrandra,current,,,not assessed
-sp_stereospermum_tetragonum,Stereospermum tetragonum,current,,,not assessed
-sp_streblus_asper,Streblus asper,ssp245,205325.0,70.49,gain
-sp_streblus_asper,Streblus asper,ssp585,205325.0,87.57,gain
-sp_strophanthus_gratus,Strophanthus gratus,current,,,not assessed
-sp_strychnos_axillaris,Strychnos axillaris,current,,,not assessed
-sp_strychnos_nux,Strychnos nux-vomica,ssp245,691525.0,-0.12,stable
-sp_strychnos_nux,Strychnos nux-vomica,ssp585,691525.0,-0.1,stable
-sp_strychnos_potatorum,Strychnos potatorum,current,,,not assessed
-sp_styphnolobium_japonicum,Styphnolobium japonicum,current,,,not assessed
-sp_swertia_angustifolia,Swertia angustifolia,ssp245,125250.0,-16.53,stable
-sp_swertia_angustifolia,Swertia angustifolia,ssp585,125250.0,-20.64,moderate loss
-sp_syzygium_aromaticum,Syzygium aromaticum,current,,,not assessed
-sp_syzygium_cumini,Syzygium cumini,ssp245,265950.0,-15.45,stable
-sp_syzygium_cumini,Syzygium cumini,ssp585,265950.0,-21.5,moderate loss
-sp_syzygium_globiflorum,Syzygium globiflorum,current,,,not assessed
-sp_tabernaemontana_divaricata,Tabernaemontana divaricata,ssp245,348725.0,20.57,gain
-sp_tabernaemontana_divaricata,Tabernaemontana divaricata,ssp585,348725.0,24.05,gain
-sp_tabernanthe_iboga,Tabernanthe iboga,current,,,not assessed
-sp_tadehagi_triquetrum,Tadehagi triquetrum,current,,,not assessed
-sp_tamarindus_indica,Tamarindus indica,ssp245,316850.0,22.43,gain
-sp_tamarindus_indica,Tamarindus indica,ssp585,316850.0,30.54,gain
-sp_tectona_grandis,Tectona grandis,ssp245,260950.0,28.02,gain
-sp_tectona_grandis,Tectona grandis,ssp585,260950.0,32.81,gain
-sp_terminalia_bellirica,Terminalia bellirica,current,,,not assessed
-sp_terminalia_chebula,Terminalia chebula,ssp245,434975.0,-13.48,stable
-sp_terminalia_chebula,Terminalia chebula,ssp585,434975.0,-17.01,stable
-sp_terminalia_citrina,Terminalia citrina,current,,,not assessed
-sp_tetrastigma_hemsleyanum,Tetrastigma hemsleyanum,current,,,not assessed
-sp_thespesia_populnea,Thespesia populnea,current,,,not assessed
-sp_thevetia_peruviana,Thevetia peruviana,current,,,not assessed
-sp_thunbergia_laurifolia,Thunbergia laurifolia,ssp245,2300.0,-100.0,high loss
-sp_thunbergia_laurifolia,Thunbergia laurifolia,ssp585,2300.0,-100.0,high loss
-sp_tinospora_crispa,Tinospora crispa,ssp245,375250.0,-4.72,stable
-sp_tinospora_crispa,Tinospora crispa,ssp585,375250.0,-10.08,stable
-sp_tithonia_diversifolia,Tithonia diversifolia,ssp245,130200.0,-13.33,stable
-sp_tithonia_diversifolia,Tithonia diversifolia,ssp585,130200.0,-18.59,stable
-sp_toona_ciliata,Toona ciliata,ssp245,167000.0,-24.28,moderate loss
-sp_toona_ciliata,Toona ciliata,ssp585,167000.0,-28.22,moderate loss
-sp_toona_sinensis,Toona sinensis,current,,,not assessed
-sp_trachelospermum_asiaticum,Trachelospermum asiaticum,current,,,not assessed
-sp_trachelospermum_jasminoides,Trachelospermum jasminoides,current,,,not assessed
-sp_trachyspermum_roxburghianum,Trachyspermum roxburghianum,current,,,not assessed
-sp_trichosanthes_cucumerina,Trichosanthes cucumerina,current,,,not assessed
-sp_triumfetta_rhomboidea,Triumfetta rhomboidea,ssp245,187150.0,-0.84,stable
-sp_triumfetta_rhomboidea,Triumfetta rhomboidea,ssp585,187150.0,-7.04,stable
-sp_tylophora_indica,Tylophora indica,current,,,not assessed
-sp_urceola_rosea,Urceola rosea,current,,,not assessed
-sp_urena_lobata,Urena lobata,ssp245,173975.0,-17.37,stable
-sp_urena_lobata,Urena lobata,ssp585,173975.0,-24.79,moderate loss
-sp_verbena_officinalis,Verbena officinalis,ssp245,28900.0,-2.34,stable
-sp_verbena_officinalis,Verbena officinalis,ssp585,28900.0,-3.29,stable
-sp_vernonia_amygdalina,Vernonia amygdalina,current,,,not assessed
-sp_vetiveria_zizanioides,Vetiveria zizanioides,current,,,not assessed
-sp_vitex_negundo,Vitex negundo,current,,,not assessed
-sp_wedelia_chinensis,Wedelia chinensis,current,,,not assessed
-sp_wrightia_hanleyi,Wrightia hanleyi,current,,,not assessed
-sp_wrightia_tinctoria,Wrightia tinctoria,current,,,not assessed
-sp_wrightia_tomentosa,Wrightia tomentosa,current,,,not assessed
-sp_xylocarpus_granatum,Xylocarpus granatum,current,,,not assessed
-sp_xylocarpus_moluccensis,Xylocarpus moluccensis,current,,,not assessed
-sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,ssp245,83425.0,-37.94,moderate loss
-sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,ssp585,83425.0,-45.43,moderate loss
-sp_zanthoxylum_armatum,Zanthoxylum armatum,ssp245,109900.0,-9.01,stable
-sp_zanthoxylum_armatum,Zanthoxylum armatum,ssp585,109900.0,-10.87,stable
-sp_zanthoxylum_rhetsa,Zanthoxylum rhetsa,current,,,not assessed
-sp_zingiber_cassumunar,Zingiber cassumunar,current,,,not assessed
-sp_zingiber_montanum,Zingiber montanum,current,,,not assessed
-sp_zingiber_officinale,Zingiber officinale,current,,,not assessed
-sp_zingiber_zerumbet,Zingiber zerumbet,ssp245,356225.0,-7.59,stable
-sp_zingiber_zerumbet,Zingiber zerumbet,ssp585,356225.0,-7.94,stable
+species_id,accepted_name,scenario,climatically_suitable_area_current_km2,projected_range_change_pct,climate_vulnerability_tier,auc,tss,confidence_flag
+sp_acanthus_ilicifolius,Acanthus ilicifolius,current,,,not assessed,,,not assessed
+sp_achyranthes_aspera,Achyranthes aspera,ssp245,182750.0,-8.54,stable,0.4608,0.2152,low-confidence (auc<0.7 or tss<0.4)
+sp_achyranthes_aspera,Achyranthes aspera,ssp585,182750.0,-12.9,stable,0.4608,0.2152,low-confidence (auc<0.7 or tss<0.4)
+sp_acmella_oleracea,Acmella oleracea,current,,,not assessed,,,not assessed
+sp_acorus_calamus,Acorus calamus,ssp245,113525.0,-12.07,stable,0.7208,0.5911,ok
+sp_acorus_calamus,Acorus calamus,ssp585,113525.0,-13.9,stable,0.7208,0.5911,ok
+sp_acorus_gramineus,Acorus gramineus,ssp245,156900.0,-12.33,stable,0.6303,0.5021,low-confidence (auc<0.7 or tss<0.4)
+sp_acorus_gramineus,Acorus gramineus,ssp585,156900.0,-14.79,stable,0.6303,0.5021,low-confidence (auc<0.7 or tss<0.4)
+sp_acrostichum_aureum,Acrostichum aureum,ssp245,674050.0,0.57,stable,0.0856,0.0622,low-confidence (auc<0.7 or tss<0.4)
+sp_acrostichum_aureum,Acrostichum aureum,ssp585,674050.0,0.67,stable,0.0856,0.0622,low-confidence (auc<0.7 or tss<0.4)
+sp_adenanthera_pavonina,Adenanthera pavonina,ssp245,283375.0,10.41,stable,0.4645,0.3709,low-confidence (auc<0.7 or tss<0.4)
+sp_adenanthera_pavonina,Adenanthera pavonina,ssp585,283375.0,13.95,stable,0.4645,0.3709,low-confidence (auc<0.7 or tss<0.4)
+sp_aegiceras_corniculatum,Aegiceras corniculatum,current,,,not assessed,,,not assessed
+sp_aegle_marmelos,Aegle marmelos,ssp245,22075.0,173.5,gain,0.7604,0.7129,ok
+sp_aegle_marmelos,Aegle marmelos,ssp585,22075.0,260.02,gain,0.7604,0.7129,ok
+sp_aerva_lanata,Aerva lanata,current,,,not assessed,,,not assessed
+sp_aglaia,Aglaia,current,,,not assessed,,,not assessed
+sp_aglaia_elliptica,Aglaia elliptica,current,,,not assessed,,,not assessed
+sp_aglaia_foveolata,Aglaia foveolata,current,,,not assessed,,,not assessed
+sp_aglaia_odorata,Aglaia odorata,ssp245,376425.0,14.43,stable,0.4365,0.3338,low-confidence (auc<0.7 or tss<0.4)
+sp_aglaia_odorata,Aglaia odorata,ssp585,376425.0,15.93,stable,0.4365,0.3338,low-confidence (auc<0.7 or tss<0.4)
+sp_aglaia_roxburghiana,Aglaia roxburghiana,current,,,not assessed,,,not assessed
+sp_ailanthus_altissima,Ailanthus altissima,current,,,not assessed,,,not assessed
+sp_albizia_lebbeck,Albizia lebbeck,ssp245,132600.0,-1.23,stable,0.7956,0.7628,ok
+sp_albizia_lebbeck,Albizia lebbeck,ssp585,132600.0,-4.62,stable,0.7956,0.7628,ok
+sp_allamanda_cathartica,Allamanda cathartica,ssp245,517075.0,12.09,stable,0.5128,0.2881,low-confidence (auc<0.7 or tss<0.4)
+sp_allamanda_cathartica,Allamanda cathartica,ssp585,517075.0,15.63,stable,0.5128,0.2881,low-confidence (auc<0.7 or tss<0.4)
+sp_alpinia_galanga,Alpinia galanga,ssp245,302900.0,0.31,stable,0.5098,0.3601,low-confidence (auc<0.7 or tss<0.4)
+sp_alpinia_galanga,Alpinia galanga,ssp585,302900.0,-0.02,stable,0.5098,0.3601,low-confidence (auc<0.7 or tss<0.4)
+sp_alpinia_officinarum,Alpinia officinarum,current,,,not assessed,,,not assessed
+sp_alpinia_zerumbet,Alpinia zerumbet,current,,,not assessed,,,not assessed
+sp_alstonia_macrophylla,Alstonia macrophylla,current,,,not assessed,,,not assessed
+sp_alstonia_scholaris,Alstonia scholaris,ssp245,339975.0,2.67,stable,0.6348,0.4099,low-confidence (auc<0.7 or tss<0.4)
+sp_alstonia_scholaris,Alstonia scholaris,ssp585,339975.0,0.29,stable,0.6348,0.4099,low-confidence (auc<0.7 or tss<0.4)
+sp_alternanthera_sessilis,Alternanthera sessilis,ssp245,390050.0,0.11,stable,0.606,0.3164,low-confidence (auc<0.7 or tss<0.4)
+sp_alternanthera_sessilis,Alternanthera sessilis,ssp585,390050.0,-4.54,stable,0.606,0.3164,low-confidence (auc<0.7 or tss<0.4)
+sp_alyxia_reinwardtii,Alyxia reinwardtii,current,,,not assessed,,,not assessed
+sp_amomum_villosum,Amomum villosum,current,,,not assessed,,,not assessed
+sp_andrographis_paniculata,Andrographis paniculata,ssp245,222050.0,32.94,gain,0.7147,0.5194,ok
+sp_andrographis_paniculata,Andrographis paniculata,ssp585,222050.0,40.73,gain,0.7147,0.5194,ok
+sp_anodendron_affine,Anodendron affine,current,,,not assessed,,,not assessed
+sp_aphanamixis_polystachya,Aphanamixis polystachya,ssp245,170250.0,-47.3,moderate loss,0.5048,0.2903,low-confidence (auc<0.7 or tss<0.4)
+sp_aphanamixis_polystachya,Aphanamixis polystachya,ssp585,170250.0,-58.53,high loss,0.5048,0.2903,low-confidence (auc<0.7 or tss<0.4)
+sp_aquilaria_crassna,Aquilaria crassna,current,,,not assessed,,,not assessed
+sp_aquilaria_malaccensis,Aquilaria malaccensis,current,,,not assessed,,,not assessed
+sp_aquilaria_sinensis,Aquilaria sinensis,current,,,not assessed,,,not assessed
+sp_arcangelisia_flava,Arcangelisia flava,current,,,not assessed,,,not assessed
+sp_areca_catechu,Areca catechu,ssp245,564475.0,10.76,stable,0.5403,0.2741,low-confidence (auc<0.7 or tss<0.4)
+sp_areca_catechu,Areca catechu,ssp585,564475.0,12.56,stable,0.5403,0.2741,low-confidence (auc<0.7 or tss<0.4)
+sp_argemone_mexicana,Argemone mexicana,current,,,not assessed,,,not assessed
+sp_argyreia_nervosa,Argyreia nervosa,current,,,not assessed,,,not assessed
+sp_argyreia_osyrensis,Argyreia osyrensis,ssp245,78725.0,-40.49,moderate loss,0.6177,0.3235,low-confidence (auc<0.7 or tss<0.4)
+sp_argyreia_osyrensis,Argyreia osyrensis,ssp585,78725.0,-53.48,high loss,0.6177,0.3235,low-confidence (auc<0.7 or tss<0.4)
+sp_aristolochia_indica,Aristolochia indica,current,,,not assessed,,,not assessed
+sp_aristolochia_tagala,Aristolochia tagala,current,,,not assessed,,,not assessed
+sp_artemisia_annua,Artemisia annua,current,,,not assessed,,,not assessed
+sp_artocarpus_heterophyllus,Artocarpus heterophyllus,ssp245,642400.0,-4.77,stable,0.4531,0.1607,low-confidence (auc<0.7 or tss<0.4)
+sp_artocarpus_heterophyllus,Artocarpus heterophyllus,ssp585,642400.0,-2.65,stable,0.4531,0.1607,low-confidence (auc<0.7 or tss<0.4)
+sp_artocarpus_lakoocha,Artocarpus lakoocha,current,,,not assessed,,,not assessed
+sp_asparagus_cochinchinensis,Asparagus cochinchinensis,current,,,not assessed,,,not assessed
+sp_avicennia_marina,Avicennia marina,current,,,not assessed,,,not assessed
+sp_azadirachta_indica,Azadirachta indica,ssp245,149300.0,38.8,gain,0.7789,0.5798,ok
+sp_azadirachta_indica,Azadirachta indica,ssp585,149300.0,47.29,gain,0.7789,0.5798,ok
+sp_bacopa_monnieri,Bacopa monnieri,current,,,not assessed,,,not assessed
+sp_barleria_prionitis,Barleria prionitis,current,,,not assessed,,,not assessed
+sp_bauhinia_purpurea,Bauhinia purpurea,ssp245,549425.0,2.16,stable,0.3226,0.1211,low-confidence (auc<0.7 or tss<0.4)
+sp_bauhinia_purpurea,Bauhinia purpurea,ssp585,549425.0,-0.92,stable,0.3226,0.1211,low-confidence (auc<0.7 or tss<0.4)
+sp_biancaea_sappan,Biancaea sappan,ssp245,176250.0,10.71,stable,0.53,0.3169,low-confidence (auc<0.7 or tss<0.4)
+sp_biancaea_sappan,Biancaea sappan,ssp585,176250.0,13.13,stable,0.53,0.3169,low-confidence (auc<0.7 or tss<0.4)
+sp_blumea_balsamifera,Blumea balsamifera,ssp245,243675.0,-8.37,stable,0.6378,0.406,low-confidence (auc<0.7 or tss<0.4)
+sp_blumea_balsamifera,Blumea balsamifera,ssp585,243675.0,-12.31,stable,0.6378,0.406,low-confidence (auc<0.7 or tss<0.4)
+sp_boesenbergia_rotunda,Boesenbergia rotunda,ssp245,384500.0,-12.26,stable,0.4525,0.2262,low-confidence (auc<0.7 or tss<0.4)
+sp_boesenbergia_rotunda,Boesenbergia rotunda,ssp585,384500.0,-14.4,stable,0.4525,0.2262,low-confidence (auc<0.7 or tss<0.4)
+sp_bombax_ceiba,Bombax ceiba,ssp245,247950.0,-0.9,stable,0.5566,0.2565,low-confidence (auc<0.7 or tss<0.4)
+sp_bombax_ceiba,Bombax ceiba,ssp585,247950.0,-5.03,stable,0.5566,0.2565,low-confidence (auc<0.7 or tss<0.4)
+sp_brownlowia_tersa,Brownlowia tersa,current,,,not assessed,,,not assessed
+sp_brucea_javanica,Brucea javanica,ssp245,74675.0,38.57,gain,0.4993,0.2524,low-confidence (auc<0.7 or tss<0.4)
+sp_brucea_javanica,Brucea javanica,ssp585,74675.0,49.18,gain,0.4993,0.2524,low-confidence (auc<0.7 or tss<0.4)
+sp_bruguiera_gymnorrhiza,Bruguiera gymnorhiza,current,,,not assessed,,,not assessed
+sp_buddleja_asiatica,Buddleja asiatica,ssp245,110775.0,-20.27,moderate loss,0.6161,0.3436,low-confidence (auc<0.7 or tss<0.4)
+sp_buddleja_asiatica,Buddleja asiatica,ssp585,110775.0,-24.92,moderate loss,0.6161,0.3436,low-confidence (auc<0.7 or tss<0.4)
+sp_buddleja_officinalis,Buddleja officinalis,ssp245,115450.0,-11.22,stable,0.7798,0.695,ok
+sp_buddleja_officinalis,Buddleja officinalis,ssp585,115450.0,-13.77,stable,0.7798,0.695,ok
+sp_butea_monosperma,Butea monosperma,ssp245,230800.0,49.29,gain,0.7152,0.4892,ok
+sp_butea_monosperma,Butea monosperma,ssp585,230800.0,56.75,gain,0.7152,0.4892,ok
+sp_butea_superba,Butea superba,current,,,not assessed,,,not assessed
+sp_caesalpinia_sappan,Caesalpinia sappan,current,,,not assessed,,,not assessed
+sp_callicarpa_macrophylla,Callicarpa macrophylla,current,,,not assessed,,,not assessed
+sp_calophyllum_inophyllum,Calophyllum inophyllum,current,,,not assessed,,,not assessed
+sp_calotropis_gigantea,Calotropis gigantea,ssp245,232925.0,65.29,gain,0.5971,0.3124,low-confidence (auc<0.7 or tss<0.4)
+sp_calotropis_gigantea,Calotropis gigantea,ssp585,232925.0,80.23,gain,0.5971,0.3124,low-confidence (auc<0.7 or tss<0.4)
+sp_camellia_sinensis,Camellia sinensis,ssp245,146000.0,-29.98,moderate loss,0.6581,0.4795,low-confidence (auc<0.7 or tss<0.4)
+sp_camellia_sinensis,Camellia sinensis,ssp585,146000.0,-36.71,moderate loss,0.6581,0.4795,low-confidence (auc<0.7 or tss<0.4)
+sp_cananga_odorata,Cananga odorata,ssp245,341175.0,-4.48,stable,0.4654,0.3445,low-confidence (auc<0.7 or tss<0.4)
+sp_cananga_odorata,Cananga odorata,ssp585,341175.0,-0.8,stable,0.4654,0.3445,low-confidence (auc<0.7 or tss<0.4)
+sp_cannabis_sativa,Cannabis sativa,ssp245,389675.0,-20.16,moderate loss,0.3158,0.2229,low-confidence (auc<0.7 or tss<0.4)
+sp_cannabis_sativa,Cannabis sativa,ssp585,389675.0,-24.55,moderate loss,0.3158,0.2229,low-confidence (auc<0.7 or tss<0.4)
+sp_capsicum_annuum,Capsicum annuum,ssp245,417450.0,-2.32,stable,0.5342,0.2551,low-confidence (auc<0.7 or tss<0.4)
+sp_capsicum_annuum,Capsicum annuum,ssp585,417450.0,-3.54,stable,0.5342,0.2551,low-confidence (auc<0.7 or tss<0.4)
+sp_cardiospermum_halicacabum,Cardiospermum halicacabum,ssp245,428525.0,10.22,stable,0.562,0.2476,low-confidence (auc<0.7 or tss<0.4)
+sp_cardiospermum_halicacabum,Cardiospermum halicacabum,ssp585,428525.0,14.12,stable,0.562,0.2476,low-confidence (auc<0.7 or tss<0.4)
+sp_cassia_alata,Cassia alata,current,,,not assessed,,,not assessed
+sp_cassia_angustifolia,Cassia angustifolia,current,,,not assessed,,,not assessed
+sp_cassia_fistula,Cassia fistula,ssp245,256700.0,43.84,gain,0.6356,0.3384,low-confidence (auc<0.7 or tss<0.4)
+sp_cassia_fistula,Cassia fistula,ssp585,256700.0,54.81,gain,0.6356,0.3384,low-confidence (auc<0.7 or tss<0.4)
+sp_catharanthus_roseus,Catharanthus roseus,ssp245,408700.0,3.31,stable,0.5999,0.2959,low-confidence (auc<0.7 or tss<0.4)
+sp_catharanthus_roseus,Catharanthus roseus,ssp585,408700.0,7.95,stable,0.5999,0.2959,low-confidence (auc<0.7 or tss<0.4)
+sp_celosia_cristata,Celosia cristata,current,,,not assessed,,,not assessed
+sp_centella_asiatica,Centella asiatica,ssp245,250800.0,-1.53,stable,0.5438,0.2601,low-confidence (auc<0.7 or tss<0.4)
+sp_centella_asiatica,Centella asiatica,ssp585,250800.0,-7.11,stable,0.5438,0.2601,low-confidence (auc<0.7 or tss<0.4)
+sp_ceriops_tagal,Ceriops tagal,current,,,not assessed,,,not assessed
+sp_chloranthus_spicatus,Chloranthus spicatus,current,,,not assessed,,,not assessed
+sp_chonemorpha_fragrans,Chonemorpha fragrans,ssp245,329200.0,3.38,stable,0.5428,0.3744,low-confidence (auc<0.7 or tss<0.4)
+sp_chonemorpha_fragrans,Chonemorpha fragrans,ssp585,329200.0,0.61,stable,0.5428,0.3744,low-confidence (auc<0.7 or tss<0.4)
+sp_chromolaena_odorata,Chromolaena odorata,ssp245,207600.0,53.41,gain,0.5342,0.1822,low-confidence (auc<0.7 or tss<0.4)
+sp_chromolaena_odorata,Chromolaena odorata,ssp585,207600.0,62.09,gain,0.5342,0.1822,low-confidence (auc<0.7 or tss<0.4)
+sp_chrysanthemum_cinerariifolium,Chrysanthemum cinerariifolium,current,,,not assessed,,,not assessed
+sp_chukrasia_tabularis,Chukrasia tabularis,ssp245,233600.0,14.69,stable,0.7009,0.463,ok
+sp_chukrasia_tabularis,Chukrasia tabularis,ssp585,233600.0,19.21,stable,0.7009,0.463,ok
+sp_cinnamomum_camphora,Cinnamomum camphora,current,,,not assessed,,,not assessed
+sp_cinnamomum_tamala,Cinnamomum tamala,current,,,not assessed,,,not assessed
+sp_cissampelos_pareira,Cissampelos pareira,ssp245,126300.0,2.97,stable,0.6636,0.4406,low-confidence (auc<0.7 or tss<0.4)
+sp_cissampelos_pareira,Cissampelos pareira,ssp585,126300.0,-1.25,stable,0.6636,0.4406,low-confidence (auc<0.7 or tss<0.4)
+sp_cissus_quadrangularis,Cissus quadrangularis,current,,,not assessed,,,not assessed
+sp_citrus_hystrix,Citrus hystrix,ssp245,191525.0,30.7,gain,0.5652,0.397,low-confidence (auc<0.7 or tss<0.4)
+sp_citrus_hystrix,Citrus hystrix,ssp585,191525.0,39.46,gain,0.5652,0.397,low-confidence (auc<0.7 or tss<0.4)
+sp_clausena,Clausena,current,,,not assessed,,,not assessed
+sp_clausena_harmandiana,Clausena harmandiana,current,,,not assessed,,,not assessed
+sp_clerodendrum_indicum,Clerodendrum indicum,ssp245,367250.0,-6.95,stable,0.4971,0.4032,low-confidence (auc<0.7 or tss<0.4)
+sp_clerodendrum_indicum,Clerodendrum indicum,ssp585,367250.0,-2.39,stable,0.4971,0.4032,low-confidence (auc<0.7 or tss<0.4)
+sp_clerodendrum_viscosum,Clerodendrum viscosum,current,,,not assessed,,,not assessed
+sp_clinacanthus_nutans,Clinacanthus nutans,ssp245,271450.0,19.62,stable,0.3134,0.1028,low-confidence (auc<0.7 or tss<0.4)
+sp_clinacanthus_nutans,Clinacanthus nutans,ssp585,271450.0,23.03,gain,0.3134,0.1028,low-confidence (auc<0.7 or tss<0.4)
+sp_clitoria_ternatea,Clitoria ternatea,ssp245,411625.0,21.1,gain,0.5537,0.2111,low-confidence (auc<0.7 or tss<0.4)
+sp_clitoria_ternatea,Clitoria ternatea,ssp585,411625.0,27.01,gain,0.5537,0.2111,low-confidence (auc<0.7 or tss<0.4)
+sp_cocos_nucifera,Cocos nucifera,ssp245,356925.0,-6.4,stable,0.5143,0.2041,low-confidence (auc<0.7 or tss<0.4)
+sp_cocos_nucifera,Cocos nucifera,ssp585,356925.0,-4.0,stable,0.5143,0.2041,low-confidence (auc<0.7 or tss<0.4)
+sp_coix_lacryma,Coix lacryma,current,,,not assessed,,,not assessed
+sp_combretum_quadrangulare,Combretum quadrangulare,ssp245,121800.0,23.62,gain,0.6449,0.4493,low-confidence (auc<0.7 or tss<0.4)
+sp_combretum_quadrangulare,Combretum quadrangulare,ssp585,121800.0,28.94,gain,0.6449,0.4493,low-confidence (auc<0.7 or tss<0.4)
+sp_coscinium_fenestratum,Coscinium fenestratum,current,,,not assessed,,,not assessed
+sp_costus_speciosus,Costus speciosus,ssp245,92775.0,22.45,gain,0.62,0.4943,low-confidence (auc<0.7 or tss<0.4)
+sp_costus_speciosus,Costus speciosus,ssp585,92775.0,31.77,gain,0.62,0.4943,low-confidence (auc<0.7 or tss<0.4)
+sp_crateva_religiosa,Crateva religiosa,current,,,not assessed,,,not assessed
+sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,ssp245,311575.0,1.53,stable,0.4667,0.1799,low-confidence (auc<0.7 or tss<0.4)
+sp_cratoxylum_cochinchinense,Cratoxylum cochinchinense,ssp585,311575.0,-4.59,stable,0.4667,0.1799,low-confidence (auc<0.7 or tss<0.4)
+sp_crinum_asiaticum,Crinum asiaticum,ssp245,424400.0,2.07,stable,0.6353,0.4557,low-confidence (auc<0.7 or tss<0.4)
+sp_crinum_asiaticum,Crinum asiaticum,ssp585,424400.0,6.82,stable,0.6353,0.4557,low-confidence (auc<0.7 or tss<0.4)
+sp_cryptolepis_dubia,Cryptolepis dubia,current,,,not assessed,,,not assessed
+sp_curculigo_orchioides,Curculigo orchioides,ssp245,195025.0,-10.56,stable,0.4369,0.213,low-confidence (auc<0.7 or tss<0.4)
+sp_curculigo_orchioides,Curculigo orchioides,ssp585,195025.0,-15.31,stable,0.4369,0.213,low-confidence (auc<0.7 or tss<0.4)
+sp_curcuma_caesia,Curcuma caesia,current,,,not assessed,,,not assessed
+sp_curcuma_comosa,Curcuma comosa,current,,,not assessed,,,not assessed
+sp_curcuma_longa,Curcuma longa,ssp245,281050.0,3.48,stable,0.3918,0.2115,low-confidence (auc<0.7 or tss<0.4)
+sp_curcuma_longa,Curcuma longa,ssp585,281050.0,7.48,stable,0.3918,0.2115,low-confidence (auc<0.7 or tss<0.4)
+sp_curcuma_phaeocaulis,Curcuma phaeocaulis,current,,,not assessed,,,not assessed
+sp_curcuma_xanthorrhiza,Curcuma xanthorrhiza,current,,,not assessed,,,not assessed
+sp_curcuma_zedoaria,Curcuma zedoaria,current,,,not assessed,,,not assessed
+sp_cuscuta_reflexa,Cuscuta reflexa,current,,,not assessed,,,not assessed
+sp_cyclea_barbata,Cyclea barbata,current,,,not assessed,,,not assessed
+sp_cynometra_ramiflora,Cynometra ramiflora,current,,,not assessed,,,not assessed
+sp_cyperus_rotundus,Cyperus rotundus,ssp245,263425.0,-10.49,stable,0.5539,0.3491,low-confidence (auc<0.7 or tss<0.4)
+sp_cyperus_rotundus,Cyperus rotundus,ssp585,263425.0,-16.2,stable,0.5539,0.3491,low-confidence (auc<0.7 or tss<0.4)
+sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,ssp245,117800.0,41.79,gain,0.6,0.4132,low-confidence (auc<0.7 or tss<0.4)
+sp_dalbergia_cochinchinensis,Dalbergia cochinchinensis,ssp585,117800.0,46.03,gain,0.6,0.4132,low-confidence (auc<0.7 or tss<0.4)
+sp_dalbergia_oliveri,Dalbergia oliveri,ssp245,314075.0,-15.2,stable,0.5142,0.3593,low-confidence (auc<0.7 or tss<0.4)
+sp_dalbergia_oliveri,Dalbergia oliveri,ssp585,314075.0,-21.99,moderate loss,0.5142,0.3593,low-confidence (auc<0.7 or tss<0.4)
+sp_datura_metel,Datura metel,ssp245,100250.0,-8.5,stable,0.551,0.3544,low-confidence (auc<0.7 or tss<0.4)
+sp_datura_metel,Datura metel,ssp585,100250.0,-11.45,stable,0.551,0.3544,low-confidence (auc<0.7 or tss<0.4)
+sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,ssp245,214850.0,-13.97,stable,0.5994,0.4289,low-confidence (auc<0.7 or tss<0.4)
+sp_dendrobium_chrysotoxum,Dendrobium chrysotoxum,ssp585,214850.0,-23.14,moderate loss,0.5994,0.4289,low-confidence (auc<0.7 or tss<0.4)
+sp_dendrobium_devonianum,Dendrobium devonianum,ssp245,117050.0,-25.05,moderate loss,0.7017,0.5441,ok
+sp_dendrobium_devonianum,Dendrobium devonianum,ssp585,117050.0,-29.77,moderate loss,0.7017,0.5441,ok
+sp_dendrobium_nobile,Dendrobium nobile,current,,,not assessed,,,not assessed
+sp_derris_elliptica,Derris elliptica,current,,,not assessed,,,not assessed
+sp_desmodium_triquetrum,Desmodium triquetrum,current,,,not assessed,,,not assessed
+sp_dioscorea_bulbifera,Dioscorea bulbifera,ssp245,170875.0,-39.21,moderate loss,0.6144,0.3433,low-confidence (auc<0.7 or tss<0.4)
+sp_dioscorea_bulbifera,Dioscorea bulbifera,ssp585,170875.0,-48.44,moderate loss,0.6144,0.3433,low-confidence (auc<0.7 or tss<0.4)
+sp_dioscorea_pentaphylla,Dioscorea pentaphylla,ssp245,148100.0,0.86,stable,0.6647,0.4463,low-confidence (auc<0.7 or tss<0.4)
+sp_dioscorea_pentaphylla,Dioscorea pentaphylla,ssp585,148100.0,-1.45,stable,0.6647,0.4463,low-confidence (auc<0.7 or tss<0.4)
+sp_diospyros_mollis,Diospyros mollis,ssp245,237950.0,13.87,stable,0.6542,0.4351,low-confidence (auc<0.7 or tss<0.4)
+sp_diospyros_mollis,Diospyros mollis,ssp585,237950.0,19.14,stable,0.6542,0.4351,low-confidence (auc<0.7 or tss<0.4)
+sp_dolichandrone_spathacea,Dolichandrone spathacea,current,,,not assessed,,,not assessed
+sp_dracaena_angustifolia,Dracaena angustifolia,ssp245,238700.0,-20.06,moderate loss,0.4192,0.1908,low-confidence (auc<0.7 or tss<0.4)
+sp_dracaena_angustifolia,Dracaena angustifolia,ssp585,238700.0,-26.09,moderate loss,0.4192,0.1908,low-confidence (auc<0.7 or tss<0.4)
+sp_duhaldea_cappa,Duhaldea cappa,ssp245,95050.0,-31.48,moderate loss,0.7441,0.5318,ok
+sp_duhaldea_cappa,Duhaldea cappa,ssp585,95050.0,-36.85,moderate loss,0.7441,0.5318,ok
+sp_dysoxylum_binectariferum,Dysoxylum binectariferum,current,,,not assessed,,,not assessed
+sp_ecdysanthera_rosea,Ecdysanthera rosea,current,,,not assessed,,,not assessed
+sp_eclipta_prostrata,Eclipta prostrata,ssp245,302550.0,8.58,stable,0.601,0.2575,low-confidence (auc<0.7 or tss<0.4)
+sp_eclipta_prostrata,Eclipta prostrata,ssp585,302550.0,9.73,stable,0.601,0.2575,low-confidence (auc<0.7 or tss<0.4)
+sp_elephantopus_scaber,Elephantopus scaber,ssp245,334625.0,-8.52,stable,0.5195,0.3273,low-confidence (auc<0.7 or tss<0.4)
+sp_elephantopus_scaber,Elephantopus scaber,ssp585,334625.0,-12.8,stable,0.5195,0.3273,low-confidence (auc<0.7 or tss<0.4)
+sp_embelia_ribes,Embelia ribes,ssp245,275175.0,-19.1,stable,0.5911,0.354,low-confidence (auc<0.7 or tss<0.4)
+sp_embelia_ribes,Embelia ribes,ssp585,275175.0,-26.16,moderate loss,0.5911,0.354,low-confidence (auc<0.7 or tss<0.4)
+sp_entada_phaseoloides,Entada phaseoloides,current,,,not assessed,,,not assessed
+sp_ephedra_gerardiana,Ephedra gerardiana,current,,,not assessed,,,not assessed
+sp_erythrina,Erythrina,current,,,not assessed,,,not assessed
+sp_erythrina_suberosa,Erythrina suberosa,current,,,not assessed,,,not assessed
+sp_erythrina_variegata,Erythrina variegata,current,,,not assessed,,,not assessed
+sp_euphoria_longana,Dimocarpus longan,ssp245,434050.0,21.13,gain,0.4709,0.2194,low-confidence (auc<0.7 or tss<0.4)
+sp_euphoria_longana,Dimocarpus longan,ssp585,434050.0,25.49,gain,0.4709,0.2194,low-confidence (auc<0.7 or tss<0.4)
+sp_eurycoma_longifolia,Eurycoma longifolia,ssp245,221500.0,-12.17,stable,0.6127,0.3602,low-confidence (auc<0.7 or tss<0.4)
+sp_eurycoma_longifolia,Eurycoma longifolia,ssp585,221500.0,-8.69,stable,0.6127,0.3602,low-confidence (auc<0.7 or tss<0.4)
+sp_excoecaria_agallocha,Excoecaria agallocha,current,,,not assessed,,,not assessed
+sp_ficus_hispida,Ficus hispida,ssp245,123450.0,17.03,stable,0.5301,0.282,low-confidence (auc<0.7 or tss<0.4)
+sp_ficus_hispida,Ficus hispida,ssp585,123450.0,25.07,gain,0.5301,0.282,low-confidence (auc<0.7 or tss<0.4)
+sp_ficus_racemosa,Ficus racemosa,ssp245,157175.0,20.2,gain,0.5348,0.3108,low-confidence (auc<0.7 or tss<0.4)
+sp_ficus_racemosa,Ficus racemosa,ssp585,157175.0,21.52,gain,0.5348,0.3108,low-confidence (auc<0.7 or tss<0.4)
+sp_ficus_religiosa,Ficus religiosa,ssp245,272550.0,17.78,stable,0.7475,0.5753,ok
+sp_ficus_religiosa,Ficus religiosa,ssp585,272550.0,21.89,gain,0.7475,0.5753,ok
+sp_flacourtia_jangomas,Flacourtia jangomas,current,,,not assessed,,,not assessed
+sp_garcinia_atroviridis,Garcinia atroviridis,current,,,not assessed,,,not assessed
+sp_garcinia_cowa,Garcinia cowa,ssp245,164300.0,4.37,stable,0.3973,0.2442,low-confidence (auc<0.7 or tss<0.4)
+sp_garcinia_cowa,Garcinia cowa,ssp585,164300.0,-1.14,stable,0.3973,0.2442,low-confidence (auc<0.7 or tss<0.4)
+sp_garcinia_hanburyi,Garcinia hanburyi,current,,,not assessed,,,not assessed
+sp_garcinia_mangostana,Garcinia mangostana,ssp245,417725.0,-5.0,stable,0.5522,0.5522,low-confidence (auc<0.7 or tss<0.4)
+sp_garcinia_mangostana,Garcinia mangostana,ssp585,417725.0,-5.39,stable,0.5522,0.5522,low-confidence (auc<0.7 or tss<0.4)
+sp_garcinia_pedunculata,Garcinia pedunculata,current,,,not assessed,,,not assessed
+sp_garcinia_schomburgkiana,Garcinia schomburgkiana,current,,,not assessed,,,not assessed
+sp_gardenia_jasminoides,Gardenia jasminoides,ssp245,292675.0,-7.66,stable,0.5919,0.3697,low-confidence (auc<0.7 or tss<0.4)
+sp_gardenia_jasminoides,Gardenia jasminoides,ssp585,292675.0,-12.95,stable,0.5919,0.3697,low-confidence (auc<0.7 or tss<0.4)
+sp_gelsemium_elegans,Gelsemium elegans,ssp245,64175.0,-14.57,stable,0.7776,0.6293,ok
+sp_gelsemium_elegans,Gelsemium elegans,ssp585,64175.0,-19.59,stable,0.7776,0.6293,ok
+sp_glycosmis_pentaphylla,Glycosmis pentaphylla,ssp245,389600.0,-12.35,stable,0.4593,0.2461,low-confidence (auc<0.7 or tss<0.4)
+sp_glycosmis_pentaphylla,Glycosmis pentaphylla,ssp585,389600.0,-19.22,stable,0.4593,0.2461,low-confidence (auc<0.7 or tss<0.4)
+sp_glycyrrhiza_glabra,Glycyrrhiza glabra,current,,,not assessed,,,not assessed
+sp_gmelina_arborea,Gmelina arborea,ssp245,142825.0,-31.37,moderate loss,0.5354,0.3701,low-confidence (auc<0.7 or tss<0.4)
+sp_gmelina_arborea,Gmelina arborea,ssp585,142825.0,-39.19,moderate loss,0.5354,0.3701,low-confidence (auc<0.7 or tss<0.4)
+sp_gymnema_sylvestre,Gymnema sylvestre,current,,,not assessed,,,not assessed
+sp_gynura_procumbens,Gynura procumbens,current,,,not assessed,,,not assessed
+sp_gynura_pseudochina,Gynura pseudochina,ssp245,213000.0,-16.33,stable,0.551,0.4154,low-confidence (auc<0.7 or tss<0.4)
+sp_gynura_pseudochina,Gynura pseudochina,ssp585,213000.0,-23.12,moderate loss,0.551,0.4154,low-confidence (auc<0.7 or tss<0.4)
+sp_gyrinops_salicifolia,Gyrinops salicifolia,current,,,not assessed,,,not assessed
+sp_hedyotis_diffusa,Scleromitrion diffusum,current,,,not assessed,,,not assessed
+sp_helicteres_isora,Helicteres isora,ssp245,174225.0,42.79,gain,0.5572,0.3309,low-confidence (auc<0.7 or tss<0.4)
+sp_helicteres_isora,Helicteres isora,ssp585,174225.0,53.69,gain,0.5572,0.3309,low-confidence (auc<0.7 or tss<0.4)
+sp_heritiera_littoralis,Heritiera littoralis,current,,,not assessed,,,not assessed
+sp_hibiscus_tiliaceus,Hibiscus tiliaceus,ssp245,348900.0,-11.66,stable,0.3626,0.2269,low-confidence (auc<0.7 or tss<0.4)
+sp_hibiscus_tiliaceus,Hibiscus tiliaceus,ssp585,348900.0,-11.18,stable,0.3626,0.2269,low-confidence (auc<0.7 or tss<0.4)
+sp_hiptage_benghalensis,Hiptage benghalensis,ssp245,282225.0,-18.14,stable,0.2792,0.1427,low-confidence (auc<0.7 or tss<0.4)
+sp_hiptage_benghalensis,Hiptage benghalensis,ssp585,282225.0,-22.15,moderate loss,0.2792,0.1427,low-confidence (auc<0.7 or tss<0.4)
+sp_holarrhena_antidysenterica,Holarrhena pubescens,current,,,not assessed,,,not assessed
+sp_holarrhena_pubescens,Holarrhena pubescens,ssp245,410475.0,15.2,stable,0.4723,0.2764,low-confidence (auc<0.7 or tss<0.4)
+sp_holarrhena_pubescens,Holarrhena pubescens,ssp585,410475.0,20.77,gain,0.4723,0.2764,low-confidence (auc<0.7 or tss<0.4)
+sp_homalomena_pendula,Homalomena pendula,current,,,not assessed,,,not assessed
+sp_houttuynia_cordata,Houttuynia cordata,ssp245,191850.0,2.49,stable,0.6309,0.3246,low-confidence (auc<0.7 or tss<0.4)
+sp_houttuynia_cordata,Houttuynia cordata,ssp585,191850.0,0.78,stable,0.6309,0.3246,low-confidence (auc<0.7 or tss<0.4)
+sp_hydnocarpus_kurzii,Hydnocarpus kurzii,current,,,not assessed,,,not assessed
+sp_hygrophila_auriculata,Hygrophila auriculata,current,,,not assessed,,,not assessed
+sp_hygrophila_spinosa,Hygrophila spinosa,current,,,not assessed,,,not assessed
+sp_hymenocallis_littoralis,Hymenocallis littoralis,current,,,not assessed,,,not assessed
+sp_hypericum_japonicum,Hypericum japonicum,ssp245,211675.0,-18.89,stable,0.6271,0.3675,low-confidence (auc<0.7 or tss<0.4)
+sp_hypericum_japonicum,Hypericum japonicum,ssp585,211675.0,-25.19,moderate loss,0.6271,0.3675,low-confidence (auc<0.7 or tss<0.4)
+sp_hypericum_perforatum,Hypericum perforatum,current,,,not assessed,,,not assessed
+sp_ichnocarpus_frutescens,Ichnocarpus frutescens,ssp245,68600.0,54.37,gain,0.5138,0.2983,low-confidence (auc<0.7 or tss<0.4)
+sp_ichnocarpus_frutescens,Ichnocarpus frutescens,ssp585,68600.0,76.06,gain,0.5138,0.2983,low-confidence (auc<0.7 or tss<0.4)
+sp_illicium_verum,Illicium verum,current,,,not assessed,,,not assessed
+sp_intsia_bijuga,Intsia bijuga,current,,,not assessed,,,not assessed
+sp_ipomoea_aquatica,Ipomoea aquatica,ssp245,270700.0,49.47,gain,0.6667,0.2792,low-confidence (auc<0.7 or tss<0.4)
+sp_ipomoea_aquatica,Ipomoea aquatica,ssp585,270700.0,59.54,gain,0.6667,0.2792,low-confidence (auc<0.7 or tss<0.4)
+sp_ixora_chinensis,Ixora chinensis,ssp245,321225.0,0.68,stable,0.5043,0.3693,low-confidence (auc<0.7 or tss<0.4)
+sp_ixora_chinensis,Ixora chinensis,ssp585,321225.0,4.97,stable,0.5043,0.3693,low-confidence (auc<0.7 or tss<0.4)
+sp_jatropha_curcas,Jatropha curcas,ssp245,233350.0,25.99,gain,0.5147,0.23,low-confidence (auc<0.7 or tss<0.4)
+sp_jatropha_curcas,Jatropha curcas,ssp585,233350.0,28.76,gain,0.5147,0.23,low-confidence (auc<0.7 or tss<0.4)
+sp_justicia_adhatoda,Justicia adhatoda,ssp245,99100.0,8.32,stable,0.4961,0.2999,low-confidence (auc<0.7 or tss<0.4)
+sp_justicia_adhatoda,Justicia adhatoda,ssp585,99100.0,16.07,stable,0.4961,0.2999,low-confidence (auc<0.7 or tss<0.4)
+sp_justicia_gendarussa,Justicia gendarussa,ssp245,260025.0,-13.95,stable,0.59,0.4006,low-confidence (auc<0.7 or tss<0.4)
+sp_justicia_gendarussa,Justicia gendarussa,ssp585,260025.0,-17.66,stable,0.59,0.4006,low-confidence (auc<0.7 or tss<0.4)
+sp_kaempferia_galanga,Kaempferia galanga,ssp245,315775.0,16.55,stable,0.6005,0.4694,low-confidence (auc<0.7 or tss<0.4)
+sp_kaempferia_galanga,Kaempferia galanga,ssp585,315775.0,22.58,gain,0.6005,0.4694,low-confidence (auc<0.7 or tss<0.4)
+sp_kaempferia_parviflora,Kaempferia parviflora,current,,,not assessed,,,not assessed
+sp_kopsia_fruticosa,Kopsia fruticosa,current,,,not assessed,,,not assessed
+sp_lannea_grandis,Lannea grandis,current,,,not assessed,,,not assessed
+sp_lansium_domesticum,Lansium domesticum,current,,,not assessed,,,not assessed
+sp_leonurus_japonicus,Leonurus japonicus,ssp245,79200.0,-27.78,moderate loss,0.4527,0.3085,low-confidence (auc<0.7 or tss<0.4)
+sp_leonurus_japonicus,Leonurus japonicus,ssp585,79200.0,-31.88,moderate loss,0.4527,0.3085,low-confidence (auc<0.7 or tss<0.4)
+sp_leucaena_leucocephala,Leucaena leucocephala,ssp245,367450.0,8.44,stable,0.531,0.1693,low-confidence (auc<0.7 or tss<0.4)
+sp_leucaena_leucocephala,Leucaena leucocephala,ssp585,367450.0,12.21,stable,0.531,0.1693,low-confidence (auc<0.7 or tss<0.4)
+sp_limonia_acidissima,Limonia acidissima,current,,,not assessed,,,not assessed
+sp_litsea_cubeba,Litsea cubeba,ssp245,211950.0,-19.33,stable,0.6291,0.3135,low-confidence (auc<0.7 or tss<0.4)
+sp_litsea_cubeba,Litsea cubeba,ssp585,211950.0,-28.03,moderate loss,0.6291,0.3135,low-confidence (auc<0.7 or tss<0.4)
+sp_lumnitzera_racemosa,Lumnitzera racemosa,current,,,not assessed,,,not assessed
+sp_madhuca_longifolia,Madhuca longifolia,current,,,not assessed,,,not assessed
+sp_mahonia_bealei,Mahonia bealei,current,,,not assessed,,,not assessed
+sp_mallotus_philippensis,Mallotus philippensis,ssp245,240150.0,-11.34,stable,0.5392,0.2234,low-confidence (auc<0.7 or tss<0.4)
+sp_mallotus_philippensis,Mallotus philippensis,ssp585,240150.0,-16.95,stable,0.5392,0.2234,low-confidence (auc<0.7 or tss<0.4)
+sp_mangifera_indica,Mangifera indica,ssp245,416275.0,17.98,stable,0.5746,0.2361,low-confidence (auc<0.7 or tss<0.4)
+sp_mangifera_indica,Mangifera indica,ssp585,416275.0,22.02,gain,0.5746,0.2361,low-confidence (auc<0.7 or tss<0.4)
+sp_markhamia_stipulata,Markhamia stipulata,ssp245,300250.0,2.98,stable,0.5157,0.2976,low-confidence (auc<0.7 or tss<0.4)
+sp_markhamia_stipulata,Markhamia stipulata,ssp585,300250.0,0.82,stable,0.5157,0.2976,low-confidence (auc<0.7 or tss<0.4)
+sp_marsdenia_tenacissima,Marsdenia tenacissima,current,,,not assessed,,,not assessed
+sp_melastoma_malabathricum,Melastoma malabathricum,ssp245,228900.0,-12.59,stable,0.4783,0.1887,low-confidence (auc<0.7 or tss<0.4)
+sp_melastoma_malabathricum,Melastoma malabathricum,ssp585,228900.0,-18.96,stable,0.4783,0.1887,low-confidence (auc<0.7 or tss<0.4)
+sp_melia_azedarach,Melia azedarach,ssp245,145125.0,-25.44,moderate loss,0.4547,0.159,low-confidence (auc<0.7 or tss<0.4)
+sp_melia_azedarach,Melia azedarach,ssp585,145125.0,-30.54,moderate loss,0.4547,0.159,low-confidence (auc<0.7 or tss<0.4)
+sp_mesua_ferrea,Mesua ferrea,current,,,not assessed,,,not assessed
+sp_millettia_pachycarpa,Millettia pachycarpa,ssp245,93875.0,-6.28,stable,0.7103,0.5267,ok
+sp_millettia_pachycarpa,Millettia pachycarpa,ssp585,93875.0,-6.71,stable,0.7103,0.5267,ok
+sp_mimosa_pudica,Mimosa pudica,ssp245,447925.0,9.18,stable,0.6517,0.3767,low-confidence (auc<0.7 or tss<0.4)
+sp_mimosa_pudica,Mimosa pudica,ssp585,447925.0,9.56,stable,0.6517,0.3767,low-confidence (auc<0.7 or tss<0.4)
+sp_mitragyna_rotundifolia,Mitragyna rotundifolia,ssp245,127300.0,5.85,stable,0.5504,0.3784,low-confidence (auc<0.7 or tss<0.4)
+sp_mitragyna_rotundifolia,Mitragyna rotundifolia,ssp585,127300.0,3.55,stable,0.5504,0.3784,low-confidence (auc<0.7 or tss<0.4)
+sp_mitragyna_speciosa,Mitragyna speciosa,current,,,not assessed,,,not assessed
+sp_momordica_charantia,Momordica charantia,ssp245,177750.0,81.25,gain,0.6931,0.4167,low-confidence (auc<0.7 or tss<0.4)
+sp_momordica_charantia,Momordica charantia,ssp585,177750.0,96.08,gain,0.6931,0.4167,low-confidence (auc<0.7 or tss<0.4)
+sp_momordica_cochinchinensis,Momordica cochinchinensis,ssp245,539275.0,4.71,stable,0.3391,0.1453,low-confidence (auc<0.7 or tss<0.4)
+sp_momordica_cochinchinensis,Momordica cochinchinensis,ssp585,539275.0,6.38,stable,0.3391,0.1453,low-confidence (auc<0.7 or tss<0.4)
+sp_morinda_citrifolia,Morinda citrifolia,ssp245,356400.0,32.04,gain,0.55,0.2238,low-confidence (auc<0.7 or tss<0.4)
+sp_morinda_citrifolia,Morinda citrifolia,ssp585,356400.0,38.71,gain,0.55,0.2238,low-confidence (auc<0.7 or tss<0.4)
+sp_moringa_oleifera,Moringa oleifera,ssp245,268175.0,26.8,gain,0.6246,0.4309,low-confidence (auc<0.7 or tss<0.4)
+sp_moringa_oleifera,Moringa oleifera,ssp585,268175.0,35.62,gain,0.6246,0.4309,low-confidence (auc<0.7 or tss<0.4)
+sp_morus_alba,Morus alba,ssp245,145200.0,-1.84,stable,0.4574,0.2788,low-confidence (auc<0.7 or tss<0.4)
+sp_morus_alba,Morus alba,ssp585,145200.0,-3.37,stable,0.4574,0.2788,low-confidence (auc<0.7 or tss<0.4)
+sp_mucuna_pruriens,Mucuna pruriens,ssp245,399500.0,-22.1,moderate loss,0.4253,0.1252,low-confidence (auc<0.7 or tss<0.4)
+sp_mucuna_pruriens,Mucuna pruriens,ssp585,399500.0,-26.38,moderate loss,0.4253,0.1252,low-confidence (auc<0.7 or tss<0.4)
+sp_murraya_koenigii,Murraya koenigii,ssp245,93950.0,6.68,stable,0.6598,0.4716,low-confidence (auc<0.7 or tss<0.4)
+sp_murraya_koenigii,Murraya koenigii,ssp585,93950.0,14.26,stable,0.6598,0.4716,low-confidence (auc<0.7 or tss<0.4)
+sp_nauclea_officinalis,Nauclea officinalis,current,,,not assessed,,,not assessed
+sp_nerium_oleander,Nerium oleander,ssp245,277575.0,20.35,gain,0.6039,0.3716,low-confidence (auc<0.7 or tss<0.4)
+sp_nerium_oleander,Nerium oleander,ssp585,277575.0,29.98,gain,0.6039,0.3716,low-confidence (auc<0.7 or tss<0.4)
+sp_nigella_sativa,Nigella sativa,current,,,not assessed,,,not assessed
+sp_nypa_fruticans,Nypa fruticans,ssp245,11600.0,-2.37,stable,,,low-confidence (auc<0.7 or tss<0.4)
+sp_nypa_fruticans,Nypa fruticans,ssp585,11600.0,-12.5,stable,,,low-confidence (auc<0.7 or tss<0.4)
+sp_ocimum_tenuiflorum,Ocimum tenuiflorum,ssp245,144625.0,37.77,gain,0.7253,0.4945,ok
+sp_ocimum_tenuiflorum,Ocimum tenuiflorum,ssp585,144625.0,46.97,gain,0.7253,0.4945,ok
+sp_ophiorrhiza_pumila,Ophiorrhiza pumila,current,,,not assessed,,,not assessed
+sp_oroxylum_indicum,Oroxylum indicum,ssp245,138825.0,27.39,gain,0.7104,0.4743,ok
+sp_oroxylum_indicum,Oroxylum indicum,ssp585,138825.0,29.64,gain,0.7104,0.4743,ok
+sp_paederia_foetida,Paederia foetida,ssp245,187950.0,-9.24,stable,0.5708,0.3135,low-confidence (auc<0.7 or tss<0.4)
+sp_paederia_foetida,Paederia foetida,ssp585,187950.0,-11.97,stable,0.5708,0.3135,low-confidence (auc<0.7 or tss<0.4)
+sp_panax_vietnamensis,Panax vietnamensis,current,,,not assessed,,,not assessed
+sp_pandanus_amaryllifolius,Pandanus amaryllifolius,current,,,not assessed,,,not assessed
+sp_paramignya_trimera,Paramignya trimera,current,,,not assessed,,,not assessed
+sp_parsonsia_alboflavescens,Parsonsia alboflavescens,current,,,not assessed,,,not assessed
+sp_passiflora_foetida,Passiflora foetida,ssp245,386650.0,28.02,gain,0.5117,0.2511,low-confidence (auc<0.7 or tss<0.4)
+sp_passiflora_foetida,Passiflora foetida,ssp585,386650.0,35.5,gain,0.5117,0.2511,low-confidence (auc<0.7 or tss<0.4)
+sp_peperomia_pellucida,Peperomia pellucida,ssp245,351600.0,9.71,stable,0.5605,0.2646,low-confidence (auc<0.7 or tss<0.4)
+sp_peperomia_pellucida,Peperomia pellucida,ssp585,351600.0,14.83,stable,0.5605,0.2646,low-confidence (auc<0.7 or tss<0.4)
+sp_phoenix_paludosa,Phoenix paludosa,current,,,not assessed,,,not assessed
+sp_phyllanthus_amarus,Phyllanthus amarus,ssp245,207825.0,29.09,gain,0.6768,0.5206,low-confidence (auc<0.7 or tss<0.4)
+sp_phyllanthus_amarus,Phyllanthus amarus,ssp585,207825.0,37.54,gain,0.6768,0.5206,low-confidence (auc<0.7 or tss<0.4)
+sp_phyllanthus_emblica,Phyllanthus emblica,ssp245,256100.0,2.41,stable,0.4864,0.1662,low-confidence (auc<0.7 or tss<0.4)
+sp_phyllanthus_emblica,Phyllanthus emblica,ssp585,256100.0,-4.07,stable,0.4864,0.1662,low-confidence (auc<0.7 or tss<0.4)
+sp_phyllanthus_niruri,Phyllanthus niruri,current,,,not assessed,,,not assessed
+sp_phyllanthus_reticulatus,Phyllanthus reticulatus,ssp245,122850.0,35.39,gain,0.4874,0.2272,low-confidence (auc<0.7 or tss<0.4)
+sp_phyllanthus_reticulatus,Phyllanthus reticulatus,ssp585,122850.0,41.66,gain,0.4874,0.2272,low-confidence (auc<0.7 or tss<0.4)
+sp_picrasma_quassioides,Picrasma quassioides,ssp245,35550.0,-1.2,stable,0.5779,0.5779,low-confidence (auc<0.7 or tss<0.4)
+sp_picrasma_quassioides,Picrasma quassioides,ssp585,35550.0,-0.07,stable,0.5779,0.5779,low-confidence (auc<0.7 or tss<0.4)
+sp_piper_betle,Piper betle,current,,,not assessed,,,not assessed
+sp_piper_longum,Piper longum,current,,,not assessed,,,not assessed
+sp_piper_nigrum,Piper nigrum,ssp245,287625.0,-25.72,moderate loss,0.444,0.3473,low-confidence (auc<0.7 or tss<0.4)
+sp_piper_nigrum,Piper nigrum,ssp585,287625.0,-24.63,moderate loss,0.444,0.3473,low-confidence (auc<0.7 or tss<0.4)
+sp_plantago_asiatica,Plantago asiatica,ssp245,68975.0,-18.88,stable,0.6049,0.3785,low-confidence (auc<0.7 or tss<0.4)
+sp_plantago_asiatica,Plantago asiatica,ssp585,68975.0,-21.06,moderate loss,0.6049,0.3785,low-confidence (auc<0.7 or tss<0.4)
+sp_pluchea_indica,Pluchea indica,current,,,not assessed,,,not assessed
+sp_plumbago_indica,Plumbago indica,ssp245,372825.0,3.54,stable,0.4051,0.2085,low-confidence (auc<0.7 or tss<0.4)
+sp_plumbago_indica,Plumbago indica,ssp585,372825.0,8.85,stable,0.4051,0.2085,low-confidence (auc<0.7 or tss<0.4)
+sp_plumbago_zeylanica,Plumbago zeylanica,ssp245,115100.0,10.32,stable,0.4969,0.2252,low-confidence (auc<0.7 or tss<0.4)
+sp_plumbago_zeylanica,Plumbago zeylanica,ssp585,115100.0,11.79,stable,0.4969,0.2252,low-confidence (auc<0.7 or tss<0.4)
+sp_plumeria_rubra,Plumeria rubra,ssp245,168875.0,4.1,stable,0.6098,0.366,low-confidence (auc<0.7 or tss<0.4)
+sp_plumeria_rubra,Plumeria rubra,ssp585,168875.0,1.98,stable,0.6098,0.366,low-confidence (auc<0.7 or tss<0.4)
+sp_pogostemon_cablin,Pogostemon cablin,current,,,not assessed,,,not assessed
+sp_polygonum_chinense,Persicaria chinensis,ssp245,145075.0,-26.76,moderate loss,0.633,0.3887,low-confidence (auc<0.7 or tss<0.4)
+sp_polygonum_chinense,Persicaria chinensis,ssp585,145075.0,-34.76,moderate loss,0.633,0.3887,low-confidence (auc<0.7 or tss<0.4)
+sp_premna_serratifolia,Premna serratifolia,current,,,not assessed,,,not assessed
+sp_psidium_guajava,Psidium guajava,ssp245,169200.0,27.97,gain,0.5504,0.2295,low-confidence (auc<0.7 or tss<0.4)
+sp_psidium_guajava,Psidium guajava,ssp585,169200.0,28.03,gain,0.5504,0.2295,low-confidence (auc<0.7 or tss<0.4)
+sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,ssp245,183325.0,-21.97,moderate loss,0.6944,0.4145,low-confidence (auc<0.7 or tss<0.4)
+sp_pterocarpus_macrocarpus,Pterocarpus macrocarpus,ssp585,183325.0,-44.36,moderate loss,0.6944,0.4145,low-confidence (auc<0.7 or tss<0.4)
+sp_punica_granatum,Punica granatum,ssp245,176600.0,-2.12,stable,0.6339,0.439,low-confidence (auc<0.7 or tss<0.4)
+sp_punica_granatum,Punica granatum,ssp585,176600.0,-8.28,stable,0.6339,0.439,low-confidence (auc<0.7 or tss<0.4)
+sp_quassia_amara,Quassia amara,current,,,not assessed,,,not assessed
+sp_randia_spinosa,Randia spinosa,current,,,not assessed,,,not assessed
+sp_rauvolfia_cambodiana,Rauvolfia cambodiana,current,,,not assessed,,,not assessed
+sp_rauvolfia_serpentina,Rauvolfia serpentina,current,,,not assessed,,,not assessed
+sp_rhinacanthus_nasutus,Rhinacanthus nasutus,current,,,not assessed,,,not assessed
+sp_rhizophora_apiculata,Rhizophora apiculata,current,,,not assessed,,,not assessed
+sp_rhizophora_mucronata,Rhizophora mucronata,current,,,not assessed,,,not assessed
+sp_rhododendron_moulmainense,Rhododendron moulmainense,ssp245,95050.0,-10.39,stable,0.8074,0.6945,ok
+sp_rhododendron_moulmainense,Rhododendron moulmainense,ssp585,95050.0,-12.44,stable,0.8074,0.6945,ok
+sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,ssp245,244375.0,-35.66,moderate loss,0.5273,0.362,low-confidence (auc<0.7 or tss<0.4)
+sp_rhodomyrtus_tomentosa,Rhodomyrtus tomentosa,ssp585,244375.0,-44.48,moderate loss,0.5273,0.362,low-confidence (auc<0.7 or tss<0.4)
+sp_ricinus_communis,Ricinus communis,ssp245,312025.0,28.83,gain,0.6042,0.2614,low-confidence (auc<0.7 or tss<0.4)
+sp_ricinus_communis,Ricinus communis,ssp585,312025.0,35.57,gain,0.6042,0.2614,low-confidence (auc<0.7 or tss<0.4)
+sp_rubia_cordifolia,Rubia cordifolia,ssp245,63000.0,20.67,gain,0.7367,0.5458,ok
+sp_rubia_cordifolia,Rubia cordifolia,ssp585,63000.0,23.69,gain,0.7367,0.5458,ok
+sp_salacia_chinensis,Salacia chinensis,ssp245,287300.0,-1.18,stable,0.4339,0.354,low-confidence (auc<0.7 or tss<0.4)
+sp_salacia_chinensis,Salacia chinensis,ssp585,287300.0,-1.6,stable,0.4339,0.354,low-confidence (auc<0.7 or tss<0.4)
+sp_sambucus_javanica,Sambucus javanica,ssp245,320925.0,-11.07,stable,0.5125,0.2209,low-confidence (auc<0.7 or tss<0.4)
+sp_sambucus_javanica,Sambucus javanica,ssp585,320925.0,-14.22,stable,0.5125,0.2209,low-confidence (auc<0.7 or tss<0.4)
+sp_santalum_album,Santalum album,current,,,not assessed,,,not assessed
+sp_sapindus_saponaria,Sapindus saponaria,current,,,not assessed,,,not assessed
+sp_sargassum,Sargassum,current,,,not assessed,,,not assessed
+sp_saurauia_napaulensis,Saurauia napaulensis,ssp245,106900.0,-16.07,stable,0.6901,0.4547,low-confidence (auc<0.7 or tss<0.4)
+sp_saurauia_napaulensis,Saurauia napaulensis,ssp585,106900.0,-20.0,stable,0.6901,0.4547,low-confidence (auc<0.7 or tss<0.4)
+sp_scoparia_dulcis,Scoparia dulcis,current,,,not assessed,,,not assessed
+sp_selaginella_pulvinata,Selaginella pulvinata,ssp245,275.0,1045.45,gain,0.6418,0.3352,low-confidence (auc<0.7 or tss<0.4)
+sp_selaginella_pulvinata,Selaginella pulvinata,ssp585,275.0,1227.27,gain,0.6418,0.3352,low-confidence (auc<0.7 or tss<0.4)
+sp_senegalia_catechu,Senegalia catechu,current,,,not assessed,,,not assessed
+sp_senna_alata,Senna alata,current,,,not assessed,,,not assessed
+sp_senna_alexandrina,Senna alexandrina,current,,,not assessed,,,not assessed
+sp_senna_occidentalis,Senna occidentalis,ssp245,237925.0,29.29,gain,0.6895,0.4303,low-confidence (auc<0.7 or tss<0.4)
+sp_senna_occidentalis,Senna occidentalis,ssp585,237925.0,36.65,gain,0.6895,0.4303,low-confidence (auc<0.7 or tss<0.4)
+sp_senna_tora,Senna tora,ssp245,111150.0,24.97,gain,0.628,0.4476,low-confidence (auc<0.7 or tss<0.4)
+sp_senna_tora,Senna tora,ssp585,111150.0,33.18,gain,0.628,0.4476,low-confidence (auc<0.7 or tss<0.4)
+sp_sida_acuta,Sida acuta,ssp245,243050.0,0.8,stable,0.6167,0.4056,low-confidence (auc<0.7 or tss<0.4)
+sp_sida_acuta,Sida acuta,ssp585,243050.0,4.25,stable,0.6167,0.4056,low-confidence (auc<0.7 or tss<0.4)
+sp_smilax_glabra,Smilax glabra,ssp245,136675.0,-18.47,stable,0.6248,0.4263,low-confidence (auc<0.7 or tss<0.4)
+sp_smilax_glabra,Smilax glabra,ssp585,136675.0,-20.25,moderate loss,0.6248,0.4263,low-confidence (auc<0.7 or tss<0.4)
+sp_solanum_indicum,Solanum indicum,current,,,not assessed,,,not assessed
+sp_solanum_trilobatum,Solanum trilobatum,ssp245,141450.0,7.74,stable,0.8557,0.6488,ok
+sp_solanum_trilobatum,Solanum trilobatum,ssp585,141450.0,5.5,stable,0.8557,0.6488,ok
+sp_solanum_violaceum,Solanum violaceum,ssp245,207350.0,14.82,stable,0.4813,0.1395,low-confidence (auc<0.7 or tss<0.4)
+sp_solanum_violaceum,Solanum violaceum,ssp585,207350.0,13.19,stable,0.4813,0.1395,low-confidence (auc<0.7 or tss<0.4)
+sp_sonneratia_caseolaris,Sonneratia caseolaris,ssp245,458750.0,-0.34,stable,0.1926,0.1926,low-confidence (auc<0.7 or tss<0.4)
+sp_sonneratia_caseolaris,Sonneratia caseolaris,ssp585,458750.0,0.47,stable,0.1926,0.1926,low-confidence (auc<0.7 or tss<0.4)
+sp_sophora_flavescens,Sophora flavescens,current,,,not assessed,,,not assessed
+sp_spondias_pinnata,Spondias pinnata,ssp245,217050.0,-0.52,stable,0.6318,0.4163,low-confidence (auc<0.7 or tss<0.4)
+sp_spondias_pinnata,Spondias pinnata,ssp585,217050.0,-6.3,stable,0.6318,0.4163,low-confidence (auc<0.7 or tss<0.4)
+sp_stephania_epigaea,Stephania epigaea,current,,,not assessed,,,not assessed
+sp_stephania_erecta,Stephania erecta,current,,,not assessed,,,not assessed
+sp_stephania_pierrei,Stephania pierrei,current,,,not assessed,,,not assessed
+sp_stephania_rotunda,Stephania rotunda,current,,,not assessed,,,not assessed
+sp_stephania_tetrandra,Stephania tetrandra,current,,,not assessed,,,not assessed
+sp_stereospermum_tetragonum,Stereospermum tetragonum,current,,,not assessed,,,not assessed
+sp_streblus_asper,Streblus asper,ssp245,205325.0,70.49,gain,0.7284,0.5166,ok
+sp_streblus_asper,Streblus asper,ssp585,205325.0,87.57,gain,0.7284,0.5166,ok
+sp_strophanthus_gratus,Strophanthus gratus,current,,,not assessed,,,not assessed
+sp_strychnos_axillaris,Strychnos axillaris,current,,,not assessed,,,not assessed
+sp_strychnos_nux,Strychnos nux-vomica,ssp245,691525.0,-0.12,stable,0.4027,0.2498,low-confidence (auc<0.7 or tss<0.4)
+sp_strychnos_nux,Strychnos nux-vomica,ssp585,691525.0,-0.1,stable,0.4027,0.2498,low-confidence (auc<0.7 or tss<0.4)
+sp_strychnos_potatorum,Strychnos potatorum,current,,,not assessed,,,not assessed
+sp_styphnolobium_japonicum,Styphnolobium japonicum,current,,,not assessed,,,not assessed
+sp_swertia_angustifolia,Swertia angustifolia,ssp245,125250.0,-16.53,stable,0.8671,0.8655,ok
+sp_swertia_angustifolia,Swertia angustifolia,ssp585,125250.0,-20.64,moderate loss,0.8671,0.8655,ok
+sp_syzygium_aromaticum,Syzygium aromaticum,current,,,not assessed,,,not assessed
+sp_syzygium_cumini,Syzygium cumini,ssp245,265950.0,-15.45,stable,0.4603,0.1726,low-confidence (auc<0.7 or tss<0.4)
+sp_syzygium_cumini,Syzygium cumini,ssp585,265950.0,-21.5,moderate loss,0.4603,0.1726,low-confidence (auc<0.7 or tss<0.4)
+sp_syzygium_globiflorum,Syzygium globiflorum,current,,,not assessed,,,not assessed
+sp_tabernaemontana_divaricata,Tabernaemontana divaricata,ssp245,348725.0,20.57,gain,0.5946,0.3156,low-confidence (auc<0.7 or tss<0.4)
+sp_tabernaemontana_divaricata,Tabernaemontana divaricata,ssp585,348725.0,24.05,gain,0.5946,0.3156,low-confidence (auc<0.7 or tss<0.4)
+sp_tabernanthe_iboga,Tabernanthe iboga,current,,,not assessed,,,not assessed
+sp_tadehagi_triquetrum,Tadehagi triquetrum,current,,,not assessed,,,not assessed
+sp_tamarindus_indica,Tamarindus indica,ssp245,316850.0,22.43,gain,0.6171,0.288,low-confidence (auc<0.7 or tss<0.4)
+sp_tamarindus_indica,Tamarindus indica,ssp585,316850.0,30.54,gain,0.6171,0.288,low-confidence (auc<0.7 or tss<0.4)
+sp_tectona_grandis,Tectona grandis,ssp245,260950.0,28.02,gain,0.7415,0.5136,ok
+sp_tectona_grandis,Tectona grandis,ssp585,260950.0,32.81,gain,0.7415,0.5136,ok
+sp_terminalia_bellirica,Terminalia bellirica,current,,,not assessed,,,not assessed
+sp_terminalia_chebula,Terminalia chebula,ssp245,434975.0,-13.48,stable,0.6464,0.4723,low-confidence (auc<0.7 or tss<0.4)
+sp_terminalia_chebula,Terminalia chebula,ssp585,434975.0,-17.01,stable,0.6464,0.4723,low-confidence (auc<0.7 or tss<0.4)
+sp_terminalia_citrina,Terminalia citrina,current,,,not assessed,,,not assessed
+sp_tetrastigma_hemsleyanum,Tetrastigma hemsleyanum,current,,,not assessed,,,not assessed
+sp_thespesia_populnea,Thespesia populnea,current,,,not assessed,,,not assessed
+sp_thevetia_peruviana,Thevetia peruviana,current,,,not assessed,,,not assessed
+sp_thunbergia_laurifolia,Thunbergia laurifolia,ssp245,2300.0,-100.0,high loss,0.4663,0.3024,low-confidence (auc<0.7 or tss<0.4)
+sp_thunbergia_laurifolia,Thunbergia laurifolia,ssp585,2300.0,-100.0,high loss,0.4663,0.3024,low-confidence (auc<0.7 or tss<0.4)
+sp_tinospora_crispa,Tinospora crispa,ssp245,375250.0,-4.72,stable,0.5287,0.3328,low-confidence (auc<0.7 or tss<0.4)
+sp_tinospora_crispa,Tinospora crispa,ssp585,375250.0,-10.08,stable,0.5287,0.3328,low-confidence (auc<0.7 or tss<0.4)
+sp_tithonia_diversifolia,Tithonia diversifolia,ssp245,130200.0,-13.33,stable,0.6036,0.3962,low-confidence (auc<0.7 or tss<0.4)
+sp_tithonia_diversifolia,Tithonia diversifolia,ssp585,130200.0,-18.59,stable,0.6036,0.3962,low-confidence (auc<0.7 or tss<0.4)
+sp_toona_ciliata,Toona ciliata,ssp245,167000.0,-24.28,moderate loss,0.6195,0.4728,low-confidence (auc<0.7 or tss<0.4)
+sp_toona_ciliata,Toona ciliata,ssp585,167000.0,-28.22,moderate loss,0.6195,0.4728,low-confidence (auc<0.7 or tss<0.4)
+sp_toona_sinensis,Toona sinensis,current,,,not assessed,,,not assessed
+sp_trachelospermum_asiaticum,Trachelospermum asiaticum,current,,,not assessed,,,not assessed
+sp_trachelospermum_jasminoides,Trachelospermum jasminoides,current,,,not assessed,,,not assessed
+sp_trachyspermum_roxburghianum,Trachyspermum roxburghianum,current,,,not assessed,,,not assessed
+sp_trichosanthes_cucumerina,Trichosanthes cucumerina,current,,,not assessed,,,not assessed
+sp_triumfetta_rhomboidea,Triumfetta rhomboidea,ssp245,187150.0,-0.84,stable,0.5097,0.3169,low-confidence (auc<0.7 or tss<0.4)
+sp_triumfetta_rhomboidea,Triumfetta rhomboidea,ssp585,187150.0,-7.04,stable,0.5097,0.3169,low-confidence (auc<0.7 or tss<0.4)
+sp_tylophora_indica,Tylophora indica,current,,,not assessed,,,not assessed
+sp_urceola_rosea,Urceola rosea,current,,,not assessed,,,not assessed
+sp_urena_lobata,Urena lobata,ssp245,173975.0,-17.37,stable,0.5404,0.1911,low-confidence (auc<0.7 or tss<0.4)
+sp_urena_lobata,Urena lobata,ssp585,173975.0,-24.79,moderate loss,0.5404,0.1911,low-confidence (auc<0.7 or tss<0.4)
+sp_verbena_officinalis,Verbena officinalis,ssp245,28900.0,-2.34,stable,0.6662,0.4761,low-confidence (auc<0.7 or tss<0.4)
+sp_verbena_officinalis,Verbena officinalis,ssp585,28900.0,-3.29,stable,0.6662,0.4761,low-confidence (auc<0.7 or tss<0.4)
+sp_vernonia_amygdalina,Vernonia amygdalina,current,,,not assessed,,,not assessed
+sp_vetiveria_zizanioides,Vetiveria zizanioides,current,,,not assessed,,,not assessed
+sp_vitex_negundo,Vitex negundo,current,,,not assessed,,,not assessed
+sp_wedelia_chinensis,Wedelia chinensis,current,,,not assessed,,,not assessed
+sp_wrightia_hanleyi,Wrightia hanleyi,current,,,not assessed,,,not assessed
+sp_wrightia_tinctoria,Wrightia tinctoria,current,,,not assessed,,,not assessed
+sp_wrightia_tomentosa,Wrightia tomentosa,current,,,not assessed,,,not assessed
+sp_xylocarpus_granatum,Xylocarpus granatum,current,,,not assessed,,,not assessed
+sp_xylocarpus_moluccensis,Xylocarpus moluccensis,current,,,not assessed,,,not assessed
+sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,ssp245,83425.0,-37.94,moderate loss,0.7428,0.5648,ok
+sp_zanthoxylum_acanthopodium,Zanthoxylum acanthopodium,ssp585,83425.0,-45.43,moderate loss,0.7428,0.5648,ok
+sp_zanthoxylum_armatum,Zanthoxylum armatum,ssp245,109900.0,-9.01,stable,0.7821,0.6667,ok
+sp_zanthoxylum_armatum,Zanthoxylum armatum,ssp585,109900.0,-10.87,stable,0.7821,0.6667,ok
+sp_zanthoxylum_rhetsa,Zanthoxylum rhetsa,current,,,not assessed,,,not assessed
+sp_zingiber_cassumunar,Zingiber cassumunar,current,,,not assessed,,,not assessed
+sp_zingiber_montanum,Zingiber montanum,current,,,not assessed,,,not assessed
+sp_zingiber_officinale,Zingiber officinale,current,,,not assessed,,,not assessed
+sp_zingiber_zerumbet,Zingiber zerumbet,ssp245,356225.0,-7.59,stable,0.4105,0.1302,low-confidence (auc<0.7 or tss<0.4)
+sp_zingiber_zerumbet,Zingiber zerumbet,ssp585,356225.0,-7.94,stable,0.4105,0.1302,low-confidence (auc<0.7 or tss<0.4)

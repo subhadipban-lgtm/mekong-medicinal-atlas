@@ -10,6 +10,8 @@ and tier totals only — no titles, abstracts, author lists, PMIDs or SMILES.
 """
 from __future__ import annotations
 
+import csv
+import re
 import json
 import sys
 from collections import Counter
@@ -22,7 +24,34 @@ EV = L.ROOT / "data" / "evidence"
 
 
 def main() -> int:
+    if "--engine-corpus" in sys.argv:
+        corpus = Path(sys.argv[sys.argv.index("--engine-corpus") + 1])
+        rows = list(csv.DictReader(corpus.open()))
+        existing = L.read_json(L.PROCESSED / "evidence_manifest.json")
+        species = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "species_master.csv")}
+        prior = {r["species_id"]: r for r in existing["taxa"]}
+        counts = Counter(r["species_id"] for r in rows)
+        taxa = []
+        for sid, count in sorted(counts.items()):
+            if sid not in species: raise ValueError(f"Unknown atlas taxon: {sid}")
+            old = prior.get(sid, {})
+            tiers = Counter(r["evidence_tier"] for r in rows if r["species_id"] == sid)
+            taxa.append({"species_id": sid, "name": species[sid]["accepted_name"], "family": species[sid]["family"], "n_pubs": count, "tiers": dict(tiers), "tier_total": count, "n_compounds": old.get("n_compounds",0), "n_resolved": old.get("n_resolved",0), "network": old.get("network",{})})
+        def key(row):
+            return ("doi:" + row["doi"].lower().removeprefix("https://doi.org/")) if row.get("doi") else ("pmid:"+row["pmid"] if row.get("pmid") else "title:"+re.sub(r"\W+", "", row.get("title", "").lower()))
+        update = dict(generated="2026-11-26", status="provisional_retrieval_candidates_not_verified_evidence", corpus=corpus.name, taxa=taxa, totals=dict(pubs=len(rows),unique_pubs=len({key(r) for r in rows}),needs_review=sum(r.get("needs_review")=="1" for r in rows),pilot_taxa=len(taxa)))
+        if corpus.name == "publications_full.csv":
+            existing["expanded_retrieval"] = update
+        else:
+            existing.update({k:v for k,v in update.items() if k != "totals"})
+            existing["totals"].update(update["totals"])
+        L.write_json(L.PROCESSED / "evidence_manifest.json", existing)
+        print("Updated provisional aggregate manifest:",len(rows),"candidate species-publication rows")
+        return 0
     use_manifest = "--manifest" in sys.argv
+    if use_manifest and (L.PROCESSED / "evidence_manifest.json").exists():
+        print("evidence manifest: preserving committed snapshot; use --engine-corpus for explicit audited refresh")
+        return 0
     tiers_path = EV / "contract" / "species_evidence_tier_counts.json"
     pubs_path = EV / "contract" / "species_publications.json"
     ns_path = EV / "contract" / "species_network_summary.json"

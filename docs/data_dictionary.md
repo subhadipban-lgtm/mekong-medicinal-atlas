@@ -33,7 +33,7 @@ Conventions: UTF-8; ISO 8601 dates; country codes ISO 3166-1 alpha-2 (CN China, 
 | `cites_appendix` | string |  | **I**, **II**, **III**, **not listed**, **unknown** | CITES appendix in which the species is listed. |
 | `trade_status` | text |  | any text | Trade pressure as described in the workbook. |
 | `source_ids` | string |  | semicolon-separated references.source_id values | Identifiers of the sources contributing to the row. |
-| `evidence_grade` | string |  | **A**, **B**, **C**, **D** | Best evidence grade among the species' use and pharmacology records. |
+| `evidence_grade` | string |  | **A**, **B**, **C**, **D** | Highest source category with two distinct bibliographically resolved DOI sources; D means insufficient verification. Not claim support. |
 | `gbif_taxon_key` | string |  | regular expression `\d*` | GBIF backbone usage key. |
 | `gbif_match_type` | string |  | **EXACT**, **FUZZY**, **HIGHERRANK**, **MANUAL**, (blank) | How the workbook name was matched to GBIF; MANUAL marks the nine names resolved by hand. |
 | `gbif_confidence` | string |  | regular expression `\d*` | Confidence of the GBIF name match (0-100). |
@@ -230,6 +230,37 @@ Conventions: UTF-8; ISO 8601 dates; country codes ISO 3166-1 alpha-2 (CN China, 
 | `dataset_key` | string |  | regular expression `[0-9a-f-]{36}` | Atlas. GBIF dataset key (UUID). |
 | `iucn_red_list_category_gbif` | string |  | **CR**, **EN**, **VU**, **NT**, **LC**, **DD**, (blank) | Atlas. IUCN category GBIF gives the species. |
 | `source_id` | string |  | **SRC-003** | Atlas. Source register entry for GBIF records. |
+
+## evidence_source_assessment.csv
+
+| Field | Type | Unit | Allowed values / range | Definition |
+|---|---|---|---|---|
+| `species_id` | string |  | any text | Atlas taxon identifier. |
+| `table` | string |  | any text | Originating evidence table. |
+| `row_id` | string |  | any text | Originating use or pharmacology row identifier. |
+| `source_key` | string |  | any text | Normalized DOI when resolved; otherwise normalized citation string. |
+| `citation` | string |  | any text | Verbatim source citation; conflicts retained. |
+| `source_grade` | string |  | any text | Provisional bibliographic source category A-D, not efficacy. |
+| `source_verification` | string |  | any text | Bibliographic metadata resolved or unverified. |
+| `study_design` | string |  | any text | Study design adjudication; not_assessed until verified. |
+| `claim_support` | string |  | any text | Claim-level adjudication; not_assessed until verified. |
+| `citation_issue` | string |  | any text | Retained bibliographic conflict. |
+| `printed_id_problem` | string |  | any text | Retained problem with the originally printed identifier. |
+
+## evidence_grade_provenance.csv
+
+| Field | Type | Unit | Allowed values / range | Definition |
+|---|---|---|---|---|
+| `species_id` | string |  | any text | Atlas taxon identifier. |
+| `accepted_name` | string |  | any text | Accepted scientific name. |
+| `grade` | string |  | any text | Highest category with two distinct resolved DOI sources; D means insufficient verification. |
+| `n_sources` | int | sources | any text | Distinct DOI or citation-string keys; unresolved aliases may remain. |
+| `n_verified_sources` | int | sources | any text | Distinct resolved DOI sources across categories. |
+| `verified_A` | int | sources | any text | Distinct resolved journal-article DOIs. |
+| `verified_B` | int | sources | any text | Distinct resolved book/reference DOIs. |
+| `verified_C` | int | sources | any text | Distinct resolved report DOIs. |
+| `source_ids` | string |  | any text | Resolved DOI keys used in the category counts. |
+| `notes` | string |  | any text | Verification scope and limitations. |
 
 ## Geospatial layers and per-species files (`data/geo/`)
 

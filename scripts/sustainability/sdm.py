@@ -263,6 +263,10 @@ def main() -> int:
 
     L.write_json(L.PROCESSED / "sdm_suitable_cells.json", suitable_cells, indent=None)
     L.write_csv(L.PROCESSED / "sdm_performance.csv", perf)
+    perf_by = {p["species_id"]: p for p in perf}
+    for result in results:
+        result.update({key: perf_by[result["species_id"]][key] for key in ("auc", "tss", "confidence_flag")})
+    L.write_json(L.PROCESSED / "sdm_suitable_cells_with_confidence.json", {sid: {"suitable_cells": cells, **{key: perf_by[sid][key] for key in ("auc", "tss", "confidence_flag")}, "interpretation": "exploratory suitability; not validated presence"} for sid, cells in suitable_cells.items()}, indent=None)
     L.write_csv(L.PROCESSED / "sdm_results.csv", results)
     assessed = [p for p in perf if p["confidence_flag"] != "not assessed"]
     tiers = defaultdict(int)

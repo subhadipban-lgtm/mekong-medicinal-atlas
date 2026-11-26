@@ -23,7 +23,7 @@ species_master,cites_status_verbatim,text,n/a,any text,CITES and national regula
 species_master,cites_appendix,string,n/a,"**I**, **II**, **III**, **not listed**, **unknown**",CITES appendix in which the species is listed.,see docs/data_dictionary.md
 species_master,trade_status,text,n/a,any text,Trade pressure as described in the workbook.,see docs/data_dictionary.md
 species_master,source_ids,string,n/a,semicolon-separated references.source_id values,Identifiers of the sources contributing to the row.,see docs/data_dictionary.md
-species_master,evidence_grade,string,n/a,"**A**, **B**, **C**, **D**",Best evidence grade among the species' use and pharmacology records.,see docs/data_dictionary.md
+species_master,evidence_grade,string,n/a,"**A**, **B**, **C**, **D**",Highest source category with two distinct bibliographically resolved DOI sources; D means insufficient verification. Not claim support.,see docs/data_dictionary.md
 species_master,gbif_taxon_key,string,n/a,regular expression `\d*`,GBIF backbone usage key.,see docs/data_dictionary.md
 species_master,gbif_match_type,string,n/a,"**EXACT**, **FUZZY**, **HIGHERRANK**, **MANUAL**, (blank)",How the workbook name was matched to GBIF; MANUAL marks the nine names resolved by hand.,see docs/data_dictionary.md
 species_master,gbif_confidence,string,n/a,regular expression `\d*`,Confidence of the GBIF name match (0-100).,see docs/data_dictionary.md
@@ -180,3 +180,24 @@ occurrences,gbif_key,string,n/a,regular expression `\d+`,Atlas. GBIF occurrence 
 occurrences,dataset_key,string,n/a,regular expression `[0-9a-f-]{36}`,Atlas. GBIF dataset key (UUID).,see docs/data_dictionary.md
 occurrences,iucn_red_list_category_gbif,string,n/a,"**CR**, **EN**, **VU**, **NT**, **LC**, **DD**, (blank)",Atlas. IUCN category GBIF gives the species.,see docs/data_dictionary.md
 occurrences,source_id,string,n/a,**SRC-003**,Atlas. Source register entry for GBIF records.,see docs/data_dictionary.md
+evidence_source_assessment,species_id,string,n/a,any text,Atlas taxon identifier.,see docs/data_dictionary.md
+evidence_source_assessment,table,string,n/a,any text,Originating evidence table.,see docs/data_dictionary.md
+evidence_source_assessment,row_id,string,n/a,any text,Originating use or pharmacology row identifier.,see docs/data_dictionary.md
+evidence_source_assessment,source_key,string,n/a,any text,Normalized DOI when resolved; otherwise normalized citation string.,see docs/data_dictionary.md
+evidence_source_assessment,citation,string,n/a,any text,Verbatim source citation; conflicts retained.,see docs/data_dictionary.md
+evidence_source_assessment,source_grade,string,n/a,any text,"Provisional bibliographic source category A-D, not efficacy.",see docs/data_dictionary.md
+evidence_source_assessment,source_verification,string,n/a,any text,Bibliographic metadata resolved or unverified.,see docs/data_dictionary.md
+evidence_source_assessment,study_design,string,n/a,any text,Study design adjudication; not_assessed until verified.,see docs/data_dictionary.md
+evidence_source_assessment,claim_support,string,n/a,any text,Claim-level adjudication; not_assessed until verified.,see docs/data_dictionary.md
+evidence_source_assessment,citation_issue,string,n/a,any text,Retained bibliographic conflict.,see docs/data_dictionary.md
+evidence_source_assessment,printed_id_problem,string,n/a,any text,Retained problem with the originally printed identifier.,see docs/data_dictionary.md
+evidence_grade_provenance,species_id,string,n/a,any text,Atlas taxon identifier.,see docs/data_dictionary.md
+evidence_grade_provenance,accepted_name,string,n/a,any text,Accepted scientific name.,see docs/data_dictionary.md
+evidence_grade_provenance,grade,string,n/a,any text,Highest category with two distinct resolved DOI sources; D means insufficient verification.,see docs/data_dictionary.md
+evidence_grade_provenance,n_sources,int,sources,any text,Distinct DOI or citation-string keys; unresolved aliases may remain.,see docs/data_dictionary.md
+evidence_grade_provenance,n_verified_sources,int,sources,any text,Distinct resolved DOI sources across categories.,see docs/data_dictionary.md
+evidence_grade_provenance,verified_A,int,sources,any text,Distinct resolved journal-article DOIs.,see docs/data_dictionary.md
+evidence_grade_provenance,verified_B,int,sources,any text,Distinct resolved book/reference DOIs.,see docs/data_dictionary.md
+evidence_grade_provenance,verified_C,int,sources,any text,Distinct resolved report DOIs.,see docs/data_dictionary.md
+evidence_grade_provenance,source_ids,string,n/a,any text,Resolved DOI keys used in the category counts.,see docs/data_dictionary.md
+evidence_grade_provenance,notes,string,n/a,any text,Verification scope and limitations.,see docs/data_dictionary.md

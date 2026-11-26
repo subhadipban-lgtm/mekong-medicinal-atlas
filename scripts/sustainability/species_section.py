@@ -16,21 +16,22 @@ def render(d: dict, sid: str) -> str:
     hp = d["sust_pressure_by"].get(sid)
     hy = d["sust_hydro_by"].get(sid)
     sdm = d["sust_sdm_by"].get(sid)
+    perf = d.get("sust_sdm_perf_by", {}).get(sid, {})
     cult = d["sust_cult_by"].get(sid)
     rows = []
     if sdm and sdm.get("projected_range_change_pct"):
         rows.append(
             '<tr><th scope="row">Climate vulnerability</th>'
             f'<td>{_e(sdm.get("climate_vulnerability_tier", "—"))}</td>'
-            f'<td>projected range change {_e(sdm.get("projected_range_change_pct"))}% (conditional scenario projection)</td></tr>')
+            f'<td>projected range change {_e(sdm.get("projected_range_change_pct"))}% (conditional scenario projection); AUC {_e(perf.get("auc", "not assessed"))}, TSS {_e(perf.get("tss", "not assessed"))}; <strong>{_e(perf.get("confidence_flag", "not assessed"))}</strong></td></tr>')
     elif not d["sust_sdm"]:
         rows.append('<tr><th scope="row">Climate vulnerability</th><td>in progress</td>'
                     '<td>SDM analysis in progress; see the Sustainability page</td></tr>')
     else:
         rows.append(
             '<tr><th scope="row">Climate vulnerability</th>'
-            f'<td>{_e(sdm.get("climate_vulnerability_tier", "not assessed"))}</td>'
-            '<td>fewer than 10 in-basin records — insufficient data for SDM</td></tr>')
+            f'<td>{_e((sdm or {}).get("climate_vulnerability_tier", "not assessed"))}</td>'
+            '<td>fewer than 10 occupied 5 km in-basin cells — insufficient data for SDM</td></tr>')
     if cult:
         rows.append(
             '<tr><th scope="row">Cultivation feasibility</th>'
@@ -41,7 +42,7 @@ def render(d: dict, sid: str) -> str:
     if hp:
         rows.append(
             '<tr><th scope="row">Harvest pressure</th>'
-            f'<td>{_e(hp["harvest_pressure_class"])}</td>'
+            f'<td>{_e(hp["harvest_pressure_class"] + (" (demographic proxy, no use data)" if float(hp.get("use_score") or 0) == 0 else ""))}</td>'
             f'<td>mean proxy {_e(hp["mean_harvest_pressure_in_range"])} across {_e(hp["n_cells"])} cells; '
             'a proxy, not measured offtake</td></tr>')
     else:
@@ -50,14 +51,14 @@ def render(d: dict, sid: str) -> str:
     if hy:
         rows.append(
             '<tr><th scope="row">Hydrological vulnerability</th>'
-            f'<td>{_e(hy["hydrological_vulnerability_class"])}</td>'
+            f'<td>{_e(hy["hydrological_vulnerability_class"] + (" (low-evidence, n=" + str(hy["n_occurrences_in_basin"]) + ")" if int(hy["n_occurrences_in_basin"]) < 3 else ""))}</td>'
             f'<td>{_e(hy["pct_within_10km_major_dam"])}% of {_e(hy["n_occurrences_in_basin"])} in-basin records '
             'within 10 km of a major dam (distance-based proxy)</td></tr>')
     else:
         rows.append('<tr><th scope="row">Hydrological vulnerability</th><td>not assessed</td><td>no in-basin records</td></tr>')
-    return ('<details class="mt-3"><summary class="h5 section-title" style="display:list-item">Harvest pressure &amp; hydrological risk</summary>'
+    return ('<details class="mt-3"><summary class="h5 section-title" style="display:list-item">Sustainability</summary>'
             '<p class="small text-muted">Screening layers from the hydroclimatic synthesis of Tiwari et al. 2023 '
             '(<a href="https://doi.org/10.5281/zenodo.7803254" target="_blank" rel="noopener">Zenodo 7803254</a>); '
-            'methods are linked from the <a href="sustainability.html">Harvest pressure &amp; hydrological risk page</a>.</p>'
+            'methods are linked from the <a href="sustainability.html">Sustainability page</a>.</p>'
             '<div class="table-responsive"><table class="table table-sm table-atlas"><tbody>'
             + "".join(rows) + '</tbody></table></div></details>')

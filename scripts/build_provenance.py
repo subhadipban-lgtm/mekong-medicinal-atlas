@@ -37,6 +37,12 @@ def distinct_ids(value: str) -> set[str]:
 
 
 def main() -> int:
+    summary = L.read_json(L.PROCESSED / "evidence_summary.json")
+    if summary.get("per_taxon_sources"):
+        L.write_csv(L.PROCESSED / "evidence_grade_provenance.csv", summary["per_taxon_sources"])
+        print("Preserved verified-source provenance and per-tier distributions")
+        return 0
+    raise RuntimeError("Rebuild evidence grades before provenance; legacy citation-string counts are not verified sources")
     master = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "species_master.csv")}
     citations: dict[str, set[str]] = defaultdict(set)
     register_ids: dict[str, set[str]] = defaultdict(set)

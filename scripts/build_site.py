@@ -45,10 +45,10 @@ BOOTSTRAP_JS = ("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.
                 "sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz")
 COUNTRY_NAMES = L.COUNTRY_NAMES
 GRADE_TEXT = {
-    "A": "peer-reviewed article or survey with documented methodology",
-    "B": "major reference book or authoritative flora",
-    "C": "report, proceedings, specimen, or citation that cannot be verified",
-    "D": "web source, unverified lead, or no citation",
+    "A": "resolved journal-article metadata",
+    "B": "resolved book or reference metadata",
+    "C": "resolved report metadata; row grades also include unverified citations",
+    "D": "insufficient verified sources; web or no citation",
 }
 EVIDENCE = L.ROOT / "data" / "evidence"
 EVIDENCE_TIERS = ("traditional", "in vitro", "in vivo", "clinical", "review", "other")
@@ -189,7 +189,7 @@ def human(size: int) -> str:
 
 MAP_LEGEND = '''<div class="map-legend legend-grade">
   <div><strong>Occurrence records</strong> · colour = evidence grade</div>
-  <div><span class="sw" style="background:#1b5e20"></span>A peer-reviewed</div>
+  <div><span class="sw" style="background:#1b5e20"></span>A resolved journal metadata</div>
   <div><span class="sw" style="background:#b36b00"></span>B reference book or flora</div>
   <div><span class="sw" style="background:#66707a"></span>C specimen or observation</div>
   <div><span class="sw" style="background:#fff;border:2px solid #66707a;width:10px;height:10px"></span>hollow = observation · filled = specimen</div>
@@ -243,7 +243,7 @@ def page(title: str, body: str, active: str, description: str, script: str, need
     <div class="collapse navbar-collapse" id="atlasNav"><ul class="navbar-nav ms-auto">{links}</ul></div>
   </div>
 </nav>
-<div class="container-fluid px-3 py-2"><div class="alert alert-warning" role="status"><strong>Evidence under revision.</strong> Publication tiers and evidence grades are provisional while classification and source verification are corrected. Literature counts are retrieval counts, not validated claims.</div></div>
+<div class="container-fluid px-3 py-2"><div class="alert alert-warning" role="status"><strong>Evidence under revision. Absence from this compilation reflects scope and uneven coverage, not absence of study.</strong> Publication tiers and evidence grades are provisional while classification and source verification are corrected. Literature counts are retrieval counts, not validated claims.</div></div>
 {body}
 <footer class="atlas">
   <div class="container-fluid px-3 px-lg-4">
@@ -318,6 +318,7 @@ def load_evidence() -> dict:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         out["generated"] = manifest.get("generated", "")
         out["gms"] = manifest.get("gms")
+        out["expanded_retrieval"] = manifest.get("expanded_retrieval")
         out["totals"]["unique_pubs"] = manifest.get("totals", {}).get("unique_pubs", 1880)
         out["totals"]["needs_review"] = manifest.get("totals", {}).get("needs_review", 190)
         for t in manifest["taxa"]:
@@ -418,6 +419,7 @@ def load() -> dict:
         d[key] = L.read_csv(path) if path.exists() else []
     d["sust_pressure_by"] = {r["species_id"]: r for r in d["sust_pressure"]}
     d["sust_hydro_by"] = {r["species_id"]: r for r in d["sust_hydro"]}
+    d["sust_sdm_perf_by"] = {r["species_id"]: r for r in d["sust_sdm_perf"]}
     d["sust_sdm_by"] = {r["species_id"]: r for r in d["sust_sdm"]}
     d["bioeconomy_by"] = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "bioeconomy_profiles.csv")}
     d["sust_cult_by"] = {r["species_id"]: r for r in d["sust_cult"]}
@@ -571,7 +573,7 @@ def home(d: dict) -> str:
 def explore(d: dict) -> str:
     boxes = "".join(
         f'<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" value="{g}" id="grade{g}" checked>'
-        f'<label class="form-check-label" for="grade{g}">{badge_grade(g)}</label></div>' for g in ("A", "B", "C"))
+        f'<label class="form-check-label" for="grade{g}">{badge_grade(g)}</label></div>' for g in ("A", "B", "C", "D"))
     return page("Explore — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
   <h1 class="h4 mb-1">Occurrence records</h1>
@@ -928,20 +930,24 @@ def evidence(d: dict) -> str:
         rows += (f'<tr><td><a class="taxon" href="species/{e(slug_of(sid))}.html">{e(s["name"])}</a></td>'
                  f'<td>{e(s["family"])}</td><td class="text-end">{n(s["n_pubs"])}</td>{tier_cells}'
                  f'<td class="text-end">{comp}</td></tr>')
-    pilot_note = (f'<p class="text-muted small">Pilot set: {n(len(ev["order"]))} taxa with the most pharmacology records '
+    pilot_note = (f'<p class="text-muted small">Historical pilot search: {n(len(ev["order"]))} taxa with the most compiled pharmacology records '
                   f'(Milestone 1 of the evidence engine, generated {e(ev["generated"] or "n/a")}). '
-                  f'<strong>{n(tot["pubs"])} tier-mapped records representing {n(tot.get("unique_pubs", 1880))} unique publications</strong>, '
+                  f'<strong>{n(tot["pubs"])} provisionally classified retrieval records representing {n(tot.get("unique_pubs", 1880))} unique publications</strong>, '
                   f'deduplicated by DOI, then PMID, then normalized title; {n(tot.get("needs_review", 190))} rows flagged '
-                  '<span class="badge text-bg-warning">review</span> and await a human queue. Publications were retrieved from '
-                  'Europe PMC and OpenAlex and classified by an automated rubric; classification is machine-made '
+                  '<span class="badge text-bg-warning">review</span> and await a human queue. Candidate publications were retrieved from '
+                  'Europe PMC, OpenAlex, Crossref and DOAJ and classified by an automated rubric; classification is machine-made '
                   'and never presented as evidence strength.</p>')
+    pilot_note += '<p class="small alert alert-warning">These are retrieval candidates. Species-specific claim support has not been assessed. The 50-paper stratified audit is incomplete. The historical full-corpus file was also affected by a pagination defect; its size does not establish completeness. Expanded all-atlas retrieval is being reconciled separately.</p>'
+    expansion = ev.get("expanded_retrieval")
+    if expansion:
+        ex = expansion["totals"]
+        pilot_note += f'<p class="small"><strong>Expanded historical retrieval: {n(ex["pubs"])} candidate species–publication rows across {n(ex["pilot_taxa"])} taxa, representing {n(ex["unique_pubs"])} distinct publication keys.</strong> {n(ex["needs_review"])} rows require classification review. This corpus contains the pilot slice and must not be added to it. It remains incomplete and is not verified species-specific evidence.</p>'
     gms_html = ""
     gms = ev.get("gms")
     if gms:
         gms_html = f'''
-<h2 class="h5 section-title mt-4">GMS deep-search register <span class="text-muted fw-normal">(Semantic Scholar systematic review)</span></h2>
-<p class="small mb-2">A separate register (<code>GMS_DEEP_SEARCH</code>, disjoint from the pilot corpus by register discipline) holding another
-session's PRISMA pipeline over Semantic Scholar: <strong>{n(gms["papers"])}</strong> included papers,
+<h2 class="h5 section-title mt-4">GMS deep-search register <span class="text-muted fw-normal">(Semantic Scholar retrieval and screening)</span></h2>
+<p class="small mb-2">A separate register (<code>GMS_DEEP_SEARCH</code>, disjoint from the pilot corpus by register discipline) holding a separate screening pipeline over Semantic Scholar: <strong>{n(gms["papers"])}</strong> included papers,
 <strong>{n(gms["plants"])}</strong> plants extracted (<strong>{n(gms["wcvp"])}</strong> matched in WCVP),
 {n(gms["molecule_rows"])} plant–molecule rows. Molecule/activity content is LLM-extracted from abstracts and treated as leads, not curated facts.
 The register tables are available from the authors on request.</p>'''
@@ -969,7 +975,7 @@ The register tables are available from the authors on request.</p>'''
   evidence-engine repository. They are available from the authors on request for reviewers and collaborators; only these aggregate,
   build-time summaries are published on this site.</div>
   <p class="small text-muted mt-3">Sources: Europe PMC REST (PubMed/MEDLINE, Agricola, patents), OpenAlex, Crossref and DOAJ.
-  Machine-assigned evidence tiers (auto-rubric-v1) are never presented as evidence strength; rows the rubric cannot place await human review.</p>
+  Machine-assigned evidence tiers (auto-rubric-v2-audit (provisional)) are never presented as evidence strength; rows the rubric cannot place await human review.</p>
   {gms_html}
 </main>
 <script>
@@ -1152,7 +1158,7 @@ auto-classified into evidence tiers; <strong>{n(ev_pilot["n_compounds"])}</stron
         <dt>Countries in the ethnobotanical inventory</dt><dd>{wb_countries}</dd>
         <dt>Life form</dt><dd>{e(r["life_form"])}</dd>
         <dt>Parts used</dt><dd>{e(r["parts_used"] or "–")}</dd>
-        <dt>Evidence grade</dt><dd>{badge_grade(r["evidence_grade"])} <span class="text-muted small">best grade among this taxon's literature records</span></dd>
+        <dt>Evidence grade</dt><dd>{badge_grade(r["evidence_grade"])} <span class="text-muted small">source category supported by at least two distinct verified DOI sources; D means insufficient verification</span></dd>
         <dt>IUCN category</dt><dd>{badge_iucn(r["iucn_category_code"])} <span class="text-muted small">({e(r["assessment_basis"])})</span></dd>
         <dt>CITES appendix</dt><dd>{e(r["cites_appendix"])}</dd>
         {extra}
@@ -1235,16 +1241,13 @@ def methods(d: dict) -> str:
             return 0.0
         s = sorted(vals); mid = len(s) // 2
         return s[mid] if len(s) % 2 else (s[mid - 1] + s[mid]) / 2
-    prov_a = grade_sources("A")
-    single = sum(1 for p in prov.values() if int(p["n_sources"]) <= 1)
-    prov_html = ""
-    if prov:
-        med_a = median(prov_a)
-        med_txt = f"{med_a:g} independent source{'s' if med_a != 1 else ''}"
-        prov_html = (f'<p class="small mt-3">Grade A was assigned to <strong>{len(prov_a)}</strong> taxa on the basis of a median of '
-                     f'<strong>{med_txt}</strong> per taxon (range {min(prov_a)}\u2013{max(prov_a)}). <strong>{single}</strong> taxa are supported by a '
-                     f'single source and are flagged in the <a href="data.html">provenance file</a> (evidence_grade_provenance, '
-                     'catalogued on the Data tab and archived with the atlas on Zenodo) as low-redundancy.</p>')
+    prov_html = '<p class="small">Source verification, study design and claim-level support are separate. Bibliographic resolution does not verify efficacy or species-specific claims. The full distribution below counts distinct resolved DOI sources per taxon; unverified books remain a coverage gap.</p>'
+    for grade in "ABCD":
+        members = [p for p in prov.values() if p["grade"] == grade]
+        singles = sum(int(p.get("n_verified_sources", 0)) == 1 for p in members)
+        prov_html += f'<p class="small">Grade {grade}: {singles}/{len(members)} taxa have exactly one verified source ({100*singles/len(members) if members else 0:.1f}%).</p>'
+    prov_html += '<details><summary>Per-taxon source distribution</summary><table class="table table-sm"><thead><tr><th>Taxon</th><th>Resolved journal sources</th><th>Resolved book sources</th><th>Resolved report sources</th><th>All cited sources</th></tr></thead><tbody>'
+    prov_html += ''.join(f'<tr><td>{e(p["accepted_name"])}</td><td>{e(p.get("verified_A",0))}</td><td>{e(p.get("verified_B",0))}</td><td>{e(p.get("verified_C",0))}</td><td>{e(p["n_sources"])}</td></tr>' for p in prov.values()) + '</tbody></table></details>'
     rubric = "".join(
         f'<tr><td>{badge_grade(g)}</td><td>{e(GRADE_TEXT[g])}</td><td class="text-end">{n(ev.get("species_by_grade", {}).get(g, 0))}</td>'
         f'<td class="text-end">{n(ev.get("rows_by_grade", {}).get("uses.csv", {}).get(g, 0))}</td>'
@@ -1263,16 +1266,17 @@ def methods(d: dict) -> str:
     return page("Methods — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
 <p class="small">The two available value-chain studies do not cover any of the 333 atlas taxa; the null result is a coverage limitation, not a finding about the taxa.</p>
-  <h1 class="h4">Methods</h1>
+  <h1 class="h4">Methods</h1><p class="small">Passing QA means the build is traceable, schema-compliant, and behaves as expected. It does not mean individual scientific claims have been verified.</p>
   <p class="lead small text-muted">How the atlas is built, graded and checked. Every step is a script in <code>scripts/</code>; running <code>build.sh</code> regenerates the whole site from the raw inputs.</p>
 
   <h2 class="h5 section-title">Data sources</h2>
   <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Source</th><th>Citation</th><th>Licence</th><th>Status</th></tr></thead><tbody>{refs}</tbody></table></div>
 
+  <p><a href="{REPO}/blob/main/docs/evidence_revision_report.md">Evidence revision report and outstanding audit gates</a></p>
+  <p class="small">Potency values from different assays, endpoints, extracts and units cannot establish a cross-study ranking. No matched-endpoint potency ranking has been established.</p>
   <h2 class="h5 section-title">Evidence grading rubric</h2>
-  <p class="small">Every use record, pharmacology record and species carries an evidence grade and a source identifier. A row citing several sources takes the best grade among them; a species takes the best grade of its rows.
-  Grade A is given only when the article is confirmed — by DOI, by PMID or PMC id, or by a Crossref match on author, year and journal or species — or when the citation is a complete journal reference.</p>
-  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Grade</th><th>Definition</th><th class="text-end">Taxa</th><th class="text-end">Use records</th><th class="text-end">Pharmacology records</th><th class="text-end">Median sources / taxon</th></tr></thead><tbody>{rubric}</tbody></table></div>
+  <p class="small">Provisional provenance grades: row grades describe citation metadata, while species grades require at least two distinct resolved DOI sources of the same category. Author–year matches and unconfirmed journal citations cannot confer A. Bibliographic verification, study design and claim support are separate; claims have not been individually verified.</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Grade</th><th>Definition</th><th class="text-end">Taxa</th><th class="text-end">Use records</th><th class="text-end">Pharmacology records</th><th class="text-end">Median citation keys / taxon</th></tr></thead><tbody>{rubric}</tbody></table></div>
   {prov_html}
   <p class="small">{len(ev.get("citation_issues", []))} citations were found to carry an error (a wrong DOI or PMID, or a misspelled journal or author) while grading; each is listed in the repository's QA report.</p>
 
@@ -1328,7 +1332,7 @@ def methods(d: dict) -> str:
   <p class="small">A parallel evidence layer maps publications, compounds and — from its Milestone 2 — compound–target–pathway networks for atlas taxa.
   Pilot scope: the {n(len(d["ev"]["order"]))} taxa with the most pharmacology records. Publications come from Europe PMC (primary) and OpenAlex
   (secondary), searched by accepted name and synonyms with a fixed query template; every query is recorded in the PRISMA search log
-  (<code>data/evidence/search_log.csv</code>). Evidence tiers are assigned by an automated keyword rubric (<code>auto-rubric-v1</code>) on title
+  (<code>data/evidence/search_log.csv</code>). Evidence tiers are assigned by an automated keyword rubric (<code>auto-rubric-v2-audit (provisional)</code>) on title
   and abstract; rows the rubric cannot place are flagged <code>needs_review</code> for a human queue — machine classification is never presented as
   evidence strength. Compounds are seeded from the pharmacology table and resolved against PubChem (CID, InChIKey, SMILES); unresolved names are
   flagged rather than guessed. Milestone-1 metadata is a citation-sorted slice (top 100 per query), so tier shares are not yet corpus-wide; full
@@ -1513,7 +1517,7 @@ def data(d: dict) -> str:
     return page("Data — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-4">
 <p class="small">The two available value-chain studies do not cover any of the 333 atlas taxa; the null result is a coverage limitation, not a finding about the taxa.</p>
-  <h1 class="h4">Data catalog</h1>
+  <h1 class="h4">Data catalog</h1><p class="small">Passing QA means the build is traceable, schema-compliant, and behaves as expected. It does not mean individual scientific claims have been verified.</p>
 
   <h2 class="h5 section-title">1 · Overview</h2>
   <p class="small">All static datasets are archived on Zenodo with DOIs. The evidence-engine contract JSON
@@ -1610,7 +1614,7 @@ def scan_download_links(pages: dict[str, str]) -> list[tuple[str, str]]:
 def about(d: dict) -> str:
     return page("About — Mekong Medicinal Plant Atlas", f'''
 <main class="container px-3 px-lg-4 py-3">
-  <h1 class="h4">About the atlas</h1>
+  <h1 class="h4">About the atlas</h1><p class="small">Passing QA means the build is traceable, schema-compliant, and behaves as expected. It does not mean individual scientific claims have been verified.</p>
   <p class="small text-muted">This page records authorship, affiliation, funding and contact.</p>
   <h2 class="h5 section-title">Authors and affiliations</h2>
   <ul class="small">
@@ -1678,11 +1682,11 @@ def sustainability(d: dict) -> str:
             f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
             f'<td class="text-end">{e(r.get("projected_range_change_pct", ""))}%</td>'
             f'<td><span class="badge text-bg-secondary">{e(r.get("climate_vulnerability_tier", ""))}</span></td>'
-            f'<td>{e(performance.get(r["species_id"], {}).get("confidence_flag", "not assessed"))}</td></tr>'
+            f'<td>{e(performance.get(r["species_id"], {}).get("confidence_flag", "not assessed"))}; AUC {e(r.get("auc", ""))}, TSS {e(r.get("tss", ""))}</td></tr>'
             for r in sorted(vuln, key=lambda r: float(r.get("projected_range_change_pct") or 0))[:15])
         sdm_block = f'''<h2 id="climate-screening" class="h5 mt-4">Climate screening — SSP5-8.5, 2041–2060</h2>
         <p class="small text-muted">Projected change in climatically suitable area using WorldClim 2.1 and MIROC6; conditional scenario projections, not forecasts.
-        {len(assessed)} taxa modelled; {len(performance) - len(assessed)} not assessed. <strong>{low_confidence} of {len(assessed)} models have low confidence (AUC &lt; 0.7 or TSS &lt; 0.4).</strong>
+        {len(assessed)} taxa modelled; {len(performance) - len(assessed)} not assessed. {len(assessed) - low_confidence} models meet both AUC ≥ 0.7 and TSS ≥ 0.4; this is a performance threshold, not independent scientific validation. <strong>{low_confidence} of {len(assessed)} models have low confidence (AUC &lt; 0.7 or TSS &lt; 0.4).</strong>
         The table shows the 15 largest projected losses, including low-confidence models; it is not a conservation priority ranking.</p>
         <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">Projected range change</th><th>Vulnerability tier</th><th>Model confidence</th></tr></thead><tbody>{top_sdm}</tbody></table></div>'''
     else:

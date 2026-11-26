@@ -47,7 +47,7 @@ SPECIES_MASTER = [
     ("cites_appendix", "string", "n/a", CITES, "CITES appendix in which the species is listed."),
     ("trade_status", "text", "n/a", "*", "Trade pressure as described in the workbook."),
     ("source_ids", "string", "n/a", "fk-list:references.source_id", "Identifiers of the sources contributing to the row."),
-    ("evidence_grade", "string", "n/a", GRADES, "Best evidence grade among the species' use and pharmacology records."),
+    ("evidence_grade", "string", "n/a", GRADES, "Highest source category with two distinct bibliographically resolved DOI sources; D means insufficient verification. Not claim support."),
     ("gbif_taxon_key", "string", "n/a", "re:\\d*", "GBIF backbone usage key."),
     ("gbif_match_type", "string", "n/a", MATCH_TYPES, "How the workbook name was matched to GBIF; MANUAL marks the nine names resolved by hand."),
     ("gbif_confidence", "string", "n/a", "re:\\d*", "Confidence of the GBIF name match (0-100)."),
@@ -257,6 +257,32 @@ TABLES = {
     "bioeconomy_priority_summary.csv": BIOECONOMY_PRIORITY_SUMMARY,
     "occurrences.csv": OCCURRENCES,
 }
+
+# Evidence correction exports keep provenance, design and claim support separate.
+TABLES["evidence_source_assessment.csv"] = [
+    (name, "string", "n/a", "*", definition) for name, definition in [
+        ("species_id", "Atlas taxon identifier."), ("table", "Originating evidence table."),
+        ("row_id", "Originating use or pharmacology row identifier."),
+        ("source_key", "Normalized DOI when resolved; otherwise normalized citation string."),
+        ("citation", "Verbatim source citation; conflicts retained."),
+        ("source_grade", "Provisional bibliographic source category A-D, not efficacy."),
+        ("source_verification", "Bibliographic metadata resolved or unverified."),
+        ("study_design", "Study design adjudication; not_assessed until verified."),
+        ("claim_support", "Claim-level adjudication; not_assessed until verified."),
+        ("citation_issue", "Retained bibliographic conflict."),
+        ("printed_id_problem", "Retained problem with the originally printed identifier.")]]
+TABLES["evidence_grade_provenance.csv"] = [
+    (name, "int" if name in {"n_sources", "n_verified_sources", "verified_A", "verified_B", "verified_C"} else "string", "sources" if name.startswith(("n_", "verified_")) else "n/a", "*", definition)
+    for name, definition in [
+        ("species_id", "Atlas taxon identifier."), ("accepted_name", "Accepted scientific name."),
+        ("grade", "Highest category with two distinct resolved DOI sources; D means insufficient verification."),
+        ("n_sources", "Distinct DOI or citation-string keys; unresolved aliases may remain."),
+        ("n_verified_sources", "Distinct resolved DOI sources across categories."),
+        ("verified_A", "Distinct resolved journal-article DOIs."),
+        ("verified_B", "Distinct resolved book/reference DOIs."),
+        ("verified_C", "Distinct resolved report DOIs."),
+        ("source_ids", "Resolved DOI keys used in the category counts."),
+        ("notes", "Verification scope and limitations.")]]
 
 GEO_LAYERS = [
     ("occurrences.geojson", "One point per published record inside the basin boundary.",

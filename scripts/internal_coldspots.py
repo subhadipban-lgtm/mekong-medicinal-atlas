@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Internal (sub-national) coldspot analysis - the atlas's novel extension.
+"""Internal (sub-national) coldspot analysis - the atlas's sub-national extension.
 
 Shrestha et al. identify hotspots/coldspots at botanical-country scale; the
 atlas has occurrence data at province scale. Here the same medicinal ~
