@@ -1425,13 +1425,11 @@ def data(d: dict) -> str:
         badge = ("text-bg-warning" if status.startswith("pending")
                  else "text-bg-success" if status.startswith("public")
                  else "text-bg-secondary")
-        repo_file = ep.get("file") or ""
+        served = ep.get("served_at") or []
         if status.startswith("pending"):
             example = '<span class="text-muted">endpoint not built — no public request</span>'
-        elif repo_file.startswith("data/evidence/"):
-            raw = ("https://raw.githubusercontent.com/subhadipban-lgtm/"
-                   "mekong-medicinal-plant-atlas/main/" + repo_file)
-            example = f'<code>curl -i &quot;{raw}&quot;</code>'
+        elif served:
+            example = f'<code>curl -i &quot;{served[0]}&quot;</code>'
         else:
             example = f'<code>curl -i &quot;{base}{e(ep["endpoint"])}&quot;</code>'
         sha = ep.get("sha256")
@@ -1510,15 +1508,17 @@ def data(d: dict) -> str:
   <code>unknown</code> is the documented result, not a gap to be filled.</p>
 
   <h2 class="h5 section-title">3 · Live contract (the living layer)</h2>
-  <p class="small">The evidence engine publishes its integration contract to <code>/data/evidence/</code>. The
+  <p class="small">The evidence engine publishes its integration contract from two live, public bases —
+  the <a href="https://api-service-dyzfz7h7lq-uc.a.run.app/contract/manifest.json" target="_blank" rel="noopener">api-service</a>
+  and the <a href="https://storage.googleapis.com/mekong-evidence-engine-public/contract/manifest.json" target="_blank" rel="noopener">public GCS bucket</a>
+  — and the same files are committed in the repository under <code>data/evidence/contract/</code>. The
   contract is <strong>aggregate metadata only</strong> (per-taxon publication identifiers, tier counts,
-  network summary counts and status stubs — no abstracts, titles or full text) and is committed in the
-  public repository under <code>data/evidence/contract/</code>; the website itself serves no
-  <code>/data/evidence/</code> endpoint, so an on-site request returns 404. The table states each
-  endpoint's real status, its schema version, its row count and the first 16 characters of its SHA-256,
-  so a reader can verify that the copy in the repository is the one this build describes. The
-  <code>curl</code> line targets the raw GitHub file for endpoints that are public in the repository;
-  for a pending endpoint no request exists.</p>
+  network summary counts and status stubs — no abstracts, titles or full text). The website itself
+  serves no <code>/data/evidence/</code> endpoint (an on-site request returns 404); the <code>curl</code>
+  line targets the live api-service endpoint. The table states each endpoint's real status, its schema
+  version, its row count and the first 16 characters of its SHA-256, so a reader can verify that the
+  copy they download is the one this build describes. <code>species_publications.json</code> carries
+  publication identifiers only and is excluded from future repository syncs.</p>
   <div class="table-responsive"><table class="table table-sm table-atlas">
     <thead><tr><th>Endpoint</th><th>Status</th><th>Schema</th><th>Rows</th><th>SHA-256</th><th>Example request</th></tr></thead>
     <tbody>{contract_html}</tbody></table></div>

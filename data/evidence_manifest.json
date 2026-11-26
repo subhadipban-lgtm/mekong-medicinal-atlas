@@ -2,6 +2,10 @@
   "schema_version": "1.0",
   "generated": "2026-11-26",
   "title": "Mekong Medicinal Plant Atlas — evidence contract endpoints: provenance manifest",
+  "live_bases": [
+    "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/",
+    "https://storage.googleapis.com/mekong-evidence-engine-public/contract/"
+  ],
   "note": "Structure, row counts, byte sizes, SHA-256 hashes, licence and access status for each evidence-engine contract endpoint. The endpoints themselves are restricted and are not published. This manifest contains no publication identifiers, DOIs, titles, author names or abstract text.",
   "contact": "Access requests: open an issue at https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/issues or write to the corresponding author listed on the About page.",
   "counts": {
@@ -26,9 +30,13 @@
     {
       "endpoint": "species_publications.json",
       "file": "data/evidence/contract/species_publications.json",
-      "access_status": "public — committed in the repository (not served on the website)",
+      "access_status": "public — api-service + GCS bucket + committed in the repository",
       "license": "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only",
       "notes": "Per-taxon list of publication identifiers behind the pilot literature mapping. Committed once (2026-11-26); excluded from future syncs by scripts/sync_evidence_contract.py.",
+      "served_at": [
+        "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/species_publications.json",
+        "https://storage.googleapis.com/mekong-evidence-engine-public/contract/species_publications.json"
+      ],
       "present": true,
       "schema_version": "1.0",
       "schema_names": [
@@ -47,9 +55,13 @@
     {
       "endpoint": "species_network_summary.json",
       "file": "data/evidence/contract/species_network_summary.json",
-      "access_status": "public — committed in the repository (not served on the website)",
+      "access_status": "public — api-service + GCS bucket + committed in the repository",
       "license": "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only",
       "notes": "Per-taxon network summary: compound, high-confidence target, pathway and disease counts.",
+      "served_at": [
+        "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/species_network_summary.json",
+        "https://storage.googleapis.com/mekong-evidence-engine-public/contract/species_network_summary.json"
+      ],
       "present": true,
       "schema_version": "1.0",
       "schema_names": [
@@ -71,9 +83,13 @@
     {
       "endpoint": "species_evidence_tier_counts.json",
       "file": "data/evidence/contract/species_evidence_tier_counts.json",
-      "access_status": "public — committed in the repository (not served on the website)",
+      "access_status": "public — api-service + GCS bucket + committed in the repository",
       "license": "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only",
       "notes": "Per-taxon publication counts by evidence tier (traditional, in vitro, in vivo, review, clinical, other).",
+      "served_at": [
+        "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/species_evidence_tier_counts.json",
+        "https://storage.googleapis.com/mekong-evidence-engine-public/contract/species_evidence_tier_counts.json"
+      ],
       "present": true,
       "schema_version": "1.0",
       "schema_names": [
@@ -100,6 +116,10 @@
       "access_status": "pending — not built",
       "license": "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only",
       "notes": "Per-taxon network edges. The local file is an empty stub (no nodes, no edges); the per-species endpoints do not exist yet.",
+      "served_at": [
+        "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/network_edges.json",
+        "https://storage.googleapis.com/mekong-evidence-engine-public/contract/network_edges.json"
+      ],
       "present": true,
       "schema_version": "1.0",
       "schema_names": [
@@ -122,9 +142,13 @@
     {
       "endpoint": "whats_new.json",
       "file": "data/evidence/contract/whats_new.json",
-      "access_status": "public — committed in the repository (not served on the website)",
+      "access_status": "public — api-service + GCS bucket + committed in the repository",
       "license": "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only",
       "notes": "Change feed from the living-review job: newly mapped publications per taxon.",
+      "served_at": [
+        "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/whats_new.json",
+        "https://storage.googleapis.com/mekong-evidence-engine-public/contract/whats_new.json"
+      ],
       "present": true,
       "schema_version": "1.0",
       "schema_names": [
@@ -143,9 +167,13 @@
     {
       "endpoint": "docking_summary.json",
       "file": "data/evidence/contract/docking_summary.json",
-      "access_status": "public — committed in the repository (not served on the website)",
+      "access_status": "public — api-service + GCS bucket + committed in the repository",
       "license": "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only",
       "notes": "Milestone-3 docking status stub (no pairs yet; AutoDock Vina runs after the decision gate).",
+      "served_at": [
+        "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/docking_summary.json",
+        "https://storage.googleapis.com/mekong-evidence-engine-public/contract/docking_summary.json"
+      ],
       "present": true,
       "schema_version": "1.0",
       "schema_names": [
@@ -169,6 +197,10 @@
       "access_status": "pending — no claims yet",
       "license": "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only",
       "notes": "Human-review status of extracted claims. The local file holds an empty claim list; no claim has been queued for review yet.",
+      "served_at": [
+        "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/review_status.json",
+        "https://storage.googleapis.com/mekong-evidence-engine-public/contract/review_status.json"
+      ],
       "present": true,
       "schema_version": "1.0",
       "schema_names": [

@@ -25,7 +25,7 @@ import atlas_lib as L  # noqa: E402
 CONTRACT = L.ROOT / "data" / "evidence" / "contract"
 OUT = L.ROOT / "data" / "evidence_manifest.json"
 
-IN_REPO = "public — committed in the repository (not served on the website)"
+IN_REPO = "public — api-service + GCS bucket + committed in the repository"
 RESTRICTED = "restricted — request access"
 RESTRICTED_NOTE = ("Restricted local build material. Not published on the website or in the "
                    "repository; available from the corresponding author on request, for review "
@@ -64,6 +64,10 @@ def endpoint(name: str, rel: str, access: str, notes: str, keys=None, records=No
         return entry
     obj = json.loads(path.read_text(encoding="utf-8"))
     digest, size = sha256_of(path)
+    entry["served_at"] = [
+        f"https://api-service-dyzfz7h7lq-uc.a.run.app/contract/{rel}",
+        f"https://storage.googleapis.com/mekong-evidence-engine-public/contract/{rel}",
+    ]
     entry.update({
         "present": True,
         "schema_version": obj.get("schema_version") if isinstance(obj, dict) else None,
@@ -146,6 +150,10 @@ def main() -> int:
         "schema_version": "1.0",
         "generated": "2026-11-26",
         "title": "Mekong Medicinal Plant Atlas — evidence contract endpoints: provenance manifest",
+        "live_bases": [
+            "https://api-service-dyzfz7h7lq-uc.a.run.app/contract/",
+            "https://storage.googleapis.com/mekong-evidence-engine-public/contract/",
+        ],
         "note": ("Structure, row counts, byte sizes, SHA-256 hashes, licence and access status for "
                  "each evidence-engine contract endpoint. The endpoints themselves are restricted "
                  "and are not published. This manifest contains no publication identifiers, DOIs, "
