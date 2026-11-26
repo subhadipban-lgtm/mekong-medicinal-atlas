@@ -57,6 +57,11 @@ if [[ $SITE_ONLY -eq 1 ]]; then
   $PYTHON scripts/build_contract_manifest.py || exit 1
   $PYTHON scripts/build_bioeconomy.py || exit 1
 fi
+# The iNaturalist photo cache is gitignored. A checkout without it would rebuild every
+# species page without its photo, so reconstruct the cache from the committed pages first.
+if [ ! -f data/raw/inat_photos.json ] && git rev-parse --git-dir >/dev/null 2>&1; then
+  run "$PYTHON" scripts/rebuild_photo_cache.py --ref HEAD
+fi
 run "$PYTHON" scripts/build_site.py
 run "$PYTHON" scripts/qa_checks.py
 if command -v node >/dev/null; then run node scripts/browser_checks.js; run "$PYTHON" scripts/qa_checks.py; else echo "node not found: skipping the browser checks"; fi

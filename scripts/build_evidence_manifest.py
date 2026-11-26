@@ -96,8 +96,9 @@ def main() -> int:
         "gms": gms,
         "taxa": taxa,
     }
-    # Corpus dedup figures (DOI -> PMID -> normalized title) when local inputs exist;
-    # otherwise preserve the committed values so a clean checkout keeps them.
+    # Corpus dedup figures (DOI -> PMID -> normalized title). In --manifest mode the site build
+    # must never move the published numbers, so the committed totals are kept even when the
+    # restricted publications table happens to be present locally.
     _prior = {}
     _mp = L.PROCESSED / "evidence_manifest.json"
     if _mp.exists():
@@ -106,7 +107,7 @@ def main() -> int:
         except Exception:
             _prior = {}
     _pub = EV / "publications.csv"
-    if _pub.exists():
+    if not use_manifest and _pub.exists():
         import re as _re, csv as _csv
         _keys = set(); _nr = 0
         def _nd(d):
