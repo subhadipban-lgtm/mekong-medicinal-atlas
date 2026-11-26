@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-25T18:29:48.566Z",
+  "generatedAt": "2026-11-26T15:50:34.590Z",
   "url": "http://127.0.0.1:8124/index.html",
-  "totalToReadyMs": 830,
+  "totalToReadyMs": 2279,
   "toggle": {
     "loaded": true,
-    "loadMs": 303,
+    "loadMs": 302,
     "note": "All records shown; out-of-basin points are generalised to one point per species per half-degree cell."
   },
   "hide": {
-    "note": "Loading the in-basin records only; switch to all records to add the out-of-basin layer."
+    "note": "Showing in-basin records only; switch to all records to add the out-of-basin layer."
   },
   "mobile": {
     "visible": true,
