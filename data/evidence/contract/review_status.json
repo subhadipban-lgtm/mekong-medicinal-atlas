@@ -3,5 +3,6 @@
   "generated": "2026-11-26",
   "status": "awaiting_human_review",
   "pending": 190,
-  "note": "190 rows flagged needs_review in the seed corpus (20 pilot taxa); human queue gate enforced by review-queue-service."
+  "note": "190 rows flagged needs_review in the seed corpus (20 pilot taxa); human queue gate enforced by review-queue-service.",
+  "claims": []
 }
