@@ -38,7 +38,7 @@
       ];
       Promise.all(promises).then(() => {
         L.control.layers({ 'CartoDB Positron': ms.base }, overlays, { collapsed: false, position: 'topleft' }).addTo(ms.map);
-        document.getElementById('sustStatus').textContent = failures.length ? failures.join('; ') : 'Toggle the layers with the control (top left).';
+        document.getElementById('sustStatus').textContent = failures.length ? 'Data layer unavailable — see Methods. ' + failures.join('; ') : 'Toggle the layers with the control (top left).';
       });
     }).catch(err => {
       const el = document.getElementById('sustStatus');

@@ -243,6 +243,7 @@ def page(title: str, body: str, active: str, description: str, script: str, need
     <div class="collapse navbar-collapse" id="atlasNav"><ul class="navbar-nav ms-auto">{links}</ul></div>
   </div>
 </nav>
+<div class="container-fluid px-3 py-2"><div class="alert alert-warning" role="status"><strong>Evidence under revision.</strong> Publication tiers and evidence grades are provisional while classification and source verification are corrected. Literature counts are retrieval counts, not validated claims.</div></div>
 {body}
 <footer class="atlas">
   <div class="container-fluid px-3 px-lg-4">
@@ -506,7 +507,7 @@ def home(d: dict) -> str:
           <div class="col-6 stat"><div class="n">{n(in_basin["species"])}</div><div class="l">taxa with records inside the basin</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["uses"]))}</div><div class="l">ethnobotanical use records</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["pharmacology"]))}</div><div class="l">pharmacology records</div></div>
-          <div class="col-6 stat"><div class="n">{n(bio_unknown)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary">taxa awaiting bioeconomy assessment</a></div></div>
+          <div class="col-6 stat"><div class="n">{n(bio_unknown)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary">taxa not yet assessed</a></div></div>
         </div>
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
         <div class="small mt-2"><a class="text-light" href="evidence.html">Evidence engine (pilot):
@@ -1261,6 +1262,7 @@ def methods(d: dict) -> str:
     ne_river = layers.get("mekong_river_naturalearth.geojson", {})
     return page("Methods — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
+<p class="small">The two available value-chain studies do not cover any of the 333 atlas taxa; the null result is a coverage limitation, not a finding about the taxa.</p>
   <h1 class="h4">Methods</h1>
   <p class="lead small text-muted">How the atlas is built, graded and checked. Every step is a script in <code>scripts/</code>; running <code>build.sh</code> regenerates the whole site from the raw inputs.</p>
 
@@ -1510,6 +1512,7 @@ def data(d: dict) -> str:
 
     return page("Data — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-4">
+<p class="small">The two available value-chain studies do not cover any of the 333 atlas taxa; the null result is a coverage limitation, not a finding about the taxa.</p>
   <h1 class="h4">Data catalog</h1>
 
   <h2 class="h5 section-title">1 · Overview</h2>
@@ -1637,25 +1640,36 @@ def sustainability(d: dict) -> str:
     names = {s["species_id"]: s["accepted_name"] for s in d["species_master"]}
 
     def row_pressure(r):
-        label = {"low": "Low", "moderate": "Moderate", "high": "High", "very high": "Very high"}[r["harvest_pressure_class"]]
-        color = {"low": "text-bg-light", "moderate": "text-bg-warning", "high": "text-bg-orange", "very high": "text-bg-danger"}[r["harvest_pressure_class"]]
+        tier = r["harvest_pressure_class"].capitalize()
+        missing = float(r["local_use_score"] or 0) == 0
+        label = tier + (" (demographic proxy, no use data)" if missing else " proxy")
+        confidence = "no-use-data" if missing else "Use data recorded; proxy only"
+        formula = "Cell index = normalized log(1 + population density) × normalized species richness × normalized summed use score; taxon score = mean over occupied cells. No taxon-specific harvest observations."
         return (f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
-                f'<td>{e(r["local_use_score"])}</td>'
-                f'<td>{e(r["mean_harvest_pressure_in_range"])}</td>'
-                f'<td><span class="badge {color}">{e(label)} proxy</span>'
-                f'{"<div class=small>No recorded use; demographic proxy only</div>" if float(r["local_use_score"] or 0) == 0 else ""}</td></tr>')
+                f'<td>{e(r["local_use_score"])}</td><td>{e(r["mean_harvest_pressure_in_range"])}</td>'
+                f'<td title="{e(formula)}">{e(label)}</td><td title="{e(formula)}">{confidence}</td></tr>')
+
+    def row_hydro(r):
+        count = int(r["n_occurrences_in_basin"])
+        tier = r["hydrological_vulnerability_class"]
+        label = f"{tier} (low-evidence, n={count})" if count < 3 else f"{tier} proximity"
+        confidence = "Single-occurrence" if count == 1 else "Two occurrences" if count == 2 else "Proximity proxy only"
+        note = "Fewer than three in-basin occurrences is flagged as low evidence; the numeric proximity threshold is unchanged."
+        return (f'<tr data-n-occurrences="{count}"><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
+                f'<td class="text-end">{count}</td><td class="text-end">{e(r["pct_within_10km_major_dam"])}%</td>'
+                f'<td title="{note}">{e(label)}</td><td title="{note}">{confidence}</td></tr>')
 
     top_pressure = "".join(row_pressure(r) for r in sorted(pressure, key=lambda r: -float(r["mean_harvest_pressure_in_range"]))[:15])
-    high_pressure_n = sum(1 for r in pressure if r["harvest_pressure_class"] in ("high", "very high"))
-    high_hydro_n = sum(1 for r in hydro if r["hydrological_vulnerability_class"] == "high")
-
-    top_hydro = "".join(
-        f'<tr><td><a class="taxon" href="species/{r["species_id"][3:]}.html">{e(names.get(r["species_id"], r["species_id"]))}</a></td>'
-        f'<td class="text-end">{e(r["n_occurrences_in_basin"])}</td>'
-        f'<td class="text-end">{e(r["pct_within_10km_major_dam"])}%</td>'
-        f'<td><span class="badge {"text-bg-danger" if r["hydrological_vulnerability_class"] == "high" else "text-bg-light"}">{e(r["hydrological_vulnerability_class"])} proximity</span>'
-        f'{"<div class=small>Sparse evidence: fewer than 10 records</div>" if int(r["n_occurrences_in_basin"]) < 10 else ""}</td></tr>'
-        for r in sorted(hydro, key=lambda r: -float(r["pct_within_10km_major_dam"]))[:15])
+    high_pressure_n = sum(r["harvest_pressure_class"] in ("high", "very high") for r in pressure)
+    high_hydro_n = sum(r["hydrological_vulnerability_class"] == "high" for r in hydro)
+    top_hydro = "".join(row_hydro(r) for r in sorted(hydro, key=lambda r: -float(r["pct_within_10km_major_dam"]))[:15])
+    bio_assessed = sum(r.get("bioeconomy_priority_tier", "unknown") != "unknown" for r in d["bioeconomy_by"].values())
+    summary = "".join(f'<div class="col"><div class="card h-100"><div class="card-body"><strong class="h4">{n(value)}</strong><div>{label}</div><p class="small mb-0">{note}</p></div></div></div>' for value, label, note in [
+        (len(pressure), "Harvest-pressure scores", "Proxy coverage, not measured harvest."),
+        (high_pressure_n, "High / very high proxies", "Read each taxon’s evidence flag."),
+        (len(hydro), "Hydrological assessments", "Occurrence proximity to major dams."),
+        (high_hydro_n, "High dam proximity", "Small samples are explicitly flagged."),
+        (bio_assessed, "Bioeconomy assessments", "Available studies do not cover the inventory.")])
 
     sdm_block = ""
     if sdm and any(r.get("projected_range_change_pct") for r in sdm):
@@ -1698,6 +1712,7 @@ def sustainability(d: dict) -> str:
   <h1 class="h4">Sustainability</h1>
   <p class="text-muted">Medicinal plant diversity, harvest pressure and hydrological risk across the Mekong basin.</p>
   <p class="small">Use these layers to explore research gaps and environmental exposure. Pressure and dam proximity are proxies; climate and cultivation outputs are exploratory screens.</p>
+  <div class="row row-cols-1 row-cols-md-3 row-cols-xl-5 g-2 mb-3">{summary}</div>
   <nav class="nav nav-pills gap-2 mb-4" aria-label="Sustainability sections">
     <a class="nav-link" href="#macroecology">Macroecology</a>
     <a class="nav-link" href="#harvest-pressure">Harvest pressure</a>
@@ -1733,7 +1748,7 @@ def sustainability(d: dict) -> str:
   <div class="map-shell map-explore">
     <div class="map" id="map" role="application" aria-label="Harvest pressure and hydrological risk summary map"></div>
     <div class="map-tools">{north_arrow()}</div>
-    <div class="map-status" id="sustStatus">Loading layers…</div>
+    <div class="map-status" id="sustStatus" role="status" aria-live="polite">Loading layers…</div>
     <div class="map-legend legend-grade">
       <div><strong>Sustainability layers</strong> (switch in the layer control)</div>
       <div><span class="sw" style="background:#f2efe9"></span>harvest pressure: low</div>
@@ -1750,12 +1765,16 @@ def sustainability(d: dict) -> str:
   not as evidence of harvest pressure on the species.</p>
   <p class="small text-muted">By the evidence-weighted mean harvest-pressure proxy across the cells where the taxon occurs
   (<a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harvest_pressure_methods.md" target="_blank" rel="noopener">methods</a>).</p>
-  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th>Use score</th><th>Mean pressure</th><th>Class</th></tr></thead><tbody>{top_pressure}</tbody></table></div>
+  <details class="my-3" open><summary>Harvest-pressure ranked table and evidence flags</summary>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th>Use score</th><th>Mean pressure</th><th>Class</th><th>Confidence</th></tr></thead><tbody>{top_pressure}</tbody></table></div>
+  </details>
 
   <h2 id="hydrological-risk" class="h5 mt-4">Hydrological risk</h2>
-  <p class="small text-muted">Share of in-basin occurrences within 10 km of a major dam (distance-based proxy, not a measured ecological impact). Fewer than 10 records is flagged as sparse evidence for interpretation, without changing the underlying class (see
+  <p class="small text-muted">Share of in-basin occurrences within 10 km of a major dam (distance-based proxy, not a measured ecological impact). Fewer than 3 records is flagged as low evidence for interpretation, without changing the underlying class (see
   <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">methods</a>).</p>
-  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">In-basin records</th><th class="text-end">Within 10 km</th><th>Class</th></tr></thead><tbody>{top_hydro}</tbody></table></div>
+  <details class="my-3" open><summary>Hydrological ranked table and evidence flags</summary>
+  <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">In-basin records</th><th class="text-end">Within 10 km</th><th>Class</th><th>Confidence</th></tr></thead><tbody>{top_hydro}</tbody></table></div>
+  </details>
 
   {sdm_block}
   {cult_block}
@@ -1827,6 +1846,12 @@ def main() -> int:
         target = L.WEB / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content, encoding="utf-8")
+    referenced_geo = set()
+    for content in list(pages.values()) + [p.read_text() for p in (L.WEB / "assets" / "js").glob("*.js")]:
+        referenced_geo.update(re.findall(r"data/geo/[A-Za-z0-9_./-]+\.geojson", content))
+    missing_geo = sorted(path for path in referenced_geo if not (L.WEB / path).is_file())
+    if missing_geo:
+        sys.exit("Required GeoJSON assets missing: " + ", ".join(missing_geo))
     bad = scan_download_links(pages)
     if bad:
         sys.exit("build: in-site data-download links are not permitted (use Zenodo DOIs): "
