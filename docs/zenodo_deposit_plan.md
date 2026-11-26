@@ -46,9 +46,10 @@ already exists and created under a new concept DOI where it does not:
 
 ## What must NOT be deposited
 
-- `data/evidence/**` (publications, compounds, search logs, contract JSONs) — restricted;
-  access on request only. Only the numbers-only `data/processed/evidence_manifest.json` and
-  the structure-only `data/evidence_manifest.json` are public.
+- `data/evidence/` beyond `contract/` (publications.csv with titles and abstracts,
+  species_compound.csv, search logs) — restricted; access on request only.
+- `data/evidence/contract/species_publications.json` (publication identifiers) — excluded
+  from future contract syncs; deposit only the structure manifest `data/evidence_manifest.json`.
 - The source workbook — not licensed for redistribution.
 - Raw GBIF/WFO/WCVP downloads — link their DOIs instead of re-hosting.
 

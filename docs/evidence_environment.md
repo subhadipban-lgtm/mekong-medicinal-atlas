@@ -14,10 +14,15 @@ what the atlas needs to know about that environment; it does not expose engine c
   `data/processed/evidence_manifest.json`, plus the structure-only
   `data/evidence_manifest.json` (schema names, row counts, SHA-256, licence, access status —
   no identifiers).
-- **Live endpoints**: the contract JSON is served from `/data/evidence/` only where an endpoint
-  is genuinely public. In this release all contract endpoints are restricted: an anonymous
-  request returns 404, and access is by request to the corresponding author
-  (see the Data tab, section 3).
+- **Contract publication (2026-11-26 policy)**: the aggregate contract files under
+  `data/evidence/contract/` (publication identifiers, tier counts, network summary counts,
+  status stubs — no abstracts, titles or full text) are committed in the public repository.
+  The website serves no `/data/evidence/` endpoint (anonymous requests return 404).
+  `species_publications.json` is excluded from future syncs by
+  `scripts/sync_evidence_contract.py`, and the scheduled contract sync is disabled
+  (`.github/workflows/sync-evidence.yml` runs on `workflow_dispatch` only).
+- **Restricted inputs**: `data/evidence/` beyond `contract/` (publications.csv with titles and
+  abstracts, species_compound.csv, search logs) stays gitignored and unpublished.
 - **Access requests**: open an issue at
   https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/issues quoting the endpoint
   name and its SHA-256 from `data/evidence_manifest.json`.

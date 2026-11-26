@@ -84,6 +84,8 @@ per-taxon note pointers for a later coding pass.
 **Blocked / requires the owner:**
 1. Actual Zenodo uploads for the ten "DOI pending" datasets (needs the owner's Zenodo account);
    the registry is updated with minted DOIs afterwards.
-2. A value-chain study that covers atlas taxa, to move any profile out of `unknown`
-   (or the owner widens the coding scope, e.g. to the documented CITES/trade register).
+2. A value-chain study that covers atlas taxa, to move any profile out of `unknown` — or the
+   decision to add the six studied species (*Gynostemma pentaphyllum*, *Asparagus filicinus*,
+   *A. subscandens*, *Paris polyphylla*, *Stemona tuberosa*, *Tacca chantrieri*) to the atlas so
+   the layer can be populated (flagged in the iScience draft before any Results section).
 3. Author confirmation of the "Charoensub" spelling before any v1.0.0 deposit.

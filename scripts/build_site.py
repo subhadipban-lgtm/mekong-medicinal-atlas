@@ -1422,9 +1422,16 @@ def data(d: dict) -> str:
     ep_rows = []
     for ep in cm["endpoints"]:
         status = ep["access_status"]
-        badge = "text-bg-warning" if status.startswith("pending") else "text-bg-secondary"
+        badge = ("text-bg-warning" if status.startswith("pending")
+                 else "text-bg-success" if status.startswith("public")
+                 else "text-bg-secondary")
+        repo_file = ep.get("file") or ""
         if status.startswith("pending"):
             example = '<span class="text-muted">endpoint not built — no public request</span>'
+        elif repo_file.startswith("data/evidence/"):
+            raw = ("https://raw.githubusercontent.com/subhadipban-lgtm/"
+                   "mekong-medicinal-plant-atlas/main/" + repo_file)
+            example = f'<code>curl -i &quot;{raw}&quot;</code>'
         else:
             example = f'<code>curl -i &quot;{base}{e(ep["endpoint"])}&quot;</code>'
         sha = ep.get("sha256")
@@ -1485,9 +1492,10 @@ def data(d: dict) -> str:
   <h1 class="h4">Data catalog</h1>
 
   <h2 class="h5 section-title">1 · Overview</h2>
-  <p class="small">All static datasets are archived on Zenodo with DOIs. Live contract JSON is served
-  from <code>/data/evidence/</code> with CORS enabled where it is public. This page is the catalog.
-  It describes each dataset, its schema, its licence, its version, and how to cite it.
+  <p class="small">All static datasets are archived on Zenodo with DOIs. The evidence-engine contract JSON
+  is committed in the repository under <code>data/evidence/contract/</code> (aggregate metadata only;
+  the website serves no <code>/data/evidence/</code> endpoint). This page is the catalog: it describes
+  each dataset, its schema, its licence, its version, and how to cite it.
   {n(total)} datasets are catalogued: {n(deposited)} deposited and {n(pending)} with a DOI pending.
   This is <strong>not</strong> a download page; the files live on Zenodo.</p>
 
@@ -1502,20 +1510,24 @@ def data(d: dict) -> str:
   <code>unknown</code> is the documented result, not a gap to be filled.</p>
 
   <h2 class="h5 section-title">3 · Live contract (the living layer)</h2>
-  <p class="small">The evidence engine publishes JSON to <code>/data/evidence/</code>. Those endpoints are
-  <strong>restricted</strong> in this release: they are not published on the site, and the data are
-  available from the corresponding author on request. The table states each endpoint's real status,
-  its schema version, its row count and the first 16 characters of its SHA-256, so a requester can
-  verify that the copy they receive is the one this build describes. The <code>curl</code> line is
-  shown for reference only: an anonymous request to a restricted endpoint returns 404, and no endpoint
-  is presented as working.</p>
+  <p class="small">The evidence engine publishes its integration contract to <code>/data/evidence/</code>. The
+  contract is <strong>aggregate metadata only</strong> (per-taxon publication identifiers, tier counts,
+  network summary counts and status stubs — no abstracts, titles or full text) and is committed in the
+  public repository under <code>data/evidence/contract/</code>; the website itself serves no
+  <code>/data/evidence/</code> endpoint, so an on-site request returns 404. The table states each
+  endpoint's real status, its schema version, its row count and the first 16 characters of its SHA-256,
+  so a reader can verify that the copy in the repository is the one this build describes. The
+  <code>curl</code> line targets the raw GitHub file for endpoints that are public in the repository;
+  for a pending endpoint no request exists.</p>
   <div class="table-responsive"><table class="table table-sm table-atlas">
     <thead><tr><th>Endpoint</th><th>Status</th><th>Schema</th><th>Rows</th><th>SHA-256</th><th>Example request</th></tr></thead>
     <tbody>{contract_html}</tbody></table></div>
-  <p class="small">This is the only live endpoint set on the site. Everything else is archived on Zenodo.
-  Access requests: open an issue in the <a href="{REPO}/issues" target="_blank" rel="noopener">repository</a>
-  or write to the corresponding author listed on the <a href="about.html">About</a> page, quoting the
-  endpoint name and the SHA-256 above.</p>
+  <p class="small">The restricted engine inputs (the publications table with titles and abstracts, the
+  compound table, the search log) remain unpublished and are available from the corresponding author on
+  request. Everything else is archived on Zenodo. Requests: open an issue in the
+  <a href="{REPO}/issues" target="_blank" rel="noopener">repository</a> or write to the corresponding
+  author listed on the <a href="about.html">About</a> page, quoting the endpoint name and the SHA-256
+  above.</p>
 
   <h2 class="h5 section-title">4 · Data dictionary</h2>
   <p class="small text-muted">Filterable table rendered from the union of {n(ndict)} <code>data/dictionary_*.csv</code>

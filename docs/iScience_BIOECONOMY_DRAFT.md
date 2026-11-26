@@ -1,4 +1,9 @@
-# iScience manuscript additions — bioeconomy layer (draft, ready to paste)
+# iScience manuscript additions — bioeconomy layer (draft)
+
+> Framing: the bioeconomy work is a **methodology plus a null result** in this release.
+> It must not be pasted as a Results claim. A Results section becomes possible only if the
+> six species covered by the two value-chain studies are added to the atlas (decision needed
+> from the corresponding author — see the box in the Results section below).
 
 All numbers are traceable to `data/processed/bioeconomy_profiles.csv`,
 `data/processed/bioeconomy_priority_summary.csv`, `data/processed/evidence_manifest.json`,
@@ -31,28 +36,32 @@ unit, and date together; they are labelled proxies, never valuations, and are ne
 into a total. No per-species bioprospecting value is claimed; published per-plant bioprospecting
 ranges (roughly US$200–US$2M) are cited in the literature only as context.
 
-## Results — Bioeconomy readiness of the pilot taxa
+## Results — Bioeconomy readiness (NULL RESULT — not a Results claim yet)
 
-- **Priority tiers**: of the 20 pilot taxa, 0 are high, 0 medium, 0 low and 20 unknown
-  (source: `bioeconomy_priority_summary.csv`).
-- **CITES-listed**: 2 of the 20 pilot taxa are CITES Appendix II in the atlas register
-  (*Aquilaria crassna*, *Dalbergia cochinchinensis*; source: `conservation_trade.csv`).
-  These listings are recorded as per-taxon pointers in the bioeconomy notes but are not copied
-  into `trade_exposure` because the coding pass is restricted to the two value-chain studies.
-- **BioTrade-supported**: 0 of 20.
-- **GACP- or FairWild-eligible**: 0 of 20 (every certification readiness is `unknown`, because
-  `wild_cultivated_status` is unrecorded for all 333 taxa).
-- **Overlap with molecular coherence**: defined for this analysis as the five pilot taxa with
-  the most seeded compounds (A. crassna 12, D. cochinchinensis 9, S. dulcis 9, A. marmelos 7,
-  A. heterophyllus 7; query: top-5 `n_compounds` in `evidence_manifest.json`), none of the five
-  has a high bioeconomy priority tier (0/5; overlap = 0).
+> **Decision needed before this section can be drafted as Results.** The two value-chain
+> studies cover six species that are not in the atlas: *Gynostemma pentaphyllum*, *Asparagus
+> filicinus*, *A. subscandens*, *Paris polyphylla*, *Stemona tuberosa* and *Tacca chantrieri*.
+> The corresponding author must choose one of two routes before any Results text is written:
+> (a) present the bioeconomy work strictly as **Methods + a null result** (the layer's schema,
+> coding rules, source register and derivation are complete, and every coding is `unknown`
+> because no atlas taxon is covered), or (b) **add the six studied species to the atlas**
+> (GBIF backbone match, occurrence harvest, evidence grading, species pages — a new
+> data-release step) so the layer can be populated with real codings and a Results section
+> becomes possible. This draft keeps the null-result framing until that decision is made.
 
-The result of this pass is therefore a fully documented *absence of evidence*, not evidence of
-absence: the screening layer's schema, derivation rule and source register are complete, and
-the layer reports `unknown` for every taxon until value-chain studies covering atlas taxa are
-retrieved.
+The null result, stated precisely: of the 20 pilot taxa, 0 are high, 0 medium, 0 low and 20
+`unknown` in the bioeconomy priority tier (`bioeconomy_priority_summary.csv`). Every one of the
+333 atlas taxa is `unknown` in every coded field, by rule: the coding scope is restricted to
+the two value-chain studies above, and neither covers an atlas taxon. This is a documented
+absence of evidence, not evidence of absence. Ancillary facts that must NOT be presented as
+Results claims until the decision above is made: 2 of the 20 pilot taxa are CITES Appendix II
+in the atlas register (*Aquilaria crassna*, *Dalbergia cochinchinensis*;
+`conservation_trade.csv`), recorded only as per-taxon note pointers because the coding pass is
+restricted to the two studies; 0 taxa are BioTrade-supported; 0 are GACP- or FairWild-eligible
+(all `unknown`); and the overlap between the five most-compound-rich pilot taxa and a high
+bioeconomy tier is 0/5 (query: top-5 `n_compounds` in `evidence_manifest.json`).
 
-## Discussion
+## Discussion (context only, in the null-result framing)
 
 The atlas is designed to identify not only which Mekong medicinal plants are chemically
 interesting but which are economically viable and socially embedded enough to support
@@ -78,12 +87,16 @@ a future coding pass once the coding scope is widened by the authors.
 - No per-species bioprospecting value is claimed.
 - The pilot coding (20 taxa) is complete in the sense that every field is populated or
   explicitly `unknown`; the wider 333-taxon layer is a screening framework and is 100%
-  `unknown` in this release.
+  `unknown` in this release. The bioeconomy contribution is a methodology plus a null result;
+  it becomes a Results claim only if the six taxa covered by the two value-chain studies are
+  added to the atlas (decision pending with the corresponding author).
 - Equity flags are only recorded where a value-chain study or a documented benefit-sharing
   assessment exists; none exists for an atlas taxon, and no flag was inferred from trade status.
 - Field validation of value-chain and livelihood data is required before any policy use.
-- The restricted evidence-engine contract (publications, compounds, networks) is not published;
-  its structure-only manifest (`data/evidence_manifest.json`) is.
+- The evidence-engine contract committed in the repository is aggregate metadata only
+  (publication identifiers, counts, status stubs — no titles, abstracts or full text); the
+  restricted inputs behind it are not published and its structure is described by
+  `data/evidence_manifest.json`.
 
 ## Data Records
 
@@ -101,11 +114,12 @@ a future coding pass once the coding scope is widened by the authors.
 | macroecology_residuals | 7 | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
 | macroecology_slope_comparison | 6 | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
 | evidence_grade_provenance | 333 | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
-| evidence_contract_manifest | 7 endpoints | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
+| evidence_contract_manifest | 8 endpoints | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
 | publications_manifest | 2,317 | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
 | compounds_manifest | 119 | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
 | network_summary_manifest | 20 | 1.0.0 | DOI pending † | DOI pending † | CC-BY-4.0 |
 
 † DOI pending at submission: the rows state the deposit plan in `zenodo_registry.csv`;
-no DOI was invented. The evidence contract endpoints themselves are restricted and are not
-deposited; only their structure-only manifest is.
+no DOI was invented. The evidence contract endpoints are aggregate metadata committed in the
+repository (no titles, abstracts or full text); the restricted inputs behind them are not
+deposited.

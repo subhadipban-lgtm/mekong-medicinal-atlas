@@ -25,11 +25,12 @@ import atlas_lib as L  # noqa: E402
 CONTRACT = L.ROOT / "data" / "evidence" / "contract"
 OUT = L.ROOT / "data" / "evidence_manifest.json"
 
+IN_REPO = "public — committed in the repository (not served on the website)"
 RESTRICTED = "restricted — request access"
 RESTRICTED_NOTE = ("Restricted local build material. Not published on the website or in the "
                    "repository; available from the corresponding author on request, for review "
                    "and research collaboration.")
-LICENSE = "not granted for redistribution; available from the corresponding author on request"
+LICENSE = "CC-BY-4.0 for the committed contract aggregates; publication identifiers are metadata only"
 
 
 def sha256_of(path: Path) -> tuple[str, int]:
@@ -99,17 +100,19 @@ def main() -> int:
                  "Top-level index of the contract set. No manifest.json exists in the local contract "
                  "set; this provenance manifest serves as the index instead.",
                  keys=0, rows_basis="no tabular rows"),
-        endpoint("species_publications.json", "species_publications.json", RESTRICTED,
-                 "Per-taxon list of publication identifiers behind the pilot literature mapping.",
+        endpoint("species_publications.json", "species_publications.json", IN_REPO,
+                 "Per-taxon list of publication identifiers behind the pilot literature mapping. "
+                 "Committed once (2026-11-26); excluded from future syncs by "
+                 "scripts/sync_evidence_contract.py.",
                  keys=len(sp),
                  records=["publication_id"],
                  rows_basis=f"one array per pilot taxon; {sum(len(v) for v in sp.values())} identifiers in total"),
-        endpoint("species_network_summary.json", "species_network_summary.json", RESTRICTED,
+        endpoint("species_network_summary.json", "species_network_summary.json", IN_REPO,
                  "Per-taxon network summary: compound, high-confidence target, pathway and disease counts.",
                  keys=len(ns),
                  records=record_fields({"x": ns}, "x"),
                  rows_basis="one object per pilot taxon"),
-        endpoint("species_evidence_tier_counts.json", "species_evidence_tier_counts.json", RESTRICTED,
+        endpoint("species_evidence_tier_counts.json", "species_evidence_tier_counts.json", IN_REPO,
                  "Per-taxon publication counts by evidence tier (traditional, in vitro, in vivo, review, clinical, other).",
                  keys=len(tiers),
                  records=record_fields({"x": tiers}, "x"),
@@ -120,11 +123,17 @@ def main() -> int:
                  keys=len(edges.get("edges", [])),
                  records=["nodes", "edges"],
                  rows_basis="edge list; 0 edges in the local stub"),
-        endpoint("whats_new.json", "whats_new.json", RESTRICTED,
+        endpoint("whats_new.json", "whats_new.json", IN_REPO,
                  "Change feed from the living-review job: newly mapped publications per taxon.",
                  keys=len(news.get("items", [])),
                  records=record_fields({"x": news.get("items") or [{}]}, "x") or ["change_id"],
                  rows_basis="one item per detected change"),
+        endpoint("docking_summary.json", "docking_summary.json", IN_REPO,
+                 "Milestone-3 docking status stub (no pairs yet; AutoDock Vina runs after the "
+                 "decision gate).",
+                 keys=0,
+                 records=record_fields({"x": load("docking_summary.json")}, "x") or ["status"],
+                 rows_basis="status stub; 0 pairs"),
         endpoint("review_status.json", "review_status.json", "pending — no claims yet",
                  "Human-review status of extracted claims. The local file holds an empty claim list; "
                  "no claim has been queued for review yet.",
