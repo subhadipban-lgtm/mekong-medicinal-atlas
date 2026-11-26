@@ -72,6 +72,9 @@ SPECIES_MASTER = [
     ("occurrence_countries", "string", "n/a", COUNTRY_LIST, "Basin countries with at least one published record."),
     ("sensitive_species", "string", "n/a", ["yes", "no"], "Species is threatened or CITES-listed and has published records."),
     ("sensitivity_reason", "string", "n/a", "*", "Why the species is treated as sensitive."),
+    ("bioeconomy_profile_available", "bool", "n/a", ["True", "False"], "A bioeconomy profile carries at least one coding that is not 'unknown' (see build_bioeconomy.py)."),
+    ("bioeconomy_priority_tier", "string", "n/a", ["high", "medium", "low", "unknown"], "Derived tier from trade_exposure, livelihood_dependence and certification_readiness; docs/bioeconomy_priority_rule.md."),
+    ("bioeconomy_source_ids", "string", "n/a", "*", "Semicolon-separated bioeconomy source ids (docs/bioeconomy_sources.csv)."),
 ]
 
 USES = [
@@ -208,6 +211,41 @@ OCCURRENCES = [
     ("source_id", "string", "n/a", ["SRC-003"], "Atlas. Source register entry for GBIF records."),
 ]
 
+VALUE_CHAIN = ["wild-informal", "wild-formal", "cultivated-informal", "cultivated-formal", "mixed", "unknown"]
+TRADE_EXPOSURE = ["CITES-listed", "BioTrade-supported", "export-commodity", "domestic-only", "no-trade-data", "unknown"]
+CERT_READINESS = ["GACP-eligible", "FairWild-eligible", "both", "neither", "unknown"]
+LIVELIHOOD = ["high", "moderate", "low", "unknown"]
+EQUITY = ["equitable", "inequitable", "not-assessed", "unknown"]
+VALUATION = ["market-price", "bioprospecting-estimate", "none", "unknown"]
+CONFIDENCE = ["high", "medium", "low"]
+
+BIOECONOMY_PROFILES = [
+    ("species_id", "string", "n/a", "fk:species_master.species_id", "Join key to the atlas taxon."),
+    ("value_chain_type", "string", "n/a", VALUE_CHAIN, "Dominant marketing channel documented in a value-chain study."),
+    ("trade_exposure", "string", "n/a", TRADE_EXPOSURE, "Documented commercial trade status."),
+    ("certification_readiness", "string", "n/a", CERT_READINESS, "Applicable certification standard, derived from cultivation status (docs/bioeconomy_priority_rule.md)."),
+    ("livelihood_dependence", "string", "n/a", LIVELIHOOD, "Documented income reliance of households on the taxon."),
+    ("equity_flag", "string", "n/a", EQUITY, "Documented benefit-distribution finding; never inferred from trade status."),
+    ("valuation_method", "string", "n/a", VALUATION, "Kind of economic valuation available; bioprospecting estimates are never per species."),
+    ("market_price_proxy", "float", "see market_price_currency_unit", "0..", "Documented price observation. A proxy, not a valuation. Null when unknown."),
+    ("market_price_currency_unit", "string", "n/a", "*", "Currency and unit of market_price_proxy, e.g. VND/kg."),
+    ("market_price_date", "date", "n/a", "*", "ISO date of the price observation."),
+    ("market_price_source_id", "string", "n/a", "*", "Source id of the price observation."),
+    ("coded_confidence", "string", "n/a", CONFIDENCE, "Confidence in the coding of this row."),
+    ("coded_by", "string", "n/a", "*", "Agent identifier that coded the row."),
+    ("reviewed_by", "string", "n/a", "*", "Human reviewer, or 'pending'."),
+    ("source_ids", "string", "n/a", "*", "Semicolon-separated bioeconomy source ids used."),
+    ("bioeconomy_priority_tier", "string", "n/a", ["high", "medium", "low", "unknown"], "Derived tier (docs/bioeconomy_priority_rule.md)."),
+    ("bioeconomy_profile_available", "bool", "n/a", ["True", "False"], "True when at least one coded field is not 'unknown'."),
+    ("notes", "text", "n/a", "*", "Free-text provenance."),
+]
+
+BIOECONOMY_PRIORITY_SUMMARY = [
+    ("bioeconomy_priority_tier", "string", "n/a", ["high", "medium", "low", "unknown"], "Priority tier."),
+    ("count", "int", "taxa", "0..", "Number of atlas taxa in the tier."),
+    ("species_ids", "string", "n/a", "*", "Semicolon-separated species_id list for the tier (empty when the count is 0)."),
+]
+
 TABLES = {
     "species_master.csv": SPECIES_MASTER,
     "uses.csv": USES,
@@ -215,6 +253,8 @@ TABLES = {
     "conservation_trade.csv": CONSERVATION,
     "references.csv": REFERENCES,
     "occurrence_summary_by_species.csv": OCCURRENCE_SUMMARY,
+    "bioeconomy_profiles.csv": BIOECONOMY_PROFILES,
+    "bioeconomy_priority_summary.csv": BIOECONOMY_PRIORITY_SUMMARY,
     "occurrences.csv": OCCURRENCES,
 }
 

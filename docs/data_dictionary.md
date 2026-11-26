@@ -58,6 +58,9 @@ Conventions: UTF-8; ISO 8601 dates; country codes ISO 3166-1 alpha-2 (CN China, 
 | `occurrence_countries` | string |  | regular expression `((CN|TH|VN|LA|KH|MM)(,(CN|TH|VN|LA|KH|MM))*)?` | Basin countries with at least one published record. |
 | `sensitive_species` | string |  | **yes**, **no** | Species is threatened or CITES-listed and has published records. |
 | `sensitivity_reason` | string |  | any text | Why the species is treated as sensitive. |
+| `bioeconomy_profile_available` | bool |  | **True**, **False** | A bioeconomy profile carries at least one coding that is not 'unknown' (see build_bioeconomy.py). |
+| `bioeconomy_priority_tier` | string |  | **high**, **medium**, **low**, **unknown** | Derived tier from trade_exposure, livelihood_dependence and certification_readiness; docs/bioeconomy_priority_rule.md. |
+| `bioeconomy_source_ids` | string |  | any text | Semicolon-separated bioeconomy source ids (docs/bioeconomy_sources.csv). |
 
 ## uses.csv
 
@@ -147,6 +150,37 @@ Conventions: UTF-8; ISO 8601 dates; country codes ISO 3166-1 alpha-2 (CN China, 
 | `n_occurrence_specimen` | int | records | **0..** | Specimen-based published records. |
 | `n_occurrence_generalised` | int | records | **0..** | Published records with generalised coordinates. |
 | `occurrence_by_country` | string |  | regular expression `((CN|TH|VN|LA|KH|MM):\d+(;(CN|TH|VN|LA|KH|MM):\d+)*)?` | Published records per basin country. |
+
+## bioeconomy_profiles.csv
+
+| Field | Type | Unit | Allowed values / range | Definition |
+|---|---|---|---|---|
+| `species_id` | string |  | a species_master.species_id | Join key to the atlas taxon. |
+| `value_chain_type` | string |  | **wild-informal**, **wild-formal**, **cultivated-informal**, **cultivated-formal**, **mixed**, **unknown** | Dominant marketing channel documented in a value-chain study. |
+| `trade_exposure` | string |  | **CITES-listed**, **BioTrade-supported**, **export-commodity**, **domestic-only**, **no-trade-data**, **unknown** | Documented commercial trade status. |
+| `certification_readiness` | string |  | **GACP-eligible**, **FairWild-eligible**, **both**, **neither**, **unknown** | Applicable certification standard, derived from cultivation status (docs/bioeconomy_priority_rule.md). |
+| `livelihood_dependence` | string |  | **high**, **moderate**, **low**, **unknown** | Documented income reliance of households on the taxon. |
+| `equity_flag` | string |  | **equitable**, **inequitable**, **not-assessed**, **unknown** | Documented benefit-distribution finding; never inferred from trade status. |
+| `valuation_method` | string |  | **market-price**, **bioprospecting-estimate**, **none**, **unknown** | Kind of economic valuation available; bioprospecting estimates are never per species. |
+| `market_price_proxy` | float | see market_price_currency_unit | **0..** | Documented price observation. A proxy, not a valuation. Null when unknown. |
+| `market_price_currency_unit` | string |  | any text | Currency and unit of market_price_proxy, e.g. VND/kg. |
+| `market_price_date` | date |  | any text | ISO date of the price observation. |
+| `market_price_source_id` | string |  | any text | Source id of the price observation. |
+| `coded_confidence` | string |  | **high**, **medium**, **low** | Confidence in the coding of this row. |
+| `coded_by` | string |  | any text | Agent identifier that coded the row. |
+| `reviewed_by` | string |  | any text | Human reviewer, or 'pending'. |
+| `source_ids` | string |  | any text | Semicolon-separated bioeconomy source ids used. |
+| `bioeconomy_priority_tier` | string |  | **high**, **medium**, **low**, **unknown** | Derived tier (docs/bioeconomy_priority_rule.md). |
+| `bioeconomy_profile_available` | bool |  | **True**, **False** | True when at least one coded field is not 'unknown'. |
+| `notes` | text |  | any text | Free-text provenance. |
+
+## bioeconomy_priority_summary.csv
+
+| Field | Type | Unit | Allowed values / range | Definition |
+|---|---|---|---|---|
+| `bioeconomy_priority_tier` | string |  | **high**, **medium**, **low**, **unknown** | Priority tier. |
+| `count` | int | taxa | **0..** | Number of atlas taxa in the tier. |
+| `species_ids` | string |  | any text | Semicolon-separated species_id list for the tier (empty when the count is 0). |
 
 ## occurrences.csv
 

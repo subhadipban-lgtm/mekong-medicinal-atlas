@@ -9,7 +9,7 @@
 #   harvest (optional)  harvest_gbif_backbone.py, harvest_gbif_occurrences.py, fetch_baselayers.py,
 #                       fetch_photos.py, resolve_references_crossref.py, fetch_wfo.R
 #   build               build_tables.py -> build_dictionary.py -> grade_evidence.py -> build_dwc.py
-#                       -> build_geo.py -> build_site.py
+#                       -> build_bioeconomy.py -> build_geo.py -> build_site.py
 #   check               qa_checks.py (gates 1,2,7,8 and those needing no browser), browser_checks.js
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -42,15 +42,21 @@ if [[ $SITE_ONLY -eq 0 ]]; then
   run "$PYTHON" scripts/build_dictionary.py
   run "$PYTHON" scripts/grade_evidence.py
   run "$PYTHON" scripts/build_evidence_manifest.py
+  run "$PYTHON" scripts/build_contract_manifest.py
   run "$PYTHON" scripts/build_provenance.py
   run "$PYTHON" scripts/build_dwc.py
+  run "$PYTHON" scripts/build_bioeconomy.py
   run "$PYTHON" scripts/build_geo.py
   if [ -f data/raw/shrestha2025/data.csv ]; then run "$PYTHON" scripts/macroecology.py; else echo "error: data/raw/shrestha2025/data.csv missing (Shrestha et al. 2025 deposit, Zenodo 14765689) — the macroecology scatter must not ship as a placeholder" >&2; exit 1; fi
   if [ -f data/raw/wcvp/wcvp_names.csv ]; then run "$PYTHON" scripts/wcvp_match.py; else echo "skipping WCVP matching: data/raw/wcvp/wcvp_names.csv missing"; fi
   if [ -f data/raw/ne_admin1/ne_10m_admin_1_states_provinces.shp ]; then run "$PYTHON" scripts/macroecology_layers.py; else echo "skipping macroecology layers: Natural Earth admin-1 missing"; fi
   if [ -f data/raw/admin1_vascular.json ]; then run "$PYTHON" scripts/internal_coldspots.py; else echo "skipping internal coldspots: data/raw/admin1_vascular.json missing (run scripts/harvest_admin1_vascular.py)"; fi
 fi
-if [[ $SITE_ONLY -eq 1 ]]; then $PYTHON scripts/build_evidence_manifest.py --manifest || exit 1; fi
+if [[ $SITE_ONLY -eq 1 ]]; then
+  $PYTHON scripts/build_evidence_manifest.py --manifest || exit 1
+  $PYTHON scripts/build_contract_manifest.py || exit 1
+  $PYTHON scripts/build_bioeconomy.py || exit 1
+fi
 run "$PYTHON" scripts/build_site.py
 run "$PYTHON" scripts/qa_checks.py
 if command -v node >/dev/null; then run node scripts/browser_checks.js; run "$PYTHON" scripts/qa_checks.py; else echo "node not found: skipping the browser checks"; fi

@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-11-26",
+  "title": "Mekong Medicinal Plant Atlas — evidence contract endpoints: provenance manifest",
+  "note": "Structure, row counts, byte sizes, SHA-256 hashes, licence and access status for each evidence-engine contract endpoint. The endpoints themselves are restricted and are not published. This manifest contains no publication identifiers, DOIs, titles, author names or abstract text.",
+  "contact": "Access requests: open an issue at https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/issues or write to the corresponding author listed on the About page.",
+  "counts": {
+    "endpoints": 7,
+    "present_locally": 6,
+    "restricted": 4,
+    "pending": 3
+  },
+  "endpoints": [
+    {
+      "endpoint": "manifest.json",
+      "file": "data/evidence/contract/manifest.json",
+      "access_status": "pending — not built",
+      "license": "not granted for redistribution; available from the corresponding author on request",
+      "notes": "Top-level index of the contract set. No manifest.json exists in the local contract set; this provenance manifest serves as the index instead.",
+      "present": false,
+      "schema_names": [],
+      "rows": null,
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "endpoint": "species_publications.json",
+      "file": "data/evidence/contract/species_publications.json",
+      "access_status": "restricted — request access",
+      "license": "not granted for redistribution; available from the corresponding author on request",
+      "notes": "Per-taxon list of publication identifiers behind the pilot literature mapping.",
+      "present": true,
+      "schema_version": "1.0",
+      "schema_names": [
+        "generated",
+        "schema_version",
+        "species_publications"
+      ],
+      "row_field_names": [
+        "publication_id"
+      ],
+      "rows": 20,
+      "rows_basis": "one array per pilot taxon; 2317 identifiers in total",
+      "bytes": 57480,
+      "sha256": "e3598fc410c4d56c5bee910981f5017867bd2c7058e61e0689c7de60e52ee644"
+    },
+    {
+      "endpoint": "species_network_summary.json",
+      "file": "data/evidence/contract/species_network_summary.json",
+      "access_status": "restricted — request access",
+      "license": "not granted for redistribution; available from the corresponding author on request",
+      "notes": "Per-taxon network summary: compound, high-confidence target, pathway and disease counts.",
+      "present": true,
+      "schema_version": "1.0",
+      "schema_names": [
+        "generated",
+        "schema_version",
+        "species_network_summary"
+      ],
+      "row_field_names": [
+        "n_compounds",
+        "n_diseases",
+        "n_high_confidence_targets",
+        "n_pathways"
+      ],
+      "rows": 20,
+      "rows_basis": "one object per pilot taxon",
+      "bytes": 3017,
+      "sha256": "8f16db3636d91ad2f4d7831b6f26da7591fdd7967ed086b543682ba3082a40aa"
+    },
+    {
+      "endpoint": "species_evidence_tier_counts.json",
+      "file": "data/evidence/contract/species_evidence_tier_counts.json",
+      "access_status": "restricted — request access",
+      "license": "not granted for redistribution; available from the corresponding author on request",
+      "notes": "Per-taxon publication counts by evidence tier (traditional, in vitro, in vivo, review, clinical, other).",
+      "present": true,
+      "schema_version": "1.0",
+      "schema_names": [
+        "generated",
+        "schema_version",
+        "species_evidence_tier_counts"
+      ],
+      "row_field_names": [
+        "clinical",
+        "in vitro",
+        "in vivo",
+        "other",
+        "review",
+        "traditional"
+      ],
+      "rows": 20,
+      "rows_basis": "one object per pilot taxon",
+      "bytes": 3368,
+      "sha256": "9311e4fcc0ea2f6123f935dda3d9ad3d8c93cdc7aea7e01543792e9ccfaa9f5a"
+    },
+    {
+      "endpoint": "network_edges/{species_id}.json",
+      "file": "data/evidence/contract/network_edges.json",
+      "access_status": "pending — not built",
+      "license": "not granted for redistribution; available from the corresponding author on request",
+      "notes": "Per-taxon network edges. The local file is an empty stub (no nodes, no edges); the per-species endpoints do not exist yet.",
+      "present": true,
+      "schema_version": "1.0",
+      "schema_names": [
+        "edges",
+        "generated",
+        "nodes",
+        "schema_version"
+      ],
+      "row_field_names": [
+        "nodes",
+        "edges"
+      ],
+      "rows": 0,
+      "rows_basis": "edge list; 0 edges in the local stub",
+      "bytes": 88,
+      "sha256": "d3d8fda637020012a2ca1ec45e9519ea8787b14a8e228bb7cc8f8c792a721f9c"
+    },
+    {
+      "endpoint": "whats_new.json",
+      "file": "data/evidence/contract/whats_new.json",
+      "access_status": "restricted — request access",
+      "license": "not granted for redistribution; available from the corresponding author on request",
+      "notes": "Change feed from the living-review job: newly mapped publications per taxon.",
+      "present": true,
+      "schema_version": "1.0",
+      "schema_names": [
+        "generated",
+        "items",
+        "schema_version"
+      ],
+      "row_field_names": [
+        "change_id"
+      ],
+      "rows": 3,
+      "rows_basis": "one item per detected change",
+      "bytes": 995,
+      "sha256": "e605439a90a107267340057f13a5196f51e28765aa194bdc26160e6aec1d0057"
+    },
+    {
+      "endpoint": "review_status.json",
+      "file": "data/evidence/contract/review_status.json",
+      "access_status": "pending — no claims yet",
+      "license": "not granted for redistribution; available from the corresponding author on request",
+      "notes": "Human-review status of extracted claims. The local file holds an empty claim list; no claim has been queued for review yet.",
+      "present": true,
+      "schema_version": "1.0",
+      "schema_names": [
+        "claims",
+        "generated",
+        "schema_version"
+      ],
+      "row_field_names": [
+        "claim_id",
+        "status"
+      ],
+      "rows": 0,
+      "rows_basis": "one entry per claim; 0 claims in the local stub",
+      "bytes": 74,
+      "sha256": "8a06834a135e5b8028b31f7beb21185c4e8f0d8a7eb40b2990d65a2242d0bf22"
+    }
+  ]
+}
