@@ -1,17 +1,18 @@
 name: Sync evidence contract
 
-# Daily: fetch the evidence-engine integration contract from api-service, validate
-# it (JSON + schema_version), and commit the aggregate contract files into
-# data/evidence/contract/. The atlas build then fails loudly on a schema-version
+# Manual only (scheduled sync disabled 2026-11-26): the contract mirror must not
+# commit evidence-engine outputs into the public repository without an explicit
+# owner decision. Fetch the integration contract from api-service, validate it
+# (JSON + schema_version), and commit the aggregate contract files into
+# data/evidence/contract/. The atlas build fails loudly on a schema-version
 # mismatch (scripts/build_site.py:check_contract_schema).
 #
-# Only aggregate contract files are mirrored (publication IDs, tier counts,
-# network summary, review status, whats-new, network/docking status). No
-# abstracts, titles or other restricted engine inputs are fetched or committed.
+# Only aggregate contract files are mirrored (tier counts, network summary,
+# review status, whats-new, network/docking status). species_publications.json
+# (publication identifiers) is excluded and stays restricted. No abstracts,
+# titles or other restricted engine inputs are fetched or committed.
 
 on:
-  schedule:
-    - cron: "17 3 * * *"      # daily 03:17 UTC
   workflow_dispatch: {}
 
 permissions:

@@ -6,8 +6,10 @@ schema_version == EXPECTED), and writes them to data/evidence/contract/.
 Exits non-zero (with the errors on stderr) if validation fails, so the calling
 GitHub Action can open an Issue and skip the commit.
 
-Only aggregate contract files are fetched (publication IDs + tier counts); no
-abstracts or other restricted engine inputs.
+Only aggregate contract files are fetched (tier counts, network summary, review
+status, whats-new, network/docking status). species_publications.json
+(publication identifiers) is EXCLUDED and stays restricted, as are abstracts and
+every other restricted engine input.
 """
 from __future__ import annotations
 
@@ -25,8 +27,9 @@ OUT = Path(os.environ.get("CONTRACT_OUT", "data/evidence/contract"))
 def main() -> int:
     with urllib.request.urlopen(f"{API_BASE}/contract/manifest.json", timeout=30) as r:
         manifest = json.loads(r.read())
-    files = [f["file"] for f in manifest.get("files", [])]
-    print("manifest files:", files)
+    files = [f["file"] for f in manifest.get("files", []) if f.get("file") != "species_publications.json"]
+    excluded = [f["file"] for f in manifest.get("files", []) if f.get("file") == "species_publications.json"]
+    print("manifest files:", files, "| excluded:", excluded)
     errors, payloads = [], {}
     for name in files:
         try:
