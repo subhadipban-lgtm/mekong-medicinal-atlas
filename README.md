@@ -4,6 +4,8 @@ An interactive, source-cited atlas of medicinal plants of the Mekong River basin
 
 **Live site:** https://subhadipban-lgtm.github.io/mekong-medicinal-plant-atlas/ · **Version:** 0.9.0 (data as of 2026-11-24) · **Dataset DOI: not yet minted**
 
+The atlas is a curated inventory, not a complete census of medicinal flora. The macroecology page uses a separate regional dataset; its botanical-country totals are not the atlas count or a basin completeness denominator. See [coverage and expansion](docs/coverage_expansion.md).
+
 The atlas covers Cambodia, China (Yunnan and Guangxi), Laos, Myanmar, Thailand and Vietnam. It brings together, for each taxon:
 
 - **Distribution** — where its records are, separating records inside the Mekong basin from records in the same countries but outside the basin.

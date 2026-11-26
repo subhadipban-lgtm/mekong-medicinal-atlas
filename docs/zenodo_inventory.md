@@ -6,7 +6,7 @@
 
 **DOI:** 10.1016/j.cub.2025.09.050 (paper) · Zenodo 14765689 (data deposit)
 
-**License:** CC-BY-4.0 (Shrestha et al. 2025 repository/data deposit); see the atlas LICENSE and data_dictionary.md for full attribution.
+**Source distinction:** Zenodo 14765689 contains the native vascular-plant distribution file; the regional richness table is from GitHub. The inspected GitHub repository has no explicit licence. Do not extend the deposit’s licence to the repository or an MPNS export. See [coverage audit](coverage_expansion.md).
 
 **Checksum:** c151663edaa46a8a1d77fc673e0f080e (md5, `data/raw/shrestha2025/data.csv`)
 

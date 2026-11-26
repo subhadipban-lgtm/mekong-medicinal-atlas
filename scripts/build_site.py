@@ -490,6 +490,8 @@ def home(d: dict) -> str:
         <h1 class="display-6">Mekong Medicinal Plant Atlas</h1>
         <p class="lead mt-3">Where medicinal plants of the Mekong basin occur, how they are used, what is known about their chemistry,
         and how strong the evidence behind each statement is — for Cambodia, China (Yunnan), Laos, Myanmar, Thailand and Vietnam.</p>
+        <p class="small">A curated inventory of {n(len(sp))} taxa from selected sources, not a complete census of Mekong medicinal flora.
+        <a class="text-light" href="sustainability.html#coverage-scope">Why macroecology reports larger counts</a>.</p>
         <div class="mt-4 d-flex flex-wrap gap-3">
           <a class="btn btn-success btn-lg" href="explore.html">Explore occurrences</a>
           <a class="btn btn-outline-light btn-lg" href="species/index.html">Browse {n(len(sp))} taxa</a>
@@ -498,7 +500,7 @@ def home(d: dict) -> str:
       </div>
       <div class="col-lg-5">
         <div class="row g-3">
-          <div class="col-6 stat"><div class="n">{n(len(sp))}</div><div class="l">medicinal taxa</div></div>
+          <div class="col-6 stat"><div class="n">{n(len(sp))}</div><div class="l">taxa in the curated inventory</div></div>
           <div class="col-6 stat"><div class="n">{n(in_basin["records"])}</div><div class="l">occurrence records inside the basin</div></div>
           <div class="col-6 stat"><div class="n">6</div><div class="l">basin countries</div></div>
           <div class="col-6 stat"><div class="n">{n(in_basin["species"])}</div><div class="l">taxa with records inside the basin</div></div>
@@ -724,25 +726,36 @@ def macroecology(d: dict) -> str:
         f'<td class="text-end">{n(r["vascular_diversity"])}</td><td class="text-end">{n(r["medicinal_diversity"])}</td>'
         f'<td class="text-end">{r["residual"]}</td><td class="text-end">{r["residual_p_value"]}</td>'
         f'<td class="text-end">{r["human_occupancy"]}</td>'
-        f'<td><span class="badge text-bg-success">fieldwork priority</span></td></tr>' for r in prio)
+        f'<td><span class="badge text-bg-success">documentation-review candidate</span></td></tr>' for r in prio)
     val_html = ""
     if val:
         val_html = (f'<p class="small">Reproduction check (QA gate 1): our med ~ vas residuals correlate '
                     f'<strong>r = {val.get("corr_med_vas_residuals_vs_published")}</strong> with the residuals column '
-                    f'shipped in the authors\u2019 repository (data.csv), confirming the model specification; '
+                    f'shipped in the authors\u2019 repository (data.csv), showing close numerical agreement; '
                     f'Indomalaya slope {val.get("indomalaya_slope")} is the steepest of the six realms: '
                     f'{str(val.get("indomalaya_is_steepest")).lower()}.</p>')
     if cold:
         cold_note = (f'<p class="small">At admin-1 scale: {n(len(cold))} provinces modelled, '
                      f'{n(sum(1 for r in cold if r["classification"] == "hotspot"))} hotspots, '
                      f'{n(n_cold)} coldspots, of which <strong>{n(n_prio)}</strong> combine a significant negative '
-                     f'residual with long human occupancy and are flagged for fieldwork.</p>')
+                     f'residual with long human occupancy and are flagged for documentation review.</p>')
     else:
         cold_note = '<p class="small text-muted">The admin-1 coldspot analysis is being harvested (GBIF vascular species counts per province); the table and map layer appear when the harvest lands.</p>'
 
     return f'''
 <section id="macroecology" aria-labelledby="macroecology-heading">
   <h2 id="macroecology-heading" class="h4 mb-1">Macroecology <span class="text-muted fw-normal">— medicinal plant diversity at Mekong scale</span></h2>
+  <div id="coverage-scope" class="alert alert-info">
+    <h3 class="h6">Two datasets, different coverage</h3>
+    <p><strong>Atlas inventory: {n(len(d["species_master"]))} curated taxa.</strong> Selected ethnobotanical and pharmacological sources;
+    this is not a census. Inclusion does not establish a verified occurrence inside the watershed for every taxon.</p>
+    <p><strong>Macroecology: regional species totals from a separate global study.</strong> The thousands shown below refer to entire
+    botanical countries, which extend beyond the Mekong basin. They combine medicinal-use listings with native distributions;
+    presence in a region does not establish medicinal use by its local communities.</p>
+    <p class="mb-0">Do not add the regional totals: species recur across countries. Dividing the atlas count by those totals would not
+    measure completeness. The 333 botanical countries retained in the global model are also unrelated to the atlas's taxon count.
+    <a href="#coverage-expansion">Species-list expansion status</a>.</p>
+  </div>
   <p class="small text-muted">A global analysis of medicinal plant diversity across 369 botanical countries<sup>1</sup> identified human occupancy time as its
   second-most important predictor. This section reproduces the residual analysis on the published data for the seven botanical countries that contain the
   Mekong basin, and extends it to sub-national (province) scale.</p>
@@ -780,24 +793,19 @@ def macroecology(d: dict) -> str:
   <details class="my-3"><summary>Interpretation of the global framework</summary>
   <h2 class="h5 section-title">Reading the Mekong through the global framework</h2>
   <div class="card"><div class="card-body small">
-    <p>The Mekong\u2019s documented medicinal flora sits on one of the world\u2019s oldest continuously occupied cultural landscapes. All seven botanical countries that
-    contain the basin carry more medicinal species than their vascular floras alone would predict, and six of the seven do so significantly (residuals +994 to +2,195;
-    p \u2264 0.072). This is what Shrestha et al.\u2019s global model would lead one to expect: human occupancy time was the second-most important predictor of medicinal
-    plant diversity in their 369-country analysis, and Indomalaya \u2014 the realm in which the basin sits \u2014 has the steepest vascular-to-medicinal slope of the six realms
-    (~{indo.get("slope") and float(indo["slope"]) * 1000:.0f} medicinal species per 1,000 vascular species, versus
-    ~{aus.get("slope") and float(aus["slope"]) * 1000:.0f} in Australasia). The basin is the demographic heart of five major language families \u2014 Austroasiatic,
-    Tai-Kadai, Tibeto-Burman, Hmong-Mien and Austronesian \u2014 and the meeting place of several canonical medical systems: Traditional Chinese Medicine in Yunnan and
-    Guangxi, Thai traditional medicine, Vietnamese thu\u1ed1c nam, Khmer traditional medicine, and the folk pharmacopoeias of upland Lao, Hmong, Khmu, Karen, Chin and
-    Kachin communities. Long occupancy multiplied by many distinct medical traditions is the mechanism the global analysis points to, and the basin\u2019s residuals are its
-    regional signature. Language diversity per se appears to act only indirectly through climate in the global model, so the atlas maps languages as context, not as a
-    predictor. The one exception worth attention is Cambodia: its residual (+994) is the smallest in the basin and not significant at p &lt; 0.05, and Cambodia is also the
-    country with the fewest occurrence records and the thinnest literature coverage in the atlas. That combination \u2014 a modest global residual, low documentation density,
-    and a rich Khmer therapeutic tradition \u2014 marks Cambodia, and its upland provinces in particular, as the basin\u2019s leading under-documentation hypothesis, which the
-    internal coldspot analysis below tests at sub-national scale.</p>
+    <p>Six of the seven botanical countries have positive residuals classified as significant by the reproduced global model.
+    These are whole-region patterns, not a count of medicinal plants within the watershed. The global association with human occupancy
+    provides context; this regional reproduction does not establish a causal mechanism or local medicinal use.</p>
+    <p>Cambodia has a positive but non-significant residual. That result alone cannot establish that it is the basin's leading
+    documentation gap. Comparisons of documentation need comparable searches and sampling effort across regions.</p>
   </div></div>
 
   </details>
   <h2 class="h5 section-title mt-4">Internal coldspots <span class="text-muted fw-normal">— the sub-national extension</span></h2>
+  <div class="alert alert-warning small"><strong>Exploratory documentation patterns.</strong> This province-level extension uses the
+  limited atlas inventory, not the global medicinal-species list. Low counts can reflect source selection, collecting effort,
+  missing records or taxonomic gaps. Coldspots are candidates for documentation review, not evidence of biological scarcity or
+  validated fieldwork priorities. The global model's reproduction does not validate this separate extension.</div>
   {cold_note}
   {f'<div class="table-responsive mb-3"><table class="table table-striped table-atlas"><thead><tr><th>Province</th><th>Country</th><th class="text-end">Vascular species</th><th class="text-end">Documented medicinal taxa</th><th class="text-end">Residual</th><th class="text-end">p</th><th class="text-end">Occupancy (kyr)</th><th></th></tr></thead><tbody>{prio_rows}</tbody></table></div>' if prio_rows else ""}
   <div class="map-shell map-macro">
@@ -814,6 +822,18 @@ def macroecology(d: dict) -> str:
   <p class="small text-muted mt-2">Layers toggle in the map control. Occupancy values are Shrestha et al.\u2019s published country-level column (reused, not re-derived);
   language richness is aggregated from Glottolog language points to admin-1 polygons and shown as context only.</p>
 
+  <section id="coverage-expansion" class="my-4" aria-labelledby="coverage-expansion-heading">
+    <h3 id="coverage-expansion-heading" class="h5">Expanding species coverage</h3>
+    <p>The source audit on 26 November 2026 found regional totals in the
+    <a href="https://github.com/nawalshrestha/med_plants">study repository</a> and a native vascular-plant distribution file in
+    <a href="https://zenodo.org/records/14765689">Zenodo</a>. Neither inspected deposit supplies the medicinal-species membership list needed for an atlas expansion.</p>
+    <p>The study used MPNS v12. <a href="https://www.kew.org/science/our-science/science-services/medicinal-plant-names-services">Kew offers tailored MPNS data subsets</a>;
+    its current portal describes v15. A new version must be labelled separately from the study reproduction.</p>
+    <p><strong>Status: awaiting a species-level medicinal list; no taxa added from regional totals.</strong>
+    Candidates will need accepted-name reconciliation, a medicinal-source citation, and basin-presence review before inclusion.
+    A regional native-range record alone is insufficient to confirm watershed presence.</p>
+    <a href="{REPO}/blob/main/docs/coverage_expansion.md">Source audit and inclusion workflow</a>
+  </section>
   <details class="my-3"><summary>Macroecology methods and references</summary>
   <h2 class="h5 section-title">Methods and reproducibility</h2>
   <ul class="small">
