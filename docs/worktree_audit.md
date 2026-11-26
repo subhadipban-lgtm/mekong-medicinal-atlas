@@ -630,4 +630,4 @@
 
 {'Obsolete': 2, 'Dangerous': 224}
 
-No changes selected for integration. Retain the worktree until the user explicitly approves deletion. Dangerous photo removals must not be merged.
+No changes selected for integration. The user explicitly approved deletion of the audited worktree. On 2026-11-26, all 226 dirty paths were checked again: 224 contained only species-photo/attribution removal and whitespace replacement; the other two contained only the audited obsolete runtime metadata changes. The worktree was then removed with `git worktree remove --force /private/tmp/atlas-sync`. No content was merged or copied. The branch was retained.
