@@ -490,6 +490,15 @@ def home(d: dict) -> str:
     d_single = ev.get("single_verified_source_share_by_grade", {}).get("D", {}).get("single_verified_source", 0)
     cult_ok = sum(1 for r in d["sust_cult"] if r.get("cultivation_feasibility_class") in ("high", "moderate"))
     ev_tot = d["ev"]["totals"]
+    # A headline tile equal to the inventory size read as "nothing assessed";
+    # state the bioeconomy-tier status as a layer summary instead.
+    bio_tiered = len(sp) - bio_unknown
+    bio_fields = ("value_chain_type", "trade_exposure", "certification_readiness",
+                  "livelihood_dependence", "market_price_proxy")
+    bio_coded = sum(1 for r in d["bioeconomy_by"].values()
+                    if any((r.get(f) or "unknown").strip() not in ("", "unknown") for f in bio_fields))
+    bio_line = (f"{n(bio_tiered)} of {n(len(sp))} taxa assigned a priority tier; value-chain, trade and price fields coded for "
+                f"{n(bio_coded)} taxa (separate from evidence grades and IUCN status)")
     outside_n = geo["outside_basin"]["records"]
     countries = "".join(f'<option value="{c}">{e(COUNTRY_NAMES[c])}</option>'
                         for c in sorted(COUNTRY_NAMES, key=lambda c: COUNTRY_NAMES[c]))
@@ -518,8 +527,6 @@ def home(d: dict) -> str:
           <div class="col-6 stat"><div class="n">{n(in_basin["species"])}</div><div class="l">taxa with records inside the basin</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["uses"]))}</div><div class="l">ethnobotanical use records</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["pharmacology"]))}</div><div class="l">pharmacology records</div></div>
-          <div class="col-6 stat"><div class="n">{n(bio_unknown)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary"
-            title="Bioeconomy priority screening has not yet assigned a tier to these taxa. This is separate from IUCN Red List status, which is shown on each species page.">taxa without a bioeconomy priority tier yet</a></div></div>
         </div>
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
         <p class="small mt-1 mb-0 grade-note">Grades describe source provenance, not claim support. A taxon takes a grade only with two distinct
@@ -534,6 +541,8 @@ def home(d: dict) -> str:
           <a role="listitem" class="status-pill" href="sustainability.html#cultivation-screening"><strong>Chemistry &amp; cultivation:</strong>
             {n(ev_tot["compounds"])} pilot compound records ({n(ev_tot["resolved"])} with resolved structures) · {n(cult_ok)} of {n(len(d["sust_cult"]))}
             screened taxa with high or moderate cultivation feasibility</a>
+          <a role="listitem" class="status-pill" href="data.html#ds-bioeconomy_priority_summary"><strong>Bioeconomy priority:</strong>
+            {bio_line}</a>
         </div>
       </div>
     </div>
