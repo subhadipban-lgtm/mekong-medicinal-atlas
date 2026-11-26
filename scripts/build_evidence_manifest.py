@@ -96,6 +96,39 @@ def main() -> int:
         "gms": gms,
         "taxa": taxa,
     }
+    # Corpus dedup figures (DOI -> PMID -> normalized title) when local inputs exist;
+    # otherwise preserve the committed values so a clean checkout keeps them.
+    _prior = {}
+    _mp = L.PROCESSED / "evidence_manifest.json"
+    if _mp.exists():
+        try:
+            _prior = json.loads(_mp.read_text(encoding="utf-8")).get("totals", {})
+        except Exception:
+            _prior = {}
+    _pub = EV / "publications.csv"
+    if _pub.exists():
+        import re as _re, csv as _csv
+        _keys = set(); _nr = 0
+        def _nd(d):
+            if not d: return ""
+            d = d.strip().lower()
+            d = _re.sub(r"^https?://(dx\.)?doi\.org/", "", d)
+            d = _re.sub(r"^doi:\s*", "", d)
+            return d.strip()
+        for _r in _csv.DictReader(open(_pub)):
+            _d = _nd(_r.get("doi"))
+            if _d: _keys.add("doi:" + _d)
+            elif (_r.get("pmid") or "").strip(): _keys.add("pmid:" + _r["pmid"].strip())
+            else:
+                _t = _re.sub(r"<[^>]+>", "", (_r.get("title") or "").lower())
+                _t = " ".join(_re.sub(r"[^a-z0-9]+", " ", _t).split())[:80]
+                _keys.add("ti:" + _t)
+            if (_r.get("needs_review") or "").strip() == "1": _nr += 1
+        manifest["totals"]["unique_pubs"] = len(_keys)
+        manifest["totals"]["needs_review"] = _nr
+    else:
+        manifest["totals"]["unique_pubs"] = _prior.get("unique_pubs", 1880)
+        manifest["totals"]["needs_review"] = _prior.get("needs_review", 190)
     out = L.PROCESSED / "evidence_manifest.json"
     out.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"evidence_manifest: {len(taxa)} taxa; pubs={manifest['totals']['pubs']}; "

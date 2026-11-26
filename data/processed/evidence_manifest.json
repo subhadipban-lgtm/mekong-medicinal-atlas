@@ -5,7 +5,9 @@
     "pubs": 2317,
     "compounds": 119,
     "resolved": 103,
-    "pilot_taxa": 20
+    "pilot_taxa": 20,
+    "unique_pubs": 1880,
+    "needs_review": 190
   },
   "gms": {
     "papers": 10,

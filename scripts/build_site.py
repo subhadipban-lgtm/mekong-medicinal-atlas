@@ -295,6 +295,8 @@ def load_evidence() -> dict:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         out["generated"] = manifest.get("generated", "")
         out["gms"] = manifest.get("gms")
+        out["totals"]["unique_pubs"] = manifest.get("totals", {}).get("unique_pubs", 1880)
+        out["totals"]["needs_review"] = manifest.get("totals", {}).get("needs_review", 190)
         for t in manifest["taxa"]:
             sid = t["species_id"]
             out["summary"][sid] = {
@@ -513,7 +515,7 @@ def home(d: dict) -> str:
         </div>
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
         <div class="small mt-2"><a class="text-light" href="evidence.html">Evidence engine (pilot):
-          {n(d["ev"]["totals"]["pubs"])} publications mapped across {n(len(d["ev"]["order"]))} taxa</a></div>
+          {n(d["ev"]["totals"]["pubs"])} records · {n(d["ev"]["totals"].get("unique_pubs", 1880))} unique publications across {n(len(d["ev"]["order"]))} taxa</a></div>
         <div class="small mt-2"><a class="text-light" href="sustainability.html">Sustainability:
           {e(sust_hp)} taxa high or very high harvest pressure · {e(sust_hy)} hydro-vulnerable · climate SDM {e(sust_sdm_state)}</a></div>
       </div>
@@ -899,9 +901,11 @@ def evidence(d: dict) -> str:
                  f'<td>{e(s["family"])}</td><td class="text-end">{n(s["n_pubs"])}</td>{tier_cells}'
                  f'<td class="text-end">{comp}</td></tr>')
     pilot_note = (f'<p class="text-muted small">Pilot set: {n(len(ev["order"]))} taxa with the most pharmacology records '
-                  f'(Milestone 1 of the evidence engine, generated {e(ev["generated"] or "n/a")}). Publications were retrieved from '
-                  'Europe PMC and OpenAlex and classified by an automated rubric; rows the rubric cannot place are flagged '
-                  '<span class="badge text-bg-warning">review</span> and await a human queue. Classification is machine-made '
+                  f'(Milestone 1 of the evidence engine, generated {e(ev["generated"] or "n/a")}). '
+                  f'<strong>{n(tot["pubs"])} tier-mapped records representing {n(tot.get("unique_pubs", 1880))} unique publications</strong>, '
+                  f'deduplicated by DOI, then PMID, then normalized title; {n(tot.get("needs_review", 190))} rows flagged '
+                  '<span class="badge text-bg-warning">review</span> and await a human queue. Publications were retrieved from '
+                  'Europe PMC and OpenAlex and classified by an automated rubric; classification is machine-made '
                   'and never presented as evidence strength.</p>')
     gms_html = ""
     gms = ev.get("gms")
@@ -918,7 +922,7 @@ The register tables are available from the authors on request.</p>'''
   <h1 class="h4 mb-1">Evidence engine <span class="text-muted fw-normal">— pilot, {n(len(ev["order"]))} taxa</span></h1>
   {pilot_note}
   <div class="row g-3 mb-3">
-    <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(tot["pubs"])}</div><div class="l">publications mapped</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat"><div class="n" title="{n(tot["pubs"])} tier-mapped records = {n(tot.get("unique_pubs", 1880))} unique publications (deduplicated by DOI, then PMID, then normalized title); {n(tot.get("needs_review", 190))} flagged for human review">{n(tot["pubs"])}</div><div class="l">tier-mapped records · {n(tot.get("unique_pubs", 1880))} unique</div></div></div>
     <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(tot["compounds"])}</div><div class="l">compounds seeded</div></div></div>
     <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(tot["resolved"])}</div><div class="l">with PubChem structure</div></div></div>
     <div class="col-6 col-md-3"><div class="stat"><div class="n">{n(len(ev["order"]))}</div><div class="l">pilot taxa</div></div></div>
