@@ -482,6 +482,15 @@ def home(d: dict) -> str:
     sust_sdm_state = "not assessed" if not any(r.get("projected_range_change_pct") for r in d["sust_sdm"]) else "exploratory results available"
     in_basin = geo["inside_basin"]
     grades = ev.get("species_by_grade", {})
+    # Why B and C read 0: a taxon needs two distinct resolved sources of one type.
+    rows_by_grade = defaultdict(int)
+    for table in ev.get("rows_by_grade", {}).values():
+        for g, k in table.items():
+            rows_by_grade[g] += k
+    d_single = ev.get("single_verified_source_share_by_grade", {}).get("D", {}).get("single_verified_source", 0)
+    cult_ok = sum(1 for r in d["sust_cult"] if r.get("cultivation_feasibility_class") in ("high", "moderate"))
+    ev_tot = d["ev"]["totals"]
+    outside_n = geo["outside_basin"]["records"]
     countries = "".join(f'<option value="{c}">{e(COUNTRY_NAMES[c])}</option>'
                         for c in sorted(COUNTRY_NAMES, key=lambda c: COUNTRY_NAMES[c]))
     grade_line = " ".join(f'{badge_grade(g)} <span class="text-light">{n(grades.get(g, 0))}</span>' for g in ("A", "B", "C", "D"))
@@ -509,13 +518,23 @@ def home(d: dict) -> str:
           <div class="col-6 stat"><div class="n">{n(in_basin["species"])}</div><div class="l">taxa with records inside the basin</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["uses"]))}</div><div class="l">ethnobotanical use records</div></div>
           <div class="col-6 stat"><div class="n">{n(len(d["pharmacology"]))}</div><div class="l">pharmacology records</div></div>
-          <div class="col-6 stat"><div class="n">{n(bio_unknown)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary">taxa not yet assessed</a></div></div>
+          <div class="col-6 stat"><div class="n">{n(bio_unknown)}</div><div class="l"><a class="text-light" href="data.html#ds-bioeconomy_priority_summary"
+            title="Bioeconomy priority screening has not yet assigned a tier to these taxa. This is separate from IUCN Red List status, which is shown on each species page.">taxa without a bioeconomy priority tier yet</a></div></div>
         </div>
         <div class="small mt-3">Taxa by best evidence grade: {grade_line}</div>
-        <div class="small mt-2"><a class="text-light" href="evidence.html">Evidence engine (pilot):
-          {n(d["ev"]["totals"]["pubs"])} records · {n(d["ev"]["totals"].get("unique_pubs", 1880))} unique publications across {n(len(d["ev"]["order"]))} taxa</a></div>
-        <div class="small mt-2"><a class="text-light" href="sustainability.html">Sustainability:
-          {e(sust_hp)} taxa with high / very high pressure proxies · {e(sust_hy)} with high dam proximity · climate SDM {e(sust_sdm_state)}</a></div>
+        <p class="small mt-1 mb-0 grade-note">Grades describe source provenance, not claim support. A taxon takes a grade only with two distinct
+          resolved sources of the same type, so B and C read 0: no book citation has resolved yet (B), and the {n(rows_by_grade["C"])} C-graded
+          records cite sources that could not be confirmed. {n(d_single)} of the {n(grades.get("D", 0))} D taxa have one verified source.
+          <a class="text-light" href="methods.html">Grading rubric</a></p>
+        <div class="atlas-status-strip mt-3" role="list" aria-label="Atlas layer summaries">
+          <a role="listitem" class="status-pill" href="evidence.html"><strong>Evidence engine (pilot):</strong>
+            {n(ev_tot["pubs"])} records · {n(ev_tot.get("unique_pubs", 1880))} unique publications across {n(len(d["ev"]["order"]))} taxa</a>
+          <a role="listitem" class="status-pill" href="sustainability.html"><strong>Sustainability:</strong>
+            {e(sust_hp)} taxa with high / very high pressure proxies · {e(sust_hy)} with high dam proximity · climate SDM {e(sust_sdm_state)}</a>
+          <a role="listitem" class="status-pill" href="sustainability.html#cultivation-screening"><strong>Chemistry &amp; cultivation:</strong>
+            {n(ev_tot["compounds"])} pilot compound records ({n(ev_tot["resolved"])} with resolved structures) · {n(cult_ok)} of {n(len(d["sust_cult"]))}
+            screened taxa with high or moderate cultivation feasibility</a>
+        </div>
       </div>
     </div>
   </div>
@@ -526,25 +545,29 @@ def home(d: dict) -> str:
   {n(geo["outside_basin"]["records"])} further records from the same countries lie outside the basin. In-basin records are shown as published; out-of-basin
   records are generalised to one point per species per half-degree cell.</p>
   <div class="d-flex flex-wrap align-items-center gap-2 mb-2" role="group" aria-label="Map record scope">
-    <div class="btn-group btn-group-sm map-scope-toggle" id="mapScope">
-      <input class="btn-check" type="radio" name="mapScope" id="scopeInBasin" value="in" checked>
+    <div class="btn-group btn-group-sm map-scope-toggle" id="mapScope" data-outside="{outside_n}">
+      <input class="btn-check" type="radio" name="mapScope" id="scopeInBasin" value="in" checked disabled>
       <label class="btn btn-outline-secondary" for="scopeInBasin">In-basin records ({n(in_basin["records"])})</label>
-      <input class="btn-check" type="radio" name="mapScope" id="scopeAll" value="all">
-      <label class="btn btn-outline-secondary" for="scopeAll">All records ({n(geo["outside_basin"]["records"] + in_basin["records"])})</label>
+      <input class="btn-check" type="radio" name="mapScope" id="scopeAll" value="all" disabled>
+      <label class="btn btn-outline-secondary" for="scopeAll">All records ({n(outside_n + in_basin["records"])})</label>
     </div>
-    <span class="small text-muted" id="scopeNote">Loading the in-basin records only; switch to all records to add the out-of-basin layer.</span>
+    <span class="small text-muted" id="scopeNote" aria-live="polite">The record scope can be switched once the in-basin layer has loaded.</span>
   </div>
   <div class="map-shell map-home">
     <div class="map" id="map" role="application" aria-label="Map of occurrence records inside the Mekong basin"></div>
     <div class="map-tools">{north_arrow()}</div>
-    <div class="map-status" id="homeStatus">Loading records…</div>
+    <div class="map-status" id="homeStatus" aria-live="polite">Loading records…</div>
     {MAP_LEGEND}
     <div class="map-legend legend-scope">
       <div><strong>Record scope</strong></div>
       <div><span class="sw" style="background:#1b5e20"></span>in-basin record (inside the basin boundary)</div>
       <div><span class="sw" style="background:#66707a;opacity:.55"></span>out-of-basin record (same six countries, outside the basin; generalised to a half-degree cell)</div>
     </div>
-    <div id="homeLoading" class="map-status" style="top:.7rem;left:.7rem;bottom:auto">Loading the atlas…</div>
+    <div id="homeLoading" class="map-status map-loading" role="status" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Loading {n(in_basin["records"])} in-basin records (<span id="homeLoadingStep">0 of 3 parts ready</span>)…</span>
+      <noscript>The map needs JavaScript; every table is downloadable from the Data page.</noscript>
+    </div>
   </div>
   <div class="row g-3 mt-1 align-items-center">
     <div class="col-auto"><label class="small text-muted me-2" for="homeCountry">Country</label>
@@ -566,6 +589,16 @@ def home(d: dict) -> str:
       <p class="small mb-2">The data are archived on Zenodo with a citable DOI; the Darwin Core Archive and every table are downloadable from the record.</p>
       <a href="https://doi.org/{e(VERSION["dataset_doi"])}" target="_blank" rel="noopener">Open the Zenodo record</a></div></div></div>
   </div>
+  <aside class="contribute-box mt-3" aria-labelledby="contribute-heading">
+    <h3 class="h6" id="contribute-heading">Contributing field survey data</h3>
+    <p class="small mb-0">Plot, transect or voucher records from the basin reach this atlas through GBIF. Publish them as a
+      <a href="https://dwc.tdwg.org/" target="_blank" rel="noopener">Darwin Core</a> occurrence or sampling-event dataset via an IPT or a
+      <a href="https://www.gbif.org/publishing-data" target="_blank" rel="noopener">GBIF-registered publisher</a>, and the next GBIF download
+      picks them up. Generalise coordinates for threatened or heavily harvested taxa before publishing, as the atlas itself does
+      (<a href="methods.html">coordinate generalisation policy</a>), and keep community and ethnobotanical knowledge under the holders&rsquo;
+      prior informed consent and the applicable access-and-benefit-sharing rules. The atlas&rsquo;s own Darwin Core Archive is on the
+      <a href="https://doi.org/{e(VERSION["dataset_doi"])}" target="_blank" rel="noopener">Zenodo record</a>.</p>
+  </aside>
 </main>
 ''', "index", "Interactive atlas of medicinal plants of the Mekong basin: occurrences, uses, pharmacology, conservation.", "index.js")
 

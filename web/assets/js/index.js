@@ -1,6 +1,7 @@
 /* Home page: the basin map with clustered in-basin records and a country filter.
-   Record scope toggle: "In-basin" loads only data/geo/occurrences.geojson (default).
-   "All records" lazily fetches data/geo/occurrences_outside_basin.geojson — 137,655 records
+   Record scope toggle (disabled until the in-basin layer is drawn): "In-basin" loads only
+   data/geo/occurrences.geojson (default). "All records" lazily fetches
+   data/geo/occurrences_outside_basin.geojson — the count comes from #mapScope[data-outside] —
    generalised to one point per species per half-degree cell — and adds it as a second
    marker-clustered layer (disableClusteringAtZoom = 6, the generalisation cell).
    Chosen approach (documented in the repo): a separate GeoJSON loaded lazily on toggle,
@@ -13,7 +14,20 @@
   function init() {
     const el = document.getElementById('map');
     if (!el) return;
-    Promise.all([M.getJSON('data/species.json'), M.create(el, { countries: true }), M.getJSON('data/geo/occurrences.geojson', 30000)])
+    /* Loading badge: count each of the three parts as it arrives (species list, base map,
+       in-basin records) so a slow connection shows progress rather than a frozen message. */
+    const stepEl = document.getElementById('homeLoadingStep');
+    let ready = 0;
+    const step = p => p.then(v => {
+      ready += 1;
+      if (stepEl) stepEl.textContent = `${ready} of 3 parts ready`;
+      return v;
+    });
+    const scopeBox = document.getElementById('mapScope');
+    const outsideN = Number(scopeBox && scopeBox.dataset.outside) || 0;
+    const IN_NOTE = 'Showing in-basin records only; switch to all records to add the out-of-basin layer.';
+    Promise.all([step(M.getJSON('data/species.json')), step(M.create(el, { countries: true })),
+                 step(M.getJSON('data/geo/occurrences.geojson', 30000))])
       .then(([species, ms, gj]) => {
         const byId = Object.fromEntries(species.map(s => [s.id, s]));
         const speciesInfo = id => { const s = byId[id]; return s ? { name: s.name, family: s.family, href: 'species/' + id.replace(/^sp_/, '') + '.html' } : null; };
@@ -56,7 +70,8 @@
           if (value === 'all') {
             if (!outside && !outsideLoading) {
               outsideLoading = true;
-              if (scopeNote) scopeNote.textContent = 'Loading the out-of-basin layer (137,655 records, generalised)…';
+              if (scopeNote) scopeNote.textContent = `Loading the out-of-basin layer (${fmt(outsideN)} records, generalised)…`;
+              if (scopeNote) scopeNote.classList.add('is-loading');
               M.getJSON('data/geo/occurrences_outside_basin.geojson', 60000)
                 .then(gj => {
                   outside = M.occurrenceLayer(ms, gj, {
@@ -66,10 +81,12 @@
                   outside.group.addTo(ms.map);
                   outside.show(outside.markers);
                   outsideLoading = false;
+                  if (scopeNote) scopeNote.classList.remove('is-loading');
                   if (scopeNote) scopeNote.textContent = 'All records shown; out-of-basin points are generalised to one point per species per half-degree cell.';
                 })
                 .catch(err => {
                   outsideLoading = false;
+                  if (scopeNote) scopeNote.classList.remove('is-loading');
                   if (scopeNote) scopeNote.textContent = 'The out-of-basin layer could not be loaded: ' + err.message;
                   if (scopeIn) scopeIn.checked = true;
                   if (scopeAll) scopeAll.checked = false;
@@ -80,18 +97,25 @@
             }
           } else {
             if (outside) outside.show([]);
-            if (scopeNote) scopeNote.textContent = 'Loading the in-basin records only; switch to all records to add the out-of-basin layer.';
+            if (scopeNote) scopeNote.textContent = IN_NOTE;
           }
         }
         if (scopeIn) scopeIn.addEventListener('change', () => setScope('in'));
         if (scopeAll) scopeAll.addEventListener('change', () => setScope('all'));
+        [scopeIn, scopeAll].forEach(r => { if (r) r.disabled = false; });
+        if (scopeNote) scopeNote.textContent = IN_NOTE;
         const loading = document.getElementById('homeLoading');
         if (loading) loading.remove();
         window.__atlasHomeReady = true;
       })
       .catch(err => {
         const loading = document.getElementById('homeLoading');
-        if (loading) loading.textContent = 'The map data could not be loaded: ' + err.message;
+        if (loading) {
+          loading.classList.add('is-error');
+          loading.textContent = 'The map data could not be loaded: ' + err.message;
+        }
+        const note = document.getElementById('scopeNote');
+        if (note) note.textContent = 'The record scope is unavailable because the map data did not load.';
       });
   }
   document.addEventListener('DOMContentLoaded', init);
