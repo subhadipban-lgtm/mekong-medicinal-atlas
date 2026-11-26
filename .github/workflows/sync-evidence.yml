@@ -2,8 +2,8 @@ name: Sync evidence contract
 
 # Daily: fetch the evidence-engine integration contract from api-service, validate
 # it (JSON + schema_version), and commit the aggregate contract files into
-# data/evidence/contract/ of this repo. The atlas build then reads them and fails
-# loudly on a schema-version mismatch (scripts/build_site.py guard).
+# data/evidence/contract/. The atlas build then fails loudly on a schema-version
+# mismatch (scripts/build_site.py:check_contract_schema).
 #
 # Only aggregate contract files are mirrored (publication IDs, tier counts,
 # network summary, review status, whats-new, network/docking status). No
@@ -28,61 +28,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch manifest
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/contract
-          curl -fsS "$API_BASE/contract/manifest.json" -o /tmp/contract/manifest.json
-          python3 - <<'PY'
-import json
-m = json.load(open("/tmp/contract/manifest.json"))
-print("manifest files:", [f["file"] for f in m.get("files", [])])
-PY
-
-      - name: Validate manifest + schema versions, fetch all contract files
+      - name: Fetch and validate contract
         id: fetch
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-import json, os, urllib.request, sys
-API = os.environ["API_BASE"]; EXPECTED = os.environ["EXPECTED_SCHEMA"]
-m = json.load(open("/tmp/contract/manifest.json"))
-errors = []
-for f in m.get("files", []):
-    name = f["file"]
-    url = f"{API}/contract/{name}"
-    try:
-        with urllib.request.urlopen(url, timeout=30) as r:
-            raw = r.read()
-        obj = json.loads(raw)
-    except Exception as e:
-        errors.append(f"{name}: fetch/parse failed ({e})"); continue
-    sv = obj.get("schema_version")
-    if sv != EXPECTED:
-        errors.append(f"{name}: schema_version {sv!r} != expected {EXPECTED!r}")
-        continue
-    os.makedirs("/tmp/contract", exist_ok=True)
-    open(f"/tmp/contract/{name}", "wb").write(raw)
-if errors:
-    print("CONTRACT VALIDATION FAILED:")
-    for e in errors: print(" -", e)
-    open("/tmp/contract_errors.txt", "w").write("\n".join(errors))
-    sys.exit(1)
-print("contract valid:", sorted(os.listdir("/tmp/contract")))
-PY
+        run: python3 scripts/sync_evidence_contract.py
 
       - name: Commit mirrored contract
         run: |
           set -euo pipefail
-          mkdir -p data/evidence/contract
-          cp /tmp/contract/*.json data/evidence/contract/
-          ver=$(python3 -c "import json;print(json.load(open('/tmp/contract/manifest.json')).get('generated','1.0'))")
           git config user.name  "atlas-bot"
           git config user.email "atlas-bot@users.noreply.github.com"
           git add data/evidence/contract
           if git diff --cached --quiet; then
-            echo "no contract changes"; exit 0
+            echo "no contract changes"
+            exit 0
           fi
+          ver=$(python3 -c "import json;print(json.load(open('data/evidence/contract/whats_new.json')).get('generated','contract'))")
           git commit -m "sync evidence contract v${ver}"
           git push
 
@@ -91,11 +51,9 @@ PY
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            let body = 'The daily evidence-contract sync failed validation.';
-            try { body += '\n\n```\n' + fs.readFileSync('/tmp/contract_errors.txt','utf8') + '\n```'; } catch (e) {}
             await github.rest.issues.create({
-              owner: context.repo.owner, repo: context.repo.repo,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
               title: 'Evidence contract sync failed',
-              body
+              body: 'The daily evidence-contract sync failed validation or fetch. See the Actions run: ' + context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId
             });
