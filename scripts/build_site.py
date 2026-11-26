@@ -128,8 +128,7 @@ def shrestha_commit() -> str:
     return p.read_text(encoding="utf-8").strip()[:10] if p.exists() else "not cached"
 NAV = [("index.html", "Atlas", "index"), ("explore.html", "Explore", "explore"),
        ("species/index.html", "Species", "species"), ("evidence.html", "Evidence", "evidence"),
-       ("macroecology.html", "Macroecology", "macroecology"),
-       ("sustainability.html", "Harvest pressure & hydrological risk", "harvest_pressure"),
+       ("sustainability.html", "Sustainability", "sustainability"),
        ("methods.html", "Methods", "methods"),
        ("data.html", "Data", "data"),
        ("about.html", "About", "about")]
@@ -741,11 +740,11 @@ def macroecology(d: dict) -> str:
     else:
         cold_note = '<p class="small text-muted">The admin-1 coldspot analysis is being harvested (GBIF vascular species counts per province); the table and map layer appear when the harvest lands.</p>'
 
-    return page("Macroecology — Mekong Medicinal Plant Atlas", f'''
-<main class="container-fluid px-3 px-lg-4 py-3">
-  <h1 class="h4 mb-1">Macroecology <span class="text-muted fw-normal">— medicinal plant diversity at Mekong scale</span></h1>
+    return f'''
+<section id="macroecology" aria-labelledby="macroecology-heading">
+  <h2 id="macroecology-heading" class="h4 mb-1">Macroecology <span class="text-muted fw-normal">— medicinal plant diversity at Mekong scale</span></h2>
   <p class="small text-muted">A global analysis of medicinal plant diversity across 369 botanical countries<sup>1</sup> identified human occupancy time as its
-  second-most important predictor. This page reproduces the residual analysis on the published data for the seven botanical countries that contain the
+  second-most important predictor. This section reproduces the residual analysis on the published data for the seven botanical countries that contain the
   Mekong basin, and extends it to sub-national (province) scale.</p>
 
   <div class="row g-3 mb-3">
@@ -800,7 +799,7 @@ def macroecology(d: dict) -> str:
   {cold_note}
   {f'<div class="table-responsive mb-3"><table class="table table-striped table-atlas"><thead><tr><th>Province</th><th>Country</th><th class="text-end">Vascular species</th><th class="text-end">Documented medicinal taxa</th><th class="text-end">Residual</th><th class="text-end">p</th><th class="text-end">Occupancy (kyr)</th><th></th></tr></thead><tbody>{prio_rows}</tbody></table></div>' if prio_rows else ""}
   <div class="map-shell map-macro">
-    <div class="map" id="map" role="application" aria-label="Macroecology layers: internal coldspots, global residuals, human occupancy, language diversity"></div>
+    <div class="map" id="macroMap" role="application" aria-label="Macroecology layers: internal coldspots, global residuals, human occupancy, language diversity"></div>
     <div class="map-tools">{north_arrow()}</div>
     <div class="map-status" id="mapStatus">Loading layers\u2026</div>
     <div class="map-legend legend-macro">
@@ -835,11 +834,11 @@ def macroecology(d: dict) -> str:
     <li>Shrestha et al., The human fingerprint of medicinal plant species diversity, Current Biology (2025),
     <a href="https://doi.org/{SHRESTHA_DOI}" target="_blank" rel="noopener">doi:{SHRESTHA_DOI}</a>.</li>
   </ol>
-</main>
+</section>
 <script>
 document.addEventListener('DOMContentLoaded', () => {{
   const CARTO_KEY = 'cb1_5f90_1_2200dcf519089dbbd5552a5c';
-  const map = L.map('map', {{ attributionControl: false, minZoom: 4, maxZoom: 12 }})
+  const map = L.map('macroMap', {{ attributionControl: false, minZoom: 4, maxZoom: 12 }})
     .setView([18.5, 102.5], 5);
   L.control.attribution({{ position: 'bottomright', prefix: false }})
     .addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> · macroecology layers: Shrestha et al. 2025 data (CC-BY-4.0), Glottolog, Natural Earth (public domain)')
@@ -888,7 +887,7 @@ document.addEventListener('DOMContentLoaded', () => {{
   }});
 }});
 </script>
-''', "macroecology", "Macroecological context for the Mekong atlas: medicinal plant diversity residuals reproduced at Mekong scale and extended to province level.", "none.js", need=("map",))
+'''
 
 
 def evidence(d: dict) -> str:
@@ -1664,7 +1663,16 @@ def sustainability(d: dict) -> str:
 
     return page("Sustainability — Mekong Medicinal Plant Atlas", f'''
 <main class="container-fluid px-3 px-lg-4 py-3">
-  <h1 class="h4">Harvest pressure & hydrological risk</h1>
+  <h1 class="h4">Sustainability</h1>
+  <p class="text-muted">Medicinal plant diversity, harvest pressure and hydrological risk across the Mekong basin.</p>
+  <nav class="nav nav-pills gap-2 mb-4" aria-label="Sustainability sections">
+    <a class="nav-link" href="#macroecology">Macroecology</a>
+    <a class="nav-link" href="#harvest-pressure">Harvest pressure</a>
+    <a class="nav-link" href="#hydrological-risk">Hydrological risk</a>
+  </nav>
+{macroecology(d)}
+  <section id="harvest-pressure" class="mt-4" aria-labelledby="pressure-heading">
+  <h2 id="pressure-heading" class="h4">Harvest pressure &amp; hydrological risk</h2>
   <p class="small text-muted">Two operational indices of conservation pressure on the atlas taxa, built from the hydroclimatic synthesis of
   Tiwari et al. 2023 (<a href="https://doi.org/10.1038/s41597-023-02193-0" target="_blank" rel="noopener">Scientific Data</a>,
   <a href="https://doi.org/10.5281/zenodo.7803254" target="_blank" rel="noopener">Zenodo 7803254</a>, CC-BY-4.0): a harvest-pressure proxy
@@ -1709,7 +1717,7 @@ def sustainability(d: dict) -> str:
   (<a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/harvest_pressure_methods.md" target="_blank" rel="noopener">methods</a>).</p>
   <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th>Use score</th><th>Mean pressure</th><th>Class</th></tr></thead><tbody>{top_pressure}</tbody></table></div>
 
-  <h2 class="h5 mt-4">Hydrologically fragmented taxa</h2>
+  <h2 id="hydrological-risk" class="h5 mt-4">Hydrological risk</h2>
   <p class="small text-muted">Share of in-basin occurrences within 10 km of a major dam (distance-based proxy;
   <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/hydrological_methods.md" target="_blank" rel="noopener">methods</a>).</p>
   <div class="table-responsive"><table class="table table-sm table-atlas"><thead><tr><th>Taxon</th><th class="text-end">In-basin records</th><th class="text-end">Within 10 km</th><th>Class</th></tr></thead><tbody>{top_hydro}</tbody></table></div>
@@ -1737,8 +1745,9 @@ def sustainability(d: dict) -> str:
   </ul>
   <p class="small text-muted">Source data: Tiwari et al. 2023, Zenodo doi:10.5281/zenodo.7803254 (CC-BY-4.0); inventory and provenance in
   <a href="https://github.com/subhadipban-lgtm/mekong-medicinal-plant-atlas/blob/main/docs/zenodo7803254_inventory.md" target="_blank" rel="noopener">docs/</a>.</p>
+</section>
 </main>
-''', "harvest_pressure", "Harvest-pressure proxy and hydrological-fragmentation indices for Mekong medicinal plant taxa.", "sustainability.js", need=("map",))
+''', "sustainability", "Macroecology, harvest pressure and hydrological risk for Mekong medicinal plant taxa.", "sustainability.js", need=("map",))
 
 
 def main() -> int:
@@ -1772,7 +1781,11 @@ def main() -> int:
     if bio_cells.exists():
         shutil.copyfile(bio_cells, geo_dest / "bioeconomy_priority_cells.geojson")
     pages = {"index.html": home(d), "explore.html": explore(d), "evidence.html": evidence(d),
-             "macroecology.html": macroecology(d),
+             "macroecology.html": ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                 '<meta http-equiv="refresh" content="0;url=sustainability.html#macroecology">'
+                 '<title>Macroecology — Sustainability</title></head><body>'
+                 '<p><a href="sustainability.html#macroecology">Macroecology is now part of Sustainability.</a></p>'
+                 '</body></html>'),
              "sustainability.html": sustainability(d),
              "methods.html": methods(d),
              "data.html": data(d),
