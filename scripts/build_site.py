@@ -1327,6 +1327,23 @@ def download(d: dict) -> str:
   Zenodo. <a href="https://doi.org/{e(VERSION["dataset_doi"])}" target="_blank" rel="noopener">https://doi.org/{e(VERSION["dataset_doi"])}</a>. The concept DOI {e(VERSION["concept_doi"])}
   always resolves to the latest version.</div>
   <div class="table-responsive"><table class="table table-striped table-atlas"><thead><tr><th>File</th><th>Content</th><th>Format</th><th>Description</th><th>Size</th><th>Licence</th></tr></thead><tbody>{table_rows}</tbody></table></div>
+  <h2 class="h5 section-title">Evidence engine — data access</h2>
+  <p class="small">The pilot evidence engine (20 taxa) publishes aggregate summaries through a public
+  <a href="https://api-service-dyzfz7h7lq-uc.a.run.app/contract/manifest.json" target="_blank" rel="noopener">api-service manifest</a> and a
+  <a href="https://storage.googleapis.com/mekong-evidence-engine-public/contract/manifest.json" target="_blank" rel="noopener">public GCS bucket</a>. The site displays the aggregate counts;
+  the underlying full tables are restricted and available from the authors on request.</p>
+  <div class="table-responsive"><table class="table table-sm table-atlas">
+    <thead><tr><th>Data</th><th>Contents</th><th>Access</th></tr></thead>
+    <tbody>
+      <tr><td>Contract JSONs (7 files)</td><td>per-taxon publication IDs, evidence-tier counts, network/docking status, review status, whats-new feed</td><td><span class="badge text-bg-success">public</span> api-service · GCS</td></tr>
+      <tr><td>Numbers-only manifest</td><td>2,317 tier-mapped records = 1,880 unique publications; 119 compounds (103 PubChem); 190 rows awaiting review</td><td><span class="badge text-bg-success">public</span> this page (Evidence)</td></tr>
+      <tr><td>Full publication tables</td><td>publications.csv (17,787 harvest rows), abstracts, classification details</td><td><span class="badge text-bg-warning">restricted</span> authors on request</td></tr>
+      <tr><td>Search log / PRISMA flow</td><td>query strings, hit counts, screening counts</td><td><span class="badge text-bg-warning">restricted</span> authors on request</td></tr>
+      <tr><td>Compound tables</td><td>species_compound.csv with structures</td><td><span class="badge text-bg-warning">restricted</span> authors on request</td></tr>
+      <tr><td>Review queue + decisions</td><td>190 pending rows; reviewer decisions + κ export (when human review begins)</td><td><span class="badge text-bg-warning">restricted</span> reviewers only</td></tr>
+      <tr><td>Network pharmacology</td><td>target predictions, concordance, ADMET, docking</td><td><span class="badge text-bg-secondary">pending external access</span></td></tr>
+      <tr><td>Raw API cache</td><td>Europe PMC / OpenAlex / PubChem responses</td><td><span class="badge text-bg-danger">private</span> build input</td></tr>
+    </tbody></table></div>
   <h2 class="h5 section-title">Licence</h2>
   <p class="small">The occurrence archive is released under CC-BY-NC-4.0 because it includes records published under that licence; each record's own licence (CC0, CC-BY-4.0 or CC-BY-NC-4.0) is given in its
   <code>license</code> field and prevails for that record. The basin boundary is CC-BY 4.0 (Tiwari et al.). Natural Earth layers are public domain. The project tables are a research compilation whose rows cite their
