@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-11-26",
+  "status": "pending_external_access",
+  "nodes": [],
+  "edges": [],
+  "note": "Prediction APIs (SwissTargetPrediction, PharmMapper, SEA) unreachable/rate-limited; populate at Milestone 3 when verified reachable."
+}

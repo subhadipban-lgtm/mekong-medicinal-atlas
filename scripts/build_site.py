@@ -272,6 +272,27 @@ def page(title: str, body: str, active: str, description: str, script: str, need
 
 
 # ------------------------------------------------------------------ data
+EXPECTED_CONTRACT_SCHEMA = "1.0"
+
+
+def check_contract_schema() -> None:
+    """Fail loudly if a mirrored evidence contract has an unexpected schema
+    version. Silent drift between the engine contract and this build is forbidden."""
+    cdir = L.ROOT / "data" / "evidence" / "contract"
+    if not cdir.exists():
+        return
+    import sys as _sys
+    for f in sorted(cdir.glob("*.json")):
+        try:
+            sv = json.loads(f.read_text(encoding="utf-8")).get("schema_version")
+        except json.JSONDecodeError as exc:
+            _sys.exit(f"contract schema check: {f.name} is not valid JSON ({exc})")
+        if sv != EXPECTED_CONTRACT_SCHEMA:
+            _sys.exit(
+                f"contract schema mismatch: {f.name} has schema_version {sv!r}, "
+                f"build expects {EXPECTED_CONTRACT_SCHEMA!r} — refusing to build")
+
+
 def load_evidence() -> dict:
     """Evidence-engine pilot data (Milestone 1), built from the committed
     contract aggregates so the page reproduces on a clean checkout:
@@ -1480,6 +1501,7 @@ def sustainability(d: dict) -> str:
 
 
 def main() -> int:
+    check_contract_schema()
     d = load()
     if not d["species_master"][0]["evidence_grade"]:
         sys.exit("evidence grades are empty: run scripts/grade_evidence.py before building the site")

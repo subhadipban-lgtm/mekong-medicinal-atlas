@@ -7,10 +7,13 @@ __pycache__/
 node_modules/
 site/
 
-# Evidence-engine: the engine's inputs and intermediates are restricted local
-# build material and are never committed or published. The committed public
-# artefact is the numbers-only manifest data/processed/evidence_manifest.json,
-# derived by scripts/build_evidence_manifest.py (counts + tier totals only).
-data/evidence/
+# Evidence-engine: the engine's inputs and intermediates (publications.csv,
+# compounds, search log, abstracts) are restricted local build material and are
+# never committed. The public artefacts are the numbers-only manifest
+# data/processed/evidence_manifest.json and the AGGREGATE contract files under
+# data/evidence/contract/ (publication IDs + tier counts only), which the daily
+# sync-evidence workflow mirrors from api-service.
+data/evidence/*
+!data/evidence/contract/
 web/data/evidence/
 occurrences_published.csv
