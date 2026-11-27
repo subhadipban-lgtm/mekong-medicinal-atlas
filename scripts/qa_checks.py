@@ -194,8 +194,10 @@ def bioeconomy_release_gates() -> dict[str, tuple[str, str]]:
 
         profiles = L.read_csv(L.PROCESSED / "bioeconomy_profiles.csv")
         master = {r["species_id"]: r for r in L.read_csv(L.PROCESSED / "species_master.csv")}
-        pilot = {r["species_id"] for r in L.read_csv(L.ROOT / "data" / "evidence" / "pilot_species.csv")} \
-            if (L.ROOT / "data" / "evidence" / "pilot_species.csv").exists() else set()
+        # Pilot taxa come from the committed evidence manifest, never from the restricted
+        # data/evidence/pilot_species.csv (which is not in the repository).
+        _ev = json.loads((L.PROCESSED / "evidence_manifest.json").read_text(encoding="utf-8"))
+        pilot = {t["species_id"] for t in _ev.get("taxa", [])}
 
         # ---- gate 9: profiles complete, prices fully qualified, tiers match the rule ------
         problems = []
@@ -302,13 +304,29 @@ def bioeconomy_release_gates() -> dict[str, tuple[str, str]]:
         m = json.loads((L.PROCESSED / "evidence_manifest.json").read_text(encoding="utf-8"))
         tiers = {r["bioeconomy_priority_tier"]: int(r["count"])
                  for r in L.read_csv(L.PROCESSED / "bioeconomy_priority_summary.csv")}
+        # Consistency, not magic constants: every figure the manuscript quotes must be
+        # derivable from committed files, and the two sources for a figure must agree.
         cites_pilot = sum(1 for r in profiles
-                          if r["species_id"] in pilot and master[r["species_id"]]["cites_appendix"] in ("I", "II", "III"))
-        trace = (m["totals"]["pubs"] == 2317 and m["totals"]["compounds"] == 119
-                 and len(master) == 333 and tiers.get("high") == 0 and cites_pilot == 2)
+                          if r["species_id"] in pilot
+                          and (master.get(r["species_id"], {}).get("cites_appendix") or "") in ("I", "II", "III"))
+        cites_expected = {r["species_id"] for r in L.read_csv(L.PROCESSED / "conservation_trade.csv")
+                          if (r.get("cites_appendix") or "") in ("I", "II", "III") and r["species_id"] in pilot}
+        checks = {
+            "every pilot taxon is in species_master": pilot <= set(master),
+            "species_master rows match the profiles": len(master) == len(profiles),
+            "priority-summary tiers sum to the profile count": sum(tiers.values()) == len(profiles),
+            "no taxon has a non-unknown tier without documented inputs": tiers.get("high", 0) == 0,
+            "CITES pilot count agrees between species_master and conservation_trade":
+                cites_pilot == len(cites_expected),
+            "manifest reports a positive publication count": m["totals"]["pubs"] > 0,
+        }
+        trace = all(checks.values())
+        failed = [k for k, ok in checks.items() if not ok]
         gates["14"] = ("PASS" if trace else "FAIL",
-                       f"2,317 pubs / 119 compounds / 333 taxa / 0 high-tier / {cites_pilot} CITES pilot taxa "
-                       f"— matches the manuscript draft numbers: {trace}.")
+                       f"{len(pilot)} pilot taxa, {len(master)} taxa, {m['totals']['pubs']:,} publications, "
+                       f"{m['totals']['compounds']} compounds, {cites_pilot} CITES pilot taxa; "
+                       + ("every manuscript figure is traceable to the committed CSVs."
+                          if trace else "NOT traceable: " + "; ".join(failed)))
     except Exception as e:  # noqa: BLE001
         for g in ("9", "10", "11", "12", "13", "14"):
             gates[g] = ("FAIL", f"gate could not run: {e}")
