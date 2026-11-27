@@ -1017,7 +1017,7 @@ The register tables are available from the authors on request.</p>'''
   evidence-engine repository. They are available from the authors on request for reviewers and collaborators; only these aggregate,
   build-time summaries are published on this site.</div>
   <p class="small text-muted mt-3">Sources: Europe PMC REST (PubMed/MEDLINE, Agricola, patents), OpenAlex, Crossref and DOAJ.
-  Machine-assigned evidence tiers (auto-rubric-v2-audit (provisional)) are never presented as evidence strength; rows the rubric cannot place await human review.</p>
+  Machine-assigned evidence tiers (auto-rubric-v3-audit (provisional)) are never presented as evidence strength; rows the rubric cannot place await human review.</p>
   {gms_html}
 </main>
 <script>
@@ -1374,7 +1374,7 @@ def methods(d: dict) -> str:
   <p class="small">A parallel evidence layer maps publications, compounds and — from its Milestone 2 — compound–target–pathway networks for atlas taxa.
   Pilot scope: the {n(len(d["ev"]["order"]))} taxa with the most pharmacology records. Publications come from Europe PMC (primary) and OpenAlex
   (secondary), searched by accepted name and synonyms with a fixed query template; every query is recorded in the PRISMA search log
-  (<code>data/evidence/search_log.csv</code>). Evidence tiers are assigned by an automated keyword rubric (<code>auto-rubric-v2-audit (provisional)</code>) on title
+  (<code>data/evidence/search_log.csv</code>). Evidence tiers are assigned by an automated keyword rubric (<code>auto-rubric-v3-audit (provisional)</code>) on title
   and abstract; rows the rubric cannot place are flagged <code>needs_review</code> for a human queue — machine classification is never presented as
   evidence strength. Compounds are seeded from the pharmacology table and resolved against PubChem (CID, InChIKey, SMILES); unresolved names are
   flagged rather than guessed. Milestone-1 metadata is a citation-sorted slice (top 100 per query), so tier shares are not yet corpus-wide; full
