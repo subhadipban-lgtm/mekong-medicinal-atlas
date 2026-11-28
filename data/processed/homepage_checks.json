@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-26T16:04:06.094Z",
+  "generatedAt": "2026-11-27T04:43:08.312Z",
   "url": "http://127.0.0.1:8124/index.html",
-  "totalToReadyMs": 702,
+  "totalToReadyMs": 4473,
   "toggle": {
     "loaded": true,
     "loadMs": 302,
